@@ -42,4 +42,37 @@ document.addEventListener('DOMContentLoaded', () => {
   if (savedTheme === 'dark') {
     document.body.classList.add('dark-mode');
   }
+
+  // Comment logic
+  const commentForm = document.getElementById('comment-form');
+  const commentDisplay = document.getElementById('comment-display');
+  const commenterName = document.getElementById('commenter-name');
+  const commentText = document.getElementById('comment-text');
+
+  function loadComments() {
+    const comments = JSON.parse(localStorage.getItem('comments') || '[]');
+    commentDisplay.innerHTML = '';
+    comments.forEach(comment => {
+      const commentElement = document.createElement('div');
+      commentElement.classList.add('comment');
+      commentElement.innerHTML = `<strong>${comment.name}</strong>: ${comment.text}`;
+      commentDisplay.appendChild(commentElement);
+    });
+  }
+
+  commentForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = commenterName.value;
+    const text = commentText.value;
+
+    const comments = JSON.parse(localStorage.getItem('comments') || '[]');
+    comments.push({ name, text });
+    localStorage.setItem('comments', JSON.stringify(comments));
+
+    commenterName.value = '';
+    commentText.value = '';
+    loadComments();
+  });
+
+  loadComments();
 });

@@ -24,7 +24,22 @@
         <button type="submit" class="submit-btn">문의 보내기</button>
       </form>
     </div>
+
+    <div class="comment-section">
+      <hr>
+      <h3>댓글 기능</h3>
+      <div id="comment-display">
+        <!-- Comments will be loaded here -->
+      </div>
+      <h4>댓글 작성</h4>
+      <form id="comment-form">
+        <input type="text" id="commenter-name" placeholder="이름" required>
+        <textarea id="comment-text" placeholder="댓글 내용을 입력하세요" required></textarea>
+        <button type="submit" class="submit-btn">댓글 작성</button>
+      </form>
+    </div>
   </div>
   <script defer type="text/javascript" src="main.js"></script>
+
 </body>
 </html>
