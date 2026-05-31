@@ -5,66 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>로또 번호 추첨</title>
   <link href='/style.css' rel='stylesheet'>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      background-color: #f0f2f5;
-      color: #333;
-    }
-    .container {
-      background-color: #ffffff;
-      padding: 30px 40px;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      text-align: center;
-    }
-    h1 {
-      color: #4a4a4a;
-      margin-bottom: 20px;
-    }
-    button {
-      background-color: #007bff;
-      color: white;
-      border: none;
-      padding: 12px 25px;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      margin-bottom: 20px;
-    }
-    button:hover {
-      background-color: #0056b3;
-    }
-    #lotto-numbers {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 20px;
-    }
-    .number {
-      background-color: #ffc107;
-      color: #333;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      font-size: 18px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-  </style>
 </head>
 <body>
   <div class="container">
+    <div style="text-align: right; margin-bottom: 10px;">
+      <button id="theme-toggle">테마 변경</button>
+    </div>
     <h1>로또 번호 추첨</h1>
     <button id="draw-button">추첨 시작</button>
     <div id="lotto-numbers"></div>
