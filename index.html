@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>인공지능 동물상 테스트</title>
+  <title>인공지능 동물상 테스트 - 나의 닮은꼴 동물 찾기</title>
+  <meta name="description" content="인공지능(AI)이 분석하는 나의 동물상 테스트! 강아지상, 고양이상 등 당신과 가장 닮은 동물을 찾아보세요.">
   <link href='style.css' rel='stylesheet'>
 </head>
 <body>
   <nav class="navbar">
     <a href="index.html" class="active">동물상 테스트</a>
     <a href="lotto.html">로또 추첨</a>
+    <a href="about.html">소개</a>
   </nav>
 
   <div class="container">
@@ -41,12 +43,44 @@
       <button onclick="location.reload()" class="retry-btn">다시 하기</button>
     </div>
 
+    <!-- AdSense Optimization: Rich Content Section -->
+    <div class="info-section">
+      <h2>인공지능 동물상 테스트란?</h2>
+      <p>본 서비스는 Google의 <strong>Teachable Machine</strong> 라이브러리를 활용하여 제작된 인공지능 기반 이미지 인식 도구입니다. 수만 장의 동물상 데이터를 학습한 AI 모델이 사용자의 얼굴 특징을 분석하여 강아지상, 고양이상, 토끼상 등 가장 닮은 동물을 높은 확률 순으로 보여줍니다.</p>
+      
+      <h2>동물상 특징 안내</h2>
+      <ul>
+        <li><strong>강아지상:</strong> 선하고 부드러운 인상으로 많은 사람들에게 호감을 주는 스타일입니다.</li>
+        <li><strong>고양이상:</strong> 세련되고 날카로운 매력이 있으며, 신비로운 분위기를 자아냅니다.</li>
+        <li><strong>토끼상:</strong> 귀엽고 발랄한 느낌을 주며, 밝은 에너지를 가진 인상입니다.</li>
+        <li><strong>공룡상:</strong> 뚜렷한 이목구비와 강인한 매력을 지닌 남성적인 느낌의 스타일입니다.</li>
+      </ul>
+
+      <h2>테스트 정확도를 높이는 팁</h2>
+      <p>인공지능 분석의 정확도를 높이기 위해서는 다음 사항을 준수해 주세요:</p>
+      <ul>
+        <li>정면을 응시하고 이목구비가 뚜렷하게 나온 사진을 사용하세요.</li>
+        <li>밝은 조명 아래에서 촬영된 사진이 좋습니다.</li>
+        <li>배경이 복잡하지 않은 사진일수록 AI가 얼굴 특징을 더 잘 파악합니다.</li>
+      </ul>
+      <p>※ 본 테스트는 재미를 목적으로 하며, 수집된 사진 데이터는 서버에 저장되지 않고 브라우저 내에서만 처리되므로 안심하고 이용하셔도 됩니다.</p>
+    </div>
+
     <div class="comment-section">
       <hr>
-      <h3>댓글</h3>
+      <h3>결과 공유 및 댓글</h3>
       <div class="giscus"></div>
     </div>
   </div>
+
+  <footer>
+    <div class="footer-links">
+      <a href="about.html">사이트 소개</a>
+      <a href="privacy.html">개인정보처리방침</a>
+      <a href="terms.html">이용약관</a>
+    </div>
+    <p>&copy; 2026 AI 도구 모음. All rights reserved.</p>
+  </footer>
   
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
