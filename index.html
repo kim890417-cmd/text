@@ -27,19 +27,26 @@
 
     <div class="comment-section">
       <hr>
-      <h3>댓글 기능</h3>
-      <div id="comment-display">
-        <!-- Comments will be loaded here -->
-      </div>
-      <h4>댓글 작성</h4>
-      <form id="comment-form">
-        <input type="text" id="commenter-name" placeholder="이름" required>
-        <textarea id="comment-text" placeholder="댓글 내용을 입력하세요" required></textarea>
-        <button type="submit" class="submit-btn">댓글 작성</button>
-      </form>
+      <h3>댓글</h3>
+      <div class="giscus"></div>
     </div>
   </div>
+  
+  <script src="https://giscus.app/client.js"
+        data-repo="kim890417-cmd/text"
+        data-repo-id="R_kgDOSs5wIg"
+        data-category="[여기에 카테고리 이름을 입력하세요]"
+        data-category-id="[여기에 카테고리 ID를 입력하세요]"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="ko"
+        crossorigin="anonymous"
+        async>
+  </script>
   <script defer type="text/javascript" src="main.js"></script>
-
 </body>
 </html>
