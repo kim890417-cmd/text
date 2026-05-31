@@ -5,9 +5,82 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>로또의 수학적 역사와 확률의 진화 | AI TOOL HUB 전문 칼럼</title>
   <meta name="description" content="고대 중국의 키노부터 현대의 6/45 시스템까지, 로또 시스템의 역사적 변천사와 그 속에 담긴 수학적 확률의 원리를 심도 있게 분석합니다.">
+  <meta property="og:title" content="로또의 수학적 역사와 확률의 진화 | AI TOOL HUB">
+  <meta property="og:description" content="고대 중국의 키노부터 현대의 6/45 시스템까지, 로또의 역사와 수학적 원리를 심도 있게 분석합니다.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1518133910546-b6c2fb7d79e3?auto=format&fit=crop&w=1200&q=80">
   <link href='style.css' rel='stylesheet'>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3406696816625207"
      crossorigin="anonymous"></script>
+  <style>
+    .toc-box {
+      background: #f8f9fa;
+      border: 1px solid #e9ecef;
+      border-radius: 14px;
+      padding: 22px 28px;
+      margin: 30px 0 40px;
+    }
+    .toc-box h3 { margin: 0 0 14px; font-size: 1rem; color: #555; }
+    .toc-box ol { margin: 0; padding-left: 20px; }
+    .toc-box li { margin-bottom: 7px; }
+    .toc-box a { color: #007bff; text-decoration: none; font-size: 0.95rem; }
+    .toc-box a:hover { text-decoration: underline; }
+    .post-meta {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      color: #888;
+      font-size: 0.88rem;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+    .post-tag {
+      background: #e8f4ff;
+      color: #007bff;
+      padding: 3px 12px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.78rem;
+    }
+    .author-box {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      background: #f8f9fa;
+      border-radius: 14px;
+      padding: 22px 25px;
+      margin-top: 50px;
+    }
+    .author-avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #007bff, #00bfff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      flex-shrink: 0;
+    }
+    .author-name { font-weight: 700; margin-bottom: 4px; }
+    .author-role { color: #007bff; font-size: 0.82rem; font-weight: 600; margin-bottom: 6px; }
+    .author-bio { color: #666; font-size: 0.88rem; margin: 0; }
+    .faq-section { margin-top: 50px; }
+    .faq-item {
+      border-bottom: 1px solid #eee;
+      padding: 18px 0;
+    }
+    .faq-q { font-weight: 700; color: #222; margin-bottom: 8px; }
+    .faq-a { color: #555; font-size: 0.95rem; margin: 0; }
+    .highlight-box {
+      background: #e8f4ff;
+      border-left: 4px solid #007bff;
+      border-radius: 0 10px 10px 0;
+      padding: 18px 22px;
+      margin: 25px 0;
+    }
+    .highlight-box p { margin: 0; color: #333; }
+  </style>
 </head>
 <body>
   <nav class="navbar">
@@ -19,6 +92,7 @@
         <li><a href="blog.html" class="active">전문 블로그</a></li>
         <li><a href="methodology.html">방법론</a></li>
         <li><a href="about.html">소개</a></li>
+        <li><a href="contact.html">문의하기</a></li>
       </ul>
     </div>
   </nav>
@@ -31,35 +105,102 @@
       <article class="content-rich">
         <p style="color: #007bff; font-weight: bold; margin-bottom: 10px;">PRO COLUMN #01</p>
         <h1>로또의 수학적 역사: 고대 중국에서 현대 확률론까지</h1>
-        <p class="subtitle">작성자: AI TOOL HUB 편집팀 | 작성일: 2026.05.31</p>
+        <div class="post-meta">
+          <span class="post-tag">History & Math</span>
+          <span>📅 2026년 5월 31일</span>
+          <span>⏱️ 읽기 약 8분</span>
+          <span>✍️ AI TOOL HUB 편집팀</span>
+        </div>
 
         <img src="https://images.unsplash.com/photo-1518133910546-b6c2fb7d79e3?auto=format&fit=crop&w=800&q=80" alt="Statistics and Math" style="width: 100%; border-radius: 20px; margin-bottom: 30px;">
 
-        <h2>1. 복권의 기원: 국가 재정과 게임의 결합</h2>
+        <!-- 목차 -->
+        <div class="toc-box">
+          <h3>📋 목차</h3>
+          <ol>
+            <li><a href="#s1">복권의 기원: 국가 재정과 게임의 결합</a></li>
+            <li><a href="#s2">중세 유럽과 현대 복권의 태동</a></li>
+            <li><a href="#s3">6/45 시스템의 수학적 구조</a></li>
+            <li><a href="#s4">한국 로또의 역사와 사회적 영향</a></li>
+            <li><a href="#s5">확률의 독립성과 무작위성의 오해</a></li>
+            <li><a href="#s6">대수의 법칙과 기대값</a></li>
+            <li><a href="#s7">결론: 건전한 레저로서의 로또</a></li>
+          </ol>
+        </div>
+
+        <h2 id="s1">1. 복권의 기원: 국가 재정과 게임의 결합</h2>
         <p>복권(Lottery)의 역사는 인류 문명의 초기 단계까지 거슬러 올라갑니다. 기록에 따르면 가장 오래된 형태의 복권은 기원전 200년경 고대 중국의 한나라 시대에 등장한 '키노(Keno)' 게임입니다. 당시 한나라의 통치자들은 거대한 만리장성 축조에 필요한 막대한 자금을 마련하기 위해 이 게임을 도입했습니다. 시민들은 자발적으로 게임에 참여했고, 그 수익금은 국가의 국방과 공공사업에 투입되었습니다. 이는 현대 복권이 가진 '공익 기금 조성'이라는 목적의 시초가 되었습니다.</p>
 
-        <h2>2. 중세 유럽과 현대 복권의 태동</h2>
-        <p>유럽에서는 로마 제국 시대에 저녁 식사 자리에서 손님들에게 선물을 나누어 주기 위한 목적으로 복권이 처음 사용되었습니다. 이후 15세기 벨기에와 네덜란드 지역에서 도시의 성벽을 수리하거나 빈민을 돕기 위해 돈을 걸고 번호를 맞추는 현대적 의미의 복권이 본격적으로 시작되었습니다. 1530년 이탈리아 피렌체에서 발행된 '라 로또 디 피렌체(La Lotto di Firenze)'는 오늘날 우리가 사용하는 '로또(Lotto)'라는 단어의 어원이 되었으며, 매주 당첨자를 발표하는 정기적인 시스템을 정착시켰습니다.</p>
+        <p>키노 게임은 기본적으로 1부터 80까지의 숫자 중에서 선택하여 맞히는 방식이었습니다. 당시에는 종이 대신 거북이 등껍데기나 도자기 조각에 숫자를 표시했다고 전해집니다. 이 원시적인 형태의 게임이 2,200여 년을 거쳐 현재의 로또 시스템으로 발전한 것입니다.</p>
 
-        <h2>3. 6/45 시스템의 수학적 구조</h2>
+        <h2 id="s2">2. 중세 유럽과 현대 복권의 태동</h2>
+        <p>유럽에서는 로마 제국 시대에 저녁 식사 자리에서 손님들에게 선물을 나누어 주기 위한 목적으로 복권이 처음 사용되었습니다. 이후 15세기 벨기에와 네덜란드 지역에서 도시의 성벽을 수리하거나 빈민을 돕기 위해 돈을 걸고 번호를 맞추는 현대적 의미의 복권이 본격적으로 시작되었습니다.</p>
+        <p>1530년 이탈리아 피렌체에서 발행된 '라 로또 디 피렌체(La Lotto di Firenze)'는 오늘날 우리가 사용하는 '로또(Lotto)'라는 단어의 어원이 되었으며, 매주 당첨자를 발표하는 정기적인 시스템을 정착시켰습니다. 영국에서는 1567년 엘리자베스 1세 여왕이 항구와 도로 건설 자금을 마련하기 위해 왕실 복권을 발행했으며, 이것이 세계 최초의 국가 단위 복권으로 기록됩니다.</p>
+
+        <div class="highlight-box">
+          <p><strong>역사적 사실:</strong> 미국 하버드, 예일, 프린스턴 등의 아이비리그 대학들은 18~19세기에 학교 건물 건축 자금을 복권 수익으로 충당했습니다. 복권은 단순한 오락이 아닌 사회 인프라를 구축하는 재원이었습니다.</p>
+        </div>
+
+        <h2 id="s3">3. 6/45 시스템의 수학적 구조</h2>
         <p>현재 대한민국을 비롯한 전 세계 많은 국가에서 채택하고 있는 '6/45' 시스템은 수학적으로 매우 정교하게 설계된 모델입니다. 1부터 45까지의 숫자 중 6개를 순서에 상관없이 선택하는 조합의 수는 다음과 같은 공식으로 계산됩니다:</p>
         <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; text-align: center; margin: 20px 0; font-family: 'Courier New', Courier, monospace;">
-          nCr = n! / (r! * (n - r)!) <br>
-          45C6 = 45! / (6! * 39!) = 8,145,060
+          nCr = n! / (r! × (n - r)!) <br>
+          45C6 = 45! / (6! × 39!) = <strong>8,145,060</strong>
         </div>
         <p>이 숫자는 단순한 우연이 아닙니다. 일주일 동안 판매되는 복권의 양과 당첨금 규모를 고려했을 때, 1등 당첨자가 매주 적절한 인원(약 5~15명)이 나올 수 있도록 확률적 밸런스를 맞춘 결과입니다. 만약 숫자의 범위가 40까지였다면 당첨자가 너무 많아 당첨금이 낮아졌을 것이고, 50까지였다면 당첨자가 나오지 않는 주가 잦아져 흥미가 떨어졌을 것입니다.</p>
 
-        <h2>4. 확률의 독립성과 무작위성의 오해</h2>
+        <h2 id="s4">4. 한국 로또의 역사와 사회적 영향</h2>
+        <p>대한민국의 로또(Lotto)는 2002년 12월 7일 첫 추첨을 시작했습니다. 복권 판매는 기획재정부 복권위원회에서 관리하며, 수익의 약 40%는 복권기금으로 조성됩니다. 복권기금은 주거 복지, 교육, 중독 예방 등 다양한 공익사업에 활용됩니다.</p>
+        <p>초창기 1회 당첨금이 약 3억 7천만 원이었던 것에 비해, 복권 판매량 증가와 함께 역대 최고 당첨금은 400억 원을 넘어섰습니다. 흥미로운 점은 매주 로또 구매자의 패턴이 비교적 일정하게 유지된다는 것입니다. 통계학적으로 사람들은 생일 날짜인 1~31 범위의 숫자를 선호하는 경향이 있어, 32~45 범위의 숫자가 포함된 번호 조합은 상대적으로 당첨 확률은 같지만 당첨 시 상금을 더 많이 받을 수 있는 구조가 되기도 합니다.</p>
+
+        <h2 id="s5">5. 확률의 독립성과 무작위성의 오해</h2>
         <p>많은 로또 애호가들이 범하는 가장 큰 오류는 '과거의 당첨 번호가 미래의 번호에 영향을 줄 것'이라는 생각입니다. 통계학적으로 로또 추첨은 <strong>독립 시행(Independent Trial)</strong>입니다. 지난주에 1번이 나왔다고 해서 이번 주에 1번이 나올 확률이 낮아지거나 높아지지 않습니다. 추첨 기계의 공들은 과거를 기억하지 않기 때문입니다.</p>
         <p>또한, '1, 2, 3, 4, 5, 6'과 같은 연속된 번호 조합은 '7, 14, 21, 33, 41, 44'와 같은 무작위해 보이는 조합과 당첨 확률이 정확히 동일합니다. 하지만 인간의 뇌는 패턴을 찾으려 하는 본능(아포페니아) 때문에 연속된 번호를 기피하게 됩니다. 실제로는 모든 조합이 814만 분의 1이라는 공평한 확률을 가집니다.</p>
 
-        <h2>5. 결론: 건전한 레저로서의 로또</h2>
+        <h2 id="s6">6. 대수의 법칙과 기대값</h2>
+        <p><strong>대수의 법칙(Law of Large Numbers)</strong>에 따르면, 시행 횟수가 많아질수록 실제 관측된 비율은 이론적 확률에 수렴하게 됩니다. 로또 역시 수천, 수만 번의 추첨이 반복된다면 모든 숫자의 출현 빈도는 비슷해질 것입니다. 그러나 현재까지의 추첨 횟수는 수학적으로 볼 때 매우 적은 표본에 불과하며, 따라서 특정 번호가 더 많이 나왔다는 사실은 미래의 결과를 예측하는 지표가 될 수 없습니다.</p>
+        <p>기대값(Expected Value)의 관점에서 로또를 분석해 보면, 1,000원짜리 로또 1장의 기대 환급액은 약 500~600원 수준입니다. 즉 구조적으로 구매자 전체로 보면 40~50%의 손실이 발생합니다. 이것이 로또를 투자가 아닌 레저로 바라봐야 하는 이유입니다. 1,000원의 구매로 일주일 동안 '혹시?'라는 설렘을 느끼는 것이 그 본질적인 가치입니다.</p>
+
+        <blockquote>
+          "복권은 수학을 이해하지 못하는 사람들에게 부과되는 세금이다." — 암브로스 비어스
+        </blockquote>
+
+        <h2 id="s7">7. 결론: 건전한 레저로서의 로또</h2>
         <p>로또의 역사를 살펴보면, 그것은 단순한 도박이 아닌 국가 시스템의 일부이자 수학적 확률의 결정체임을 알 수 있습니다. 우리는 기술을 통해 이러한 확률적 재미를 극대화할 수 있도록 <a href="lotto.html">로또 번호 추첨 도구</a>를 제공하고 있습니다. 확률을 이해하고 즐기는 태도야말로 로또를 가장 건전하게 즐기는 방법입니다.</p>
+        <p>중요한 것은 '언젠가는 당첨될 것'이라는 막연한 기대보다, 확률의 본질을 이해하고 스스로 설정한 건전한 한도 안에서 즐기는 태도입니다. 로또는 수학이며, 동시에 인간의 희망이 담긴 문화적 현상이기도 합니다.</p>
+
+        <!-- FAQ -->
+        <div class="faq-section">
+          <h2 style="border: none; padding: 0; font-size: 1.4rem;">자주 묻는 질문 (FAQ)</h2>
+          <div class="faq-item">
+            <p class="faq-q">Q. 자주 나오는 번호를 선택하면 당첨 확률이 올라가나요?</p>
+            <p class="faq-a">A. 아니요. 로또 추첨은 매회 독립 시행이기 때문에, 과거 출현 빈도는 미래 결과에 영향을 주지 않습니다. 모든 번호 조합의 확률은 동일합니다.</p>
+          </div>
+          <div class="faq-item">
+            <p class="faq-q">Q. 로또 번호를 자동으로 선택하는 것과 수동으로 선택하는 것 중 어느 것이 유리한가요?</p>
+            <p class="faq-a">A. 당첨 확률은 동일합니다. 다만 수동으로 특정 번호를 선택할 경우, 동일 번호를 선택한 사람이 많을수록 당첨 시 상금이 나눠진다는 점을 고려해야 합니다.</p>
+          </div>
+          <div class="faq-item">
+            <p class="faq-q">Q. 대한민국 로또 1등 당첨 확률은 얼마인가요?</p>
+            <p class="faq-a">A. 45개 숫자 중 6개를 맞출 확률은 약 814만 분의 1 (정확히 8,145,060분의 1)입니다.</p>
+          </div>
+        </div>
       </article>
+
+      <!-- 작성자 박스 -->
+      <div class="author-box">
+        <div class="author-avatar">✍️</div>
+        <div>
+          <div class="author-name">AI TOOL HUB 콘텐츠팀</div>
+          <div class="author-role">기술 칼럼 & 리서치</div>
+          <p class="author-bio">AI, 통계학, 심리학 전반을 아우르는 심층 아티클을 연구하고 집필합니다. 복잡한 기술과 수학적 개념을 누구나 이해할 수 있는 언어로 풀어내는 것을 목표로 합니다.</p>
+        </div>
+      </div>
 
       <div style="margin-top: 50px; padding: 30px; background-color: #f1f3f5; border-radius: 20px;">
         <h3>함께 읽어볼 만한 글</h3>
         <ul>
+          <li><a href="post-luck-psychology.html">확률과 행운의 심리학: 무작위 속 인간의 본능</a></li>
           <li><a href="post-ai-perception.html">AI는 어떻게 아름다움을 보는가?</a></li>
           <li><a href="methodology.html">AI TOOL HUB의 기술 방법론 안내</a></li>
         </ul>
@@ -88,9 +229,10 @@
       <div class="footer-section">
         <h4>법적 고지</h4>
         <ul>
+          <li><a href="about.html">사이트 소개</a></li>
+          <li><a href="contact.html">문의하기</a></li>
           <li><a href="privacy.html">개인정보처리방침</a></li>
           <li><a href="terms.html">이용약관</a></li>
-          <li><a href="about.html">사이트 소개</a></li>
         </ul>
       </div>
     </div>

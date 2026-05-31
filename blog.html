@@ -5,9 +5,117 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>전문 블로그 | AI 및 데이터 사이언스 인사이트 | AI TOOL HUB</title>
   <meta name="description" content="인공지능 기술의 깊이 있는 분석, 확률 통계의 역사, 그리고 디지털 시대의 데이터 윤리를 다루는 전문 블로그입니다. 고품질 지식 아티클을 만나보세요.">
+  <meta property="og:title" content="전문 블로그 | AI & 데이터 사이언스 인사이트">
+  <meta property="og:description" content="AI 기술, 확률 통계, 디지털 윤리를 다루는 심층 아티클 모음입니다.">
+  <meta property="og:type" content="website">
   <link href='style.css' rel='stylesheet'>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3406696816625207"
      crossorigin="anonymous"></script>
+  <style>
+    .blog-card {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.04);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+    .blog-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+    }
+    .blog-card-thumb {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .blog-card-body { padding: 22px; flex: 1; display: flex; flex-direction: column; }
+    .blog-card-tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 10px;
+    }
+    .blog-card-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #222;
+      text-decoration: none;
+      line-height: 1.5;
+      margin-bottom: 10px;
+      display: block;
+    }
+    .blog-card-title:hover { color: #007bff; }
+    .blog-card-desc { font-size: 0.88rem; color: #666; line-height: 1.6; margin-bottom: 15px; flex: 1; }
+    .blog-card-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.8rem;
+      color: #999;
+      border-top: 1px solid #f0f0f0;
+      padding-top: 12px;
+      margin-top: auto;
+    }
+    .blog-card-meta span { display: flex; align-items: center; gap: 4px; }
+    .blog-read-link { color: #007bff; font-weight: 700; font-size: 0.88rem; text-decoration: none; }
+    .blog-read-link:hover { text-decoration: underline; }
+    .category-filter {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 35px;
+      flex-wrap: wrap;
+    }
+    .cat-btn {
+      padding: 7px 18px;
+      border-radius: 999px;
+      border: 1.5px solid #ddd;
+      background: #fff;
+      cursor: pointer;
+      font-size: 0.88rem;
+      font-family: 'Noto Sans KR', sans-serif;
+      transition: all 0.2s;
+      font-weight: 500;
+    }
+    .cat-btn.active, .cat-btn:hover {
+      background: #007bff;
+      border-color: #007bff;
+      color: #fff;
+    }
+    .featured-banner {
+      background: linear-gradient(135deg, #007bff, #0056b3);
+      border-radius: 20px;
+      padding: 35px;
+      color: #fff;
+      margin-bottom: 50px;
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+    .featured-banner img {
+      width: 160px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 12px;
+      flex-shrink: 0;
+    }
+    @media (max-width: 600px) {
+      .featured-banner { flex-direction: column; }
+      .featured-banner img { width: 100%; height: 160px; }
+    }
+    .featured-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      background: rgba(255,255,255,0.2);
+      padding: 3px 10px;
+      border-radius: 999px;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
   <nav class="navbar">
@@ -19,6 +127,7 @@
         <li><a href="blog.html" class="active">전문 블로그</a></li>
         <li><a href="methodology.html">방법론</a></li>
         <li><a href="about.html">소개</a></li>
+        <li><a href="contact.html">문의하기</a></li>
       </ul>
     </div>
   </nav>
@@ -28,51 +137,99 @@
       <div style="text-align: right; margin-bottom: 20px;">
         <button id="theme-toggle" style="background:none; border:1px solid #ddd; cursor:pointer; padding:5px 10px; border-radius:5px; font-size:0.8rem;">테마 변경</button>
       </div>
-      <h1>지식 라이브러리 (Insights)</h1>
+      <h1>지식 라이브러리</h1>
       <p class="subtitle">AI TOOL HUB가 제공하는 깊이 있는 지식 콘텐츠를 탐색해 보세요.</p>
 
-      <div class="blog-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; text-align: left; margin-top: 50px;">
-        
+      <!-- 추천 글 배너 -->
+      <div class="featured-banner">
+        <img src="https://images.unsplash.com/photo-1507146426996-ef05306b995a?auto=format&fit=crop&w=400&q=80" alt="AI Featured">
+        <div>
+          <span class="featured-label">✨ 편집팀 추천</span>
+          <h2 style="margin: 0 0 10px; font-size: 1.4rem; color: #fff; border: none; padding: 0;">딥러닝 vs 인간의 지각: AI는 어떻게 얼굴에서 패턴을 읽는가?</h2>
+          <p style="margin: 0 0 15px; opacity: 0.85; font-size: 0.95rem; line-height: 1.6;">컨볼루션 신경망(CNN)이 얼굴의 픽셀 데이터를 분석하여 인상을 수치화하는 기술적 원리를 상세히 설명합니다.</p>
+          <a href="post-ai-perception.html" style="background: rgba(255,255,255,0.2); color: #fff; text-decoration: none; padding: 8px 20px; border-radius: 8px; font-weight: 600; font-size: 0.9rem;">자세히 읽기 →</a>
+        </div>
+      </div>
+
+      <!-- 카테고리 필터 -->
+      <div class="category-filter">
+        <button class="cat-btn active">전체</button>
+        <button class="cat-btn">AI Technology</button>
+        <button class="cat-btn">History & Math</button>
+        <button class="cat-btn">Ethics & Privacy</button>
+        <button class="cat-btn">Psychology</button>
+      </div>
+
+      <!-- 블로그 카드 그리드 -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; text-align: left;">
+
         <!-- Post 1 -->
-        <div style="background: #fff; border: 1px solid #eee; border-radius: 20px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.03);">
-          <div style="padding: 25px;">
-            <span style="color: #007bff; font-size: 0.8rem; font-weight: bold; text-transform: uppercase;">History & Math</span>
-            <h3 style="margin: 10px 0;"><a href="post-lotto-history.html" style="text-decoration: none; color: #333;">로또의 수학적 역사: 고대 중국에서 현대까지</a></h3>
-            <p style="font-size: 0.9rem; color: #666; line-height: 1.6;">만리장성 축조 자금에서 시작된 복권의 역사와 현대 로또 시스템에 숨겨진 정교한 확률적 설계를 파헤쳐 봅니다.</p>
-            <a href="post-lotto-history.html" style="color: #007bff; font-weight: bold; text-decoration: none; font-size: 0.9rem;">자세히 읽기 &rarr;</a>
+        <div class="blog-card">
+          <img class="blog-card-thumb" src="https://images.unsplash.com/photo-1518133910546-b6c2fb7d79e3?auto=format&fit=crop&w=600&q=80" alt="로또 수학적 역사">
+          <div class="blog-card-body">
+            <span class="blog-card-tag" style="color: #007bff;">History & Math</span>
+            <a href="post-lotto-history.html" class="blog-card-title">로또의 수학적 역사: 고대 중국에서 현대까지</a>
+            <p class="blog-card-desc">만리장성 축조 자금에서 시작된 복권의 역사와 현대 로또 시스템에 숨겨진 정교한 확률적 설계를 파헤쳐 봅니다.</p>
+            <div class="blog-card-meta">
+              <span>📅 2026.05.31</span>
+              <span>⏱️ 약 8분</span>
+              <a href="post-lotto-history.html" class="blog-read-link" style="margin-left: auto;">읽기 →</a>
+            </div>
           </div>
         </div>
 
         <!-- Post 2 -->
-        <div style="background: #fff; border: 1px solid #eee; border-radius: 20px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.03);">
-          <div style="padding: 25px;">
-            <span style="color: #28a745; font-size: 0.8rem; font-weight: bold; text-transform: uppercase;">AI Technology</span>
-            <h3 style="margin: 10px 0;"><a href="post-ai-perception.html" style="text-decoration: none; color: #333;">딥러닝 vs 인간의 지각: AI는 어떻게 아름다움을 보는가?</a></h3>
-            <p style="font-size: 0.9rem; color: #666; line-height: 1.6;">컨볼루션 신경망(CNN)이 얼굴의 픽셀 데이터를 분석하여 인상을 수치화하는 기술적 원리를 상세히 설명합니다.</p>
-            <a href="post-ai-perception.html" style="color: #007bff; font-weight: bold; text-decoration: none; font-size: 0.9rem;">자세히 읽기 &rarr;</a>
+        <div class="blog-card">
+          <img class="blog-card-thumb" src="https://images.unsplash.com/photo-1507146426996-ef05306b995a?auto=format&fit=crop&w=600&q=80" alt="AI 지각 딥러닝">
+          <div class="blog-card-body">
+            <span class="blog-card-tag" style="color: #28a745;">AI Technology</span>
+            <a href="post-ai-perception.html" class="blog-card-title">딥러닝 vs 인간의 지각: AI는 어떻게 아름다움을 보는가?</a>
+            <p class="blog-card-desc">컨볼루션 신경망(CNN)이 얼굴의 픽셀 데이터를 분석하여 인상을 수치화하는 기술적 원리를 상세히 설명합니다.</p>
+            <div class="blog-card-meta">
+              <span>📅 2026.05.31</span>
+              <span>⏱️ 약 9분</span>
+              <a href="post-ai-perception.html" class="blog-read-link" style="margin-left: auto;">읽기 →</a>
+            </div>
           </div>
         </div>
 
         <!-- Post 3 -->
-        <div style="background: #fff; border: 1px solid #eee; border-radius: 20px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.03);">
-          <div style="padding: 25px;">
-            <span style="color: #dc3545; font-size: 0.8rem; font-weight: bold; text-transform: uppercase;">Ethics & Privacy</span>
-            <h3 style="margin: 10px 0;"><a href="post-digital-ethics.html" style="text-decoration: none; color: #333;">디지털 시대의 안면 인식 윤리: 당신의 데이터는 안전한가?</a></h3>
-            <p style="font-size: 0.9rem; color: #666; line-height: 1.6;">글로벌 AI 규제 트렌드와 프라이버시 보호를 위한 온디바이스(On-device) 연산의 중요성을 전문적인 시각에서 다룹니다.</p>
-            <a href="post-digital-ethics.html" style="color: #007bff; font-weight: bold; text-decoration: none; font-size: 0.9rem;">자세히 읽기 &rarr;</a>
+        <div class="blog-card">
+          <img class="blog-card-thumb" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=80" alt="디지털 프라이버시 윤리">
+          <div class="blog-card-body">
+            <span class="blog-card-tag" style="color: #dc3545;">Ethics & Privacy</span>
+            <a href="post-digital-ethics.html" class="blog-card-title">디지털 시대의 안면 인식 윤리: 당신의 데이터는 안전한가?</a>
+            <p class="blog-card-desc">글로벌 AI 규제 트렌드와 프라이버시 보호를 위한 온디바이스(On-device) 연산의 중요성을 전문적인 시각에서 다룹니다.</p>
+            <div class="blog-card-meta">
+              <span>📅 2026.05.31</span>
+              <span>⏱️ 약 8분</span>
+              <a href="post-digital-ethics.html" class="blog-read-link" style="margin-left: auto;">읽기 →</a>
+            </div>
           </div>
         </div>
 
         <!-- Post 4 -->
-        <div style="background: #fff; border: 1px solid #eee; border-radius: 20px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.03);">
-          <div style="padding: 25px;">
-            <span style="color: #ffc107; font-size: 0.8rem; font-weight: bold; text-transform: uppercase;">Psychology</span>
-            <h3 style="margin: 10px 0;"><a href="post-luck-psychology.html" style="text-decoration: none; color: #333;">확률과 운의 심리학: 왜 우리는 무작위에 열광하는가?</a></h3>
-            <p style="font-size: 0.9rem; color: #666; line-height: 1.6;">아포페니아와 도박사의 오류 등 확률을 대하는 인간의 심리적 편향을 과학적으로 분석하여 합리적 사고의 틀을 제시합니다.</p>
-            <a href="post-luck-psychology.html" style="color: #007bff; font-weight: bold; text-decoration: none; font-size: 0.9rem;">자세히 읽기 &rarr;</a>
+        <div class="blog-card">
+          <img class="blog-card-thumb" src="https://images.unsplash.com/photo-1553481187-be93c21490a9?auto=format&fit=crop&w=600&q=80" alt="확률과 행운 심리학">
+          <div class="blog-card-body">
+            <span class="blog-card-tag" style="color: #e67e22;">Psychology</span>
+            <a href="post-luck-psychology.html" class="blog-card-title">확률과 운의 심리학: 왜 우리는 무작위에 열광하는가?</a>
+            <p class="blog-card-desc">아포페니아와 도박사의 오류 등 확률을 대하는 인간의 심리적 편향을 과학적으로 분석하여 합리적 사고의 틀을 제시합니다.</p>
+            <div class="blog-card-meta">
+              <span>📅 2026.05.31</span>
+              <span>⏱️ 약 7분</span>
+              <a href="post-luck-psychology.html" class="blog-read-link" style="margin-left: auto;">읽기 →</a>
+            </div>
           </div>
         </div>
 
+      </div>
+
+      <!-- 뉴스레터 구독 CTA -->
+      <div style="margin-top: 60px; padding: 40px; background: #f8f9fa; border-radius: 20px; text-align: center;">
+        <h3 style="margin-top: 0; font-size: 1.4rem;">새 아티클 소식을 받으시겠어요?</h3>
+        <p style="color: #666; margin-bottom: 25px;">AI, 데이터 사이언스, 확률 통계에 관한 심층 아티클이 업데이트될 때 알려드립니다.</p>
+        <a href="contact.html" class="btn-primary" style="text-decoration: none; font-size: 1rem; padding: 14px 35px;">문의 및 구독 신청</a>
       </div>
     </div>
   </main>
@@ -95,6 +252,7 @@
         <h4>고객 지원</h4>
         <ul>
           <li><a href="about.html">사이트 소개</a></li>
+          <li><a href="contact.html">문의하기</a></li>
           <li><a href="privacy.html">개인정보처리방침</a></li>
           <li><a href="terms.html">이용약관</a></li>
         </ul>
