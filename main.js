@@ -1,43 +1,103 @@
+const URL = "https://teachablemachine.withgoogle.com/models/4yps9I5lk/";
+
+let model, labelContainer, maxPredictions;
+
+// Load the image model
+async function init() {
+  const modelURL = URL + "model.json";
+  const metadataURL = URL + "metadata.json";
+
+  model = await tmImage.load(modelURL, metadataURL);
+  maxPredictions = model.getTotalClasses();
+  labelContainer = document.getElementById("label-container");
+}
+
+// Handle image upload and prediction
+async function handleImageUpload(event) {
+  const file = event.target.files[0] || event.dataTransfer.files[0];
+  if (!file || !file.type.startsWith('image/')) return;
+
+  const reader = new FileReader();
+  reader.onload = async (e) => {
+    const imgElement = document.getElementById('image-preview');
+    imgElement.src = e.target.result;
+    imgElement.style.display = 'block';
+    document.getElementById('upload-label').style.display = 'none';
+    
+    document.getElementById('loading-spinner').style.display = 'block';
+    document.getElementById('result-container').style.display = 'none';
+
+    // Wait for image to load to predict
+    imgElement.onload = async () => {
+      await predict(imgElement);
+    };
+  };
+  reader.readAsDataURL(file);
+}
+
+// Run the image through the model
+async function predict(imgElement) {
+  const prediction = await model.predict(imgElement);
+  
+  document.getElementById('loading-spinner').style.display = 'none';
+  document.getElementById('result-container').style.display = 'block';
+  
+  // Sort predictions by probability
+  prediction.sort((a, b) => b.probability - a.probability);
+  
+  const topResult = prediction[0];
+  document.getElementById('result-message').innerText = `당신은 ${topResult.className}상!`;
+
+  labelContainer.innerHTML = '';
+  for (let i = 0; i < maxPredictions; i++) {
+    const p = prediction[i];
+    const percent = (p.probability * 100).toFixed(0);
+    
+    const barHtml = `
+      <div class="result-item">
+        <span class="class-name">${p.className}</span>
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: ${percent}%"></div>
+        </div>
+        <span class="percent-text">${percent}%</span>
+      </div>
+    `;
+    labelContainer.innerHTML += barHtml;
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-  const drawButton = document.getElementById('draw-button');
-  const lottoNumbersContainer = document.getElementById('lotto-numbers');
-  const themeToggle = document.getElementById('theme-toggle');
+  init();
 
-  // Lotto number generation logic
-  drawButton.addEventListener('click', () => {
-    const numbers = [];
-    while (numbers.length < 6) {
-      const randomNum = Math.floor(Math.random() * 45) + 1;
-      if (!numbers.includes(randomNum)) {
-        numbers.push(randomNum);
-      }
-    }
+  const imageInput = document.getElementById('image-input');
+  const uploadArea = document.getElementById('upload-area');
 
-    // Sort numbers in ascending order
-    numbers.sort((a, b) => a - b);
+  imageInput.addEventListener('change', handleImageUpload);
 
-    // Display numbers
-    lottoNumbersContainer.innerHTML = '';
-    numbers.forEach((num, index) => {
-      setTimeout(() => {
-        const numberElement = document.createElement('div');
-        numberElement.classList.add('number');
-        numberElement.textContent = num;
-        lottoNumbersContainer.appendChild(numberElement);
-      }, index * 100); // Staggered animation
-    });
+  // Drag and drop events
+  uploadArea.addEventListener('dragover', (e) => {
+    e.preventDefault();
+    uploadArea.classList.add('dragover');
+  });
+
+  uploadArea.addEventListener('dragleave', () => {
+    uploadArea.classList.remove('dragover');
+  });
+
+  uploadArea.addEventListener('drop', (e) => {
+    e.preventDefault();
+    uploadArea.classList.remove('dragover');
+    handleImageUpload(e);
   });
 
   // Theme toggle logic
+  const themeToggle = document.getElementById('theme-toggle');
   themeToggle.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
-    
-    // Save preference to localStorage (optional but good practice)
     const isDarkMode = document.body.classList.contains('dark-mode');
     localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
   });
 
-  // Load saved theme preference
   const savedTheme = localStorage.getItem('theme');
   if (savedTheme === 'dark') {
     document.body.classList.add('dark-mode');

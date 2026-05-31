@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>로또 번호 추첨</title>
+  <title>인공지능 동물상 테스트</title>
   <link href='style.css' rel='stylesheet'>
 </head>
 <body>
@@ -11,18 +11,29 @@
     <div style="text-align: right; margin-bottom: 10px;">
       <button id="theme-toggle">테마 변경</button>
     </div>
-    <h1>로또 번호 추첨</h1>
-    <button id="draw-button">추첨 시작</button>
-    <div id="lotto-numbers"></div>
+    <h1>동물상 테스트</h1>
+    <p class="subtitle">인공지능이 분석하는 나의 동물상</p>
+    
+    <div class="upload-section" id="upload-area">
+      <input type="file" id="image-input" accept="image/*" hidden>
+      <div class="upload-box" onclick="document.getElementById('image-input').click()">
+        <div id="upload-label">
+          <p>사진을 드래그하거나 클릭하여 업로드하세요</p>
+          <span class="upload-icon">📸</span>
+        </div>
+        <img id="image-preview" src="" alt="미리보기" style="display: none;">
+      </div>
+    </div>
 
-    <div class="contact-section">
-      <hr>
-      <h3>제휴 문의</h3>
-      <form action="https://formspree.io/f/mnjrylje" method="POST">
-        <input type="email" name="email" placeholder="이메일 주소" required>
-        <textarea name="message" placeholder="문의 내용을 입력하세요" required></textarea>
-        <button type="submit" class="submit-btn">문의 보내기</button>
-      </form>
+    <div id="loading-spinner" style="display: none;">
+      <p>AI가 분석 중입니다...</p>
+      <div class="spinner"></div>
+    </div>
+
+    <div id="result-container" style="display: none;">
+      <h2 id="result-message"></h2>
+      <div id="label-container"></div>
+      <button onclick="location.reload()" class="retry-btn">다시 하기</button>
     </div>
 
     <div class="comment-section">
@@ -32,6 +43,8 @@
     </div>
   </div>
   
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
   <script src="https://giscus.app/client.js"
         data-repo="kim890417-cmd/text"
         data-repo-id="R_kgDOSs5wIg"
