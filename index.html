@@ -3,25 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>인공지능 동물상 테스트 | AI 기반 얼굴 분석 및 관상 정보 포털</title>
-  <meta name="description" content="최신 AI 딥러닝 기술을 활용한 동물상 테스트와 전통 관상학의 비교 분석 정보를 제공합니다. 당신의 얼굴이 가진 숨겨진 매력을 발견하세요.">
-  <meta property="og:title" content="인공지능 동물상 테스트 | 블로그 도구모음">
-  <meta property="og:description" content="AI 딥러닝이 분석하는 나의 동물상. 사진 업로드만으로 결과를 확인하세요. 모든 처리는 기기 내에서만 이루어집니다.">
-  <meta property="og:type" content="website">
-  <meta name="naver-site-verification" content="93050349df63a3823ca359af6981a85d663521c0" />
+  <title>블로그 도구모음 | AI 기반 콘텐츠 제작 도우미</title>
   <link href='style.css' rel='stylesheet'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3406696816625207"
-     crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="dark-mode">
   <nav class="navbar">
     <div class="nav-container">
       <a href="/" class="nav-logo">블로그 도구모음</a>
       <ul class="nav-menu">
         <li><a href="/short">단축 링크</a></li>
-        <li><a href="/">동물상 테스트</a></li>
-        <li><a href="/lotto">로또 통계</a></li>
+        <li><a href="/">심리테스트</a></li>
+        <li><a href="/lotto">로또</a></li>
         <li class="dropdown">
           <a href="#" class="dropbtn">이미지 도구</a>
           <div class="dropdown-content">
@@ -30,130 +23,68 @@
             <a href="/eraser">AI 지우개</a>
           </div>
         </li>
-        <li><a href="/video_maker">AI 영상 제작</a></li>
+        <li><a href="/video_maker">영상 제작</a></li>
         <li><a href="/keyword_analyzer">키워드 분석기</a></li>
-        <li><a href="/blog">전문 블로그</a></li>
-        <li><a href="/about">소개</a></li>
-        <li><a href="/contact">문의하기</a></li>
+        <li class="dropdown">
+          <a href="/blog" class="dropbtn">블로그</a>
+          <div class="dropdown-content">
+            <a href="/about">소개</a>
+            <a href="/contact">문의하기</a>
+          </div>
+        </li>
       </ul>
-      <button id="theme-toggle">테마 변경</button>
     </div>
   </nav>
 
   <main>
     <div class="container">
-      <section class="tool-section">
-        <h1>동물상 테스트</h1>
-        <p class="subtitle">인공지능이 분석하는 나의 숨겨진 동물상과 매력 포인트</p>
+      <div class="card-container text-center">
+        <h1>🚀 여러분의 블로그를 한 단계 업그레이드하세요</h1>
+        <p class="subtitle">AI 기술을 활용한 혁신적인 도구들로 콘텐츠 제작의 효율을 극대화하고, 방문자에게 새로운 경험을 선사하세요.</p>
         
-        <div class="tool-box" id="upload-area">
-          <input type="file" id="image-input" accept="image/*" hidden>
-          <div class="upload-box-inner" onclick="document.getElementById('image-input').click()" style="cursor:pointer;">
-            <div id="upload-label">
-              <span style="font-size: 3rem; display: block; margin-bottom: 15px;">📸</span>
-              <p style="font-weight: 500; font-size: 1.1rem; margin: 0;">사진을 업로드하여 분석 시작하기</p>
-              <p style="color: #888; font-size: 0.9rem;">(드래그 앤 드롭 지원)</p>
-            </div>
-            <img id="image-preview" src="" alt="미리보기" style="display: none; max-width: 100%; border-radius: 15px; margin: 0 auto;">
+        <div id="shorten-form">
+          <div class="input-row">
+            <input type="url" id="original-url" placeholder="단축할 URL을 여기에 붙여넣으세요">
+            <button id="submit-btn">링크 생성</button>
           </div>
-        </div>
-
-        <div id="loading-spinner" style="display: none; margin: 30px 0;">
-          <div class="spinner"></div>
-          <p style="margin-top: 15px; font-weight: 500;">AI가 안면 특징점을 추출하여 분석 중입니다...</p>
-        </div>
-
-        <div id="result-container" style="display: none; margin-top: 30px;">
-          <div style="background-color: #f0f7ff; padding: 30px; border-radius: 20px; border: 1px solid #cce5ff;">
-            <h2 id="result-message" style="margin-top: 0; border: none; padding: 0; text-align: center; color: #007bff;"></h2>
-            <div id="label-container" style="margin-top: 20px;"></div>
+          <div class="input-row optional">
+            <input type="text" id="custom-code" placeholder="(선택) 사용할 짧은 주소를 입력하세요">
           </div>
-          <button onclick="location.reload()" class="btn-primary" style="margin-top: 30px; width: 100%;">다른 사진으로 테스트하기</button>
+          <div class="features">
+            <span>🔗 사용자 정의 링크</span> 
+            <span>📊 클릭 통계</span>
+            <span>✏️ 언제든지 수정</span>
+          </div>
+          <div class="result" id="result"></div>
         </div>
-      </section>
-
-      <!-- NEW BLOG TOOLS SECTION -->
-      <section class="featured-tools" style="margin-top: 80px; text-align: center;">
-        <h2 style="margin-bottom: 40px;">콘텐츠 제작을 위한 강력한 블로그 도구</h2>
-        <div class="tool-card-container" style="justify-content: center;">
+      </div>
+    </div>
+    
+    <div class="container">
+        <div class="page-header">
+            <h1>주요 기능 살펴보기</h1>
+            <p>여러분의 콘텐츠 제작 여정을 도와줄 강력한 도구들을 만나보세요.</p>
+        </div>
+        <div class="tool-card-container">
             <div class="tool-card">
-              <div class="tool-card-icon">
-                <i class="fas fa-eraser"></i>
-              </div>
-              <h3>AI 지우개</h3>
-              <p>사진에서 불필요한 개체를 감쪽같이 제거하여 완벽한 이미지를 만듭니다.</p>
-              <a href="eraser.html" class="tool-card-link">바로가기</a>
+                <div class="tool-card-icon"><i class="fas fa-bolt"></i></div>
+                <h3>심리테스트</h3>
+                <p>AI를 통해 알아보는 나의 성향과 특징. 재미있는 심리테스트를 통해 자신을 더 깊이 이해해 보세요.</p>
+                <a href="/" class="tool-card-link">테스트 시작하기</a>
             </div>
             <div class="tool-card">
-              <div class="tool-card-icon">
-                <i class="fas fa-compress-arrows-alt"></i>
-              </div>
-              <h3>이미지 용량 줄이기</h3>
-              <p>품질 저하 없이 이미지 파일 크기를 최적화하여 웹사이트 로딩 속도를 높입니다.</p>
-              <a href="compressor.html" class="tool-card-link">바로가기</a>
+                <div class="tool-card-icon"><i class="fas fa-chart-pie"></i></div>
+                <h3>로또</h3>
+                <p>역대 로또 당첨 번호의 통계를 분석하여 다음 번 행운의 번호를 예측해 보세요.</p>
+                <a href="/lotto" class="tool-card-link">번호 분석하기</a>
             </div>
             <div class="tool-card">
-              <div class="tool-card-icon">
-                <i class="fas fa-image"></i>
-              </div>
-              <h3>이미지 화질 올리기</h3>
-              <p>AI 기술로 저해상도 이미지의 품질을 놀랍도록 선명하게 개선합니다.</p>
-              <a href="upscaler.html" class="tool-card-link">바로가기</a>
-            </div>
-             <div class="tool-card">
-              <div class="tool-card-icon">
-                <i class="fas fa-chart-line"></i>
-              </div>
-              <h3>키워드 분석기</h3>
-              <p>블로그 포스팅을 위한 최적의 키워드를 찾아내어 검색 엔진 노출을 극대화합니다.</p>
-              <a href="keyword_analyzer.html" class="tool-card-link">바로가기</a>
+                <div class="tool-card-icon"><i class="fas fa-magic"></i></div>
+                <h3>AI 이미지 도구</h3>
+                <p>이미지 용량 최적화, 저화질 이미지 개선, AI 지우개 기능으로 이미지를 자유롭게 편집하세요.</p>
+                <a href="/compressor" class="tool-card-link">바로 사용하기</a>
             </div>
         </div>
-        <a href="hub.html" class="btn-primary" style="margin-top: 30px; display: inline-block;">모든 도구 보러가기</a>
-      </section>
-
-      <hr style="margin: 60px 0; border: 0; border-top: 1px solid #eee;">
-
-      <article class="content-rich">
-        <h2>AI 안면 인식 기술과 전통 관상학의 만남</h2>
-        <p>현대의 인공지능 기술은 더 이상 단순히 데이터를 처리하는 수준에 머물지 않습니다. 본 서비스에 적용된 <strong>딥러닝(Deep Learning)</strong> 모델은 수만 장의 인물 데이터를 학습하여 얼굴의 주요 특징점(Landmarks)을 추출하고, 이를 동물별 특징 데이터와 매칭합니다.</p>
-        
-        <blockquote>
-          "전통적인 관상학이 눈매와 턱선에서 운명을 읽었다면, 현대의 AI는 수치화된 데이터로 당신의 첫인상과 매력을 분석합니다."
-        </blockquote>
-
-        <h3>AI는 얼굴에서 무엇을 읽는가?</h3>
-        <p>인공지능은 얼굴을 분석할 때 눈의 가로세로 비율, 미간의 거리, 입꼬리의 각도 등 수백 가지의 요소를 고려합니다. 예를 들어, 고양이상은 눈꼬리가 위로 향하고 눈매가 가로로 긴 특징을 AI가 포착하여 점수를 산출합니다. 반면 강아지상은 눈의 곡률이 크고 전체적으로 둥근 인상을 감지합니다.</p>
-
-        <h3>관상학적 관점에서 본 동물상</h3>
-        <p>과거부터 동양의 관상학에서는 인물을 동물의 모습에 비유하여 성품을 파악하곤 했습니다. <strong>물형론(物形論)</strong>이라 불리는 이 학문은 사람의 기질이 동물의 본성과 닮아있다는 통찰에서 시작되었습니다. 저희 AI 모델은 이러한 고전적 통찰을 현대적인 확률 통계 시스템으로 재해석하여 제공합니다.</p>
-
-        <h3>정확한 분석을 위한 가이드</h3>
-        <ul>
-          <li><strong>조명의 중요성:</strong> 그림자가 너무 짙으면 AI가 눈매의 각도를 오인할 수 있습니다. 자연광 아래에서 촬영하세요.</li>
-          <li><strong>정면 응시:</strong> 얼굴의 좌우 대칭성은 분석 결과의 신뢰도를 높이는 핵심 요소입니다.</li>
-          <li><strong>개인정보 보호:</strong> 사용자가 업로드한 사진은 서버에 저장되지 않으며, 오직 브라우저 내에서만 연산된 후 소멸됩니다.</li>
-        </ul>
-      </article>
-
-      <section class="latest-articles" style="margin-top: 80px; text-align: left;">
-        <h2 style="border-bottom: 2px solid #333; padding-bottom: 10px; margin-bottom: 30px;">최신 기술 인사이트</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
-          <div style="padding: 20px; background: #fff; border: 1px solid #eee; border-radius: 15px;">
-            <h4 style="margin-top: 0;"><a href="blog.html#article2" style="text-decoration: none; color: #007bff;">AI는 아름다움을 어떻게 정의하는가?</a></h4>
-            <p style="font-size: 0.9rem; color: #666;">인간의 주관적인 지각과 AI의 수치적 데이터 분석의 차이점에 대해 알아봅니다.</p>
-          </div>
-          <div style="padding: 20px; background: #fff; border: 1px solid #eee; border-radius: 15px;">
-            <h4 style="margin-top: 0;"><a href="blog.html#article3" style="text-decoration: none; color: #007bff;">디지털 프라이버시와 안면 인식</a></h4>
-            <p style="font-size: 0.9rem; color: #666;">편리한 기술 이면에 숨겨진 데이터 보호의 중요성과 글로벌 규제 트렌드를 분석합니다.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="comment-section" style="margin-top: 80px;">
-        <h3 style="text-align: left; border-bottom: 2px solid #333; padding-bottom: 10px; margin-bottom: 30px;">분석 결과 공유 및 커뮤니티</h3>
-        <div class="giscus"></div>
-      </section>
     </div>
   </main>
 
@@ -167,12 +98,12 @@
         <h4>주요 도구</h4>
         <ul>
           <li><a href="/short">단축 링크</a></li>
-          <li><a href="/">동물상 테스트</a></li>
-          <li><a href="/lotto">로또 번호 통계</a></li>
+          <li><a href="/">심리테스트</a></li>
+          <li><a href="/lotto">로또</a></li>
           <li><a href="/compressor">이미지 용량 줄이기</a></li>
           <li><a href="/upscaler">이미지 화질 올리기</a></li>
           <li><a href="/eraser">AI 지우개</a></li>
-          <li><a href="/video_maker">AI 영상 제작</a></li>
+          <li><a href="/video_maker">영상 제작</a></li>
           <li><a href="/keyword_analyzer">키워드 분석기</a></li>
         </ul>
       </div>
@@ -190,40 +121,9 @@
       <p>&copy; 2026 블로그 도구모음. 사용자에게 가치 있는 정보를 제공하기 위해 최선을 다합니다.</p>
     </div>
   </footer>
-  
-  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
-  <script src="https://giscus.app/client.js"
-        data-repo="kim890417-cmd/text"
-        data-repo-id="R_kgDOSs5wIg"
-        data-category="Announcements"
-        data-category-id="DIC_kwDOSs5wIs4C-NjD"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="preferred_color_scheme"
-        data-lang="ko"
-        crossorigin="anonymous"
-        async>
-  </script>
+
+  <script src="/main.js"></script>
   <script>
-    // Theme toggle script
-    const themeToggle = document.getElementById('theme-toggle');
-    if (themeToggle) {
-      themeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-        const isDarkMode = document.body.classList.contains('dark-mode');
-        localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
-      });
-    }
-
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-      document.body.classList.add('dark-mode');
-    }
-
     // Active link highlighting
     const currentPage = window.location.pathname;
     const navLinks = document.querySelectorAll('.nav-menu a');
@@ -239,6 +139,5 @@
         }
     });
   </script>
-  <script defer type="text/javascript" src="main.js"></script>
 </body>
 </html>
