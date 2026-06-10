@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI 영상 제작기 | 블로그 도구모음</title>
+  <link href='style.css' rel='stylesheet'>
+  <style>
+    .container { max-width: 800px; }
+    textarea { width: 100%; height: 150px; padding: 10px; font-size: 1rem; margin-bottom: 15px; }
+  </style>
+</head>
+<body>
+  <nav class="navbar"></nav>
+
+  <main class="container">
+    <div class="page-header">
+        <h1><i class="fas fa-video"></i> AI 영상 제작기</h1>
+        <p>간단한 텍스트 입력만으로 전문가 수준의 영상을 자동 제작합니다.</p>
+    </div>
+
+    <textarea id="script-input" placeholder="여기에 영상으로 만들 스크립트를 입력하세요..."></textarea>
+    <button id="generate-btn" class="btn-primary" style="width:100%;">영상 제작 시작</button>
+
+    <div id="loading" style="text-align:center; display:none; margin-top:20px;">
+      <p>AI가 영상을 제작하고 있습니다. 이 작업은 몇 분 정도 소요될 수 있습니다...</p>
+    </div>
+
+    <div id="result-area" style="display:none; margin-top:20px;">
+      <h3>영상 제작 완료!</h3>
+      <video id="result-video" width="100%" controls></video>
+      <a id="download-btn" href="#" download="ai_video.mp4" class="btn-primary" style="display:block; text-align:center; margin-top:10px;">영상 다운로드</a>
+    </div>
+
+  </main>
+
+  <footer></footer>
+
+  <script src="shared.js"></script>
+  <script>
+    const navBar = document.querySelector(".navbar");
+    const footer = document.querySelector("footer");
+    fetch('tools.html')
+        .then(response => response.text())
+        .then(data => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(data, 'text/html');
+            navBar.innerHTML = doc.querySelector('.navbar').innerHTML;
+            footer.innerHTML = doc.querySelector('footer').innerHTML;
+        });
+
+    const scriptInput = document.getElementById('script-input');
+    const generateBtn = document.getElementById('generate-btn');
+    const loading = document.getElementById('loading');
+    const resultArea = document.getElementById('result-area');
+    const resultVideo = document.getElementById('result-video');
+    const downloadBtn = document.getElementById('download-btn');
+
+    generateBtn.addEventListener('click', async () => {
+      const script = scriptInput.value;
+      if (!script) {
+        alert('스크립트를 입력해주세요.');
+        return;
+      }
+
+      loading.style.display = 'block';
+      resultArea.style.display = 'none';
+
+      // Placeholder for server-side video generation
+      console.log(`Simulating video generation for script: ${script}`);
+      await new Promise(resolve => setTimeout(resolve, 10000)); // 10-second delay for simulation
+
+      const placeholderVideo = 'https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_1MB.mp4';
+      resultVideo.src = placeholderVideo;
+      downloadBtn.href = placeholderVideo;
+
+      loading.style.display = 'none';
+      resultArea.style.display = 'block';
+    });
+  </script>
+</body>
+</html>

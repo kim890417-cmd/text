@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>키워드 분석기 | 블로그 도구모음</title>
+  <link href='style.css' rel='stylesheet'>
+  <style>
+    .container { max-width: 800px; }
+    #keyword-input { width: 100%; padding: 12px; font-size: 1rem; margin-bottom: 15px; }
+    #results-area { 
+        margin-top: 20px; 
+        padding: 20px;
+        background-color: var(--background-alt-color);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar"></nav>
+
+  <main class="container">
+    <div class="page-header">
+        <h1><i class="fas fa-chart-line"></i> 키워드 분석기</h1>
+        <p>블로그 포스팅을 위한 최적의 키워드를 찾아보세요.</p>
+    </div>
+
+    <input type="text" id="keyword-input" placeholder="분석할 키워드를 입력하세요 (예: 인공지능)">
+    <button id="analyze-btn" class="btn-primary" style="width:100%;">분석 시작</button>
+
+    <div id="loading" style="text-align:center; display:none; margin-top:20px;">
+      <p>키워드를 분석하고 있습니다. 잠시만 기다려주세요...</p>
+    </div>
+    
+    <div id="results-area" style="display:none;">
+      <h3>분석 결과</h3>
+      <div id="results-content"></div>
+    </div>
+
+  </main>
+
+  <footer></footer>
+
+  <script src="shared.js"></script>
+  <script>
+    const navBar = document.querySelector(".navbar");
+    const footer = document.querySelector("footer");
+    fetch('tools.html')
+        .then(response => response.text())
+        .then(data => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(data, 'text/html');
+            navBar.innerHTML = doc.querySelector('.navbar').innerHTML;
+            footer.innerHTML = doc.querySelector('footer').innerHTML;
+        });
+
+    const keywordInput = document.getElementById('keyword-input');
+    const analyzeBtn = document.getElementById('analyze-btn');
+    const loading = document.getElementById('loading');
+    const resultsArea = document.getElementById('results-area');
+    const resultsContent = document.getElementById('results-content');
+
+    analyzeBtn.addEventListener('click', async () => {
+      const keyword = keywordInput.value;
+      if (!keyword) {
+        alert('키워드를 입력해주세요.');
+        return;
+      }
+
+      loading.style.display = 'block';
+      resultsArea.style.display = 'none';
+
+      // Placeholder for server-side API call
+      console.log(`Simulating analysis for keyword: ${keyword}`);
+      await new Promise(resolve => setTimeout(resolve, 2000));
+
+      // Dummy data for demonstration
+      resultsContent.innerHTML = `
+        <h4>'${keyword}' 관련 키워드</h4>
+        <ul>
+          <li>${keyword} 전망 (월간 검색량: 15,000)</li>
+          <li>${keyword} 종류 (월간 검색량: 12,000)</li>
+          <li>${keyword} 활용 사례 (월간 검색량: 9,000)</li>
+          <li>최신 ${keyword} 기술 (월간 검색량: 7,500)</li>
+        </ul>
+        <h4>블로그 포스팅 추천 주제</h4>
+        <p>1. 2026년 ${keyword} 기술의 최신 트렌드 분석<br>
+           2. 비전공자를 위한 ${keyword} 핵심 개념 5가지 정리<br>
+           3. 실제 업무에서 ${keyword}를 활용하여 생산성을 높인 3가지 사례</p>
+      `;
+
+      loading.style.display = 'none';
+      resultsArea.style.display = 'block';
+    });
+  </script>
+</body>
+</html>

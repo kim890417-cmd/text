@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>블로그 도구 | 블로그 도구모음</title>
   <link href='style.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3406696816625207"
      crossorigin="anonymous"></script>
 </head>
@@ -26,13 +27,54 @@
 
   <main>
     <div class="container">
-      <div style="text-align: right; margin-bottom: 20px;">
-        <button id="theme-toggle" style="background:none; border:1px solid #ddd; cursor:pointer; padding:5px 10px; border-radius:5px; font-size:0.8rem;">테마 변경</button>
-      </div>
-      <article class="content-rich">
+      <div class="page-header">
         <h1>블로그 도구</h1>
-        <p>이 페이지는 블로그 운영에 도움이 되는 도구들을 모아 제공할 예정입니다.</p>
-      </article>
+        <p>콘텐츠 제작과 관리를 위한 강력한 도구들을 만나보세요.</p>
+        <button id="theme-toggle" class="theme-toggle-btn">테마 변경</button>
+      </div>
+
+      <div class="tool-card-container">
+        <div class="tool-card">
+          <div class="tool-card-icon">
+            <i class="fas fa-eraser"></i>
+          </div>
+          <h3>AI 지우개</h3>
+          <p>사진에서 불필요한 개체를 감쪽같이 제거하여 완벽한 이미지를 만듭니다.</p>
+          <a href="eraser.html" class="tool-card-link">바로가기</a>
+        </div>
+        <div class="tool-card">
+          <div class="tool-card-icon">
+            <i class="fas fa-compress-arrows-alt"></i>
+          </div>
+          <h3>이미지 용량 줄이기</h3>
+          <p>품질 저하 없이 이미지 파일 크기를 최적화하여 웹사이트 로딩 속도를 높입니다.</p>
+          <a href="compressor.html" class="tool-card-link">바로가기</a>
+        </div>
+        <div class="tool-card">
+          <div class="tool-card-icon">
+            <i class="fas fa-image"></i>
+          </div>
+          <h3>이미지 화질 올리기</h3>
+          <p>AI 기술로 저해상도 이미지의 품질을 놀랍도록 선명하게 개선합니다.</p>
+          <a href="upscaler.html" class="tool-card-link">바로가기</a>
+        </div>
+        <div class="tool-card">
+          <div class="tool-card-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3>키워드 분석기</h3>
+          <p>블로그 포스팅을 위한 최적의 키워드를 찾아내어 검색 엔진 노출을 극대화합니다.</p>
+          <a href="keyword_analyzer.html" class="tool-card-link">바로가기</a>
+        </div>
+        <div class="tool-card">
+          <div class="tool-card-icon">
+            <i class="fas fa-video"></i>
+          </div>
+          <h3>AI 영상 제작기</h3>
+          <p>간단한 텍스트 입력만으로 전문가 수준의 홍보 및 정보성 영상을 자동 제작합니다.</p>
+          <a href="video_maker.html" class="tool-card-link">바로가기</a>
+        </div>
+      </div>
     </div>
   </main>
 

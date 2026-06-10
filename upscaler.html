@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>이미지 화질 올리기 | 블로그 도구모음</title>
+  <link href='style.css' rel='stylesheet'>
+  <style>
+    .container { max-width: 800px; }
+    .comparison-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin-top: 20px;
+    }
+    .img-container {
+        border: 2px dashed var(--border-color);
+        padding: 10px;
+        border-radius: 8px;
+        text-align: center;
+    }
+    .img-container img { max-width: 100%; border-radius: 4px; }
+    .img-container h4 { margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+      <!-- Navbar content from tools.html -->
+  </nav>
+
+  <main class="container">
+    <div class="page-header">
+        <h1><i class="fas fa-image"></i> 이미지 화질 올리기</h1>
+        <p>AI 기술로 저해상도 이미지의 품질을 놀랍도록 선명하게 개선합니다.</p>
+    </div>
+
+    <input type="file" id="image-input" accept="image/*" style="margin-bottom: 20px;">
+    
+    <div class="tool-settings" style="max-width: 400px; margin: 0 auto 20px auto;">
+        <div class="setting-item">
+            <label for="scale-select">확대 배율</label>
+            <select id="scale-select">
+                <option value="2">2x</option>
+                <option value="3">3x</option>
+                <option value="4">4x</option>
+            </select>
+        </div>
+    </div>
+
+    <button id="upscale-btn" class="btn-primary" style="width:100%; margin-bottom: 20px;">🔍 화질 올리기 실행</button>
+
+    <div id="loading" style="text-align:center; display:none;">
+        <p>AI가 이미지를 처리하고 있습니다. 잠시만 기다려주세요...</p>
+    </div>
+
+    <div id="result" style="display:none;">
+        <div class="comparison-container">
+            <div class="img-container" id="original-container">
+                <h4>원본</h4>
+                <img id="original-image" src="">
+            </div>
+            <div class="img-container" id="upscaled-container">
+                <h4>결과</h4>
+                <img id="upscaled-image" src="">
+            </div>
+        </div>
+        <a id="download-btn" href="#" download="upscaled_image.png" class="btn-primary" style="width:100%; margin-top:20px; text-align:center; display:block;">결과 이미지 다운로드</a>
+    </div>
+
+  </main>
+
+  <footer>
+     <!-- Footer content from tools.html -->
+  </footer>
+
+  <script src="shared.js"></script>
+  <script>
+    const imageInput = document.getElementById('image-input');
+    const scaleSelect = document.getElementById('scale-select');
+    const upscaleBtn = document.getElementById('upscale-btn');
+    const loadingEl = document.getElementById('loading');
+    const resultEl = document.getElementById('result');
+    const originalImage = document.getElementById('original-image');
+    const upscaledImage = document.getElementById('upscaled-image');
+    const downloadBtn = document.getElementById('download-btn');
+    const navBar = document.querySelector(".navbar");
+
+    // Simple fetch to populate navbar from tools.html
+    fetch('tools.html')
+        .then(response => response.text())
+        .then(data => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(data, 'text/html');
+            const newNav = doc.querySelector('.navbar');
+            if (newNav) {
+                navBar.innerHTML = newNav.innerHTML;
+            }
+            const newFooter = doc.querySelector('footer');
+            if(newFooter){
+                document.querySelector("footer").innerHTML = newFooter.innerHTML;
+            }
+        });
+
+
+    upscaleBtn.addEventListener('click', async () => {
+      if (imageInput.files.length === 0) {
+        alert('이미지를 먼저 선택해주세요.');
+        return;
+      }
+
+      loadingEl.style.display = 'block';
+      resultEl.style.display = 'none';
+
+      const formData = new FormData();
+      formData.append('image', imageInput.files[0]);
+      formData.append('scale', scaleSelect.value);
+
+      try {
+        //  This is a placeholder for where the server-side call would be made.
+        //  For demonstration, we will simulate a delay and use a placeholder image.
+        console.log("Simulating AI processing...");
+        await new Promise(resolve => setTimeout(resolve, 3000)); // Simulate 3 second delay
+        
+        const originalImageUrl = URL.createObjectURL(imageInput.files[0]);
+        //  Replace with actual upscaled image URL from server
+        const upscaledImageUrl = 'https://via.placeholder.com/800x800.png?text=Upscaled+Image';
+
+        originalImage.src = originalImageUrl;
+        upscaledImage.src = upscaledImageUrl;
+        downloadBtn.href = upscaledImageUrl;
+        
+        loadingEl.style.display = 'none';
+        resultEl.style.display = 'block';
+
+      } catch (error) {
+        loadingEl.style.display = 'none';
+        alert('오류가 발생했습니다: ' + error.message);
+        console.error(error);
+      }
+    });
+  </script>
+</body>
+</html>

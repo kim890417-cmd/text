@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI 지우개 | 블로그 도구모음</title>
+  <link href='style.css' rel='stylesheet'>
+  <style>
+    .container { max-width: 900px; }
+    .canvas-container { 
+        position: relative; 
+        margin: 0 auto; 
+        border: 2px dashed var(--border-color);
+        width: fit-content;
+        height: fit-content;
+    }
+    #canvas { 
+        position: absolute; 
+        top: 0; 
+        left: 0; 
+        cursor: crosshair; 
+    }
+    #source-image { max-width: 100%; display: block; }
+    .controls { display: flex; gap: 10px; align-items: center; margin-bottom: 15px; flex-wrap: wrap; }
+  </style>
+</head>
+<body>
+  <nav class="navbar"></nav>
+
+  <main class="container">
+    <div class="page-header">
+        <h1><i class="fas fa-eraser"></i> AI 지우개</h1>
+        <p>사진에서 불필요한 부분을 칠하면 AI가 감쪽같이 제거해줍니다.</p>
+    </div>
+    
+    <input type="file" id="image-input" accept="image/*" style="margin-bottom:15px;">
+    
+    <div class="controls">
+      <label for="brush-size">붓 크기:</label>
+      <input type="range" id="brush-size" min="5" max="120" value="30">
+      <button id="reset-btn" class="btn-secondary">초기화</button>
+    </div>
+
+    <div id="canvas-container" class="canvas-container"></div>
+
+    <button id="erase-btn" class="btn-primary" style="width:100%; margin-top:15px;">🧹 지우기 실행</button>
+
+    <div id="loading" style="text-align:center; display:none; margin-top:20px;">
+      <p>AI가 이미지를 처리하고 있습니다. 잠시만 기다려주세요...</p>
+    </div>
+
+    <div id="result-container" style="display:none; margin-top:20px;">
+        <h3>결과</h3>
+        <img id="result-image" style="max-width:100%; border-radius: 8px;">
+        <a id="download-btn" href="#" download="erased_image.jpg" class="btn-primary" style="display:block; text-align:center; margin-top:10px;">결과 이미지 다운로드</a>
+    </div>
+
+  </main>
+
+  <footer></footer>
+
+  <script src="shared.js"></script>
+  <script>
+    const navBar = document.querySelector(".navbar");
+    const footer = document.querySelector("footer");
+    fetch('tools.html')
+        .then(response => response.text())
+        .then(data => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(data, 'text/html');
+            navBar.innerHTML = doc.querySelector('.navbar').innerHTML;
+            footer.innerHTML = doc.querySelector('footer').innerHTML;
+        });
+
+    const imageInput = document.getElementById('image-input');
+    const brushSize = document.getElementById('brush-size');
+    const resetBtn = document.getElementById('reset-btn');
+    const eraseBtn = document.getElementById('erase-btn');
+    const canvasContainer = document.getElementById('canvas-container');
+    const loading = document.getElementById('loading');
+    const resultContainer = document.getElementById('result-container');
+    const resultImage = document.getElementById('result-image');
+    const downloadBtn = document.getElementById('download-btn');
+
+    let canvas, ctx, sourceImage, isDrawing = false;
+
+    imageInput.addEventListener('change', e => {
+        if (e.target.files && e.target.files[0]) {
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                canvasContainer.innerHTML = ''; // Clear previous
+                sourceImage = new Image();
+                sourceImage.onload = () => {
+                    canvas = document.createElement('canvas');
+                    canvas.id = 'canvas';
+                    canvas.width = sourceImage.width;
+                    canvas.height = sourceImage.height;
+                    
+                    const imgElement = document.createElement('img');
+                    imgElement.id = 'source-image';
+                    imgElement.src = sourceImage.src;
+
+                    canvasContainer.style.width = sourceImage.width + 'px';
+                    canvasContainer.style.height = sourceImage.height + 'px';
+
+                    canvasContainer.appendChild(imgElement);
+                    canvasContainer.appendChild(canvas);
+
+                    ctx = canvas.getContext('2d');
+                    setupCanvasEvents();
+                }
+                sourceImage.src = event.target.result;
+            }
+            reader.readAsDataURL(e.target.files[0]);
+        }
+    });
+    
+    function setupCanvasEvents() {
+        canvas.addEventListener('mousedown', () => isDrawing = true);
+        canvas.addEventListener('mouseup', () => isDrawing = false);
+        canvas.addEventListener('mouseout', () => isDrawing = false);
+        canvas.addEventListener('mousemove', draw);
+    }
+
+    function draw(event) {
+        if (!isDrawing) return;
+        ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
+        ctx.beginPath();
+        ctx.arc(event.offsetX, event.offsetY, brushSize.value/2, 0, Math.PI*2);
+        ctx.fill();
+    }
+
+    resetBtn.addEventListener('click', () => {
+        if (ctx) {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+    });
+
+    eraseBtn.addEventListener('click', async () => {
+      if (!sourceImage || !canvas) {
+        alert('이미지를 먼저 선택해주세요.');
+        return;
+      }
+      loading.style.display = 'block';
+      resultContainer.style.display = 'none';
+
+      const maskCanvas = document.createElement('canvas');
+      maskCanvas.width = canvas.width;
+      maskCanvas.height = canvas.height;
+      const maskCtx = maskCanvas.getContext('2d');
+      maskCtx.drawImage(canvas, 0, 0);
+      const maskData = maskCanvas.toDataURL('image/png');
+
+      // Placeholder for server-side processing
+      console.log("Simulating AI inpainting...");
+      await new Promise(resolve => setTimeout(resolve, 3000));
+
+      const placeholderResult = 'https://via.placeholder.com/' + canvas.width + 'x' + canvas.height + '.png?text=Erased+Result';
+      resultImage.src = placeholderResult;
+      downloadBtn.href = placeholderResult;
+
+      loading.style.display = 'none';
+      resultContainer.style.display = 'block';
+    });
+
+  </script>
+</body>
+</html>
