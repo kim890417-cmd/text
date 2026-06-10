@@ -36,7 +36,7 @@ body {
 }
 
 .nav-container {
-  max-width: 1100px;
+  max-width: 1200px; /* Wider nav */
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -55,7 +55,7 @@ body {
 
 .nav-menu {
   display: flex;
-  gap: 25px;
+  gap: 30px; /* Increased gap */
   list-style: none;
   margin: 0;
   padding: 0;
@@ -93,25 +93,33 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px 0;
+  padding: 50px 20px;
 }
 
 .container {
-  background-color: var(--card-bg);
-  padding: 50px;
-  border-radius: 24px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.04);
-  max-width: 900px;
-  width: 90%;
+  width: 100%;
+  max-width: 1100px; /* Increased from 900px */
   margin-bottom: 40px;
 }
 
+/* Specific container for tools and others needing a 'card' look */
+.card-container {
+    background-color: var(--card-bg);
+    padding: 50px;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.04);
+}
+
+
 /* Typography for Content Richness */
-h1 {
+h1, .page-header h1 {
   font-size: 2.8rem;
   margin-bottom: 10px;
   letter-spacing: -1.5px;
   color: #1e272e;
+  text-align: center;
+  border: none;
+  padding: 0;
 }
 
 h2 {
@@ -123,40 +131,71 @@ h2 {
   padding-left: 15px;
 }
 
-.subtitle {
+.subtitle, .page-header p {
   font-size: 1.2rem;
   color: var(--text-muted);
   margin-bottom: 40px;
+  text-align: center;
 }
 
-/* Tool Sections */
-.tool-box {
-  background-color: #f9f9f9;
-  border-radius: 20px;
-  padding: 30px;
-  margin-bottom: 40px;
-  border: 1px solid var(--border-color);
+/* Tool Card styles from tools.html */
+.tool-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px; /* Increased gap */
+    margin-top: 40px;
 }
 
-/* AdSense Info Sections */
-article.content-rich {
-  text-align: left;
+.tool-card {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-article.content-rich p {
-  margin-bottom: 20px;
-  font-size: 1.1rem;
-  color: #444;
+.tool-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
 }
 
-article.content-rich blockquote {
-  border-left: 4px solid #ced4da;
-  margin: 30px 0;
-  padding: 10px 25px;
-  font-style: italic;
-  color: var(--text-muted);
-  background-color: #f8f9fa;
+.tool-card-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
 }
+
+.tool-card h3 {
+    margin: 0 0 15px 0;
+    font-size: 1.4rem;
+    color: var(--text-main);
+}
+
+.tool-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.tool-card-link {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.tool-card-link:hover {
+    background-color: var(--primary-hover);
+}
+
 
 /* Buttons */
 .btn-primary {
@@ -186,7 +225,7 @@ footer {
 }
 
 .footer-container {
-  max-width: 1100px;
+  max-width: 1200px; /* Wider footer */
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -221,7 +260,7 @@ footer {
 }
 
 .footer-bottom {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 40px auto 0;
   padding: 30px 20px 0;
   border-top: 1px solid #444;
@@ -240,11 +279,6 @@ body.dark-mode {
   --border-color: #333;
 }
 
-body.dark-mode h1, body.dark-mode h2 { color: #ffffff; }
-body.dark-mode .tool-box { background-color: #2c2c2c; }
-body.dark-mode article.content-rich p { color: #ccc; }
-body.dark-mode article.content-rich blockquote { background-color: #252525; border-left-color: #444; }
+body.dark-mode h1, body.dark-mode h2, body.dark-mode .page-header h1 { color: #ffffff; }
+body.dark-mode .tool-card { background-color: #2c2c2c; }
 
-/* Existing Spinner/Bars stay mostly same but match palette */
-.progress-bar { background-color: var(--primary-color); }
-.number { background-color: #f1c40f; color: #2d3436; }
