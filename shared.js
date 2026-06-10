@@ -15,23 +15,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const navbarHTML = `
     <div class="nav-container">
-      <a href="short.html" class="nav-logo">블로그 도구모음</a>
+      <a href="/" class="nav-logo">블로그 도구모음</a>
       <ul class="nav-menu">
-        <li><a href="short.html">단축 링크</a></li>
-        <li><a href="index.html">동물상 테스트</a></li>
-        <li><a href="lotto.html">로또 통계</a></li>
-        <li><a href="eraser.html">AI 지우개</a></li>
-        <li><a href="keyword_analyzer.html">키워드 분석기</a></li>
+        <li><a href="/short">단축 링크</a></li>
+        <li><a href="/">동물상 테스트</a></li>
+        <li><a href="/lotto">로또 통계</a></li>
+        <li><a href="/eraser">AI 지우개</a></li>
+        <li><a href="/keyword_analyzer">키워드 분석기</a></li>
         <li class="dropdown">
           <a href="#" class="dropbtn">이미지</a>
           <div class="dropdown-content">
-            <a href="compressor.html">이미지 용량 줄이기</a>
-            <a href="upscaler.html">이미지 화질 올리기</a>
+            <a href="/compressor">이미지 용량 줄이기</a>
+            <a href="/upscaler">이미지 화질 올리기</a>
           </div>
         </li>
-        <li><a href="blog.html">전문 블로그</a></li>
-        <li><a href="about.html">소개</a></li>
-        <li><a href="contact.html">문의하기</a></li>
+        <li><a href="/blog">전문 블로그</a></li>
+        <li><a href="/about">소개</a></li>
+        <li><a href="/contact">문의하기</a></li>
       </ul>
     </div>`;
 
@@ -44,20 +44,19 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="footer-section">
         <h4>주요 도구</h4>
         <ul>
-          <li><a href="short.html">단축 링크</a></li>
-          <li><a href="index.html">동물상 테스트</a></li>
-          <li><a href="lotto.html">로또 번호 통계</a></li>
-          <li><a href="blog.html">전문 블로그</a></li>
-          <li><a href="tools.html">블로그 도구</a></li>
+          <li><a href="/short">단축 링크</a></li>
+          <li><a href="/">동물상 테스트</a></li>
+          <li><a href="/lotto">로또 번호 통계</a></li>
+          <li><a href="/blog">전문 블로그</a></li>
         </ul>
       </div>
       <div class="footer-section">
         <h4>고객 지원</h4>
         <ul>
-          <li><a href="about.html">사이트 소개</a></li>
-          <li><a href="contact.html">문의하기</a></li>
-          <li><a href="privacy.html">개인정보처리방침</a></li>
-          <li><a href="terms.html">이용약관</a></li>
+          <li><a href="/about">사이트 소개</a></li>
+          <li><a href="/contact">문의하기</a></li>
+          <li><a href="/privacy">개인정보처리방침</a></li>
+          <li><a href="/terms">이용약관</a></li>
         </ul>
       </div>
     </div>
@@ -76,12 +75,13 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Active link highlighting
-  const currentPage = window.location.pathname.split('/').pop();
+  const currentPage = window.location.pathname;
   const navLinks = document.querySelectorAll('.nav-menu a');
 
   navLinks.forEach(link => {
     const linkPage = link.getAttribute('href');
-    if (linkPage === currentPage) {
+    // Check for exact match or if it's the root path
+    if (linkPage === currentPage || (currentPage === '/' && linkPage === 'index.html')) {
       link.classList.add('active');
       // If it's in a dropdown, also highlight the dropdown button
       if (link.closest('.dropdown-content')) {
