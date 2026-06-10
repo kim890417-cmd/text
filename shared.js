@@ -87,6 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <ul class="nav-menu">
         ${createNavLinks(navLinksData)}
       </ul>
+      <button id="theme-toggle">테마 변경</button>
     </div>`;
 
   const footerHTML = `
@@ -113,19 +114,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelectorAll('.nav-menu a');
 
   navLinks.forEach(link => {
-    const linkHref = link.getAttribute('href');
+      const linkHref = link.getAttribute('href');
+      const dropdown = link.closest('.dropdown');
 
-    // Handle dropdown links
-    if (link.closest('.dropdown-content')) {
-        if (linkHref === currentPage) {
-            link.classList.add('active');
-            // Also activate the main dropdown button
-            link.closest('.dropdown').querySelector('.dropbtn').classList.add('active');
-        }
-    } 
-    // Handle regular links
-    else if ((linkHref === currentPage) || (currentPage === '/index.html' && linkHref === '/')) {
-        link.classList.add('active');
-    }
+      if (linkHref === currentPage) {
+          link.classList.add('active');
+          if (dropdown) {
+              dropdown.querySelector('.dropbtn').classList.add('active');
+          }
+      } else if (currentPage === '/index.html' && linkHref === '/') {
+          link.classList.add('active');
+      }
   });
 });
