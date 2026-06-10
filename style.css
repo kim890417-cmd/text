@@ -55,13 +55,12 @@ body {
 
 .nav-menu {
   display: flex;
-  gap: 25px; /* Adjusted gap */
+  gap: 18px; /* Reduced gap */
   list-style: none;
   margin: 0;
   padding: 0;
   align-items: center;
-  flex-wrap: wrap; /* Allow items to wrap */
-  justify-content: center; /* Center items for a cleaner look when wrapped */
+  flex-wrap: nowrap; /* Prevent ugly wrapping */
 }
 
 .nav-menu a {
