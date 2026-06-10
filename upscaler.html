@@ -3,140 +3,65 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>이미지 화질 올리기 | 블로그 도구모음</title>
+  <title>이미지 화질 올리기 | AI 업스케일링 | 블로그 도구모음</title>
+  <meta name="description" content="저해상도 이미지의 품질을 AI 기술로 향상시키는 슈퍼 레졸루션 도구입니다. 흐릿한 사진을 최대 4배까지 선명하게 만들어보세요.">
+  <meta property="og:title" content="AI 이미지 화질 개선 | 업스케일링">
+  <meta property="og:description" content="AI가 저해상도 이미지의 디테일을 복원하여 선명하게 만듭니다.">
+  <meta property="og:type" content="website">
   <link href='style.css' rel='stylesheet'>
-  <style>
-    .container { max-width: 800px; }
-    .comparison-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 15px;
-        margin-top: 20px;
-    }
-    .img-container {
-        border: 2px dashed var(--border-color);
-        padding: 10px;
-        border-radius: 8px;
-        text-align: center;
-    }
-    .img-container img { max-width: 100%; border-radius: 4px; }
-    .img-container h4 { margin-bottom: 10px; }
-  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3406696816625207"
+     crossorigin="anonymous"></script>
 </head>
 <body>
-  <nav class="navbar">
-      <!-- Navbar content from tools.html -->
-  </nav>
+  <nav class="navbar"></nav>
 
-  <main class="container">
-    <div class="page-header">
-        <h1><i class="fas fa-image"></i> 이미지 화질 올리기</h1>
-        <p>AI 기술로 저해상도 이미지의 품질을 놀랍도록 선명하게 개선합니다.</p>
-    </div>
-
-    <input type="file" id="image-input" accept="image/*" style="margin-bottom: 20px;">
-    
-    <div class="tool-settings" style="max-width: 400px; margin: 0 auto 20px auto;">
-        <div class="setting-item">
-            <label for="scale-select">확대 배율</label>
-            <select id="scale-select">
-                <option value="2">2x</option>
-                <option value="3">3x</option>
-                <option value="4">4x</option>
-            </select>
+  <main>
+    <div class="container">
+      <section class="tool-section">
+        <h1>AI 이미지 화질 올리기</h1>
+        <p class="subtitle">딥러닝을 이용해 저해상도 이미지의 디테일을 복원하고 선명도를 높입니다.</p>
+        
+        <div class="tool-box" style="padding: 40px; text-align: center;">
+          <p style="margin-top:0; color: #666;">화질을 개선할 이미지를 업로드하세요.</p>
+          <input type="file" id="image-upload" accept="image/*" style="margin-bottom: 20px;">
+          <button id="upscale-button" class="btn-primary">화질 개선하기 (x4)</button>
+          <div id="result-area" style="margin-top: 30px; min-height: 100px;">
+             <!-- 결과 이미지가 여기에 표시됩니다 -->
+          </div>
         </div>
+      </section>
+
+      <hr class="divider">
+
+      <article class="content-rich">
+        <h2>슈퍼 레졸루션(Super-Resolution)의 원리</h2>
+        <p>이미지 업스케일링은 <strong>슈퍼 레졸루션(SR)</strong>, 특히 <strong>생성적 적대 신경망(GAN)</strong> 기반의 모델을 사용하여 이루어집니다. 이 기술은 단순히 픽셀을 늘리는 전통적인 방식(Bicubic Interpolation)과 달리, 실제와 같은 디테일을 생성하여 이미지를 복원합니다.</p>
+        
+        <h3>작동 방식</h3>
+        <p>GAN 모델은 두 개의 신경망, 즉 생성자(Generator)와 판별자(Discriminator)로 구성됩니다.
+          <ul>
+            <li><strong>생성자:</strong> 저해상도 이미지를 입력받아 고해상도 이미지를 만들어냅니다.</li>
+            <li><strong>판별자:</strong> 생성자가 만든 이미지가 실제 고해상도 이미지와 얼마나 유사한지를 판별합니다.</li>
+          </ul>
+        이 두 신경망이 서로 경쟁하며 학습하는 과정을 통해, 생성자는 점점 더 진짜 같은 고품질 이미지를 만들어내는 능력을 갖추게 됩니다.
+        </p>
+
+        <blockquote>
+          "AI는 잃어버린 디테일을 상상하여 그려냄으로써, 과거의 흐릿한 기억을 선명하게 되살립니다."
+        </blockquote>
+
+        <p>이러한 기술 덕분에 오래된 사진, 작은 썸네일 등 해상도가 낮아 활용하기 어려웠던 이미지들을 새롭게 사용할 수 있게 됩니다. 본 도구는 ESRGAN, Real-ESRGAN과 같은 최신 모델을 기반으로 구현될 예정입니다.</p>
+      </article>
+
     </div>
-
-    <button id="upscale-btn" class="btn-primary" style="width:100%; margin-bottom: 20px;">🔍 화질 올리기 실행</button>
-
-    <div id="loading" style="text-align:center; display:none;">
-        <p>AI가 이미지를 처리하고 있습니다. 잠시만 기다려주세요...</p>
-    </div>
-
-    <div id="result" style="display:none;">
-        <div class="comparison-container">
-            <div class="img-container" id="original-container">
-                <h4>원본</h4>
-                <img id="original-image" src="">
-            </div>
-            <div class="img-container" id="upscaled-container">
-                <h4>결과</h4>
-                <img id="upscaled-image" src="">
-            </div>
-        </div>
-        <a id="download-btn" href="#" download="upscaled_image.png" class="btn-primary" style="width:100%; margin-top:20px; text-align:center; display:block;">결과 이미지 다운로드</a>
-    </div>
-
   </main>
 
-  <footer>
-     <!-- Footer content from tools.html -->
-  </footer>
-
+  <footer></footer>
+  
   <script src="shared.js"></script>
   <script>
-    const imageInput = document.getElementById('image-input');
-    const scaleSelect = document.getElementById('scale-select');
-    const upscaleBtn = document.getElementById('upscale-btn');
-    const loadingEl = document.getElementById('loading');
-    const resultEl = document.getElementById('result');
-    const originalImage = document.getElementById('original-image');
-    const upscaledImage = document.getElementById('upscaled-image');
-    const downloadBtn = document.getElementById('download-btn');
-    const navBar = document.querySelector(".navbar");
-
-    // Simple fetch to populate navbar from tools.html
-    fetch('tools.html')
-        .then(response => response.text())
-        .then(data => {
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(data, 'text/html');
-            const newNav = doc.querySelector('.navbar');
-            if (newNav) {
-                navBar.innerHTML = newNav.innerHTML;
-            }
-            const newFooter = doc.querySelector('footer');
-            if(newFooter){
-                document.querySelector("footer").innerHTML = newFooter.innerHTML;
-            }
-        });
-
-
-    upscaleBtn.addEventListener('click', async () => {
-      if (imageInput.files.length === 0) {
-        alert('이미지를 먼저 선택해주세요.');
-        return;
-      }
-
-      loadingEl.style.display = 'block';
-      resultEl.style.display = 'none';
-
-      const formData = new FormData();
-      formData.append('image', imageInput.files[0]);
-      formData.append('scale', scaleSelect.value);
-
-      try {
-        //  This is a placeholder for where the server-side call would be made.
-        //  For demonstration, we will simulate a delay and use a placeholder image.
-        console.log("Simulating AI processing...");
-        await new Promise(resolve => setTimeout(resolve, 3000)); // Simulate 3 second delay
-        
-        const originalImageUrl = URL.createObjectURL(imageInput.files[0]);
-        //  Replace with actual upscaled image URL from server
-        const upscaledImageUrl = 'https://via.placeholder.com/800x800.png?text=Upscaled+Image';
-
-        originalImage.src = originalImageUrl;
-        upscaledImage.src = upscaledImageUrl;
-        downloadBtn.href = upscaledImageUrl;
-        
-        loadingEl.style.display = 'none';
-        resultEl.style.display = 'block';
-
-      } catch (error) {
-        loadingEl.style.display = 'none';
-        alert('오류가 발생했습니다: ' + error.message);
-        console.error(error);
-      }
+    document.getElementById('upscale-button').addEventListener('click', () => {
+      alert('현재 개발 중인 기능입니다.');
     });
   </script>
 </body>

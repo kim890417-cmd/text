@@ -3,79 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI 영상 제작기 | 블로그 도구모음</title>
+  <title>AI 영상 제작 | 콘텐츠 제작 도구 | 블로그 도구모음</title>
+  <meta name="description" content="텍스트 설명만으로 간단한 동영상을 만들어주는 AI 영상 제작 도구입니다. 아이디어를 현실로 만들어보세요.">
+  <meta property="og:title" content="AI 영상 제작 | 콘텐츠 제작 도구">
+  <meta property="og:description" content="텍스트를 입력하면 AI가 관련 영상을 생성해줍니다.">
+  <meta property="og:type" content="website">
   <link href='style.css' rel='stylesheet'>
-  <style>
-    .container { max-width: 800px; }
-    textarea { width: 100%; height: 150px; padding: 10px; font-size: 1rem; margin-bottom: 15px; }
-  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3406696816625207"
+     crossorigin="anonymous"></script>
 </head>
 <body>
   <nav class="navbar"></nav>
 
-  <main class="container">
-    <div class="page-header">
-        <h1><i class="fas fa-video"></i> AI 영상 제작기</h1>
-        <p>간단한 텍스트 입력만으로 전문가 수준의 영상을 자동 제작합니다.</p>
+  <main>
+    <div class="container">
+      <section class="tool-section">
+        <h1>AI 영상 제작</h1>
+        <p class="subtitle">상상 속의 장면을 텍스트로 설명하면, AI가 영상으로 만들어 드립니다.</p>
+        
+        <div class="tool-box" style="padding: 40px;">
+          <div class="form-group">
+            <label for="video-prompt">영상 스크립트 또는 설명</label>
+            <textarea id="video-prompt" placeholder="예: 해변에서 일몰을 바라보는 강아지" style="height: 100px;"></textarea>
+          </div>
+          <button id="generate-video-button" class="btn-primary" style="width: 100%;">영상 생성하기</button>
+          <div id="result-area" style="margin-top: 30px; min-height: 100px; text-align: center;">
+             <!-- 결과 영상이 여기에 표시됩니다 -->
+             <p style="color: #888;">생성된 영상은 여기에 나타납니다.</p>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider">
+
+      <article class="content-rich">
+        <h2>Text-to-Video: 텍스트가 영상이 되는 기술</h2>
+        <p>AI 영상 제작은 <strong>Text-to-Video</strong> 모델을 기반으로 합니다. 이 기술은 사용자가 입력한 텍스트(Prompt)를 이해하고, 그에 맞는 영상 클립을 생성하거나 기존 영상을 조합하여 새로운 콘텐츠를 만듭니다.</p>
+        
+        <h3>작동 원리</h3>
+        <p>이 기술의 핵심은 텍스트의 의미와 시각적 표현 사이의 관계를 학습한 거대 언어 모델(LLM)과 영상 생성 모델의 결합에 있습니다. 모델은 '일몰', '해변', '강아지' 같은 키워드를 시각적 요소로 변환하고, 이를 영상의 형태로 자연스럽게 연결하여 최종 결과물을 만들어냅니다.</p>
+
+        <h3>활용 분야</h3>
+        <ul>
+          <li><strong>소셜 미디어 콘텐츠:</strong> 짧고 시선을 끄는 동영상을 빠르게 제작할 수 있습니다.</li>
+          <li><strong>광고 및 마케팅:</strong> 제품이나 서비스에 대한 간단한 홍보 영상을 만들 수 있습니다.</li>
+          <li><strong>교육 자료:</strong> 복잡한 개념을 시각적으로 설명하는 보조 자료로 활용할 수 있습니다.</li>
+        </ul>
+        <p>본 도구는 현재 개발 초기 단계이며, 점차 더 길고 정교한 영상을 제작할 수 있도록 발전해 나갈 것입니다.</p>
+      </article>
+
     </div>
-
-    <textarea id="script-input" placeholder="여기에 영상으로 만들 스크립트를 입력하세요..."></textarea>
-    <button id="generate-btn" class="btn-primary" style="width:100%;">영상 제작 시작</button>
-
-    <div id="loading" style="text-align:center; display:none; margin-top:20px;">
-      <p>AI가 영상을 제작하고 있습니다. 이 작업은 몇 분 정도 소요될 수 있습니다...</p>
-    </div>
-
-    <div id="result-area" style="display:none; margin-top:20px;">
-      <h3>영상 제작 완료!</h3>
-      <video id="result-video" width="100%" controls></video>
-      <a id="download-btn" href="#" download="ai_video.mp4" class="btn-primary" style="display:block; text-align:center; margin-top:10px;">영상 다운로드</a>
-    </div>
-
   </main>
 
   <footer></footer>
-
+  
   <script src="shared.js"></script>
   <script>
-    const navBar = document.querySelector(".navbar");
-    const footer = document.querySelector("footer");
-    fetch('tools.html')
-        .then(response => response.text())
-        .then(data => {
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(data, 'text/html');
-            navBar.innerHTML = doc.querySelector('.navbar').innerHTML;
-            footer.innerHTML = doc.querySelector('footer').innerHTML;
-        });
-
-    const scriptInput = document.getElementById('script-input');
-    const generateBtn = document.getElementById('generate-btn');
-    const loading = document.getElementById('loading');
-    const resultArea = document.getElementById('result-area');
-    const resultVideo = document.getElementById('result-video');
-    const downloadBtn = document.getElementById('download-btn');
-
-    generateBtn.addEventListener('click', async () => {
-      const script = scriptInput.value;
-      if (!script) {
-        alert('스크립트를 입력해주세요.');
-        return;
-      }
-
-      loading.style.display = 'block';
-      resultArea.style.display = 'none';
-
-      // Placeholder for server-side video generation
-      console.log(`Simulating video generation for script: ${script}`);
-      await new Promise(resolve => setTimeout(resolve, 10000)); // 10-second delay for simulation
-
-      const placeholderVideo = 'https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_1MB.mp4';
-      resultVideo.src = placeholderVideo;
-      downloadBtn.href = placeholderVideo;
-
-      loading.style.display = 'none';
-      resultArea.style.display = 'block';
+    document.getElementById('generate-video-button').addEventListener('click', () => {
+      alert('현재 개발 중인 기능입니다.');
     });
   </script>
 </body>
