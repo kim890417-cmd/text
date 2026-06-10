@@ -41,8 +41,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
-  height: 70px;
+  padding: 10px 20px; /* Adjusted padding */
+  min-height: 70px; /* Allow container to grow */
 }
 
 .nav-logo {
@@ -55,11 +55,13 @@ body {
 
 .nav-menu {
   display: flex;
-  gap: 30px; /* Increased gap */
+  gap: 25px; /* Adjusted gap */
   list-style: none;
   margin: 0;
   padding: 0;
   align-items: center;
+  flex-wrap: wrap; /* Allow items to wrap */
+  justify-content: center; /* Center items for a cleaner look when wrapped */
 }
 
 .nav-menu a {
@@ -70,6 +72,7 @@ body {
   transition: all 0.3s;
   padding: 10px 5px;
   position: relative;
+  white-space: nowrap; /* Prevent text from breaking mid-word */
 }
 
 .nav-menu a:hover, .nav-menu a.active {
