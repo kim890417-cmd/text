@@ -11,24 +11,31 @@
 <body>
   <nav class="navbar">
     <div class="nav-container">
-      <a href="short.html" class="nav-logo">블로그 도구모음</a>
+      <a href="/" class="nav-logo">블로그 도구모음</a>
       <ul class="nav-menu">
-        <li><a href="short.html">단축 링크</a></li>
-        <li><a href="index.html">동물상 테스트</a></li>
-        <li><a href="lotto.html">로또 통계</a></li>
-        <li><a href="blog.html">전문 블로그</a></li>
-        <li><a href="tools.html">블로그 도구</a></li>
-        <li><a href="about.html">소개</a></li>
-        <li><a href="contact.html">문의하기</a></li>
+        <li><a href="/short">단축 링크</a></li>
+        <li><a href="/">동물상 테스트</a></li>
+        <li><a href="/lotto">로또 통계</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn">이미지 도구</a>
+          <div class="dropdown-content">
+            <a href="/compressor">이미지 용량 줄이기</a>
+            <a href="/upscaler">이미지 화질 올리기</a>
+            <a href="/eraser">AI 지우개</a>
+          </div>
+        </li>
+        <li><a href="/video_maker">AI 영상 제작</a></li>
+        <li><a href="/keyword_analyzer">키워드 분석기</a></li>
+        <li><a href="/blog">전문 블로그</a></li>
+        <li><a href="/about">소개</a></li>
+        <li><a href="/contact">문의하기</a></li>
       </ul>
+      <button id="theme-toggle">테마 변경</button>
     </div>
   </nav>
 
   <main>
     <div class="container">
-      <div style="text-align: right; margin-bottom: 20px;">
-        <button id="theme-toggle" style="background:none; border:1px solid #ddd; cursor:pointer; padding:5px 10px; border-radius:5px; font-size:0.8rem;">테마 변경</button>
-      </div>
       <article class="content-rich">
         <h1>개인정보처리방침</h1>
         <p>본 사이트(이하 '블로그 도구모음')는 사용자의 개인정보 보호를 최우선으로 생각합니다. 당사는 귀하의 권익 보호를 위해 개인정보 보호법 등 관련 법령을 준수합니다.</p>
@@ -63,20 +70,23 @@
       <div class="footer-section">
         <h4>주요 도구</h4>
         <ul>
-          <li><a href="short.html">단축 링크</a></li>
-          <li><a href="index.html">동물상 테스트</a></li>
-          <li><a href="lotto.html">로또 번호 통계</a></li>
-          <li><a href="blog.html">전문 블로그</a></li>
-          <li><a href="tools.html">블로그 도구</a></li>
+          <li><a href="/short">단축 링크</a></li>
+          <li><a href="/">동물상 테스트</a></li>
+          <li><a href="/lotto">로또 번호 통계</a></li>
+          <li><a href="/compressor">이미지 용량 줄이기</a></li>
+          <li><a href="/upscaler">이미지 화질 올리기</a></li>
+          <li><a href="/eraser">AI 지우개</a></li>
+          <li><a href="/video_maker">AI 영상 제작</a></li>
+          <li><a href="/keyword_analyzer">키워드 분석기</a></li>
         </ul>
       </div>
       <div class="footer-section">
         <h4>고객 지원</h4>
         <ul>
-          <li><a href="about.html">사이트 소개</a></li>
-          <li><a href="contact.html">문의하기</a></li>
-          <li><a href="privacy.html">개인정보처리방침</a></li>
-          <li><a href="terms.html">이용약관</a></li>
+          <li><a href="/about">사이트 소개</a></li>
+          <li><a href="/contact">문의하기</a></li>
+          <li><a href="/privacy">개인정보처리방침</a></li>
+          <li><a href="/terms">이용약관</a></li>
         </ul>
       </div>
     </div>
@@ -84,6 +94,36 @@
       <p>&copy; 2026 블로그 도구모음. 사용자에게 가치 있는 정보를 제공하기 위해 최선을 다합니다.</p>
     </div>
   </footer>
-  <script src="shared.js"></script>
+  <script>
+    // Theme toggle script
+    const themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        const isDarkMode = document.body.classList.contains('dark-mode');
+        localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+      });
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      document.body.classList.add('dark-mode');
+    }
+
+    // Active link highlighting
+    const currentPage = window.location.pathname;
+    const navLinks = document.querySelectorAll('.nav-menu a');
+    navLinks.forEach(link => {
+        const linkHref = link.getAttribute('href');
+        const dropdown = link.closest('.dropdown');
+
+        if (linkHref === currentPage || (currentPage === '/index.html' && linkHref === '/')) {
+            link.classList.add('active');
+            if (dropdown) {
+                dropdown.querySelector('.dropbtn').classList.add('active');
+            }
+        }
+    });
+  </script>
 </body>
 </html>
