@@ -41,24 +41,55 @@
     </div>
   </nav>
 
-  <main class="container">
-    <div class="page-header">
-        <h1><i class="fas fa-chart-line"></i> 키워드 분석기</h1>
-        <p>블로그 포스팅을 위한 최적의 키워드를 찾아보세요.</p>
-    </div>
+  <main>
+    <div class="container">
+      <section class="tool-section">
+        <h1>키워드 분석기</h1>
+        <p class="subtitle">블로그 글의 키워드 밀도·빈도를 분석하여 SEO를 최적화하세요.</p>
 
-    <input type="text" id="keyword-input" placeholder="분석할 키워드를 입력하세요 (예: 인공지능)">
-    <button id="analyze-btn" class="btn-primary" style="width:100%;">분석 시작</button>
+        <div class="tool-box" style="padding: 30px;">
+          <div style="margin-bottom: 16px;">
+            <label style="font-weight:600; font-size:0.95rem; display:block; margin-bottom:8px;">분석할 텍스트</label>
+            <textarea id="text-input" placeholder="블로그 글 전체를 붙여넣으세요..." style="width:100%; height:180px; padding:14px; border:1px solid #ddd; border-radius:10px; font-size:0.95rem; font-family:inherit; resize:vertical; box-sizing:border-box;"></textarea>
+          </div>
+          <div style="display:flex; gap:10px; align-items:center; margin-bottom:16px; flex-wrap:wrap;">
+            <input type="text" id="focus-keyword" placeholder="핵심 키워드 (선택)" style="flex:1; min-width:160px; padding:10px 14px; border:1px solid #ddd; border-radius:10px; font-size:0.95rem;">
+            <button id="analyze-btn" class="btn-primary">분석하기</button>
+            <button id="clear-btn" style="padding:10px 18px; border:1px solid #ddd; border-radius:10px; background:#fff; cursor:pointer; font-size:0.9rem;">초기화</button>
+          </div>
 
-    <div id="loading" style="text-align:center; display:none; margin-top:20px;">
-      <p>키워드를 분석하고 있습니다. 잠시만 기다려주세요...</p>
-    </div>
-    
-    <div id="results-area" style="display:none;">
-      <h3>분석 결과</h3>
-      <div id="results-content"></div>
-    </div>
+          <div id="results-area" style="display:none;">
+            <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:12px; margin-bottom:24px;">
+              <div style="background:#f8f9fa; border-radius:12px; padding:16px; text-align:center;">
+                <p style="margin:0 0 4px; font-size:0.78rem; color:#999;">글자 수</p>
+                <p id="stat-chars" style="margin:0; font-size:1.4rem; font-weight:700;"></p>
+              </div>
+              <div style="background:#f8f9fa; border-radius:12px; padding:16px; text-align:center;">
+                <p style="margin:0 0 4px; font-size:0.78rem; color:#999;">단어 수</p>
+                <p id="stat-words" style="margin:0; font-size:1.4rem; font-weight:700;"></p>
+              </div>
+              <div style="background:#f8f9fa; border-radius:12px; padding:16px; text-align:center;">
+                <p style="margin:0 0 4px; font-size:0.78rem; color:#999;">문장 수</p>
+                <p id="stat-sentences" style="margin:0; font-size:1.4rem; font-weight:700;"></p>
+              </div>
+              <div style="background:#f8f9fa; border-radius:12px; padding:16px; text-align:center;">
+                <p style="margin:0 0 4px; font-size:0.78rem; color:#999;">읽기 시간</p>
+                <p id="stat-readtime" style="margin:0; font-size:1.4rem; font-weight:700;"></p>
+              </div>
+              <div id="stat-density-box" style="background:#e8f4ff; border-radius:12px; padding:16px; text-align:center; display:none;">
+                <p style="margin:0 0 4px; font-size:0.78rem; color:#007bff;">핵심 키워드 밀도</p>
+                <p id="stat-density" style="margin:0; font-size:1.4rem; font-weight:700; color:#007bff;"></p>
+              </div>
+            </div>
 
+            <div id="focus-result" style="display:none; padding:14px 18px; border-radius:12px; margin-bottom:20px;"></div>
+
+            <h3 style="font-size:1rem; margin-bottom:12px;">상위 키워드 (빈도순)</h3>
+            <div id="keyword-list" style="display:flex; flex-direction:column; gap:8px;"></div>
+          </div>
+        </div>
+      </section>
+    </div>
   </main>
 
   <footer>
@@ -123,44 +154,82 @@
         }
     });
 
-    const keywordInput = document.getElementById('keyword-input');
-    const analyzeBtn = document.getElementById('analyze-btn');
-    const loading = document.getElementById('loading');
-    const resultsArea = document.getElementById('results-area');
-    const resultsContent = document.getElementById('results-content');
+    const STOP_WORDS = new Set(['이','가','을','를','은','는','의','에','에서','로','으로','도','만','과','와','이다','있다','없다','하다','되다','그','저','이것','그것','저것','및','또','또는','그리고','하지만','그러나','그래서','때문에','위해','위한','대한','관한','통해','따라','따른','같은','다른','모든','각','어떤','이런','저런','그런','더','가장','매우','너무','정말','아주','특히','또한','즉','등','등의','들','들의','a','an','the','is','are','was','were','be','been','being','have','has','had','do','does','did','will','would','could','should','may','might','shall','and','or','but','if','in','on','at','to','for','of','with','by','from','as','into','through','about','than','so','yet','nor','not','this','that','these','those','it','its']);
 
-    analyzeBtn.addEventListener('click', async () => {
-      const keyword = keywordInput.value;
-      if (!keyword) {
-        alert('키워드를 입력해주세요.');
-        return;
+    document.getElementById('analyze-btn').addEventListener('click', analyze);
+    document.getElementById('clear-btn').addEventListener('click', () => {
+      document.getElementById('text-input').value = '';
+      document.getElementById('focus-keyword').value = '';
+      document.getElementById('results-area').style.display = 'none';
+    });
+    document.getElementById('text-input').addEventListener('keydown', e => { if (e.ctrlKey && e.key === 'Enter') analyze(); });
+
+    function analyze() {
+      const text = document.getElementById('text-input').value.trim();
+      if (!text) { alert('텍스트를 입력해주세요.'); return; }
+
+      const focusKw = document.getElementById('focus-keyword').value.trim().toLowerCase();
+      const chars = text.replace(/\s/g, '').length;
+      const words = text.split(/\s+/).filter(w => w.length > 0);
+      const sentences = text.split(/[.!?。]+/).filter(s => s.trim().length > 0).length;
+      const readMin = Math.ceil(words.length / 250);
+
+      document.getElementById('stat-chars').textContent = chars.toLocaleString();
+      document.getElementById('stat-words').textContent = words.length.toLocaleString();
+      document.getElementById('stat-sentences').textContent = sentences;
+      document.getElementById('stat-readtime').textContent = readMin + '분';
+
+      // 단어 빈도 계산
+      const freq = {};
+      words.forEach(raw => {
+        const w = raw.toLowerCase().replace(/[^가-힣a-z0-9]/g, '');
+        if (w.length < 2) return;
+        if (STOP_WORDS.has(w)) return;
+        freq[w] = (freq[w] || 0) + 1;
+      });
+
+      const sorted = Object.entries(freq).sort((a, b) => b[1] - a[1]).slice(0, 20);
+      const maxCount = sorted[0]?.[1] || 1;
+
+      // 핵심 키워드 밀도
+      if (focusKw) {
+        const count = words.filter(w => w.toLowerCase().includes(focusKw)).length;
+        const density = ((count / words.length) * 100).toFixed(2);
+        document.getElementById('stat-density-box').style.display = 'block';
+        document.getElementById('stat-density').textContent = density + '%';
+        const box = document.getElementById('focus-result');
+        box.style.display = 'block';
+        let msg, color;
+        if (density < 0.5) { msg = `"${focusKw}" 밀도가 낮아요 (${density}%). 조금 더 자연스럽게 사용해보세요.`; color = '#fff3cd'; }
+        else if (density <= 2.5) { msg = `"${focusKw}" 밀도가 적절합니다 (${density}%). SEO에 좋아요! ✅`; color = '#d4edda'; }
+        else { msg = `"${focusKw}" 밀도가 높아요 (${density}%). 키워드 남용으로 SEO에 불리할 수 있어요.`; color = '#f8d7da'; }
+        box.style.background = color;
+        box.style.padding = '14px 18px';
+        box.style.borderRadius = '12px';
+        box.textContent = msg;
+      } else {
+        document.getElementById('stat-density-box').style.display = 'none';
+        document.getElementById('focus-result').style.display = 'none';
       }
 
-      loading.style.display = 'block';
-      resultsArea.style.display = 'none';
+      // 키워드 목록 렌더링
+      const list = document.getElementById('keyword-list');
+      list.innerHTML = sorted.map(([word, count], i) => {
+        const pct = ((count / maxCount) * 100).toFixed(0);
+        const density = ((count / words.length) * 100).toFixed(2);
+        return `<div style="display:flex; align-items:center; gap:10px;">
+          <span style="width:22px; text-align:right; font-size:0.8rem; color:#999;">${i+1}</span>
+          <span style="width:100px; font-weight:600; font-size:0.95rem;">${word}</span>
+          <div style="flex:1; background:#f0f0f0; border-radius:999px; height:8px; overflow:hidden;">
+            <div style="width:${pct}%; background:#007bff; height:100%; border-radius:999px;"></div>
+          </div>
+          <span style="width:40px; text-align:right; font-size:0.88rem; font-weight:600;">${count}회</span>
+          <span style="width:48px; text-align:right; font-size:0.8rem; color:#999;">${density}%</span>
+        </div>`;
+      }).join('');
 
-      // Placeholder for server-side API call
-      console.log(`Simulating analysis for keyword: ${keyword}`);
-      await new Promise(resolve => setTimeout(resolve, 2000));
-
-      // Dummy data for demonstration
-      resultsContent.innerHTML = `
-        <h4>'${keyword}' 관련 키워드</h4>
-        <ul>
-          <li>${keyword} 전망 (월간 검색량: 15,000)</li>
-          <li>${keyword} 종류 (월간 검색량: 12,000)</li>
-          <li>${keyword} 활용 사례 (월간 검색량: 9,000)</li>
-          <li>최신 ${keyword} 기술 (월간 검색량: 7,500)</li>
-        </ul>
-        <h4>블로그 포스팅 추천 주제</h4>
-        <p>1. 2026년 ${keyword} 기술의 최신 트렌드 분석<br>
-           2. 비전공자를 위한 ${keyword} 핵심 개념 5가지 정리<br>
-           3. 실제 업무에서 ${keyword}를 활용하여 생산성을 높인 3가지 사례</p>
-      `;
-
-      loading.style.display = 'none';
-      resultsArea.style.display = 'block';
-    });
+      document.getElementById('results-area').style.display = 'block';
+    }
   </script>
 </body>
 </html>
