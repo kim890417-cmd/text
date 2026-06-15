@@ -3,56 +3,157 @@
 <channel>
   <title>블로그 도구모음</title>
   <link>https://dream95.com</link>
-  <description>인공지능 기술을 일상 속의 재미와 정보로 연결하는 창의적인 도구 모음 플랫폼</description>
+  <description>블로그 운영에 필요한 무료 AI 도구와 건강·생활 정보를 제공하는 플랫폼</description>
+  <language>ko</language>
+  <lastBuildDate>Sun, 15 Jun 2026 00:00:00 +0900</lastBuildDate>
+
+  <!-- 블로그 글 -->
   <item>
-    <title>단축링크 만들기</title>
-    <link>https://dream95.com/</link>
-    <description>긴 주소를 짧게 만들어주는 무료 URL 단축 서비스. 클릭 통계도 확인할 수 있습니다.</description>
+    <title>칼슘 흡수율 높이는 방법 5가지와 비타민D 함께 먹어야 하는 이유</title>
+    <link>https://dream95.com/health/칼슘-흡수율-높이는-방법-5가지와-비타민d-함께-먹어야/</link>
+    <description>칼슘 흡수율을 높이는 방법과 비타민D를 함께 먹어야 하는 이유를 정확하게 정리했습니다.</description>
+    <pubDate>Sun, 15 Jun 2026 00:00:00 +0900</pubDate>
   </item>
+  <item>
+    <title>단백질 하루 섭취량 완벽 정리</title>
+    <link>https://dream95.com/health/단백질-하루-섭취량/</link>
+    <description>나이·체중·운동량에 따른 단백질 하루 권장 섭취량과 올바른 섭취 방법을 정리했습니다.</description>
+    <pubDate>Sun, 15 Jun 2026 00:00:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>비타민D 부족 증상 7가지와 햇빛·음식으로 채우는 법</title>
+    <link>https://dream95.com/health/비타민d-부족-증상-7가지와-햇빛·음식으로-채우는-법/</link>
+    <description>비타민D 결핍 증상과 햇빛, 음식, 영양제로 보충하는 방법을 알아봅니다.</description>
+    <pubDate>Sun, 15 Jun 2026 00:00:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>오메가3 효능과 올바른 복용법 및 부작용 주의사항 완벽 정리</title>
+    <link>https://dream95.com/health/오메가3-효능과-올바른-복용법-부작용-주의사항-완벽/</link>
+    <description>오메가3의 주요 효능과 올바른 복용법, 주의해야 할 부작용까지 한 번에 정리합니다.</description>
+    <pubDate>Sun, 15 Jun 2026 00:00:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>마그네슘 효능과 부족 증상, 눈떨림과의 관계 총정리</title>
+    <link>https://dream95.com/health/마그네슘-효능과-부족-증상-눈떨림과의-관계-총정리-2/</link>
+    <description>마그네슘 부족 증상과 눈떨림의 관계, 권장 섭취량과 음식 보충법을 정리했습니다.</description>
+    <pubDate>Sun, 15 Jun 2026 00:00:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>아연 효능과 하루 권장량 총정리 — 남성 건강에 꼭 필요한 이유</title>
+    <link>https://dream95.com/health/아연-효능과-하루-권장량-총정리-남성-건강에-꼭-필/</link>
+    <description>아연의 주요 효능과 하루 권장량, 결핍 증상과 음식 섭취법을 알아봅니다.</description>
+    <pubDate>Sun, 15 Jun 2026 00:00:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>철분제 효능과 빈혈 증상, 복용 시 주의할 음식 총정리</title>
+    <link>https://dream95.com/health/철분제-효능과-빈혈-증상-복용-시-주의할-음식-총정리/</link>
+    <description>철분제 효능과 빈혈 증상, 복용할 때 피해야 할 음식과 올바른 복용법을 정리합니다.</description>
+    <pubDate>Sun, 15 Jun 2026 00:00:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>루테인 효능과 권장 섭취량 — 눈 건강 영양제 완벽 정리</title>
+    <link>https://dream95.com/health/루테인-효능과-권장-섭취량-눈-건강-영양제-완벽-정/</link>
+    <description>루테인의 눈 건강 효능과 하루 권장 섭취량, 올바른 복용법을 정리했습니다.</description>
+    <pubDate>Sun, 15 Jun 2026 00:00:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>멀티비타민 언제 먹어야 효과 좋을까 — 복용 시간 총정리</title>
+    <link>https://dream95.com/health/멀티비타민-언제-먹어야-효과-좋을까-복용-시간-총정/</link>
+    <description>멀티비타민 복용 최적 시간과 공복/식후 복용 차이, 영양소별 흡수율을 높이는 방법을 정리합니다.</description>
+    <pubDate>Sun, 15 Jun 2026 00:00:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>프로바이오틱스 유산균 효능과 공복 vs 식후 복용 시간</title>
+    <link>https://dream95.com/health/프로바이오틱스-유산균-효능과-공복-vs-식후-복용-시간/</link>
+    <description>프로바이오틱스 효능과 공복·식후 복용 중 어느 쪽이 더 효과적인지 비교 정리합니다.</description>
+    <pubDate>Sun, 15 Jun 2026 00:00:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>비타민C 효능 총정리 — 하루 권장량과 결핍 증상까지</title>
+    <link>https://dream95.com/health/비타민c-효능-총정리-하루-권장량·결핍-증상까지-한/</link>
+    <description>비타민C의 주요 효능, 하루 권장 섭취량, 결핍 시 나타나는 증상을 한눈에 정리합니다.</description>
+    <pubDate>Sun, 15 Jun 2026 00:00:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>비타민B 복합제 효능 총정리 — 피로회복에 좋은 7가지</title>
+    <link>https://dream95.com/health/비타민b-복합제-효능-총정리-피로회복에-좋은-7가지/</link>
+    <description>비타민B군의 종류별 효능과 피로회복, 신경 건강에 미치는 영향을 정리했습니다.</description>
+    <pubDate>Sun, 15 Jun 2026 00:00:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>비타민E 효능 총정리 — 권장 섭취량과 과다복용 부작용</title>
+    <link>https://dream95.com/health/비타민e-효능-총정리-권장-섭취량과-과다복용-부작용/</link>
+    <description>비타민E의 항산화 효능, 권장 섭취량, 과다복용 시 나타날 수 있는 부작용을 정리합니다.</description>
+    <pubDate>Sun, 15 Jun 2026 00:00:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>잠 잘 오는 음식과 멜라토닌 영양제 효과 직접 써본 후기</title>
+    <link>https://dream95.com/health/잠-잘-오는-음식과-멜라토닌-영양제-효과-직접-써본/</link>
+    <description>수면에 도움이 되는 음식과 멜라토닌 영양제 효과를 직접 경험한 내용을 정리합니다.</description>
+    <pubDate>Sun, 15 Jun 2026 00:00:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>면역력 높이는 음식 10가지와 환절기 건강관리법</title>
+    <link>https://dream95.com/health/면역력-높이는-음식-10가지와-환절기-건강관리법/</link>
+    <description>면역력을 높이는 대표 음식 10가지와 환절기 건강을 지키는 생활습관을 소개합니다.</description>
+    <pubDate>Sun, 15 Jun 2026 00:00:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>콜레스테롤 낮추는 음식 7가지와 정상 수치 범위 총정리</title>
+    <link>https://dream95.com/health/콜레스테롤-낮추는-음식-7가지와-정상-수치-범위-총정/</link>
+    <description>콜레스테롤을 낮추는 음식과 정상 수치 기준, 생활습관 개선 방법을 정리했습니다.</description>
+    <pubDate>Sun, 15 Jun 2026 00:00:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>장 건강에 좋은 음식 7가지와 변비 개선 생활습관 완벽 정리</title>
+    <link>https://dream95.com/health/장-건강에-좋은-음식-7가지와-변비-개선-생활습관-완벽/</link>
+    <description>장 건강을 지키는 음식과 변비 개선에 효과적인 생활습관을 소개합니다.</description>
+    <pubDate>Sun, 15 Jun 2026 00:00:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>간에 좋은 음식과 피해야 할 음식 총정리 2026년 최신</title>
+    <link>https://dream95.com/health/간에-좋은-음식과-피해야-할-음식-총정리-2026년-최신/</link>
+    <description>간 건강을 위해 먹으면 좋은 음식과 피해야 할 음식을 최신 정보로 정리했습니다.</description>
+    <pubDate>Sun, 15 Jun 2026 00:00:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>고혈압에 좋은 음식 vs 나쁜 음식 — 혈압 낮추는 생활습관</title>
+    <link>https://dream95.com/health/고혈압에-좋은-음식-vs-나쁜-음식-혈압-낮추는-생활습/</link>
+    <description>고혈압에 도움이 되는 음식과 피해야 할 음식, 혈압을 낮추는 생활습관을 정리합니다.</description>
+    <pubDate>Sun, 15 Jun 2026 00:00:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>Vitamin C Megadose Guide 2026</title>
+    <link>https://dream95.com/health/vitamin-c-megadose-guide-2026/</link>
+    <description>비타민C 고용량 복용법과 효과, 안전한 섭취 기준을 정리한 2026년 최신 가이드입니다.</description>
+    <pubDate>Sun, 15 Jun 2026 00:00:00 +0900</pubDate>
+  </item>
+
+  <!-- 도구 -->
   <item>
     <title>이미지 용량 줄이기</title>
     <link>https://dream95.com/compressor</link>
-    <description>화질 저하를 최소화하면서 이미지 파일 크기를 줄이는 브라우저 기반 압축 도구입니다.</description>
+    <description>화질 저하 없이 이미지 파일 크기를 압축하는 무료 온라인 도구입니다.</description>
   </item>
   <item>
     <title>이미지 화질 올리기</title>
     <link>https://dream95.com/upscaler</link>
-    <description>저해상도 이미지의 화질을 AI 기술로 선명하게 업스케일합니다.</description>
+    <description>저해상도 이미지를 AI 기술로 2배·4배 업스케일합니다.</description>
   </item>
   <item>
-    <title>AI 지우개</title>
+    <title>AI 배경 제거</title>
     <link>https://dream95.com/eraser</link>
-    <description>사진에서 원하지 않는 배경이나 피사체를 AI로 자연스럽게 제거합니다.</description>
+    <description>AI가 자동으로 이미지 배경을 제거하고 투명 PNG로 저장합니다.</description>
   </item>
   <item>
-    <title>키워드 분석기</title>
+    <title>단축링크 만들기</title>
+    <link>https://dream95.com/short</link>
+    <description>긴 URL을 짧게 만들고 클릭 통계를 확인하는 무료 서비스입니다.</description>
+  </item>
+  <item>
+    <title>키워드 연관검색어 조회</title>
     <link>https://dream95.com/keyword_analyzer</link>
-    <description>블로그나 웹사이트의 SEO를 위한 키워드 빈도 및 밀도를 분석합니다.</description>
-  </item>
-  <item>
-    <title>딥러닝 vs 인간의 지각: AI는 어떻게 패턴을 읽는가?</title>
-    <link>https://dream95.com/post-ai-perception</link>
-    <description>컨볼루션 신경망(CNN)이 얼굴의 픽셀 데이터를 분석하여 인상을 수치화하는 기술적 원리를 설명합니다.</description>
-  </item>
-  <item>
-    <title>디지털 시대의 안면 인식 윤리: 당신의 데이터는 안전한가?</title>
-    <link>https://dream95.com/post-digital-ethics</link>
-    <description>글로벌 AI 규제 트렌드와 프라이버시 보호를 위한 온디바이스 연산의 중요성을 다룹니다.</description>
-  </item>
-  <item>
-    <title>로또의 수학적 역사: 고대 중국에서 현대까지</title>
-    <link>https://dream95.com/post-lotto-history</link>
-    <description>만리장성 축조 자금에서 시작된 복권의 역사와 현대 로또 시스템의 확률적 설계를 파헤칩니다.</description>
-  </item>
-  <item>
-    <title>확률과 운의 심리학: 왜 우리는 무작위에 열광하는가?</title>
-    <link>https://dream95.com/post-luck-psychology</link>
-    <description>아포페니아와 도박사의 오류 등 확률을 대하는 인간의 심리적 편향을 과학적으로 분석합니다.</description>
-  </item>
-  <item>
-    <title>전문 블로그</title>
-    <link>https://dream95.com/blog</link>
-    <description>AI 기술, 데이터 과학, 디지털 윤리에 관한 심층 아티클을 연재합니다.</description>
+    <description>Google·Naver 연관검색어를 한눈에 확인하는 SEO 도구입니다.</description>
   </item>
 </channel>
 </rss>
