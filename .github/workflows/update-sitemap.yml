@@ -3,8 +3,11 @@ name: Auto-update sitemap & RSS
 on:
   push:
     branches: [main]
-    paths:
-      - 'health/**'
+    paths-ignore:
+      - 'sitemap.xml'
+      - 'rss.xml'
+      - 'scripts/**'
+      - '.github/**'
 
 jobs:
   update:
