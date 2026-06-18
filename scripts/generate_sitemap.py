@@ -1,10 +1,22 @@
 import os
 import re
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 
 BASE_URL = "https://dream95.com"
-TODAY = datetime.now().strftime("%Y-%m-%d")
-TODAY_RSS = datetime.now().strftime("%a, %d %b %Y 00:00:00 +0900")
+KST = timezone(timedelta(hours=9))
+NOW = datetime.now(KST)
+TODAY = NOW.strftime("%Y-%m-%d")
+
+# RFC822(영문 요일/월) — 로케일에 의존하지 않도록 직접 구성
+_WD = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+_MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+        'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+
+def rfc822(dt):
+    return (f"{_WD[dt.weekday()]}, {dt.day:02d} {_MON[dt.month-1]} {dt.year} "
+            f"{dt.hour:02d}:{dt.minute:02d}:{dt.second:02d} +0900")
+
+NOW_RSS = rfc822(NOW)
 
 # 블로그 카테고리가 아닌 폴더 (건너뜀)
 SKIP_DIRS = {
@@ -35,54 +47,63 @@ TOOL_ITEMS = [
     {"title": "영양제 권장량 조회", "link": "/supplement", "desc": "비타민·미네랄별 하루 권장 섭취량과 상한 섭취량을 조회합니다."},
 ]
 
-def extract_title(html_path):
-    try:
-        with open(html_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-        match = re.search(r'<title[^>]*>(.*?)</title>', content, re.IGNORECASE | re.DOTALL)
-        if match:
-            title = match.group(1).strip()
-            title = re.split(r'\s*[\-\|]\s*(?:블로그|dream95|kim890417)', title)[0].strip()
-            return title
-    except:
-        pass
-    return None
+def _read(html_path):
+    with open(html_path, 'r', encoding='utf-8') as f:
+        return f.read()
 
-def extract_description(html_path):
-    try:
-        with open(html_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-        match = re.search(r'<meta\s+name=["\']description["\']\s+content=["\'](.*?)["\']', content, re.IGNORECASE)
-        if match:
-            return match.group(1).strip()
-    except:
-        pass
-    return ""
+def extract_title(content, slug):
+    match = re.search(r'<title[^>]*>(.*?)</title>', content, re.IGNORECASE | re.DOTALL)
+    if match:
+        title = match.group(1).strip()
+        title = re.split(r'\s*[\-\|]\s*(?:블로그|dream95|kim890417)', title)[0].strip()
+        if title:
+            return title
+    return slug.replace('-', ' ')
+
+def extract_description(content):
+    match = re.search(r'<meta\s+name=["\']description["\']\s+content=["\'](.*?)["\']', content, re.IGNORECASE)
+    return match.group(1).strip() if match else ""
+
+def extract_pubdate(content):
+    """글의 실제 발행일(article:published_time → datePublished 순)을 KST로 반환."""
+    m = (re.search(r'article:published_time["\']\s+content=["\']([^"\']+)["\']', content)
+         or re.search(r'"datePublished"\s*:\s*"([^"]+)"', content))
+    if m:
+        try:
+            dt = datetime.fromisoformat(m.group(1).replace('Z', '+00:00'))
+            if dt.tzinfo is None:
+                dt = dt.replace(tzinfo=KST)
+            return dt.astimezone(KST)
+        except ValueError:
+            pass
+    return None
 
 def escape_xml(text):
     return text.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
 
 # 블로그 카테고리 자동 감지: 하위에 index.html이 있는 폴더를 포함한 디렉토리
 posts = []
-root_items = sorted(os.listdir('.'))
-for cat_dir in root_items:
-    if not os.path.isdir(cat_dir):
+for cat_dir in sorted(os.listdir('.')):
+    if not os.path.isdir(cat_dir) or cat_dir in SKIP_DIRS or cat_dir.startswith('.'):
         continue
-    if cat_dir in SKIP_DIRS or cat_dir.startswith('.'):
-        continue
-
-    # 해당 폴더 안에 글 폴더(index.html 포함)가 있는지 확인
     found_posts = False
     for slug in sorted(os.listdir(cat_dir)):
         index_path = os.path.join(cat_dir, slug, 'index.html')
         if os.path.isfile(index_path):
-            title = extract_title(index_path) or slug.replace('-', ' ')
-            desc = extract_description(index_path)
-            posts.append({"cat": cat_dir, "slug": slug, "title": title, "desc": desc})
+            content = _read(index_path)
+            posts.append({
+                "cat": cat_dir,
+                "slug": slug,
+                "title": extract_title(content, slug),
+                "desc": extract_description(content),
+                "date": extract_pubdate(content) or NOW,
+            })
             found_posts = True
-
     if found_posts:
         print(f"  📁 카테고리 감지: {cat_dir}/")
+
+# 최신 글이 위로 오도록 정렬
+posts.sort(key=lambda p: p["date"], reverse=True)
 
 # sitemap.xml 생성
 sitemap_parts = ['<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
@@ -98,7 +119,7 @@ for page in STATIC_PAGES:
 for post in posts:
     sitemap_parts.append(f"""  <url>
     <loc>{BASE_URL}/{post['cat']}/{post['slug']}/</loc>
-    <lastmod>{TODAY}</lastmod>
+    <lastmod>{post['date'].strftime('%Y-%m-%d')}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>""")
@@ -118,7 +139,7 @@ for post in posts:
     <title>{escape_xml(post['title'])}</title>
     <link>{BASE_URL}/{post['cat']}/{post['slug']}/</link>
     <description>{escape_xml(post['desc'])}</description>
-    <pubDate>{TODAY_RSS}</pubDate>
+    <pubDate>{rfc822(post['date'])}</pubDate>
   </item>""")
 
 for tool in TOOL_ITEMS:
@@ -135,7 +156,7 @@ rss_content = f"""<?xml version="1.0" encoding="UTF-8" ?>
   <link>{BASE_URL}</link>
   <description>영양제·식단·생활습관 등 일상 건강 정보와 무료 건강 계산기를 제공하는 블로그</description>
   <language>ko</language>
-  <lastBuildDate>{TODAY_RSS}</lastBuildDate>
+  <lastBuildDate>{NOW_RSS}</lastBuildDate>
 
 {chr(10).join(rss_items)}
 </channel>
