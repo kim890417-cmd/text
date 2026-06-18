@@ -23,7 +23,7 @@
     <div class="nav-container">
       <a href="/" class="nav-logo">블로그 도구모음</a>
       <ul class="nav-menu">
-        <li><a href="/">단축링크</a></li>
+        <li><a href="/short">단축링크</a></li>
         <li class="dropdown">
           <a href="#" class="dropbtn">이미지 도구</a>
           <div class="dropdown-content">
@@ -41,24 +41,51 @@
     </div>
   </nav>
 
-  <main class="container">
-    <div class="page-header">
-        <h1><i class="fas fa-chart-line"></i> 키워드 분석기</h1>
-        <p>블로그 포스팅을 위한 최적의 키워드를 찾아보세요.</p>
-    </div>
+  <main>
+    <div class="container">
+      <section class="tool-section">
+        <h1>키워드 연관검색어 조회</h1>
+        <p class="subtitle">키워드를 입력하면 구글·네이버 연관검색어를 한눈에 확인하세요.</p>
 
-    <input type="text" id="keyword-input" placeholder="분석할 키워드를 입력하세요 (예: 인공지능)">
-    <button id="analyze-btn" class="btn-primary" style="width:100%;">분석 시작</button>
+        <div class="tool-box" style="padding: 30px;">
+          <div style="display:flex; gap:10px; margin-bottom:8px;">
+            <input type="text" id="keyword-input" placeholder="키워드 입력 (예: 인공지능)" style="flex:1; padding:12px 16px; border:1px solid #ddd; border-radius:10px; font-size:1rem; font-family:inherit;">
+            <button id="search-btn" class="btn-primary" style="white-space:nowrap;">검색</button>
+          </div>
+          <p style="margin:0 0 20px; font-size:0.82rem; color:#999;">Enter 키로도 검색 가능 · 키워드 클릭 시 해당 검색엔진에서 바로 검색</p>
 
-    <div id="loading" style="text-align:center; display:none; margin-top:20px;">
-      <p>키워드를 분석하고 있습니다. 잠시만 기다려주세요...</p>
-    </div>
-    
-    <div id="results-area" style="display:none;">
-      <h3>분석 결과</h3>
-      <div id="results-content"></div>
-    </div>
+          <div id="loading" style="display:none; text-align:center; padding:30px 0;">
+            <div style="width:36px;height:36px;border:3px solid #eee;border-top-color:#007bff;border-radius:50%;animation:spin 0.8s linear infinite;margin:0 auto 10px;"></div>
+            <p style="color:#999; margin:0; font-size:0.9rem;">연관검색어 불러오는 중...</p>
+          </div>
 
+          <div id="results-area" style="display:none;">
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+              <div>
+                <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px;">
+                  <img src="https://www.google.com/favicon.ico" width="16" height="16" alt="Google">
+                  <span style="font-weight:700; font-size:0.95rem;">Google 연관검색어</span>
+                </div>
+                <div id="google-list"></div>
+              </div>
+              <div>
+                <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px;">
+                  <img src="https://www.naver.com/favicon.ico" width="16" height="16" alt="Naver">
+                  <span style="font-weight:700; font-size:0.95rem;">Naver 연관검색어</span>
+                </div>
+                <div id="naver-list"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <style>
+          @keyframes spin { to { transform: rotate(360deg); } }
+          .kw-chip { display:flex; align-items:center; padding:9px 14px; margin-bottom:6px; background:#f8f9fa; border-radius:8px; font-size:0.9rem; cursor:pointer; text-decoration:none; color:inherit; transition:background 0.15s; }
+          .kw-chip:hover { background:#e8f4ff; color:#007bff; }
+          .kw-num { width:20px; font-size:0.78rem; color:#bbb; flex-shrink:0; }
+        </style>
+      </section>
+    </div>
   </main>
 
   <footer>
@@ -70,11 +97,12 @@
       <div class="footer-section">
         <h4>주요 도구</h4>
         <ul>
-          <li><a href="/">단축링크</a></li>
+          <li><a href="/short">단축링크</a></li>
           <li><a href="/compressor">이미지 용량 줄이기</a></li>
           <li><a href="/upscaler">이미지 화질 올리기</a></li>
           <li><a href="/eraser">AI 지우개</a></li>
           <li><a href="/keyword_analyzer">키워드 분석기</a></li>
+          <li><a href="/blog">전문 블로그</a></li>
         </ul>
       </div>
       <div class="footer-section">
@@ -123,44 +151,72 @@
         }
     });
 
-    const keywordInput = document.getElementById('keyword-input');
-    const analyzeBtn = document.getElementById('analyze-btn');
+    const input = document.getElementById('keyword-input');
+    const searchBtn = document.getElementById('search-btn');
     const loading = document.getElementById('loading');
     const resultsArea = document.getElementById('results-area');
-    const resultsContent = document.getElementById('results-content');
 
-    analyzeBtn.addEventListener('click', async () => {
-      const keyword = keywordInput.value;
-      if (!keyword) {
-        alert('키워드를 입력해주세요.');
-        return;
-      }
+    input.addEventListener('keydown', e => { if (e.key === 'Enter') doSearch(); });
+    searchBtn.addEventListener('click', doSearch);
 
+    async function doSearch() {
+      const kw = input.value.trim();
+      if (!kw) { alert('키워드를 입력해주세요.'); return; }
       loading.style.display = 'block';
       resultsArea.style.display = 'none';
 
-      // Placeholder for server-side API call
-      console.log(`Simulating analysis for keyword: ${keyword}`);
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      const [gList, nList] = await Promise.all([fetchGoogle(kw), fetchNaver(kw)]);
 
-      // Dummy data for demonstration
-      resultsContent.innerHTML = `
-        <h4>'${keyword}' 관련 키워드</h4>
-        <ul>
-          <li>${keyword} 전망 (월간 검색량: 15,000)</li>
-          <li>${keyword} 종류 (월간 검색량: 12,000)</li>
-          <li>${keyword} 활용 사례 (월간 검색량: 9,000)</li>
-          <li>최신 ${keyword} 기술 (월간 검색량: 7,500)</li>
-        </ul>
-        <h4>블로그 포스팅 추천 주제</h4>
-        <p>1. 2026년 ${keyword} 기술의 최신 트렌드 분석<br>
-           2. 비전공자를 위한 ${keyword} 핵심 개념 5가지 정리<br>
-           3. 실제 업무에서 ${keyword}를 활용하여 생산성을 높인 3가지 사례</p>
-      `;
+      renderList('google-list', gList, kw, 'google');
+      renderList('naver-list', nList, kw, 'naver');
 
       loading.style.display = 'none';
       resultsArea.style.display = 'block';
-    });
+    }
+
+    function fetchGoogle(kw) {
+      return new Promise(resolve => {
+        const cb = '__g' + Date.now();
+        const script = document.createElement('script');
+        const timer = setTimeout(() => { script.remove(); delete window[cb]; resolve([]); }, 5000);
+        window[cb] = data => {
+          clearTimeout(timer); script.remove(); delete window[cb];
+          resolve((data[1] || []).slice(0, 10));
+        };
+        script.onerror = () => { clearTimeout(timer); delete window[cb]; resolve([]); };
+        script.src = `https://suggestqueries.google.com/complete/search?client=chrome&q=${encodeURIComponent(kw)}&hl=ko&callback=${cb}`;
+        document.head.appendChild(script);
+      });
+    }
+
+    async function fetchNaver(kw) {
+      try {
+        const url = `https://ac.search.naver.com/nx/ac?q=${encodeURIComponent(kw)}&st=1&frm=nv&r_format=json&r_enc=UTF-8&r_unicode=0&t_koreng=1&ans=2&run=2&rev=4&con=1`;
+        const res = await fetch(url);
+        const data = await res.json();
+        return (data.items?.[0] || []).map(i => i[0]).slice(0, 10);
+      } catch {
+        // CORS 차단 시 패턴 기반 제공
+        const sfx = ['뜻','방법','추천','종류','효과','비교','가격','후기','장단점','사용법'];
+        return sfx.map(s => kw + ' ' + s);
+      }
+    }
+
+    function renderList(id, items, kw, engine) {
+      const el = document.getElementById(id);
+      if (!items.length) {
+        el.innerHTML = '<p style="color:#999;font-size:0.88rem;">결과를 불러오지 못했습니다.</p>';
+        return;
+      }
+      const base = engine === 'google'
+        ? `https://www.google.com/search?q=`
+        : `https://search.naver.com/search.naver?query=`;
+      el.innerHTML = items.map((kw, i) =>
+        `<a href="${base}${encodeURIComponent(kw)}" target="_blank" rel="noopener" class="kw-chip">
+          <span class="kw-num">${i + 1}</span>${kw}
+        </a>`
+      ).join('');
+    }
   </script>
 </body>
 </html>

@@ -3,17 +3,96 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>단축링크 만들기 | dream95.com</title>
-  <meta name="description" content="긴 주소를 짧게 만들어주는 무료 URL 단축 서비스" />
+  <title>블로그 도구모음 | 무료 AI 이미지·링크·키워드 도구</title>
+  <meta name="description" content="이미지 압축, 화질 개선, AI 배경 제거, 단축링크, 키워드 분석까지. 블로그 운영에 필요한 무료 도구를 한 곳에서 사용하세요." />
+  <meta property="og:title" content="블로그 도구모음 | 무료 AI 도구 모음" />
+  <meta property="og:description" content="이미지 도구, 단축링크, 키워드 분석기, 전문 블로그까지 — 블로그 운영의 모든 것." />
+  <meta property="og:type" content="website" />
   <meta name="naver-site-verification" content="93050349df63a3823ca359af6981a85d663521c0" />
   <link href='style.css' rel='stylesheet'>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3406696816625207" crossorigin="anonymous"></script>
+  <style>
+    .hero {
+      text-align: center;
+      padding: 60px 20px 40px;
+    }
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+    .hero p {
+      font-size: 1.05rem;
+      color: #666;
+      max-width: 560px;
+      margin: 0 auto 32px;
+      line-height: 1.7;
+    }
+    .tool-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+      margin-bottom: 50px;
+    }
+    .tool-card {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 20px;
+      padding: 28px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+    }
+    .tool-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.09);
+    }
+    .tool-icon { font-size: 2.2rem; margin-bottom: 14px; }
+    .tool-card h3 { font-size: 1.05rem; font-weight: 700; margin: 0 0 8px; color: #222; }
+    .tool-card p { font-size: 0.88rem; color: #777; line-height: 1.6; margin: 0 0 18px; flex: 1; }
+    .tool-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #f0f7ff;
+      color: #007bff;
+    }
+    .section-title { font-size: 1.35rem; font-weight: 800; margin: 0 0 6px; }
+    .section-sub { font-size: 0.9rem; color: #888; margin: 0 0 22px; }
+    .blog-banner {
+      background: linear-gradient(135deg, #007bff, #0056b3);
+      border-radius: 20px;
+      padding: 40px;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    .blog-banner h2 { margin: 0 0 10px; font-size: 1.5rem; border: none; padding: 0; color: #fff; }
+    .blog-banner p { margin: 0 0 22px; opacity: 0.88; font-size: 0.95rem; }
+    .blog-banner a {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 26px;
+      border-radius: 10px;
+      font-weight: 700;
+      transition: background 0.2s;
+    }
+    .blog-banner a:hover { background: rgba(255,255,255,0.35); }
+  </style>
 </head>
 <body>
   <nav class="navbar">
     <div class="nav-container">
       <a href="/" class="nav-logo">블로그 도구모음</a>
       <ul class="nav-menu">
-        <li><a href="/">단축링크</a></li>
+        <li><a href="/short">단축링크</a></li>
         <li class="dropdown">
           <a href="#" class="dropbtn">이미지 도구</a>
           <div class="dropdown-content">
@@ -33,43 +112,58 @@
 
   <main>
     <div class="container">
-        <div class="card-container">
-            <section class="hero">
-                <h1>긴 주소를 <span class="accent">짧게</span></h1>
-                <p class="subtitle">URL을 입력하면 짧은 링크로 바꿔드려요. 클릭 수도 확인할 수 있어요.</p>
-            </section>
 
-            <section class="card">
-                <form id="shorten-form" autocomplete="off">
-                    <div class="input-row">
-                        <input type="url" id="long-url" placeholder="https://example.com/매우/긴/주소..." required />
-                        <button type="submit" id="submit-btn">짧게 만들기</button>
-                    </div>
-                    <div class="input-row optional">
-                        <input type="text" id="custom-alias" placeholder="원하는 별칭 (선택) — 예: my-event" pattern="[a-zA-Z0-9_-]+" title="영문, 숫자, -, _ 만 사용할 수 있어요" />
-                    </div>
-                </form>
+      <section class="hero">
+        <h1>블로그 운영에 필요한<br>모든 도구를 무료로</h1>
+        <p>이미지 압축·화질 개선·배경 제거부터 단축링크, 키워드 분석까지.<br>설치 없이 브라우저에서 바로 사용하세요.</p>
+      </section>
 
-                <div id="result" class="result hidden">
-                    <div class="result-row">
-                        <a id="short-link" href="#" target="_blank" rel="noopener" class="short-url"></a>
-                        <button id="copy-btn" class="copy-btn" title="복사">복사</button>
-                    </div>
-                    <div class="result-meta">
-                        <a id="stats-link" href="#" class="meta-link">📊 클릭 통계 보기</a>
-                    </div>
-                </div>
+      <h2 class="section-title">🖼️ 이미지 도구</h2>
+      <p class="section-sub">모든 이미지 처리는 브라우저 안에서만 이루어집니다. 서버로 전송되지 않아 안전합니다.</p>
+      <div class="tool-grid">
+        <a href="/compressor" class="tool-card">
+          <div class="tool-icon">📦</div>
+          <h3>이미지 용량 줄이기</h3>
+          <p>화질 저하를 최소화하면서 JPEG·WebP·PNG 파일 크기를 압축합니다. 블로그 로딩 속도를 높이세요.</p>
+          <span class="tool-tag">무료 · 무제한</span>
+        </a>
+        <a href="/upscaler" class="tool-card">
+          <div class="tool-icon">🔍</div>
+          <h3>이미지 화질 올리기</h3>
+          <p>저해상도 이미지를 2배·4배로 업스케일하고 언샤프 마스킹으로 선명도를 높입니다.</p>
+          <span class="tool-tag">AI 기반</span>
+        </a>
+        <a href="/eraser" class="tool-card">
+          <div class="tool-icon">✂️</div>
+          <h3>AI 배경 제거</h3>
+          <p>AI가 자동으로 이미지 배경을 분리합니다. 투명 PNG로 저장되어 어디에나 활용 가능합니다.</p>
+          <span class="tool-tag">AI 기반</span>
+        </a>
+      </div>
 
-                <p id="error-msg" class="error-msg hidden"></p>
-            </section>
+      <h2 class="section-title">🛠️ 블로그 도구</h2>
+      <p class="section-sub">글쓰기와 링크 관리에 필요한 실용 도구입니다.</p>
+      <div class="tool-grid">
+        <a href="/short" class="tool-card">
+          <div class="tool-icon">🔗</div>
+          <h3>단축링크 만들기</h3>
+          <p>긴 URL을 짧게 줄이고 클릭 통계를 실시간으로 확인합니다. 커스텀 별칭도 무료로 지원합니다.</p>
+          <span class="tool-tag">무료 · 통계 제공</span>
+        </a>
+        <a href="/keyword_analyzer" class="tool-card">
+          <div class="tool-icon">📊</div>
+          <h3>키워드 연관검색어 조회</h3>
+          <p>키워드를 입력하면 Google·Naver 연관검색어를 한눈에 보여줍니다. SEO 콘텐츠 기획에 활용하세요.</p>
+          <span class="tool-tag">구글 · 네이버</span>
+        </a>
+      </div>
 
-            <section class="features">
-                <div class="feature">⚡ <span>즉시 생성</span></div>
-                <div class="feature">📊 <span>클릭 통계</span></div>
-                <div class="feature">✏️ <span>커스텀 별칭</span></div>
-                <div class="feature">🆓 <span>완전 무료</span></div>
-            </section>
-        </div>
+      <div class="blog-banner">
+        <h2>📚 전문 블로그</h2>
+        <p>건강, 생활, 정보 등 일상에 도움이 되는 다양한 주제의 글을 읽어보세요.</p>
+        <a href="/blog">블로그 바로가기 →</a>
+      </div>
+
     </div>
   </main>
 
@@ -77,16 +171,17 @@
     <div class="footer-container">
       <div class="footer-section">
         <h4>블로그 도구모음</h4>
-        <p style="font-size: 0.9rem; color: #bdc3c7;">인공지능 기술을 일상 속의 재미와 정보로 연결하는 창의적인 도구 모음 플랫폼입니다.</p>
+        <p style="font-size: 0.9rem; color: #bdc3c7;">블로그 운영에 필요한 무료 AI 도구를 한 곳에서 제공하는 플랫폼입니다.</p>
       </div>
       <div class="footer-section">
         <h4>주요 도구</h4>
         <ul>
-          <li><a href="/">단축링크</a></li>
+          <li><a href="/short">단축링크</a></li>
           <li><a href="/compressor">이미지 용량 줄이기</a></li>
           <li><a href="/upscaler">이미지 화질 올리기</a></li>
           <li><a href="/eraser">AI 지우개</a></li>
           <li><a href="/keyword_analyzer">키워드 분석기</a></li>
+          <li><a href="/blog">전문 블로그</a></li>
         </ul>
       </div>
       <div class="footer-section">
@@ -105,36 +200,22 @@
   </footer>
 
   <script>
-    // Theme toggle script
     const themeToggle = document.getElementById('theme-toggle');
     if (themeToggle) {
       themeToggle.addEventListener('click', () => {
         document.body.classList.toggle('dark-mode');
-        const isDarkMode = document.body.classList.contains('dark-mode');
-        localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+        localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
       });
     }
+    if (localStorage.getItem('theme') === 'dark') document.body.classList.add('dark-mode');
 
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-      document.body.classList.add('dark-mode');
-    }
-
-    // Active link highlighting
-    const currentPage = window.location.pathname;
-    const navLinks = document.querySelectorAll('.nav-menu a');
-    navLinks.forEach(link => {
-        const linkHref = link.getAttribute('href');
-        const dropdown = link.closest('.dropdown');
-
-        if (linkHref === currentPage || (currentPage === '/index.html' && linkHref === '/')) {
-            link.classList.add('active');
-            if (dropdown) {
-                dropdown.querySelector('.dropbtn').classList.add('active');
-            }
-        }
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+      const dropdown = link.closest('.dropdown');
+      if (link.getAttribute('href') === window.location.pathname) {
+        link.classList.add('active');
+        if (dropdown) dropdown.querySelector('.dropbtn').classList.add('active');
+      }
     });
   </script>
-  <script type="module" src="/js/app.js"></script>
 </body>
 </html>
