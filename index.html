@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>블로그 도구모음 | 무료 AI 이미지·링크·키워드 도구</title>
-  <meta name="description" content="이미지 압축, 화질 개선, AI 배경 제거, 단축링크, 키워드 분석까지. 블로그 운영에 필요한 무료 도구를 한 곳에서 사용하세요." />
-  <meta property="og:title" content="블로그 도구모음 | 무료 AI 도구 모음" />
-  <meta property="og:description" content="이미지 도구, 단축링크, 키워드 분석기, 전문 블로그까지 — 블로그 운영의 모든 것." />
+  <title>건강노트 | 영양제·식단·건강 정보와 무료 건강 계산기</title>
+  <meta name="description" content="비타민·영양제 효능, 식단, 콜레스테롤·혈압 관리까지. 직접 공부해 정리한 건강 정보와 BMI·칼로리·단백질 계산기를 무료로 제공합니다." />
+  <meta property="og:title" content="건강노트 | 건강 정보와 무료 건강 계산기" />
+  <meta property="og:description" content="영양제·식단·생활습관 건강 정보와 BMI·칼로리·단백질 계산기를 한 곳에서." />
   <meta property="og:type" content="website" />
   <meta name="naver-site-verification" content="93050349df63a3823ca359af6981a85d663521c0" />
   <link href='style.css' rel='stylesheet'>
@@ -85,24 +85,50 @@
       transition: background 0.2s;
     }
     .blog-banner a:hover { background: rgba(255,255,255,0.35); }
+    .topic-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 12px;
+      margin-bottom: 60px;
+    }
+    .topic-chip {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 16px;
+      text-align: center;
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      font-size: 0.92rem;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .topic-chip:hover { border-color: #007bff; color: #007bff; }
+    .disclaimer {
+      background: #f8f9fa;
+      border-radius: 14px;
+      padding: 18px 22px;
+      font-size: 0.85rem;
+      color: #777;
+      line-height: 1.6;
+      margin-bottom: 50px;
+    }
   </style>
 </head>
 <body>
   <nav class="navbar">
     <div class="nav-container">
-      <a href="/" class="nav-logo">블로그 도구모음</a>
+      <a href="/" class="nav-logo">건강노트</a>
       <ul class="nav-menu">
-        <li><a href="/short">단축링크</a></li>
         <li class="dropdown">
-          <a href="#" class="dropbtn">이미지 도구</a>
+          <a href="#" class="dropbtn">건강 계산기</a>
           <div class="dropdown-content">
-            <a href="/compressor">이미지 용량 줄이기</a>
-            <a href="/upscaler">이미지 화질 올리기</a>
-            <a href="/eraser">AI 지우개</a>
+            <a href="/bmi">BMI 계산기</a>
+            <a href="/calorie">칼로리 계산기</a>
+            <a href="/protein">단백질 계산기</a>
           </div>
         </li>
-        <li><a href="/keyword_analyzer">키워드 분석기</a></li>
-        <li><a href="/blog">전문 블로그</a></li>
+        <li><a href="/blog">건강 블로그</a></li>
         <li><a href="/about">소개</a></li>
         <li><a href="/contact">문의하기</a></li>
       </ul>
@@ -114,55 +140,51 @@
     <div class="container">
 
       <section class="hero">
-        <h1>블로그 운영에 필요한<br>모든 도구를 무료로</h1>
-        <p>이미지 압축·화질 개선·배경 제거부터 단축링크, 키워드 분석까지.<br>설치 없이 브라우저에서 바로 사용하세요.</p>
+        <h1>건강, 직접 공부해<br>쉽게 정리해 드립니다</h1>
+        <p>비타민·영양제 효능부터 식단, 콜레스테롤·혈압 관리까지.<br>믿을 수 있는 건강 정보와 무료 건강 계산기를 한 곳에서 만나보세요.</p>
       </section>
 
-      <h2 class="section-title">🖼️ 이미지 도구</h2>
-      <p class="section-sub">모든 이미지 처리는 브라우저 안에서만 이루어집니다. 서버로 전송되지 않아 안전합니다.</p>
+      <h2 class="section-title">🧮 건강 계산기</h2>
+      <p class="section-sub">모든 계산은 브라우저 안에서만 이루어집니다. 입력값은 서버로 전송되지 않아 안전합니다.</p>
       <div class="tool-grid">
-        <a href="/compressor" class="tool-card">
-          <div class="tool-icon">📦</div>
-          <h3>이미지 용량 줄이기</h3>
-          <p>화질 저하를 최소화하면서 JPEG·WebP·PNG 파일 크기를 압축합니다. 블로그 로딩 속도를 높이세요.</p>
-          <span class="tool-tag">무료 · 무제한</span>
+        <a href="/bmi" class="tool-card">
+          <div class="tool-icon">⚖️</div>
+          <h3>BMI·표준체중 계산기</h3>
+          <p>키와 몸무게로 체질량지수(BMI)와 비만도, 표준체중을 한 번에 계산합니다. 내 체중이 적정 범위인지 확인하세요.</p>
+          <span class="tool-tag">무료 · 즉시 계산</span>
         </a>
-        <a href="/upscaler" class="tool-card">
-          <div class="tool-icon">🔍</div>
-          <h3>이미지 화질 올리기</h3>
-          <p>저해상도 이미지를 2배·4배로 업스케일하고 언샤프 마스킹으로 선명도를 높입니다.</p>
-          <span class="tool-tag">AI 기반</span>
+        <a href="/calorie" class="tool-card">
+          <div class="tool-icon">🔥</div>
+          <h3>하루 칼로리 계산기</h3>
+          <p>기초대사량(BMR)과 활동량을 바탕으로 하루 필요 칼로리(TDEE)와 감량·유지·증량 목표 칼로리를 알려줍니다.</p>
+          <span class="tool-tag">BMR · TDEE</span>
         </a>
-        <a href="/eraser" class="tool-card">
-          <div class="tool-icon">✂️</div>
-          <h3>AI 배경 제거</h3>
-          <p>AI가 자동으로 이미지 배경을 분리합니다. 투명 PNG로 저장되어 어디에나 활용 가능합니다.</p>
-          <span class="tool-tag">AI 기반</span>
+        <a href="/protein" class="tool-card">
+          <div class="tool-icon">🍗</div>
+          <h3>단백질 섭취량 계산기</h3>
+          <p>체중과 활동 수준에 맞는 하루 단백질 권장량(g)을 계산하고, 어떤 음식으로 채우면 좋은지 안내합니다.</p>
+          <span class="tool-tag">하루 권장량</span>
         </a>
       </div>
 
-      <h2 class="section-title">🛠️ 블로그 도구</h2>
-      <p class="section-sub">글쓰기와 링크 관리에 필요한 실용 도구입니다.</p>
-      <div class="tool-grid">
-        <a href="/short" class="tool-card">
-          <div class="tool-icon">🔗</div>
-          <h3>단축링크 만들기</h3>
-          <p>긴 URL을 짧게 줄이고 클릭 통계를 실시간으로 확인합니다. 커스텀 별칭도 무료로 지원합니다.</p>
-          <span class="tool-tag">무료 · 통계 제공</span>
-        </a>
-        <a href="/keyword_analyzer" class="tool-card">
-          <div class="tool-icon">📊</div>
-          <h3>키워드 연관검색어 조회</h3>
-          <p>키워드를 입력하면 Google·Naver 연관검색어를 한눈에 보여줍니다. SEO 콘텐츠 기획에 활용하세요.</p>
-          <span class="tool-tag">구글 · 네이버</span>
-        </a>
+      <h2 class="section-title">📚 인기 건강 주제</h2>
+      <p class="section-sub">자주 찾는 건강 주제를 골라 읽어보세요.</p>
+      <div class="topic-grid">
+        <a href="/blog" class="topic-chip">비타민·영양제</a>
+        <a href="/blog" class="topic-chip">콜레스테롤·혈압</a>
+        <a href="/blog" class="topic-chip">면역력·환절기</a>
+        <a href="/blog" class="topic-chip">장 건강·유산균</a>
+        <a href="/blog" class="topic-chip">단백질·식단</a>
+        <a href="/blog" class="topic-chip">수면·피로회복</a>
       </div>
 
       <div class="blog-banner">
-        <h2>📚 전문 블로그</h2>
-        <p>건강, 생활, 정보 등 일상에 도움이 되는 다양한 주제의 글을 읽어보세요.</p>
+        <h2>📖 건강 블로그</h2>
+        <p>영양제 복용법, 음식별 효능, 생활습관까지 — 직접 공부해 정리한 건강 글을 읽어보세요.</p>
         <a href="/blog">블로그 바로가기 →</a>
       </div>
+
+      <p class="disclaimer">⚠️ 건강노트의 모든 글과 계산기 결과는 일반적인 정보 제공을 목적으로 하며, 의학적 진단·치료·처방을 대체하지 않습니다. 건강상의 결정을 내리기 전에는 반드시 의사·약사 등 전문가와 상담하시기 바랍니다.</p>
 
     </div>
   </main>
@@ -170,18 +192,16 @@
   <footer>
     <div class="footer-container">
       <div class="footer-section">
-        <h4>블로그 도구모음</h4>
-        <p style="font-size: 0.9rem; color: #bdc3c7;">블로그 운영에 필요한 무료 AI 도구를 한 곳에서 제공하는 플랫폼입니다.</p>
+        <h4>건강노트</h4>
+        <p style="font-size: 0.9rem; color: #bdc3c7;">영양제·식단·생활습관 등 일상 건강 정보를 직접 공부하고 정리해 전하는 블로그입니다.</p>
       </div>
       <div class="footer-section">
-        <h4>주요 도구</h4>
+        <h4>건강 계산기</h4>
         <ul>
-          <li><a href="/short">단축링크</a></li>
-          <li><a href="/compressor">이미지 용량 줄이기</a></li>
-          <li><a href="/upscaler">이미지 화질 올리기</a></li>
-          <li><a href="/eraser">AI 지우개</a></li>
-          <li><a href="/keyword_analyzer">키워드 분석기</a></li>
-          <li><a href="/blog">전문 블로그</a></li>
+          <li><a href="/bmi">BMI 계산기</a></li>
+          <li><a href="/calorie">칼로리 계산기</a></li>
+          <li><a href="/protein">단백질 계산기</a></li>
+          <li><a href="/blog">건강 블로그</a></li>
         </ul>
       </div>
       <div class="footer-section">
@@ -195,7 +215,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 블로그 도구모음. 사용자에게 가치 있는 정보를 제공하기 위해 최선을 다합니다.</p>
+      <p>&copy; 2026 건강노트. 신뢰할 수 있는 건강 정보를 쉽게 전하기 위해 노력합니다.</p>
     </div>
   </footer>
 

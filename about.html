@@ -3,41 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>사이트 소개 | 블로그 도구모음 - 인공지능 기술의 일상화</title>
-  <meta name="description" content="블로그 도구모음는 복잡한 인공지능 기술을 누구나 쉽게 체험할 수 있도록 돕는 지식 및 도구 공유 플랫폼입니다. 운영 철학과 팀 소개를 확인하세요.">
-  <meta property="og:title" content="사이트 소개 | 블로그 도구모음">
-  <meta property="og:description" content="블로그 도구모음의 운영 철학과 팀 소개를 확인하세요.">
+  <title>소개 | 건강노트 - 건강을 직접 공부해 정리하는 사람</title>
+  <meta name="description" content="식품학을 전공하고, 몸이 약해진 경험을 계기로 건강을 공부해 기록하는 운영자가 만드는 건강노트입니다. 운영자 이야기와 글쓰기 원칙을 소개합니다.">
+  <meta property="og:title" content="소개 | 건강노트">
+  <meta property="og:description" content="건강을 직접 공부해 쉽게 정리하는 운영자의 이야기.">
   <meta property="og:type" content="website">
   <link href='style.css' rel='stylesheet'>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3406696816625207"
      crossorigin="anonymous"></script>
   <style>
-    .team-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 25px;
-      margin-top: 30px;
-    }
-    .team-card {
-      background: #f8f9fa;
-      border-radius: 16px;
-      padding: 25px;
-      text-align: center;
-    }
-    .team-avatar {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #007bff, #00bfff);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      margin: 0 auto 15px;
-    }
-    .team-name { font-weight: 700; margin-bottom: 5px; }
-    .team-role { color: #007bff; font-size: 0.85rem; font-weight: 600; margin-bottom: 10px; }
-    .team-desc { color: #666; font-size: 0.88rem; line-height: 1.6; }
     .value-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -80,24 +54,31 @@
     }
     .timeline-title { font-weight: 600; margin-bottom: 5px; }
     .timeline-desc { color: #666; font-size: 0.9rem; margin: 0; }
+    .disclaimer {
+      background: #f8f9fa;
+      border-radius: 14px;
+      padding: 18px 22px;
+      font-size: 0.85rem;
+      color: #777;
+      line-height: 1.6;
+      margin-top: 30px;
+    }
   </style>
 </head>
 <body>
   <nav class="navbar">
     <div class="nav-container">
-      <a href="/" class="nav-logo">블로그 도구모음</a>
+      <a href="/" class="nav-logo">건강노트</a>
       <ul class="nav-menu">
-        <li><a href="/short">단축링크</a></li>
         <li class="dropdown">
-          <a href="#" class="dropbtn">이미지 도구</a>
+          <a href="#" class="dropbtn">건강 계산기</a>
           <div class="dropdown-content">
-            <a href="/compressor">이미지 용량 줄이기</a>
-            <a href="/upscaler">이미지 화질 올리기</a>
-            <a href="/eraser">AI 지우개</a>
+            <a href="/bmi">BMI 계산기</a>
+            <a href="/calorie">칼로리 계산기</a>
+            <a href="/protein">단백질 계산기</a>
           </div>
         </li>
-        <li><a href="/keyword_analyzer">키워드 분석기</a></li>
-        <li><a href="/blog">전문 블로그</a></li>
+        <li><a href="/blog">건강 블로그</a></li>
         <li><a href="/about">소개</a></li>
         <li><a href="/contact">문의하기</a></li>
       </ul>
@@ -107,102 +88,72 @@
 
   <main>
     <div class="container">
-      <div style="text-align: right; margin-bottom: 20px;">
-        <button id="theme-toggle" style="background:none; border:1px solid #ddd; cursor:pointer; padding:5px 10px; border-radius:5px; font-size:0.8rem;">테마 변경</button>
-      </div>
       <article class="content-rich">
-        <h1>블로그 도구모음 소개</h1>
-        <p class="subtitle">기술을 이해하는 사람이 더 나은 선택을 한다고 믿습니다.</p>
+        <h1>건강노트를 운영하는 사람</h1>
+        <p class="subtitle">건강에 서툴렀던 사람이라, 어렵게 공부한 만큼 쉽게 정리합니다.</p>
 
-        <p><strong>블로그 도구모음</strong>는 블로그 운영에 필요한 실용 도구를 무료로 제공하는 플랫폼입니다. <a href="/">이미지 도구</a>와 <a href="/short">단축링크</a>, <a href="/keyword_analyzer">키워드 분석기</a>부터 건강·생활·정보 등 다양한 주제를 다루는 <a href="/blog">전문 블로그</a>까지, 일상에 유익한 콘텐츠와 도구를 함께 제공합니다.</p>
+        <p>안녕하세요. <strong>건강노트</strong>는 의사도 약사도 아닌, 그저 <strong>건강이 절실해서 직접 공부하게 된 한 사람</strong>이 운영하는 블로그입니다. 제가 어떤 사람인지, 왜 이 글들을 쓰게 됐는지 솔직하게 적어두는 게 맞다고 생각했습니다.</p>
 
-        <h2>우리의 미션</h2>
-        <p>우리는 기술이 소수의 전유물이 아닌, 모든 사람의 일상에 즐거움과 유익함을 주는 자원이 되어야 한다고 믿습니다. 블로그 도구모음는 세 가지 기둥 위에 서 있습니다.</p>
+        <h2>제가 건강을 공부하게 된 이야기</h2>
+        <p>저는 2014년에 소위로 임관해 고성, 남양주, 대관령 등 여러 부대를 거치며 군 생활을 했고 대위로 전역했습니다. 전역 후에는 대전에서 스피치 학원과 행사 회사에서 <strong>PD</strong>로 일했습니다. 무대를 만드는 일은 보람찼지만 밤샘이 정말 많았습니다.</p>
+        <p>군 생활의 강도, PD 시절의 잦은 밤샘, 그리고 나이가 더해지면서 어느 순간부터 <strong>몸이 눈에 띄게 약해졌습니다.</strong> 작은 일에도 쉽게 지치고, 주변에서 "몸 좀 챙기라"는 잔소리도 참 많이 들었습니다. 그때부터 영양제 하나, 음식 하나도 그냥 먹지 않고 "이게 정말 나에게 맞나"를 찾아보기 시작했습니다.</p>
+        <p>다행히 저는 혼자가 아니었습니다. 대학에서 <strong>식품학</strong>을 전공한 덕분에 영양 성분표를 읽고 자료를 해석하는 데 익숙했고, 영양사나 건강 분야에서 일하는 학과 친구들이 주변에 많았습니다. 게다가 <strong>매제(여동생 남편)가 의사</strong>라서 궁금한 점을 물어볼 수 있었고, 가깝게 지내는 <strong>약사 형</strong>과도 약과 영양제 이야기를 자주 나눴습니다. 이렇게 보고 듣고 공부한 것을, 저처럼 몸이 약해 고민하는 분들을 위해 하나씩 정리한 것이 건강노트입니다.</p>
+
+        <h2>지금까지 걸어온 길</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">2014년 ~ 전역</div>
+            <div class="timeline-title">육군 장교 (소위 임관 → 대위 전역)</div>
+            <p class="timeline-desc">고성, 남양주, 대관령 등에서 근무하며 규율과 책임을 배웠습니다.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">전역 후</div>
+            <div class="timeline-title">대전 스피치 학원 · 행사 회사 PD</div>
+            <p class="timeline-desc">사람들 앞에서 말하고, 무대를 기획하고 진행했습니다. 잦은 밤샘으로 건강의 소중함을 절감한 시기이기도 합니다.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">현재</div>
+            <div class="timeline-title">천안에서 공인중개사 사무소 운영</div>
+            <p class="timeline-desc">공인중개사 자격증을 취득해 천안에서 사무소를 운영하고 있으며, 틈틈이 건강을 공부하고 글로 기록하고 있습니다.</p>
+          </div>
+        </div>
+
+        <h2>글을 쓸 때 지키는 원칙</h2>
+        <p>건강 정보는 잘못 전하면 누군가의 몸에 영향을 줄 수 있다고 생각합니다. 그래서 다음 원칙을 지키려 노력합니다.</p>
         <div class="value-grid">
           <div class="value-card">
-            <div class="value-icon">🔍</div>
-            <div class="value-title">투명성</div>
-            <p class="value-desc">모든 도구의 작동 원리를 상세히 설명하여 사용자가 '왜'를 이해할 수 있도록 합니다.</p>
+            <div class="value-icon">📖</div>
+            <div class="value-title">근거를 찾고 씁니다</div>
+            <p class="value-desc">식품학 전공 배경을 살려 공신력 있는 자료와 권장 기준을 확인한 뒤 정리합니다.</p>
           </div>
           <div class="value-card">
-            <div class="value-icon">🔒</div>
-            <div class="value-title">프라이버시</div>
-            <p class="value-desc">사용자 데이터를 서버에 저장하지 않는 기기 내(On-device) 연산 방식을 지향합니다.</p>
+            <div class="value-icon">🩺</div>
+            <div class="value-title">주변 전문가에게 묻습니다</div>
+            <p class="value-desc">의사인 매제, 약사 형, 영양사 친구들의 조언을 참고해 한쪽으로 치우치지 않으려 합니다.</p>
           </div>
           <div class="value-card">
-            <div class="value-icon">📚</div>
-            <div class="value-title">정보의 질</div>
-            <p class="value-desc">단순한 결과 제공을 넘어, 그 이면의 수학적·과학적 원리를 함께 전달합니다.</p>
+            <div class="value-icon">🙋</div>
+            <div class="value-title">쉽게 풀어 씁니다</div>
+            <p class="value-desc">저처럼 비전문가도 이해할 수 있도록, 어려운 내용을 일상의 언어로 정리합니다.</p>
           </div>
           <div class="value-card">
             <div class="value-icon">⚖️</div>
-            <div class="value-title">윤리적 AI</div>
-            <p class="value-desc">안면 인식 기술이 올바른 방향으로 활용되는 사례를 만들어 나갑니다.</p>
+            <div class="value-title">한계를 분명히 합니다</div>
+            <p class="value-desc">제 글은 진단·처방이 아니며, 중요한 결정은 꼭 전문가와 상담하라고 안내합니다.</p>
           </div>
         </div>
 
-        <h2>팀 소개</h2>
-        <p>블로그 도구모음는 실용적인 도구와 유익한 콘텐츠를 함께 제공하고자 하는 소규모 팀이 운영합니다. 도구의 편의성과 콘텐츠의 품질, 두 가지를 모두 추구합니다.</p>
-        <div class="team-grid">
-          <div class="team-card">
-            <div class="team-avatar">🤖</div>
-            <div class="team-name">AI 연구팀</div>
-            <div class="team-role">딥러닝 모델 개발</div>
-            <p class="team-desc">TensorFlow.js와 Teachable Machine을 활용한 브라우저 기반 AI 모델을 개발하고 유지합니다.</p>
-          </div>
-          <div class="team-card">
-            <div class="team-avatar">✍️</div>
-            <div class="team-name">콘텐츠팀</div>
-            <div class="team-role">기술 칼럼 & 리서치</div>
-            <p class="team-desc">건강, 생활, 정보 등 독자에게 실질적으로 도움이 되는 콘텐츠를 연구하고 집필합니다.</p>
-          </div>
-          <div class="team-card">
-            <div class="team-avatar">🎨</div>
-            <div class="team-name">프론트엔드팀</div>
-            <div class="team-role">UX & 인터페이스 설계</div>
-            <p class="team-desc">복잡한 기술을 직관적이고 아름다운 인터페이스로 녹여내는 작업을 담당합니다.</p>
-          </div>
-        </div>
+        <h2>함께 나누고 싶습니다</h2>
+        <p>건강노트의 글이 저와 비슷한 고민을 하는 분들께 작은 도움이 되길 바랍니다. 잘못된 정보나 보완할 점이 있다면 언제든 알려주세요. 더 정확하게 고쳐 나가겠습니다.</p>
 
-        <h2>연혁</h2>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-date">2025년 하반기</div>
-            <div class="timeline-title">블로그 도구모음 프로젝트 시작</div>
-            <p class="timeline-desc">브라우저 기반 온디바이스 AI의 가능성을 탐구하며 첫 동물상 테스트 프로토타입을 개발했습니다.</p>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-date">2026년 3월</div>
-            <div class="timeline-title">전문 블로그 섹션 오픈</div>
-            <p class="timeline-desc">건강, 생활 정보 등 다양한 주제의 블로그 콘텐츠 연재를 시작했습니다.</p>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-date">2026년 5월</div>
-            <div class="timeline-title">사이트 전면 리뉴얼</div>
-            <p class="timeline-desc">사용자 경험을 개선하고, 더 많은 고품질 콘텐츠를 제공하기 위해 전면 업데이트를 진행했습니다.</p>
-          </div>
-        </div>
-
-        <h2>서비스 안내</h2>
-        <p>현재 제공 중인 도구와 앞으로 추가될 서비스를 소개합니다.</p>
-        <ul>
-          <li><strong>단축링크:</strong> 긴 URL을 짧게 만들고 클릭 통계를 확인할 수 있는 무료 URL 단축 서비스입니다.</li>
-          <li><strong>이미지 도구:</strong> 이미지 용량 줄이기, 화질 올리기, AI 지우개 등 다양한 이미지 편집 도구를 제공합니다.</li>
-          <li><strong>키워드 분석기:</strong> 입력한 텍스트의 키워드 빈도와 밀도를 분석하는 SEO 보조 도구입니다.</li>
-          <li><strong>전문 블로그:</strong> 건강, 생활, 정보 등 일상에 도움이 되는 다양한 주제의 글을 연재합니다.</li>
-          <li><strong>(예정) 텍스트 감정 분석:</strong> 자연어 처리(NLP) 기반으로 텍스트의 감정과 톤을 분석하는 도구를 개발 중입니다.</li>
-          <li><strong>(예정) AI 색상 추천:</strong> 얼굴 톤을 분석하여 어울리는 색상 팔레트를 추천하는 서비스를 준비 중입니다.</li>
-        </ul>
-
-        <h2>기술 및 개인정보 보호</h2>
-        <p>블로그 도구모음는 사용자의 프라이버시를 최우선으로 생각합니다. 이미지 도구에 업로드된 사진은 사용자의 기기(브라우저)에서만 처리되며, 어떠한 서버에도 전송되거나 저장되지 않습니다. 자세한 내용은 <a href="/privacy">개인정보처리방침</a>을 확인해 주세요.</p>
+        <div class="disclaimer">⚠️ 건강노트는 의료기관이 아니며, 운영자는 의료 전문가가 아닙니다. 본 사이트의 모든 글과 건강 계산기 결과는 일반적인 정보 제공을 목적으로 하며 의학적 진단·치료·처방을 대체하지 않습니다. 질병의 예방·진단·치료에 관한 결정은 반드시 의사·약사 등 전문가와 상담하시기 바랍니다.</div>
 
         <div style="text-align: center; margin-top: 50px; padding: 40px; background: linear-gradient(135deg, #007bff11, #00bfff11); border-radius: 20px;">
-          <h3 style="margin-top: 0;">함께 더 나은 서비스를 만들어 갑시다</h3>
-          <p style="color: #555; margin-bottom: 25px;">버그 신고, 콘텐츠 제안, 비즈니스 문의 등 무엇이든 환영합니다.</p>
+          <h3 style="margin-top: 0;">궁금한 점이 있으신가요?</h3>
+          <p style="color: #555; margin-bottom: 25px;">콘텐츠 제안, 정정 요청, 비즈니스 문의 등 무엇이든 환영합니다.</p>
           <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-            <a href="contact.html" class="btn-primary" style="text-decoration: none; font-size: 1rem; padding: 12px 25px;">문의하기</a>
-            <a href="blog.html" style="display: inline-block; padding: 12px 25px; border: 2px solid #007bff; border-radius: 12px; color: #007bff; text-decoration: none; font-weight: 600; font-size: 1rem;">블로그 읽기</a>
+            <a href="/contact" class="btn-primary" style="text-decoration: none; font-size: 1rem; padding: 12px 25px;">문의하기</a>
+            <a href="/blog" style="display: inline-block; padding: 12px 25px; border: 2px solid #007bff; border-radius: 12px; color: #007bff; text-decoration: none; font-weight: 600; font-size: 1rem;">블로그 읽기</a>
           </div>
         </div>
       </article>
@@ -212,18 +163,16 @@
   <footer>
     <div class="footer-container">
       <div class="footer-section">
-        <h4>블로그 도구모음</h4>
-        <p style="font-size: 0.9rem; color: #bdc3c7;">인공지능 기술을 일상 속의 재미와 정보로 연결하는 창의적인 도구 모음 플랫폼입니다.</p>
+        <h4>건강노트</h4>
+        <p style="font-size: 0.9rem; color: #bdc3c7;">영양제·식단·생활습관 등 일상 건강 정보를 직접 공부하고 정리해 전하는 블로그입니다.</p>
       </div>
       <div class="footer-section">
-        <h4>주요 도구</h4>
+        <h4>건강 계산기</h4>
         <ul>
-          <li><a href="/short">단축링크</a></li>
-          <li><a href="/compressor">이미지 용량 줄이기</a></li>
-          <li><a href="/upscaler">이미지 화질 올리기</a></li>
-          <li><a href="/eraser">AI 지우개</a></li>
-          <li><a href="/keyword_analyzer">키워드 분석기</a></li>
-          <li><a href="/blog">전문 블로그</a></li>
+          <li><a href="/bmi">BMI 계산기</a></li>
+          <li><a href="/calorie">칼로리 계산기</a></li>
+          <li><a href="/protein">단백질 계산기</a></li>
+          <li><a href="/blog">건강 블로그</a></li>
         </ul>
       </div>
       <div class="footer-section">
@@ -237,9 +186,26 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 블로그 도구모음. 사용자에게 가치 있는 정보를 제공하기 위해 최선을 다합니다.</p>
+      <p>&copy; 2026 건강노트. 신뢰할 수 있는 건강 정보를 쉽게 전하기 위해 노력합니다.</p>
     </div>
   </footer>
-  <script src="shared.js"></script>
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+      });
+    }
+    if (localStorage.getItem('theme') === 'dark') document.body.classList.add('dark-mode');
+
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+      const dropdown = link.closest('.dropdown');
+      if (link.getAttribute('href') === window.location.pathname) {
+        link.classList.add('active');
+        if (dropdown) dropdown.querySelector('.dropbtn').classList.add('active');
+      }
+    });
+  </script>
 </body>
 </html>

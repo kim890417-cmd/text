@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>단백질 섭취량 계산기 | 하루 권장 단백질(g) 계산 | 건강노트</title>
+  <meta name="description" content="체중과 활동 수준에 맞는 하루 단백질 권장 섭취량(g)을 무료로 계산합니다. 일반인부터 근력운동·다이어트까지 목표별 단백질량과 추천 음식을 안내합니다.">
+  <meta property="og:title" content="단백질 섭취량 계산기 | 하루 권장 단백질 계산">
+  <meta property="og:description" content="체중·활동 수준별 하루 단백질 권장량을 즉시 계산하는 무료 도구.">
+  <meta property="og:type" content="website">
+  <link href='style.css' rel='stylesheet'>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3406696816625207"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">건강노트</a>
+      <ul class="nav-menu">
+        <li class="dropdown">
+          <a href="#" class="dropbtn">건강 계산기</a>
+          <div class="dropdown-content">
+            <a href="/bmi">BMI 계산기</a>
+            <a href="/calorie">칼로리 계산기</a>
+            <a href="/protein">단백질 계산기</a>
+          </div>
+        </li>
+        <li><a href="/blog">건강 블로그</a></li>
+        <li><a href="/about">소개</a></li>
+        <li><a href="/contact">문의하기</a></li>
+      </ul>
+      <button id="theme-toggle">테마 변경</button>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      <section class="tool-section">
+        <h1>단백질 섭취량 계산기</h1>
+        <p class="subtitle">체중과 활동 수준에 맞는 하루 단백질 권장량을 계산해 드립니다.</p>
+
+        <div class="tool-box" style="padding: 30px; max-width: 520px; margin: 0 auto;">
+          <div style="margin-bottom: 18px;">
+            <label for="weight" style="font-weight:600; font-size:0.95rem;">몸무게 (kg)</label>
+            <input type="number" id="weight" placeholder="예: 65" style="width:100%; padding:12px 15px; border:1px solid #ddd; border-radius:10px; font-size:1rem; box-sizing:border-box; margin-top:8px;">
+          </div>
+          <div style="margin-bottom: 22px;">
+            <label for="goal" style="font-weight:600; font-size:0.95rem;">활동 수준 / 목표</label>
+            <select id="goal" style="width:100%; padding:12px 15px; border:1px solid #ddd; border-radius:10px; font-size:1rem; box-sizing:border-box; margin-top:8px;">
+              <option value="0.8,1.0">일반 성인 (운동 거의 안 함)</option>
+              <option value="1.2,1.4">가벼운 운동·활동적인 생활</option>
+              <option value="1.6,1.8" selected>규칙적 근력운동</option>
+              <option value="1.8,2.2">근육 증가(벌크업) 목표</option>
+              <option value="1.6,2.0">다이어트 중 근육 유지</option>
+            </select>
+          </div>
+          <button id="calc-button" class="btn-primary" style="width:100%;">계산하기</button>
+
+          <div id="result-area" style="display:none; margin-top: 28px; text-align:center;">
+            <p style="margin:0 0 6px; font-size:0.85rem; color:#999;">하루 권장 단백질</p>
+            <p id="protein-value" style="margin:0; font-weight:800; font-size:2.2rem; color:#007bff;"></p>
+            <p id="protein-foods" style="margin:14px 0 0; color:#666; font-size:0.9rem; line-height:1.6;"></p>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider">
+
+      <article class="content-rich">
+        <h2>하루 단백질, 얼마나 먹어야 할까?</h2>
+        <p>단백질 필요량은 체중과 활동 수준에 따라 달라집니다. 보통 체중 1kg당 필요한 단백질(g)을 곱해 하루 권장량을 추정합니다.</p>
+        <ul>
+          <li><strong>일반 성인:</strong> 체중 1kg당 0.8~1.0g</li>
+          <li><strong>가벼운 운동·활동적인 생활:</strong> 1.2~1.4g</li>
+          <li><strong>규칙적 근력운동:</strong> 1.6~1.8g</li>
+          <li><strong>근육 증가(벌크업):</strong> 1.8~2.2g</li>
+          <li><strong>다이어트 중 근육 유지:</strong> 1.6~2.0g</li>
+        </ul>
+        <p>예를 들어 체중 65kg인 사람이 규칙적으로 근력운동을 한다면 하루 약 <strong>104~117g</strong>의 단백질이 권장됩니다.</p>
+
+        <h2>단백질이 풍부한 음식</h2>
+        <p>단백질은 한 끼에 몰아서 먹기보다 세 끼에 나누어 꾸준히 섭취하는 것이 흡수에 유리합니다. 대표적인 고단백 음식의 단백질 함량(100g 기준, 대략)은 다음과 같습니다.</p>
+        <ul>
+          <li><strong>닭가슴살:</strong> 약 23g</li>
+          <li><strong>소고기·돼지고기 살코기:</strong> 약 20~26g</li>
+          <li><strong>달걀:</strong> 1개당 약 6g</li>
+          <li><strong>두부:</strong> 약 8g</li>
+          <li><strong>그릭요거트:</strong> 약 9~10g</li>
+          <li><strong>렌틸콩·검은콩:</strong> 약 9g(조리 기준)</li>
+        </ul>
+        <p>식단으로 채우기 어렵다면 단백질 보충제를 활용할 수 있습니다. 더 자세한 내용은 <a href="/blog">건강 블로그</a>의 단백질·식단 글을 참고하세요.</p>
+
+        <p style="background:#f8f9fa; border-radius:14px; padding:18px 22px; font-size:0.85rem; color:#777; line-height:1.6;">⚠️ 본 계산기 결과는 일반적인 권장 기준에 기반한 참고용 추정치입니다. 신장 질환 등으로 단백질 섭취를 조절해야 하는 경우가 있으니, 건강상의 결정은 반드시 의사·전문가와 상담하시기 바랍니다.</p>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>건강노트</h4>
+        <p style="font-size: 0.9rem; color: #bdc3c7;">영양제·식단·생활습관 등 일상 건강 정보를 직접 공부하고 정리해 전하는 블로그입니다.</p>
+      </div>
+      <div class="footer-section">
+        <h4>건강 계산기</h4>
+        <ul>
+          <li><a href="/bmi">BMI 계산기</a></li>
+          <li><a href="/calorie">칼로리 계산기</a></li>
+          <li><a href="/protein">단백질 계산기</a></li>
+          <li><a href="/blog">건강 블로그</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>고객 지원</h4>
+        <ul>
+          <li><a href="/about">사이트 소개</a></li>
+          <li><a href="/contact">문의하기</a></li>
+          <li><a href="/privacy">개인정보처리방침</a></li>
+          <li><a href="/terms">이용약관</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 건강노트. 신뢰할 수 있는 건강 정보를 쉽게 전하기 위해 노력합니다.</p>
+    </div>
+  </footer>
+
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+      });
+    }
+    if (localStorage.getItem('theme') === 'dark') document.body.classList.add('dark-mode');
+
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+      const dropdown = link.closest('.dropdown');
+      if (link.getAttribute('href') === window.location.pathname) {
+        link.classList.add('active');
+        if (dropdown) dropdown.querySelector('.dropbtn').classList.add('active');
+      }
+    });
+
+    document.getElementById('calc-button').addEventListener('click', () => {
+      const w = parseFloat(document.getElementById('weight').value);
+      if (!w || w <= 0) {
+        alert('몸무게를 올바르게 입력해 주세요.');
+        return;
+      }
+      const [lo, hi] = document.getElementById('goal').value.split(',').map(parseFloat);
+      const low = Math.round(w * lo);
+      const high = Math.round(w * hi);
+      document.getElementById('protein-value').textContent = `${low} ~ ${high} g`;
+      const eggs = Math.round(((low + high) / 2) / 6);
+      document.getElementById('protein-foods').textContent =
+        `달걀로 환산하면 하루 약 ${eggs}개분에 해당합니다. 세 끼에 나누어 드세요.`;
+      document.getElementById('result-area').style.display = 'block';
+    });
+  </script>
+</body>
+</html>

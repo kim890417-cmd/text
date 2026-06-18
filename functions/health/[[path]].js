@@ -16,19 +16,17 @@ export async function onRequest(context) {
   const navBlock = `
   <nav class="navbar">
     <div class="nav-container">
-      <a href="/" class="nav-logo">블로그 도구모음</a>
+      <a href="/" class="nav-logo">건강노트</a>
       <ul class="nav-menu">
-        <li><a href="/short">단축링크</a></li>
         <li class="dropdown">
-          <a href="#" class="dropbtn">이미지 도구</a>
+          <a href="#" class="dropbtn">건강 계산기</a>
           <div class="dropdown-content">
-            <a href="/compressor">이미지 용량 줄이기</a>
-            <a href="/upscaler">이미지 화질 올리기</a>
-            <a href="/eraser">AI 지우개</a>
+            <a href="/bmi">BMI 계산기</a>
+            <a href="/calorie">칼로리 계산기</a>
+            <a href="/protein">단백질 계산기</a>
           </div>
         </li>
-        <li><a href="/keyword_analyzer">키워드 분석기</a></li>
-        <li><a href="/blog">전문 블로그</a></li>
+        <li><a href="/blog">건강 블로그</a></li>
         <li><a href="/about">소개</a></li>
         <li><a href="/contact">문의하기</a></li>
       </ul>

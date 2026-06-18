@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
 <channel>
-  <title>블로그 도구모음</title>
+  <title>건강노트</title>
   <link>https://dream95.com</link>
-  <description>블로그 운영에 필요한 무료 AI 도구와 건강·생활 정보를 제공하는 플랫폼</description>
+  <description>영양제·식단·생활습관 등 일상 건강 정보와 무료 건강 계산기를 제공하는 블로그</description>
   <language>ko</language>
   <lastBuildDate>Thu, 18 Jun 2026 00:00:00 +0900</lastBuildDate>
 
@@ -242,29 +242,19 @@
     <pubDate>Thu, 18 Jun 2026 00:00:00 +0900</pubDate>
   </item>
   <item>
-    <title>이미지 용량 줄이기</title>
-    <link>https://dream95.com/compressor</link>
-    <description>화질 저하 없이 이미지 파일 크기를 압축하는 무료 온라인 도구입니다.</description>
+    <title>BMI 계산기</title>
+    <link>https://dream95.com/bmi</link>
+    <description>키와 몸무게로 체질량지수(BMI)와 비만도, 표준체중을 계산하는 무료 도구입니다.</description>
   </item>
   <item>
-    <title>이미지 화질 올리기</title>
-    <link>https://dream95.com/upscaler</link>
-    <description>저해상도 이미지를 AI 기술로 2배·4배 업스케일합니다.</description>
+    <title>하루 칼로리 계산기</title>
+    <link>https://dream95.com/calorie</link>
+    <description>기초대사량(BMR)과 하루 필요 칼로리(TDEE), 목표별 권장 칼로리를 계산합니다.</description>
   </item>
   <item>
-    <title>AI 배경 제거</title>
-    <link>https://dream95.com/eraser</link>
-    <description>AI가 자동으로 이미지 배경을 제거하고 투명 PNG로 저장합니다.</description>
-  </item>
-  <item>
-    <title>단축링크 만들기</title>
-    <link>https://dream95.com/short</link>
-    <description>긴 URL을 짧게 만들고 클릭 통계를 확인하는 무료 서비스입니다.</description>
-  </item>
-  <item>
-    <title>키워드 연관검색어 조회</title>
-    <link>https://dream95.com/keyword_analyzer</link>
-    <description>Google·Naver 연관검색어를 한눈에 확인하는 SEO 도구입니다.</description>
+    <title>단백질 섭취량 계산기</title>
+    <link>https://dream95.com/protein</link>
+    <description>체중과 활동 수준에 맞는 하루 단백질 권장량(g)을 계산합니다.</description>
   </item>
 </channel>
 </rss>

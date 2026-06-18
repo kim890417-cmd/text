@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BMI 계산기 | 체질량지수·표준체중 무료 계산 | 건강노트</title>
+  <meta name="description" content="키와 몸무게만 입력하면 체질량지수(BMI)와 비만도, 표준체중을 즉시 계산합니다. 아시아·태평양 기준 정상 범위와 함께 확인하세요. 입력값은 저장되지 않습니다.">
+  <meta property="og:title" content="BMI 계산기 | 체질량지수·표준체중 무료 계산">
+  <meta property="og:description" content="키·몸무게로 BMI와 비만도, 표준체중을 즉시 계산하는 무료 도구.">
+  <meta property="og:type" content="website">
+  <link href='style.css' rel='stylesheet'>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3406696816625207"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">건강노트</a>
+      <ul class="nav-menu">
+        <li class="dropdown">
+          <a href="#" class="dropbtn">건강 계산기</a>
+          <div class="dropdown-content">
+            <a href="/bmi">BMI 계산기</a>
+            <a href="/calorie">칼로리 계산기</a>
+            <a href="/protein">단백질 계산기</a>
+          </div>
+        </li>
+        <li><a href="/blog">건강 블로그</a></li>
+        <li><a href="/about">소개</a></li>
+        <li><a href="/contact">문의하기</a></li>
+      </ul>
+      <button id="theme-toggle">테마 변경</button>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      <section class="tool-section">
+        <h1>BMI 계산기</h1>
+        <p class="subtitle">키와 몸무게로 체질량지수(BMI)와 표준체중을 확인하세요.</p>
+
+        <div class="tool-box" style="padding: 30px; max-width: 520px; margin: 0 auto;">
+          <div style="margin-bottom: 18px;">
+            <label for="height" style="font-weight:600; font-size:0.95rem;">키 (cm)</label>
+            <input type="number" id="height" placeholder="예: 170" style="width:100%; padding:12px 15px; border:1px solid #ddd; border-radius:10px; font-size:1rem; box-sizing:border-box; margin-top:8px;">
+          </div>
+          <div style="margin-bottom: 22px;">
+            <label for="weight" style="font-weight:600; font-size:0.95rem;">몸무게 (kg)</label>
+            <input type="number" id="weight" placeholder="예: 65" style="width:100%; padding:12px 15px; border:1px solid #ddd; border-radius:10px; font-size:1rem; box-sizing:border-box; margin-top:8px;">
+          </div>
+          <button id="calc-button" class="btn-primary" style="width:100%;">계산하기</button>
+
+          <div id="result-area" style="display:none; margin-top: 28px; text-align:center;">
+            <p style="margin:0 0 6px; font-size:0.85rem; color:#999;">나의 BMI</p>
+            <p id="bmi-value" style="margin:0; font-weight:800; font-size:2.4rem; color:#007bff;"></p>
+            <p id="bmi-category" style="margin:8px 0 0; font-weight:700; font-size:1.1rem;"></p>
+            <p id="standard-weight" style="margin:14px 0 0; color:#666; font-size:0.95rem;"></p>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider">
+
+      <article class="content-rich">
+        <h2>BMI(체질량지수)란?</h2>
+        <p>BMI(Body Mass Index, 체질량지수)는 키와 몸무게를 이용해 비만 정도를 간단히 추정하는 지표입니다. 계산식은 다음과 같습니다.</p>
+        <blockquote>BMI = 몸무게(kg) ÷ [키(m) × 키(m)]</blockquote>
+        <p>예를 들어 키 170cm(1.7m), 몸무게 65kg인 사람의 BMI는 65 ÷ (1.7 × 1.7) ≈ <strong>22.5</strong>로 정상 범위에 해당합니다.</p>
+
+        <h2>BMI 정상 범위 (아시아·태평양 기준)</h2>
+        <p>세계보건기구(WHO) 서태평양지역 기준으로 한국을 포함한 아시아인은 다음과 같이 분류합니다. 같은 BMI라도 서양 기준보다 더 엄격하게 봅니다.</p>
+        <ul>
+          <li><strong>저체중:</strong> 18.5 미만</li>
+          <li><strong>정상:</strong> 18.5 ~ 22.9</li>
+          <li><strong>과체중(위험체중):</strong> 23 ~ 24.9</li>
+          <li><strong>비만 1단계:</strong> 25 ~ 29.9</li>
+          <li><strong>비만 2단계(고도비만):</strong> 30 이상</li>
+        </ul>
+
+        <h2>표준체중은 어떻게 구하나요?</h2>
+        <p>이 계산기는 건강한 BMI의 기준값인 22를 적용해 <strong>표준체중 = 22 × 키(m)²</strong>로 계산합니다. 키 170cm라면 약 63.6kg이 표준체중입니다.</p>
+
+        <h2>BMI의 한계</h2>
+        <p>BMI는 근육량과 체지방을 구분하지 못합니다. 근육이 많은 운동선수는 BMI가 높게 나와도 비만이 아닐 수 있고, 반대로 BMI가 정상이어도 체지방이 많은 '마른 비만'일 수 있습니다. 따라서 BMI는 참고 지표로만 활용하고, 정확한 평가는 체지방률 측정과 의료진의 진단을 함께 참고하는 것이 좋습니다.</p>
+
+        <p style="background:#f8f9fa; border-radius:14px; padding:18px 22px; font-size:0.85rem; color:#777; line-height:1.6;">⚠️ 본 계산기 결과는 표준 공식에 기반한 참고용 추정치이며, 의학적 진단을 대체하지 않습니다. 체중 관리나 건강상의 결정은 의사·전문가와 상담하시기 바랍니다.</p>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>건강노트</h4>
+        <p style="font-size: 0.9rem; color: #bdc3c7;">영양제·식단·생활습관 등 일상 건강 정보를 직접 공부하고 정리해 전하는 블로그입니다.</p>
+      </div>
+      <div class="footer-section">
+        <h4>건강 계산기</h4>
+        <ul>
+          <li><a href="/bmi">BMI 계산기</a></li>
+          <li><a href="/calorie">칼로리 계산기</a></li>
+          <li><a href="/protein">단백질 계산기</a></li>
+          <li><a href="/blog">건강 블로그</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>고객 지원</h4>
+        <ul>
+          <li><a href="/about">사이트 소개</a></li>
+          <li><a href="/contact">문의하기</a></li>
+          <li><a href="/privacy">개인정보처리방침</a></li>
+          <li><a href="/terms">이용약관</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 건강노트. 신뢰할 수 있는 건강 정보를 쉽게 전하기 위해 노력합니다.</p>
+    </div>
+  </footer>
+
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+      });
+    }
+    if (localStorage.getItem('theme') === 'dark') document.body.classList.add('dark-mode');
+
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+      const dropdown = link.closest('.dropdown');
+      if (link.getAttribute('href') === window.location.pathname) {
+        link.classList.add('active');
+        if (dropdown) dropdown.querySelector('.dropbtn').classList.add('active');
+      }
+    });
+
+    document.getElementById('calc-button').addEventListener('click', () => {
+      const h = parseFloat(document.getElementById('height').value);
+      const w = parseFloat(document.getElementById('weight').value);
+      if (!h || !w || h <= 0 || w <= 0) {
+        alert('키와 몸무게를 올바르게 입력해 주세요.');
+        return;
+      }
+      const m = h / 100;
+      const bmi = w / (m * m);
+      let category, color;
+      if (bmi < 18.5) { category = '저체중'; color = '#f39c12'; }
+      else if (bmi < 23) { category = '정상'; color = '#28a745'; }
+      else if (bmi < 25) { category = '과체중 (위험체중)'; color = '#f39c12'; }
+      else if (bmi < 30) { category = '비만 1단계'; color = '#e74c3c'; }
+      else { category = '비만 2단계 (고도비만)'; color = '#c0392b'; }
+
+      const standard = (22 * m * m).toFixed(1);
+      document.getElementById('bmi-value').textContent = bmi.toFixed(1);
+      const catEl = document.getElementById('bmi-category');
+      catEl.textContent = category;
+      catEl.style.color = color;
+      document.getElementById('bmi-value').style.color = color;
+      document.getElementById('standard-weight').textContent =
+        `키 ${h}cm 기준 표준체중은 약 ${standard}kg 입니다.`;
+      document.getElementById('result-area').style.display = 'block';
+    });
+  </script>
+</body>
+</html>

@@ -14,25 +14,21 @@ SKIP_DIRS = {
 }
 
 STATIC_PAGES = [
-    {"loc": "/",                "priority": "1.0", "changefreq": "weekly"},
-    {"loc": "/blog",            "priority": "0.9", "changefreq": "weekly"},
-    {"loc": "/short",           "priority": "0.8", "changefreq": "monthly"},
-    {"loc": "/compressor",      "priority": "0.8", "changefreq": "monthly"},
-    {"loc": "/upscaler",        "priority": "0.8", "changefreq": "monthly"},
-    {"loc": "/eraser",          "priority": "0.8", "changefreq": "monthly"},
-    {"loc": "/keyword_analyzer","priority": "0.8", "changefreq": "monthly"},
-    {"loc": "/about",           "priority": "0.6", "changefreq": "monthly"},
-    {"loc": "/contact",         "priority": "0.6", "changefreq": "monthly"},
-    {"loc": "/privacy",         "priority": "0.4", "changefreq": "yearly"},
-    {"loc": "/terms",           "priority": "0.4", "changefreq": "yearly"},
+    {"loc": "/",         "priority": "1.0", "changefreq": "weekly"},
+    {"loc": "/blog",     "priority": "0.9", "changefreq": "weekly"},
+    {"loc": "/bmi",      "priority": "0.8", "changefreq": "monthly"},
+    {"loc": "/calorie",  "priority": "0.8", "changefreq": "monthly"},
+    {"loc": "/protein",  "priority": "0.8", "changefreq": "monthly"},
+    {"loc": "/about",    "priority": "0.6", "changefreq": "monthly"},
+    {"loc": "/contact",  "priority": "0.6", "changefreq": "monthly"},
+    {"loc": "/privacy",  "priority": "0.4", "changefreq": "yearly"},
+    {"loc": "/terms",    "priority": "0.4", "changefreq": "yearly"},
 ]
 
 TOOL_ITEMS = [
-    {"title": "이미지 용량 줄이기",     "link": "/compressor",       "desc": "화질 저하 없이 이미지 파일 크기를 압축하는 무료 온라인 도구입니다."},
-    {"title": "이미지 화질 올리기",     "link": "/upscaler",         "desc": "저해상도 이미지를 AI 기술로 2배·4배 업스케일합니다."},
-    {"title": "AI 배경 제거",           "link": "/eraser",           "desc": "AI가 자동으로 이미지 배경을 제거하고 투명 PNG로 저장합니다."},
-    {"title": "단축링크 만들기",        "link": "/short",            "desc": "긴 URL을 짧게 만들고 클릭 통계를 확인하는 무료 서비스입니다."},
-    {"title": "키워드 연관검색어 조회", "link": "/keyword_analyzer", "desc": "Google·Naver 연관검색어를 한눈에 확인하는 SEO 도구입니다."},
+    {"title": "BMI 계산기",        "link": "/bmi",     "desc": "키와 몸무게로 체질량지수(BMI)와 비만도, 표준체중을 계산하는 무료 도구입니다."},
+    {"title": "하루 칼로리 계산기", "link": "/calorie", "desc": "기초대사량(BMR)과 하루 필요 칼로리(TDEE), 목표별 권장 칼로리를 계산합니다."},
+    {"title": "단백질 섭취량 계산기", "link": "/protein", "desc": "체중과 활동 수준에 맞는 하루 단백질 권장량(g)을 계산합니다."},
 ]
 
 def extract_title(html_path):
@@ -131,9 +127,9 @@ for tool in TOOL_ITEMS:
 rss_content = f"""<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
 <channel>
-  <title>블로그 도구모음</title>
+  <title>건강노트</title>
   <link>{BASE_URL}</link>
-  <description>블로그 운영에 필요한 무료 AI 도구와 건강·생활 정보를 제공하는 플랫폼</description>
+  <description>영양제·식단·생활습관 등 일상 건강 정보와 무료 건강 계산기를 제공하는 블로그</description>
   <language>ko</language>
   <lastBuildDate>{TODAY_RSS}</lastBuildDate>
 
