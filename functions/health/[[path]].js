@@ -8,10 +8,10 @@ export async function onRequest(context) {
 
   const cssBlock = `
   <link rel="stylesheet" href="/style.css">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <style>
     #masthead, .ast-above-header-bar, .ast-below-header-bar,
     .main-header-bar, .main-header-bar-wrap { display: none !important; }
-    .entry-meta .posted-by { display: none !important; }
   </style>`;
 
   const navBlock = `
