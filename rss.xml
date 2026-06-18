@@ -142,5 +142,15 @@
     <link>https://dream95.com/protein</link>
     <description>체중과 활동 수준에 맞는 하루 단백질 권장량(g)을 계산합니다.</description>
   </item>
+  <item>
+    <title>물 섭취량 계산기</title>
+    <link>https://dream95.com/water</link>
+    <description>체중과 운동량으로 하루 권장 수분량을 계산하는 무료 도구입니다.</description>
+  </item>
+  <item>
+    <title>영양제 권장량 조회</title>
+    <link>https://dream95.com/supplement</link>
+    <description>비타민·미네랄별 하루 권장 섭취량과 상한 섭취량을 조회합니다.</description>
+  </item>
 </channel>
 </rss>

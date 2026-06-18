@@ -16,10 +16,12 @@ SKIP_DIRS = {
 STATIC_PAGES = [
     {"loc": "/",         "priority": "1.0", "changefreq": "weekly"},
     {"loc": "/blog",     "priority": "0.9", "changefreq": "weekly"},
-    {"loc": "/bmi",      "priority": "0.8", "changefreq": "monthly"},
-    {"loc": "/calorie",  "priority": "0.8", "changefreq": "monthly"},
-    {"loc": "/protein",  "priority": "0.8", "changefreq": "monthly"},
-    {"loc": "/about",    "priority": "0.6", "changefreq": "monthly"},
+    {"loc": "/bmi",        "priority": "0.8", "changefreq": "monthly"},
+    {"loc": "/calorie",    "priority": "0.8", "changefreq": "monthly"},
+    {"loc": "/protein",    "priority": "0.8", "changefreq": "monthly"},
+    {"loc": "/water",      "priority": "0.8", "changefreq": "monthly"},
+    {"loc": "/supplement", "priority": "0.8", "changefreq": "monthly"},
+    {"loc": "/about",      "priority": "0.6", "changefreq": "monthly"},
     {"loc": "/contact",  "priority": "0.6", "changefreq": "monthly"},
     {"loc": "/privacy",  "priority": "0.4", "changefreq": "yearly"},
     {"loc": "/terms",    "priority": "0.4", "changefreq": "yearly"},
@@ -29,6 +31,8 @@ TOOL_ITEMS = [
     {"title": "BMI 계산기",        "link": "/bmi",     "desc": "키와 몸무게로 체질량지수(BMI)와 비만도, 표준체중을 계산하는 무료 도구입니다."},
     {"title": "하루 칼로리 계산기", "link": "/calorie", "desc": "기초대사량(BMR)과 하루 필요 칼로리(TDEE), 목표별 권장 칼로리를 계산합니다."},
     {"title": "단백질 섭취량 계산기", "link": "/protein", "desc": "체중과 활동 수준에 맞는 하루 단백질 권장량(g)을 계산합니다."},
+    {"title": "물 섭취량 계산기",   "link": "/water",   "desc": "체중과 운동량으로 하루 권장 수분량을 계산하는 무료 도구입니다."},
+    {"title": "영양제 권장량 조회", "link": "/supplement", "desc": "비타민·미네랄별 하루 권장 섭취량과 상한 섭취량을 조회합니다."},
 ]
 
 def extract_title(html_path):

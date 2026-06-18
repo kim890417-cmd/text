@@ -11,6 +11,7 @@ export async function onRequest(context) {
   <style>
     #masthead, .ast-above-header-bar, .ast-below-header-bar,
     .main-header-bar, .main-header-bar-wrap { display: none !important; }
+    .entry-meta .posted-by { display: none !important; }
   </style>`;
 
   const navBlock = `
@@ -24,6 +25,8 @@ export async function onRequest(context) {
             <a href="/bmi">BMI 계산기</a>
             <a href="/calorie">칼로리 계산기</a>
             <a href="/protein">단백질 계산기</a>
+            <a href="/water">물 섭취량 계산기</a>
+            <a href="/supplement">영양제 권장량</a>
           </div>
         </li>
         <li><a href="/blog">건강 블로그</a></li>

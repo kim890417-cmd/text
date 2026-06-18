@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>영양제 권장량 조회 | 비타민·미네랄 1일 권장·상한 섭취량 | 건강노트</title>
+  <meta name="description" content="비타민 C·D·E, 칼슘·마그네슘·철분·아연 등 주요 영양소의 성인 하루 권장 섭취량과 상한 섭취량을 한국인 영양소 섭취기준으로 조회하세요. 성별에 따라 자동 안내합니다.">
+  <meta property="og:title" content="영양제 권장량 조회 | 1일 권장·상한 섭취량">
+  <meta property="og:description" content="비타민·미네랄별 성인 권장 섭취량과 상한 섭취량을 한눈에 조회.">
+  <meta property="og:type" content="website">
+  <link href='style.css' rel='stylesheet'>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3406696816625207"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">건강노트</a>
+      <ul class="nav-menu">
+        <li class="dropdown">
+          <a href="#" class="dropbtn">건강 계산기</a>
+          <div class="dropdown-content">
+            <a href="/bmi">BMI 계산기</a>
+            <a href="/calorie">칼로리 계산기</a>
+            <a href="/protein">단백질 계산기</a>
+            <a href="/water">물 섭취량 계산기</a>
+            <a href="/supplement">영양제 권장량</a>
+          </div>
+        </li>
+        <li><a href="/blog">건강 블로그</a></li>
+        <li><a href="/about">소개</a></li>
+        <li><a href="/contact">문의하기</a></li>
+      </ul>
+      <button id="theme-toggle">테마 변경</button>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      <section class="tool-section">
+        <h1>영양제 권장량 조회</h1>
+        <p class="subtitle">주요 비타민·미네랄의 하루 권장 섭취량과 상한 섭취량을 확인하세요.</p>
+
+        <div class="tool-box" style="padding: 30px; max-width: 520px; margin: 0 auto;">
+          <div style="margin-bottom: 18px;">
+            <label for="nutrient" style="font-weight:600; font-size:0.95rem;">영양소 선택</label>
+            <select id="nutrient" style="width:100%; padding:12px 15px; border:1px solid #ddd; border-radius:10px; font-size:1rem; box-sizing:border-box; margin-top:8px;">
+              <option value="vitc">비타민 C</option>
+              <option value="vitd">비타민 D</option>
+              <option value="vite">비타민 E</option>
+              <option value="folate">엽산</option>
+              <option value="calcium">칼슘</option>
+              <option value="magnesium">마그네슘</option>
+              <option value="iron">철분</option>
+              <option value="zinc">아연</option>
+              <option value="omega3">오메가-3 (EPA+DHA)</option>
+            </select>
+          </div>
+          <div style="margin-bottom: 22px;">
+            <label style="font-weight:600; font-size:0.95rem;">성별</label>
+            <div style="display:flex; gap:16px; margin-top:8px;">
+              <label style="cursor:pointer;"><input type="radio" name="gender" value="male" checked> 남성</label>
+              <label style="cursor:pointer;"><input type="radio" name="gender" value="female"> 여성</label>
+            </div>
+          </div>
+          <button id="calc-button" class="btn-primary" style="width:100%;">조회하기</button>
+
+          <div id="result-area" style="display:none; margin-top: 28px;">
+            <p id="nut-name" style="margin:0 0 14px; text-align:center; font-weight:800; font-size:1.3rem; color:#007bff;"></p>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:16px;">
+              <div style="text-align:center; background:#e8f4ff; border-radius:12px; padding:16px;">
+                <p style="margin:0 0 6px; font-size:0.8rem; color:#007bff;">하루 권장 섭취량</p>
+                <p id="rda-value" style="margin:0; font-weight:700; font-size:1.1rem;"></p>
+              </div>
+              <div style="text-align:center; background:#fdecea; border-radius:12px; padding:16px;">
+                <p style="margin:0 0 6px; font-size:0.8rem; color:#e74c3c;">상한 섭취량</p>
+                <p id="ul-value" style="margin:0; font-weight:700; font-size:1.1rem;"></p>
+              </div>
+            </div>
+            <p id="nut-note" style="margin:0; color:#666; font-size:0.9rem; line-height:1.6;"></p>
+          </div>
+        </div>
+        <p style="text-align:center; font-size:0.8rem; color:#999; margin-top:14px;">※ 성인(19~49세) 기준 · 「2020 한국인 영양소 섭취기준」 참고</p>
+      </section>
+
+      <hr class="divider">
+
+      <article class="content-rich">
+        <h2>권장 섭취량과 상한 섭취량, 무엇이 다른가요?</h2>
+        <p>영양제를 고를 때는 두 가지 숫자를 함께 봐야 합니다.</p>
+        <ul>
+          <li><strong>권장 섭취량(RDA):</strong> 대부분의 건강한 사람이 하루에 필요로 하는 양입니다. 부족하지 않도록 채우는 것이 목표입니다.</li>
+          <li><strong>상한 섭취량(UL):</strong> 부작용 없이 섭취할 수 있는 하루 최대량입니다. 음식과 영양제를 합쳐 이 수치를 넘지 않도록 주의해야 합니다.</li>
+        </ul>
+        <p>예를 들어 비타민 C는 권장량이 100mg이지만 상한은 2,000mg으로 여유가 큰 편이고, 마그네슘은 보충제 기준 상한이 350mg으로 비교적 빠듯합니다. 영양제는 '많이'가 아니라 '적정량'이 핵심입니다.</p>
+
+        <h2>영양제 고를 때 팁</h2>
+        <ul>
+          <li>이미 먹고 있는 종합비타민·식단과 <strong>중복</strong>되지 않는지 확인하세요. 같은 성분을 여러 제품으로 먹으면 상한을 넘기기 쉽습니다.</li>
+          <li>지용성 비타민(A·D·E·K)은 몸에 축적되므로 과다 복용에 더 주의가 필요합니다.</li>
+          <li>철분·칼슘 등은 흡수를 돕거나 방해하는 음식이 있으니, 각 성분별 글을 참고하세요.</li>
+        </ul>
+        <p>성분별 효능과 복용법은 <a href="/blog">건강 블로그</a>에서 더 자세히 다루고 있습니다.</p>
+
+        <p style="background:#f8f9fa; border-radius:14px; padding:18px 22px; font-size:0.85rem; color:#777; line-height:1.6;">⚠️ 위 수치는 성인(19~49세) 일반 기준으로, 나이·임신·수유·질환·복용 약물에 따라 권장량이 달라질 수 있습니다. 본 정보는 의학적 진단·처방을 대체하지 않으니, 영양제 복용 전 의사·약사와 상담하시기 바랍니다.</p>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>건강노트</h4>
+        <p style="font-size: 0.9rem; color: #bdc3c7;">영양제·식단·생활습관 등 일상 건강 정보를 직접 공부하고 정리해 전하는 블로그입니다.</p>
+      </div>
+      <div class="footer-section">
+        <h4>건강 계산기</h4>
+        <ul>
+          <li><a href="/bmi">BMI 계산기</a></li>
+          <li><a href="/calorie">칼로리 계산기</a></li>
+          <li><a href="/protein">단백질 계산기</a></li>
+          <li><a href="/water">물 섭취량 계산기</a></li>
+          <li><a href="/supplement">영양제 권장량</a></li>
+          <li><a href="/blog">건강 블로그</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>고객 지원</h4>
+        <ul>
+          <li><a href="/about">사이트 소개</a></li>
+          <li><a href="/contact">문의하기</a></li>
+          <li><a href="/privacy">개인정보처리방침</a></li>
+          <li><a href="/terms">이용약관</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 건강노트. 신뢰할 수 있는 건강 정보를 쉽게 전하기 위해 노력합니다.</p>
+    </div>
+  </footer>
+
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+      });
+    }
+    if (localStorage.getItem('theme') === 'dark') document.body.classList.add('dark-mode');
+
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+      const dropdown = link.closest('.dropdown');
+      if (link.getAttribute('href') === window.location.pathname) {
+        link.classList.add('active');
+        if (dropdown) dropdown.querySelector('.dropbtn').classList.add('active');
+      }
+    });
+
+    const DATA = {
+      vitc:      { name: '비타민 C',            rda: '100 mg',                  ul: '2,000 mg',  note: '항산화 작용을 하며 면역과 콜라겐 합성에 관여합니다. 수용성이라 과잉분은 배출되지만, 고용량은 위장 장애·설사를 유발할 수 있습니다.' },
+      vitd:      { name: '비타민 D',            rda: '10 µg (400 IU) · 충분섭취량', ul: '100 µg (4,000 IU)', note: '뼈 건강과 칼슘 흡수에 필수입니다. 햇빛으로도 합성되며, 결핍이 흔해 보충이 권장되는 경우가 많습니다.' },
+      vite:      { name: '비타민 E',            rda: '12 mg α-TE · 충분섭취량',  ul: '540 mg',    note: '지용성 항산화 비타민입니다. 견과류·식물성 기름에 풍부하며, 고용량 보충 시 출혈 위험에 주의합니다.' },
+      folate:    { name: '엽산',                rda: '400 µg DFE',              ul: '1,000 µg',  note: '세포 분열과 적혈구 생성에 필요하며 임신 준비기·임신부에게 특히 중요합니다.' },
+      calcium:   { name: '칼슘',                rda: { male: '800 mg', female: '700 mg' }, ul: '2,500 mg', note: '뼈·치아 건강의 핵심입니다. 비타민 D와 함께 섭취하면 흡수가 좋아집니다. 한 번에 500mg 이하로 나누어 먹는 것이 흡수에 유리합니다.' },
+      magnesium: { name: '마그네슘',            rda: { male: '350 mg', female: '280 mg' }, ul: '350 mg (보충제 기준)', note: '근육·신경 기능과 에너지 대사에 관여합니다. 보충제로 과다 섭취 시 설사가 나타날 수 있습니다. (상한은 식품 외 보충제 기준)' },
+      iron:      { name: '철분',                rda: { male: '10 mg', female: '14 mg' }, ul: '45 mg', note: '적혈구의 산소 운반에 필수입니다. 가임기 여성은 필요량이 더 많습니다. 비타민 C와 함께 먹으면 흡수가 좋아집니다.' },
+      zinc:      { name: '아연',                rda: { male: '10 mg', female: '8 mg' }, ul: '35 mg', note: '면역과 단백질 합성, 남성 건강에 관여합니다. 장기 고용량 섭취는 구리 결핍을 유발할 수 있습니다.' },
+      omega3:    { name: '오메가-3 (EPA+DHA)',  rda: '0.5 ~ 1 g (일반 권장)',    ul: '명확한 상한 기준 없음',  note: '혈중 중성지방·심혈관 건강에 도움을 줄 수 있습니다. 고용량은 출혈 경향을 높일 수 있어 항응고제 복용 시 주의가 필요합니다.' },
+    };
+
+    document.getElementById('calc-button').addEventListener('click', () => {
+      const key = document.getElementById('nutrient').value;
+      const gender = document.querySelector('input[name="gender"]:checked').value;
+      const d = DATA[key];
+      const rda = (typeof d.rda === 'object') ? d.rda[gender] : d.rda;
+      document.getElementById('nut-name').textContent = d.name;
+      document.getElementById('rda-value').textContent = rda;
+      document.getElementById('ul-value').textContent = d.ul;
+      document.getElementById('nut-note').textContent = d.note;
+      document.getElementById('result-area').style.display = 'block';
+    });
+  </script>
+</body>
+</html>

@@ -153,9 +153,44 @@ gtag("config", "GT-P8VJJSFD");
 <script async crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3406696816625207&host=ca-host-pub-2644536267352236"></script>
 
 <!-- Site Kit에 의해 추가된 Google AdSense 스니펫 종료 -->
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    #masthead, .ast-above-header-bar, .ast-below-header-bar,
+    .main-header-bar, .main-header-bar-wrap { display: none !important; }
+    .entry-meta .posted-by { display: none !important; }
+  </style>
 </head>
 
 <body itemtype="https://schema.org/Blog" itemscope="itemscope" class="home blog wp-embed-responsive wp-theme-astra ast-desktop ast-separate-container ast-right-sidebar astra-4.13.4 ast-inherit-site-logo-transparent ast-hfb-header">
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">건강노트</a>
+      <ul class="nav-menu">
+        <li class="dropdown">
+          <a href="#" class="dropbtn">건강 계산기</a>
+          <div class="dropdown-content">
+            <a href="/bmi">BMI 계산기</a>
+            <a href="/calorie">칼로리 계산기</a>
+            <a href="/protein">단백질 계산기</a>
+            <a href="/water">물 섭취량 계산기</a>
+            <a href="/supplement">영양제 권장량</a>
+          </div>
+        </li>
+        <li><a href="/blog">건강 블로그</a></li>
+        <li><a href="/about">소개</a></li>
+        <li><a href="/contact">문의하기</a></li>
+      </ul>
+      <button id="theme-toggle">테마 변경</button>
+    </div>
+  </nav>
+  <script>
+    const __t = document.getElementById('theme-toggle');
+    if (__t) __t.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+    });
+    if (localStorage.getItem('theme') === 'dark') document.body.classList.add('dark-mode');
+  </script>
 			<script>
 			(function(){if(window.matchMedia('(max-width:921.99px)').matches){document.body.classList.add('ast-header-break-point');document.body.classList.remove('ast-desktop');}})();
 			</script>
