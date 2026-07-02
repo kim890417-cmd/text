@@ -312,3 +312,9 @@ body.dark-mode .dropdown-content a:hover { background-color: #333; }
   .dropdown-content a { padding: 6px 2px; }
   #theme-toggle { display: none; }
 }
+
+/* Hide broken search widget */
+.widget_search {
+  display: none !important;
+}
+
