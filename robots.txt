@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dream95.com/sitemap.xml
+Sitemap: https://healthfit100.com/sitemap.xml

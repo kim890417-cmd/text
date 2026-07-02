@@ -2,7 +2,7 @@ import os
 import re
 from datetime import datetime, timezone, timedelta
 
-BASE_URL = "https://dream95.com"
+BASE_URL = "https://healthfit100.com"
 KST = timezone(timedelta(hours=9))
 NOW = datetime.now(KST)
 TODAY = NOW.strftime("%Y-%m-%d")
