@@ -45,8 +45,12 @@ export async function onRequest(context) {
     if (localStorage.getItem('theme') === 'dark') document.body.classList.add('dark-mode');
   </script>`;
 
-  html = html.replace('</head>', cssBlock + '\n</head>');
-  html = html.replace(/(<body[^>]*>)/, '$1\n' + navBlock);
+  if (!html.includes('#masthead') && !html.includes('.main-header-bar')) {
+    html = html.replace('</head>', cssBlock + '\n</head>');
+  }
+  if (!html.includes('class="navbar"') && !html.includes('class=\'navbar\'')) {
+    html = html.replace(/(<body[^>]*>)/, '$1\n' + navBlock);
+  }
 
   return new Response(html, {
     status: response.status,
