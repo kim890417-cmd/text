@@ -350,11 +350,12 @@ body.dark-mode .site-below-footer-wrap {
   .nav-menu { flex-wrap: wrap; gap: 8px 14px; width: 100%; justify-content: center; }
   .nav-menu a { font-size: 0.9rem; padding: 6px 2px; }
   /* 모바일에서는 '건강 계산기' 라벨 대신 계산기 링크를 펼쳐 노출 */
-  .dropdown { position: static; }
+  .dropdown { position: static; display: block; width: 100%; }
   .dropdown .dropbtn { display: none; }
   .dropdown-content {
     display: flex; position: static; flex-wrap: wrap; justify-content: center;
     gap: 8px 14px; min-width: 0; padding: 0; box-shadow: none; background: transparent;
+    width: 100%;
   }
   .dropdown-content a { padding: 6px 2px; }
   #theme-toggle { display: none; }
