@@ -289,6 +289,22 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
         if (dropdown) dropdown.querySelector('.dropbtn').classList.add('active');
       }
     });
+
+    // Mobile dropdown toggle on click
+    const dropbtn = document.querySelector('.dropbtn');
+    const dropdownContent = document.querySelector('.dropdown-content');
+    if (dropbtn && dropdownContent) {
+      dropbtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        dropdownContent.classList.toggle('show');
+      });
+      // Close dropdown when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!dropbtn.contains(e.target) && !dropdownContent.contains(e.target)) {
+          dropdownContent.classList.remove('show');
+        }
+      });
+    }
   </script>
 </body>
 </html>

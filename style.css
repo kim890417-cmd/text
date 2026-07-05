@@ -349,15 +349,31 @@ body.dark-mode .site-below-footer-wrap {
   .nav-logo { font-size: 1.3rem; }
   .nav-menu { flex-wrap: wrap; gap: 8px 14px; width: 100%; justify-content: center; }
   .nav-menu a { font-size: 0.9rem; padding: 6px 2px; }
-  /* 모바일에서는 '건강 계산기' 라벨 대신 계산기 링크를 펼쳐 노출 */
-  .dropdown { position: static; display: block; width: 100%; }
-  .dropdown .dropbtn { display: none; }
+  /* 모바일 드롭다운 스타일 - 터치 시 열리는 방식 */
+  .dropdown { position: relative; }
+  .dropdown .dropbtn { display: inline-block; }
   .dropdown-content {
-    display: flex !important; position: static; flex-wrap: wrap; justify-content: center;
-    gap: 8px 14px; min-width: 0; padding: 0; box-shadow: none; background: transparent;
-    width: 100%;
+    display: none !important; /* 기본 숨김 */
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--card-bg);
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    padding: 10px 0;
+    z-index: 10000;
   }
-  .dropdown-content a { padding: 6px 2px; }
+  .dropdown-content.show {
+    display: block !important; /* 클릭 시 활성화 */
+  }
+  .dropdown-content a {
+    display: block;
+    padding: 12px 20px;
+    font-size: 0.9rem;
+    text-align: center;
+  }
   #theme-toggle { display: none; }
 }
 

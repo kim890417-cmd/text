@@ -73,7 +73,7 @@ NAVBAR_HTML = """  <nav class="navbar">
     </div>
   </nav>"""
 
-# Custom script for navbar functionality (no theme toggle)
+# Custom script for navbar functionality (no theme toggle, includes mobile dropdown click toggle)
 SCRIPT_HTML = """  <script>
     document.querySelectorAll('.nav-menu a').forEach(link => {
       const dropdown = link.closest('.dropdown');
@@ -82,6 +82,22 @@ SCRIPT_HTML = """  <script>
         if (dropdown) dropdown.querySelector('.dropbtn').classList.add('active');
       }
     });
+
+    // Mobile dropdown toggle on click
+    const dropbtn = document.querySelector('.dropbtn');
+    const dropdownContent = document.querySelector('.dropdown-content');
+    if (dropbtn && dropdownContent) {
+      dropbtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        dropdownContent.classList.toggle('show');
+      });
+      // Close dropdown when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!dropbtn.contains(e.target) && !dropdownContent.contains(e.target)) {
+          dropdownContent.classList.remove('show');
+        }
+      });
+    }
   </script>"""
 
 # Process each file
@@ -118,16 +134,23 @@ for file_path in target_files:
             modified = True
             print(f"Replaced header (no comment fallback) in: {os.path.relpath(file_path, ROOT)}")
                 
-        # 3. Replace old theme toggle script block or inject new one before </body>
+        # 3. Replace old script block or inject new one before </body>
         old_script_pattern = r'  <script>\s*const themeToggle = document\.getElementById\(\'theme-toggle\'\);.*?</script>'
-        if re.search(old_script_pattern, content, re.DOTALL):
-            content = re.sub(old_script_pattern, SCRIPT_HTML, content, flags=re.DOTALL)
-            modified = True
-            print(f"Replaced old script in: {os.path.relpath(file_path, ROOT)}")
-        elif 'document.querySelectorAll(\'.nav-menu a\')' not in content:
-            content = content.replace("</body>", f"{SCRIPT_HTML}\n</body>")
-            modified = True
-            print(f"Injected script in: {os.path.relpath(file_path, ROOT)}")
+        clean_script_pattern = r'  <script>\s*document\.querySelectorAll\(\'\.nav-menu a\'\).*?</script>'
+        
+        if 'const dropbtn' not in content:
+            if re.search(old_script_pattern, content, re.DOTALL):
+                content = re.sub(old_script_pattern, SCRIPT_HTML, content, flags=re.DOTALL)
+                modified = True
+                print(f"Replaced old theme script in: {os.path.relpath(file_path, ROOT)}")
+            elif re.search(clean_script_pattern, content, re.DOTALL):
+                content = re.sub(clean_script_pattern, SCRIPT_HTML, content, flags=re.DOTALL)
+                modified = True
+                print(f"Replaced clean script in: {os.path.relpath(file_path, ROOT)}")
+            elif 'document.querySelectorAll(\'.nav-menu a\')' not in content:
+                content = content.replace("</body>", f"{SCRIPT_HTML}\n</body>")
+                modified = True
+                print(f"Injected script in: {os.path.relpath(file_path, ROOT)}")
 
         # 4. Remove search widget HTML if present
         search_widget_pattern = r'<aside[^>]*class=["\'][^"\']*widget_search[^"\']*["\'][^>]*>.*?</aside>'
