@@ -366,3 +366,14 @@ body.dark-mode .site-below-footer-wrap {
   display: none !important;
 }
 
+/* Force GNB clickability and layered priority on mobile/all screens */
+.navbar,
+.navbar * {
+  pointer-events: auto !important;
+}
+.navbar {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 999999 !important;
+}
+
