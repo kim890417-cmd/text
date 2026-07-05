@@ -67,6 +67,18 @@
     <priority>0.4</priority>
   </url>
   <url>
+    <loc>https://healthfit100.com/health/칼슘-하루-권장-섭취량/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://healthfit100.com/health/마그네슘-하루-권장량/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://healthfit100.com/health/근육-유지와-다이어트를-위해-단백질-섭취의-중요성/</loc>
     <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -171,6 +183,12 @@
   <url>
     <loc>https://healthfit100.com/health/bmi-계산법/</loc>
     <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://healthfit100.com/health/단백질-권장량/</loc>
+    <lastmod>2026-06-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
