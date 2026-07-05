@@ -42,6 +42,15 @@ if os.path.exists(UNCATEGORIZED_DIR):
         if os.path.isfile(file_path):
             target_files.append(file_path)
 
+# Add active pages under tag, category, author folders recursively
+for folder in ["tag", "category", "author"]:
+    dir_path = os.path.join(ROOT, folder)
+    if os.path.exists(dir_path):
+        for root, dirs, files in os.walk(dir_path):
+            for file in files:
+                if file == "index.html":
+                    target_files.append(os.path.join(root, file))
+
 # The custom navbar HTML
 NAVBAR_HTML = """  <nav class="navbar">
     <div class="nav-container">
@@ -119,6 +128,13 @@ for file_path in target_files:
             content = content.replace("</body>", f"{SCRIPT_HTML}\n</body>")
             modified = True
             print(f"Injected script in: {os.path.relpath(file_path, ROOT)}")
+
+        # 4. Remove search widget HTML if present
+        search_widget_pattern = r'<aside[^>]*class=["\'][^"\']*widget_search[^"\']*["\'][^>]*>.*?</aside>'
+        if re.search(search_widget_pattern, content, re.DOTALL):
+            content = re.sub(search_widget_pattern, "", content, flags=re.DOTALL)
+            modified = True
+            print(f"Removed search widget in: {os.path.relpath(file_path, ROOT)}")
             
         if modified:
             with open(file_path, "w", encoding="utf-8") as f:
