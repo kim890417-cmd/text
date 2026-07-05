@@ -189,10 +189,17 @@ for file_path in target_files:
                 content = re.sub(clean_script_pattern, SCRIPT_HTML, content, flags=re.DOTALL)
                 modified = True
                 print(f"Replaced clean script in: {os.path.relpath(file_path, ROOT)}")
-            elif 'document.querySelectorAll(\'.nav-menu a\')' not in content:
-                content = content.replace("</body>", f"{SCRIPT_HTML}\n</body>")
-                modified = True
-                print(f"Injected script in: {os.path.relpath(file_path, ROOT)}")
+            else:
+                # Broader fallback: replace any <script> block that contains theme toggle comment
+                any_theme_pattern = r'  <script>\s*// Theme toggle script.*?</script>'
+                if re.search(any_theme_pattern, content, re.DOTALL):
+                    content = re.sub(any_theme_pattern, SCRIPT_HTML, content, flags=re.DOTALL)
+                    modified = True
+                    print(f"Replaced legacy theme script in: {os.path.relpath(file_path, ROOT)}")
+                elif 'document.querySelectorAll(\'.nav-menu a\')' not in content:
+                    content = content.replace("</body>", f"{SCRIPT_HTML}\n</body>")
+                    modified = True
+                    print(f"Injected script in: {os.path.relpath(file_path, ROOT)}")
 
         # 4. Remove search widget HTML if present
         search_widget_pattern = r'<aside[^>]*class=["\'][^"\']*widget_search[^"\']*["\'][^>]*>.*?</aside>'

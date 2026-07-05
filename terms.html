@@ -85,35 +85,71 @@
     </div>
   </footer>
   <script>
-    // Theme toggle script
-    const themeToggle = document.getElementById('theme-toggle');
-    if (themeToggle) {
-      themeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-        const isDarkMode = document.body.classList.contains('dark-mode');
-        localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+    // Active link highlight
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+      const dropdown = link.closest('.dropdown');
+      if (link.getAttribute('href') === window.location.pathname) {
+        link.classList.add('active');
+        if (dropdown) dropdown.querySelector('.dropbtn').classList.add('active');
+      }
+    });
+
+    // Mobile dropdown: JS-driven, not CSS-driven (to avoid Astra theme CSS conflicts)
+    const dropbtn = document.querySelector('.dropbtn');
+    const dropdownContent = document.querySelector('.dropdown-content');
+    const isMobile = () => window.innerWidth <= 600;
+
+    function initDropdown() {
+      if (!dropbtn || !dropdownContent) return;
+      if (isMobile()) {
+        // On mobile: hide dropdown and handle tap toggle
+        dropdownContent.style.setProperty('display', 'none', 'important');
+        dropdownContent.style.position = 'absolute';
+        dropdownContent.style.top = '100%';
+        dropdownContent.style.left = '50%';
+        dropdownContent.style.transform = 'translateX(-50%)';
+        dropdownContent.style.zIndex = '999999';
+        dropdownContent.style.background = 'var(--card-bg, #fff)';
+        dropdownContent.style.boxShadow = '0 8px 16px rgba(0,0,0,0.15)';
+        dropdownContent.style.borderRadius = '8px';
+        dropdownContent.style.padding = '10px 0';
+        dropdownContent.style.minWidth = '180px';
+        dropbtn.style.display = 'inline-block';
+      } else {
+        // On desktop: reset to CSS-driven hover
+        dropdownContent.style.removeProperty('display');
+        dropdownContent.style.position = '';
+        dropbtn.style.display = '';
+      }
+    }
+
+    initDropdown();
+    window.addEventListener('resize', initDropdown);
+
+    if (dropbtn && dropdownContent) {
+      dropbtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        if (!isMobile()) return;
+        const isOpen = dropdownContent.style.display !== 'none';
+        dropdownContent.style.setProperty('display', isOpen ? 'none' : 'block', 'important');
+      });
+
+      // Tap on a link inside dropdown: allow navigation
+      dropdownContent.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', (e) => {
+          e.stopPropagation();
+        });
+      });
+
+      // Close when tapping outside
+      document.addEventListener('click', (e) => {
+        if (!isMobile()) return;
+        if (!dropbtn.contains(e.target) && !dropdownContent.contains(e.target)) {
+          dropdownContent.style.setProperty('display', 'none', 'important');
+        }
       });
     }
-
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-      document.body.classList.add('dark-mode');
-    }
-
-    // Active link highlighting
-    const currentPage = window.location.pathname;
-    const navLinks = document.querySelectorAll('.nav-menu a');
-    navLinks.forEach(link => {
-        const linkHref = link.getAttribute('href');
-        const dropdown = link.closest('.dropdown');
-
-        if (linkHref === currentPage || (currentPage === '/index.html' && linkHref === '/')) {
-            link.classList.add('active');
-            if (dropdown) {
-                dropdown.querySelector('.dropbtn').classList.add('active');
-            }
-        }
-    });
   </script>
 </body>
 </html>
