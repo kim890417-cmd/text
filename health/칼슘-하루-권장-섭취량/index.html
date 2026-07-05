@@ -378,6 +378,7 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
 //# sourceURL=https://healthfit100.com/wp-includes/js/wp-emoji-loader.min.js
 </script>
 	  <script>
+    // Active link highlight
     document.querySelectorAll('.nav-menu a').forEach(link => {
       const dropdown = link.closest('.dropdown');
       if (link.getAttribute('href') === window.location.pathname) {
@@ -386,18 +387,59 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
       }
     });
 
-    // Mobile dropdown toggle on click
+    // Mobile dropdown: JS-driven, not CSS-driven (to avoid Astra theme CSS conflicts)
     const dropbtn = document.querySelector('.dropbtn');
     const dropdownContent = document.querySelector('.dropdown-content');
+    const isMobile = () => window.innerWidth <= 600;
+
+    function initDropdown() {
+      if (!dropbtn || !dropdownContent) return;
+      if (isMobile()) {
+        // On mobile: hide dropdown and handle tap toggle
+        dropdownContent.style.setProperty('display', 'none', 'important');
+        dropdownContent.style.position = 'absolute';
+        dropdownContent.style.top = '100%';
+        dropdownContent.style.left = '50%';
+        dropdownContent.style.transform = 'translateX(-50%)';
+        dropdownContent.style.zIndex = '999999';
+        dropdownContent.style.background = 'var(--card-bg, #fff)';
+        dropdownContent.style.boxShadow = '0 8px 16px rgba(0,0,0,0.15)';
+        dropdownContent.style.borderRadius = '8px';
+        dropdownContent.style.padding = '10px 0';
+        dropdownContent.style.minWidth = '180px';
+        dropbtn.style.display = 'inline-block';
+      } else {
+        // On desktop: reset to CSS-driven hover
+        dropdownContent.style.removeProperty('display');
+        dropdownContent.style.position = '';
+        dropbtn.style.display = '';
+      }
+    }
+
+    initDropdown();
+    window.addEventListener('resize', initDropdown);
+
     if (dropbtn && dropdownContent) {
       dropbtn.addEventListener('click', (e) => {
         e.preventDefault();
-        dropdownContent.classList.toggle('show');
+        e.stopPropagation();
+        if (!isMobile()) return;
+        const isOpen = dropdownContent.style.display !== 'none';
+        dropdownContent.style.setProperty('display', isOpen ? 'none' : 'block', 'important');
       });
-      // Close dropdown when clicking outside
+
+      // Tap on a link inside dropdown: allow navigation
+      dropdownContent.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', (e) => {
+          e.stopPropagation();
+        });
+      });
+
+      // Close when tapping outside
       document.addEventListener('click', (e) => {
+        if (!isMobile()) return;
         if (!dropbtn.contains(e.target) && !dropdownContent.contains(e.target)) {
-          dropdownContent.classList.remove('show');
+          dropdownContent.style.setProperty('display', 'none', 'important');
         }
       });
     }
