@@ -47,6 +47,17 @@ TOOL_ITEMS = [
     {"title": "영양제 권장량 조회", "link": "/supplement", "desc": "비타민·미네랄별 하루 권장 섭취량과 상한 섭취량을 조회합니다."},
 ]
 
+def get_file_lastmod(loc):
+    if loc == "/":
+        filename = "index.html"
+    else:
+        filename = loc.strip("/") + ".html"
+    if os.path.exists(filename):
+        mtime = os.path.getmtime(filename)
+        dt = datetime.fromtimestamp(mtime, KST)
+        return dt.strftime("%Y-%m-%d")
+    return TODAY
+
 def _read(html_path):
     with open(html_path, 'r', encoding='utf-8') as f:
         return f.read()
@@ -109,9 +120,10 @@ posts.sort(key=lambda p: p["date"], reverse=True)
 sitemap_parts = ['<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
 
 for page in STATIC_PAGES:
+    lastmod_val = get_file_lastmod(page['loc'])
     sitemap_parts.append(f"""  <url>
     <loc>{BASE_URL}{page['loc']}</loc>
-    <lastmod>{TODAY}</lastmod>
+    <lastmod>{lastmod_val}</lastmod>
     <changefreq>{page['changefreq']}</changefreq>
     <priority>{page['priority']}</priority>
   </url>""")
