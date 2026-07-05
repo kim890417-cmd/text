@@ -183,7 +183,6 @@ gtag("config", "GT-P8VJJSFD");
         <li><a href="/about">소개</a></li>
         <li><a href="/contact">문의하기</a></li>
       </ul>
-      <button id="theme-toggle">테마 변경</button>
     </div>
   </nav>
 			<div id="content" class="site-content">
@@ -472,15 +471,6 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
 //# sourceURL=https://healthfit100.com/wp-includes/js/wp-emoji-loader.min.js
 </script>
 	  <script>
-    const themeToggle = document.getElementById('theme-toggle');
-    if (themeToggle) {
-      themeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-        localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
-      });
-    }
-    if (localStorage.getItem('theme') === 'dark') document.body.classList.add('dark-mode');
-
     document.querySelectorAll('.nav-menu a').forEach(link => {
       const dropdown = link.closest('.dropdown');
       if (link.getAttribute('href') === window.location.pathname) {

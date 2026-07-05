@@ -12,6 +12,7 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3406696816625207"
      crossorigin="anonymous"></script>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link href="/style.css" rel="stylesheet">
 </head>
 <body>
   <nav class="navbar">
@@ -32,7 +33,6 @@
         <li><a href="/about">소개</a></li>
         <li><a href="/contact">문의하기</a></li>
       </ul>
-      <button id="theme-toggle">테마 변경</button>
     </div>
   </nav>
 
@@ -116,36 +116,12 @@
   </footer>
 
   <script>
-    const themeToggle = document.getElementById('theme-toggle');
-    if (themeToggle) {
-      themeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-        localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
-      });
-    }
-    if (localStorage.getItem('theme') === 'dark') document.body.classList.add('dark-mode');
-
     document.querySelectorAll('.nav-menu a').forEach(link => {
       const dropdown = link.closest('.dropdown');
       if (link.getAttribute('href') === window.location.pathname) {
         link.classList.add('active');
         if (dropdown) dropdown.querySelector('.dropbtn').classList.add('active');
       }
-    });
-
-    document.getElementById('calc-button').addEventListener('click', () => {
-      const w = parseFloat(document.getElementById('weight').value);
-      const ex = parseFloat(document.getElementById('exercise').value) || 0;
-      if (!w || w <= 0) {
-        alert('몸무게를 올바르게 입력해 주세요.');
-        return;
-      }
-      const ml = w * 33 + (ex / 30) * 350;
-      const liters = (ml / 1000).toFixed(1);
-      const cups = Math.round(ml / 250);
-      document.getElementById('water-value').textContent = `${liters} L`;
-      document.getElementById('water-cups').textContent = `약 ${cups}컵(250ml 기준)에 해당합니다. 하루에 나누어 드세요.`;
-      document.getElementById('result-area').style.display = 'block';
     });
   </script>
 </body>

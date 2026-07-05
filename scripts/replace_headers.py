@@ -4,12 +4,29 @@ import re
 ROOT = r"c:\Users\User\Documents\GitHub\text"
 HEALTH_DIR = os.path.join(ROOT, "health")
 UNCATEGORIZED_DIR = os.path.join(ROOT, "uncategorized")
+PAGE_DIR = os.path.join(ROOT, "page")
 
 # Define target HTML files
 target_files = [
+    os.path.join(ROOT, "index.html"),
     os.path.join(ROOT, "blog.html"),
-    os.path.join(ROOT, "page", "2", "index.html"),
+    os.path.join(ROOT, "bmi.html"),
+    os.path.join(ROOT, "calorie.html"),
+    os.path.join(ROOT, "protein.html"),
+    os.path.join(ROOT, "water.html"),
+    os.path.join(ROOT, "supplement.html"),
+    os.path.join(ROOT, "about.html"),
+    os.path.join(ROOT, "contact.html"),
+    os.path.join(ROOT, "privacy.html"),
+    os.path.join(ROOT, "terms.html"),
 ]
+
+# Add active pages under page/
+if os.path.exists(PAGE_DIR):
+    for p in os.listdir(PAGE_DIR):
+        file_path = os.path.join(PAGE_DIR, p, "index.html")
+        if os.path.isfile(file_path):
+            target_files.append(file_path)
 
 # Add active pages under health
 if os.path.exists(HEALTH_DIR):
@@ -18,8 +35,12 @@ if os.path.exists(HEALTH_DIR):
         if os.path.isfile(file_path):
             target_files.append(file_path)
 
-# Add active page under uncategorized
-target_files.append(os.path.join(UNCATEGORIZED_DIR, "단백질-권장량", "index.html"))
+# Add active pages under uncategorized
+if os.path.exists(UNCATEGORIZED_DIR):
+    for slug in os.listdir(UNCATEGORIZED_DIR):
+        file_path = os.path.join(UNCATEGORIZED_DIR, slug, "index.html")
+        if os.path.isfile(file_path):
+            target_files.append(file_path)
 
 # The custom navbar HTML
 NAVBAR_HTML = """  <nav class="navbar">
@@ -40,21 +61,11 @@ NAVBAR_HTML = """  <nav class="navbar">
         <li><a href="/about">소개</a></li>
         <li><a href="/contact">문의하기</a></li>
       </ul>
-      <button id="theme-toggle">테마 변경</button>
     </div>
   </nav>"""
 
-# Custom script for navbar functionality and theme toggle
+# Custom script for navbar functionality (no theme toggle)
 SCRIPT_HTML = """  <script>
-    const themeToggle = document.getElementById('theme-toggle');
-    if (themeToggle) {
-      themeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-        localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
-      });
-    }
-    if (localStorage.getItem('theme') === 'dark') document.body.classList.add('dark-mode');
-
     document.querySelectorAll('.nav-menu a').forEach(link => {
       const dropdown = link.closest('.dropdown');
       if (link.getAttribute('href') === window.location.pathname) {
@@ -75,33 +86,39 @@ for file_path in target_files:
             
         modified = False
         
-        # 1. Inject link stylesheet in head
-        if 'href="/style.css"' not in content:
-            # Insert before </head>
+        # 1. Inject link stylesheet in head (skip for root/pages if already styled, but keep for consistency)
+        if 'href="/style.css"' not in content and 'style.css' not in file_path:
             content = content.replace("</head>", '  <link href="/style.css" rel="stylesheet">\n</head>')
             modified = True
             
-        # 2. Replace the WP/Astra header with custom navbar
-        # Find <header ... id="masthead" ...> ... </header><!-- #masthead -->
+        # 2. Replace the WP/Astra header or existing custom navbar
+        navbar_pattern = r'  <nav class="navbar">.*?</nav>'
         header_pattern = r'<header[^>]*id=["\']masthead["\'][^>]*>.*?</header><!-- #masthead -->'
-        match = re.search(header_pattern, content, re.DOTALL)
-        if match:
+        header_pattern_no_comment = r'<header[^>]*id=["\']masthead["\'][^>]*>.*?</header>'
+        
+        if re.search(navbar_pattern, content, re.DOTALL):
+            content = re.sub(navbar_pattern, NAVBAR_HTML, content, flags=re.DOTALL)
+            modified = True
+            print(f"Updated navbar in: {os.path.relpath(file_path, ROOT)}")
+        elif re.search(header_pattern, content, re.DOTALL):
             content = re.sub(header_pattern, NAVBAR_HTML, content, flags=re.DOTALL)
             modified = True
             print(f"Replaced header in: {os.path.relpath(file_path, ROOT)}")
-        else:
-            # Fallback if comment is missing
-            header_pattern_no_comment = r'<header[^>]*id=["\']masthead["\'][^>]*>.*?</header>'
-            match_nc = re.search(header_pattern_no_comment, content, re.DOTALL)
-            if match_nc:
-                content = re.sub(header_pattern_no_comment, NAVBAR_HTML, content, flags=re.DOTALL)
-                modified = True
-                print(f"Replaced header (no comment fallback) in: {os.path.relpath(file_path, ROOT)}")
+        elif re.search(header_pattern_no_comment, content, re.DOTALL):
+            content = re.sub(header_pattern_no_comment, NAVBAR_HTML, content, flags=re.DOTALL)
+            modified = True
+            print(f"Replaced header (no comment fallback) in: {os.path.relpath(file_path, ROOT)}")
                 
-        # 3. Inject script before </body> if not present
-        if 'id="theme-toggle"' in content and 'const themeToggle' not in content:
+        # 3. Replace old theme toggle script block or inject new one before </body>
+        old_script_pattern = r'  <script>\s*const themeToggle = document\.getElementById\(\'theme-toggle\'\);.*?</script>'
+        if re.search(old_script_pattern, content, re.DOTALL):
+            content = re.sub(old_script_pattern, SCRIPT_HTML, content, flags=re.DOTALL)
+            modified = True
+            print(f"Replaced old script in: {os.path.relpath(file_path, ROOT)}")
+        elif 'document.querySelectorAll(\'.nav-menu a\')' not in content:
             content = content.replace("</body>", f"{SCRIPT_HTML}\n</body>")
             modified = True
+            print(f"Injected script in: {os.path.relpath(file_path, ROOT)}")
             
         if modified:
             with open(file_path, "w", encoding="utf-8") as f:

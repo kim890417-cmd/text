@@ -12,6 +12,7 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3406696816625207"
      crossorigin="anonymous"></script>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link href="/style.css" rel="stylesheet">
 </head>
 <body>
   <nav class="navbar">
@@ -32,7 +33,6 @@
         <li><a href="/about">소개</a></li>
         <li><a href="/contact">문의하기</a></li>
       </ul>
-      <button id="theme-toggle">테마 변경</button>
     </div>
   </nav>
 
@@ -124,48 +124,12 @@
   </footer>
 
   <script>
-    const themeToggle = document.getElementById('theme-toggle');
-    if (themeToggle) {
-      themeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-        localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
-      });
-    }
-    if (localStorage.getItem('theme') === 'dark') document.body.classList.add('dark-mode');
-
     document.querySelectorAll('.nav-menu a').forEach(link => {
       const dropdown = link.closest('.dropdown');
       if (link.getAttribute('href') === window.location.pathname) {
         link.classList.add('active');
         if (dropdown) dropdown.querySelector('.dropbtn').classList.add('active');
       }
-    });
-
-    document.getElementById('calc-button').addEventListener('click', () => {
-      const h = parseFloat(document.getElementById('height').value);
-      const w = parseFloat(document.getElementById('weight').value);
-      if (!h || !w || h <= 0 || w <= 0) {
-        alert('키와 몸무게를 올바르게 입력해 주세요.');
-        return;
-      }
-      const m = h / 100;
-      const bmi = w / (m * m);
-      let category, color;
-      if (bmi < 18.5) { category = '저체중'; color = '#f39c12'; }
-      else if (bmi < 23) { category = '정상'; color = '#28a745'; }
-      else if (bmi < 25) { category = '과체중 (위험체중)'; color = '#f39c12'; }
-      else if (bmi < 30) { category = '비만 1단계'; color = '#e74c3c'; }
-      else { category = '비만 2단계 (고도비만)'; color = '#c0392b'; }
-
-      const standard = (22 * m * m).toFixed(1);
-      document.getElementById('bmi-value').textContent = bmi.toFixed(1);
-      const catEl = document.getElementById('bmi-category');
-      catEl.textContent = category;
-      catEl.style.color = color;
-      document.getElementById('bmi-value').style.color = color;
-      document.getElementById('standard-weight').textContent =
-        `키 ${h}cm 기준 표준체중은 약 ${standard}kg 입니다.`;
-      document.getElementById('result-area').style.display = 'block';
     });
   </script>
 </body>
