@@ -343,12 +343,21 @@ body.dark-mode .site-below-footer-wrap {
 }
 
 
-/* 모바일 네비게이션 — hover 드롭다운이 터치에서 안 열리는 문제 대응 */
+/* 모바일 네비게이션 — hover 드롭다운이 터치에서 안 열리는 문제 대응 및 가로 넘침 수정 */
 @media (max-width: 600px) {
-  .nav-container { flex-wrap: wrap; row-gap: 4px; padding: 8px 14px; min-height: 0; }
-  .nav-logo { font-size: 1.3rem; }
+  .nav-container { flex-direction: column; align-items: center; row-gap: 8px; padding: 10px 14px; min-height: 0; }
+  .nav-logo { font-size: 1.3rem; margin-bottom: 2px; }
   .nav-menu { flex-wrap: wrap; gap: 8px 14px; width: 100%; justify-content: center; }
   .nav-menu a { font-size: 0.9rem; padding: 6px 2px; }
+  
+  /* 모바일 제목 폰트 크기 및 여백 조정 (가로 잘림 방지) */
+  h1, .page-header h1 { font-size: 1.8rem !important; letter-spacing: -1px !important; }
+  .subtitle, .page-header p { font-size: 1rem !important; margin-bottom: 24px !important; }
+  
+  /* 계산기 카드 여백 조정 */
+  .tool-box { padding: 20px !important; }
+  .card-container { padding: 24px !important; }
+
   /* 모바일 드롭다운 스타일 - 터치 시 열리는 방식 */
   .dropdown { position: relative; }
   .dropdown .dropbtn { display: inline-block; }
