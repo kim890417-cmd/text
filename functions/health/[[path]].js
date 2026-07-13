@@ -37,12 +37,66 @@ export async function onRequest(context) {
     </div>
   </nav>
   <script>
+    // Theme toggle
     const t = document.getElementById('theme-toggle');
     if (t) t.addEventListener('click', () => {
       document.body.classList.toggle('dark-mode');
       localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
     });
     if (localStorage.getItem('theme') === 'dark') document.body.classList.add('dark-mode');
+
+    // Mobile dropdown toggle script (same as static pages)
+    const dropbtn = document.querySelector('.dropbtn');
+    const dropdownContent = document.querySelector('.dropdown-content');
+    const isMobile = () => window.innerWidth <= 600;
+
+    function initDropdown() {
+      if (!dropbtn || !dropdownContent) return;
+      if (isMobile()) {
+        dropdownContent.style.setProperty('display', 'none', 'important');
+        dropdownContent.style.position = 'absolute';
+        dropdownContent.style.top = '100%';
+        dropdownContent.style.left = '50%';
+        dropdownContent.style.transform = 'translateX(-50%)';
+        dropdownContent.style.zIndex = '999999';
+        dropdownContent.style.background = 'var(--card-bg, #fff)';
+        dropdownContent.style.boxShadow = '0 8px 16px rgba(0,0,0,0.15)';
+        dropdownContent.style.borderRadius = '8px';
+        dropdownContent.style.padding = '10px 0';
+        dropdownContent.style.minWidth = '180px';
+        dropbtn.style.display = 'inline-block';
+      } else {
+        dropdownContent.style.removeProperty('display');
+        dropdownContent.style.position = '';
+        dropbtn.style.display = '';
+      }
+    }
+
+    initDropdown();
+    window.addEventListener('resize', initDropdown);
+
+    if (dropbtn && dropdownContent) {
+      dropbtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        if (!isMobile()) return;
+        const isOpen = dropdownContent.style.display !== 'none';
+        dropdownContent.style.setProperty('display', isOpen ? 'none' : 'block', 'important');
+      });
+
+      dropdownContent.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', (e) => {
+          e.stopPropagation();
+        });
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!isMobile()) return;
+        if (!dropbtn.contains(e.target) && !dropdownContent.contains(e.target)) {
+          dropdownContent.style.setProperty('display', 'none', 'important');
+        }
+      });
+    }
   </script>`;
 
   if (!html.includes('#masthead') && !html.includes('.main-header-bar')) {
