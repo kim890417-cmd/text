@@ -224,6 +224,27 @@
         }
       });
     }
+
+    document.getElementById('calc-button').addEventListener('click', () => {
+      const gender = document.querySelector('input[name="gender"]:checked').value;
+      const age = parseFloat(document.getElementById('age').value);
+      const h = parseFloat(document.getElementById('height').value);
+      const w = parseFloat(document.getElementById('weight').value);
+      const activity = parseFloat(document.getElementById('activity').value);
+      if (!age || !h || !w || age <= 0 || h <= 0 || w <= 0) {
+        alert('나이, 키, 몸무게를 올바르게 입력해 주세요.');
+        return;
+      }
+      let bmr = 10 * w + 6.25 * h - 5 * age + (gender === 'male' ? 5 : -161);
+      const tdee = bmr * activity;
+      const fmt = n => Math.round(n).toLocaleString() + ' kcal';
+      document.getElementById('bmr-value').textContent = `기초대사량(BMR): ${fmt(bmr)}`;
+      document.getElementById('tdee-value').textContent = fmt(tdee);
+      document.getElementById('cut-value').textContent = fmt(tdee - 500);
+      document.getElementById('maintain-value').textContent = fmt(tdee);
+      document.getElementById('bulk-value').textContent = fmt(tdee + 500);
+      document.getElementById('result-area').style.display = 'block';
+    });
   </script>
 </body>
 </html>

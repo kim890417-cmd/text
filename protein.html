@@ -196,6 +196,22 @@
         }
       });
     }
+
+    document.getElementById('calc-button').addEventListener('click', () => {
+      const w = parseFloat(document.getElementById('weight').value);
+      if (!w || w <= 0) {
+        alert('몸무게를 올바르게 입력해 주세요.');
+        return;
+      }
+      const [lo, hi] = document.getElementById('goal').value.split(',').map(parseFloat);
+      const low = Math.round(w * lo);
+      const high = Math.round(w * hi);
+      document.getElementById('protein-value').textContent = `${low} ~ ${high} g`;
+      const eggs = Math.round(((low + high) / 2) / 6);
+      document.getElementById('protein-foods').textContent =
+        `달걀로 환산하면 하루 약 ${eggs}개분에 해당합니다. 세 끼에 나누어 드세요.`;
+      document.getElementById('result-area').style.display = 'block';
+    });
   </script>
 </body>
 </html>

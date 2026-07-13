@@ -181,6 +181,21 @@
         }
       });
     }
+
+    document.getElementById('calc-button').addEventListener('click', () => {
+      const w = parseFloat(document.getElementById('weight').value);
+      const ex = parseFloat(document.getElementById('exercise').value) || 0;
+      if (!w || w <= 0) {
+        alert('몸무게를 올바르게 입력해 주세요.');
+        return;
+      }
+      const ml = w * 33 + (ex / 30) * 350;
+      const liters = (ml / 1000).toFixed(1);
+      const cups = Math.round(ml / 250);
+      document.getElementById('water-value').textContent = `${liters} L`;
+      document.getElementById('water-cups').textContent = `약 ${cups}컵(250ml 기준)에 해당합니다. 하루에 나누어 드세요.`;
+      document.getElementById('result-area').style.display = 'block';
+    });
   </script>
 </body>
 </html>
