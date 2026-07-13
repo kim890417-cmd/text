@@ -106,6 +106,23 @@ export async function onRequest(context) {
     html = html.replace(/(<body[^>]*>)/, '$1\n' + navBlock);
   }
 
+  // Inject Kakao AdFit vertical ad banner if not already present
+  const adBlock = `
+  <!-- Floating Wing Banner Ad -->
+  <div class="floating-ad-right">
+    <div class="adfit-placeholder">
+      <ins class="kakao_ad_area" style="display:none;"
+      data-ad-unit="DAN-yhdlNr698Sm5YvXi"
+      data-ad-width="160"
+      data-ad-height="600"></ins>
+      <script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+    </div>
+  </div>`;
+
+  if (!html.includes('floating-ad-right')) {
+    html = html.replace('</body>', adBlock + '\n</body>');
+  }
+
   return new Response(html, {
     status: response.status,
     headers: response.headers,
