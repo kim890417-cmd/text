@@ -1,6 +1,7 @@
 import os
 import re
 from datetime import datetime, timezone, timedelta
+from urllib.parse import quote
 
 BASE_URL = "https://healthfit100.com"
 KST = timezone(timedelta(hours=9))
@@ -22,21 +23,21 @@ NOW_RSS = rfc822(NOW)
 SKIP_DIRS = {
     'wp-content', 'wp-includes', 'functions', 'js', 'css', 'scripts',
     'tag', 'author', 'category', 'page', 'sample-page', 'feed',
-    'netlify', 'node_modules',
+    'netlify', 'node_modules', 'uncategorized',
 }
 
 STATIC_PAGES = [
-    {"loc": "/",         "priority": "1.0", "changefreq": "weekly"},
-    {"loc": "/blog",     "priority": "0.9", "changefreq": "weekly"},
-    {"loc": "/bmi",        "priority": "0.8", "changefreq": "monthly"},
-    {"loc": "/calorie",    "priority": "0.8", "changefreq": "monthly"},
-    {"loc": "/protein",    "priority": "0.8", "changefreq": "monthly"},
-    {"loc": "/water",      "priority": "0.8", "changefreq": "monthly"},
-    {"loc": "/supplement", "priority": "0.8", "changefreq": "monthly"},
-    {"loc": "/about",      "priority": "0.6", "changefreq": "monthly"},
-    {"loc": "/contact",  "priority": "0.6", "changefreq": "monthly"},
-    {"loc": "/privacy",  "priority": "0.4", "changefreq": "yearly"},
-    {"loc": "/terms",    "priority": "0.4", "changefreq": "yearly"},
+    {"loc": "/"},
+    {"loc": "/blog"},
+    {"loc": "/bmi"},
+    {"loc": "/calorie"},
+    {"loc": "/protein"},
+    {"loc": "/water"},
+    {"loc": "/supplement"},
+    {"loc": "/about"},
+    {"loc": "/contact"},
+    {"loc": "/privacy"},
+    {"loc": "/terms"},
 ]
 
 TOOL_ITEMS = [
@@ -111,7 +112,7 @@ for cat_dir in sorted(os.listdir('.')):
             })
             found_posts = True
     if found_posts:
-        print(f"  📁 카테고리 감지: {cat_dir}/")
+        print(f"  Category detected: {cat_dir}/")
 
 # 최신 글이 위로 오도록 정렬
 posts.sort(key=lambda p: p["date"], reverse=True)
@@ -121,19 +122,23 @@ sitemap_parts = ['<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://
 
 for page in STATIC_PAGES:
     lastmod_val = get_file_lastmod(page['loc'])
+    # URL 인코딩 (영어 경로 위주지만 혹시 모를 비-ASCII 문자 처리)
+    encoded_loc = "/".join(quote(p) for p in page['loc'].split("/"))
+    # 중복 슬래시 제거 방지
+    if encoded_loc.startswith("//"):
+        encoded_loc = "/" + encoded_loc.lstrip("/")
     sitemap_parts.append(f"""  <url>
-    <loc>{BASE_URL}{page['loc']}</loc>
+    <loc>{BASE_URL}{encoded_loc}</loc>
     <lastmod>{lastmod_val}</lastmod>
-    <changefreq>{page['changefreq']}</changefreq>
-    <priority>{page['priority']}</priority>
   </url>""")
 
 for post in posts:
+    # 한글 카테고리와 한글 슬러그 인코딩
+    encoded_cat = quote(post['cat'])
+    encoded_slug = quote(post['slug'])
     sitemap_parts.append(f"""  <url>
-    <loc>{BASE_URL}/{post['cat']}/{post['slug']}/</loc>
+    <loc>{BASE_URL}/{encoded_cat}/{encoded_slug}/</loc>
     <lastmod>{post['date'].strftime('%Y-%m-%d')}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>""")
 
 sitemap_parts.append('</urlset>')
@@ -141,15 +146,17 @@ sitemap_parts.append('</urlset>')
 with open('sitemap.xml', 'w', encoding='utf-8') as f:
     f.write('\n'.join(sitemap_parts) + '\n')
 
-print(f"✅ sitemap.xml: 도구 {len(STATIC_PAGES)}개 + 블로그 {len(posts)}개")
+print(f"[Success] sitemap.xml: Tools {len(STATIC_PAGES)} + Blogs {len(posts)}")
 
 # rss.xml 생성
 rss_items = []
 
 for post in posts:
+    encoded_cat = quote(post['cat'])
+    encoded_slug = quote(post['slug'])
     rss_items.append(f"""  <item>
     <title>{escape_xml(post['title'])}</title>
-    <link>{BASE_URL}/{post['cat']}/{post['slug']}/</link>
+    <link>{BASE_URL}/{encoded_cat}/{encoded_slug}/</link>
     <description>{escape_xml(post['desc'])}</description>
     <pubDate>{rfc822(post['date'])}</pubDate>
   </item>""")
@@ -178,4 +185,4 @@ rss_content = f"""<?xml version="1.0" encoding="UTF-8" ?>
 with open('rss.xml', 'w', encoding='utf-8') as f:
     f.write(rss_content)
 
-print(f"✅ rss.xml: 블로그 {len(posts)}개 + 도구 {len(TOOL_ITEMS)}개")
+print(f"[Success] rss.xml: Blogs {len(posts)} + Tools {len(TOOL_ITEMS)}")
