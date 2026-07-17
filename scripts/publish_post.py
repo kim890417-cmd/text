@@ -1,10 +1,16 @@
 import os
 import re
+import sys
 from datetime import datetime
 
 ROOT = r"c:\Users\User\Documents\GitHub\text"
-DRAFT_FILE = os.path.join(ROOT, "drafts", "철분제 효능과 빈혈 증상 예방 가이드 복용 시 주의할 음식 및 부작용.txt")
 TEMPLATE_POST = os.path.join(ROOT, "health", "눈-뻑뻑함과-계단-어지러움-루테인과-철분제-낭비-없", "index.html")
+
+def clean_slug(title):
+    # Remove punctuation like : ? ! , and replace spaces with hyphens
+    slug = re.sub(r'[:?!\.,·\(\)]', '', title)
+    slug = re.sub(r'\s+', '-', slug)
+    return slug.strip("-")
 
 def parse_draft(filepath):
     metadata = {}
@@ -97,7 +103,6 @@ def convert_body_to_html(lines):
             item_text = re.sub(r"\*\*(.*?)\*\*", r"<strong>\1</strong>", item_text)
             current_list.append(item_text)
         # Check subheaders/list items like "제1철 (황산철...):" or "카페인 및 타닌..."
-        # If it's a short line ending with ":" or "：" or has bold title at start, let's treat it as a strong paragraph or h3
         elif (line.endswith(":") or line.endswith("：")) and len(line) < 100:
             close_list()
             h_text = line.strip()
@@ -114,12 +119,17 @@ def convert_body_to_html(lines):
     close_list()
     return "\n\n".join(html_blocks)
 
-def publish():
-    print("Parsing draft...")
-    metadata, body_lines = parse_draft(DRAFT_FILE)
+def publish(draft_filename, post_id):
+    draft_path = os.path.join(ROOT, "drafts", draft_filename)
+    if not os.path.exists(draft_path):
+        print(f"Draft file not found: {draft_path}")
+        return
+        
+    print(f"Parsing draft: {draft_filename} ...")
+    metadata, body_lines = parse_draft(draft_path)
     body_html = convert_body_to_html(body_lines)
     
-    slug = "철분제-효능과-빈혈-증상-예방-가이드-복용-시-주의할-음식-및-부작용"
+    slug = clean_slug(metadata["title"])
     post_dir = os.path.join(ROOT, "health", slug)
     os.makedirs(post_dir, exist_ok=True)
     
@@ -150,8 +160,8 @@ def publish():
     new_html = re.sub(r'"datePublished"\s*:\s*"[^"]+"', f'"datePublished":"{metadata["pub_time"]}"', new_html)
     new_html = re.sub(r'"dateModified"\s*:\s*"[^"]+"', f'"dateModified":"{metadata["pub_time"]}"', new_html)
     
-    new_html = new_html.replace('post-345', 'post-350')
-    new_html = new_html.replace('postid-345', 'postid-350')
+    new_html = new_html.replace('post-345', f'post-{post_id}')
+    new_html = new_html.replace('postid-345', f'postid-{post_id}')
     
     tag_lines = [f'<meta property="article:tag" content="{tag}">' for tag in metadata["tags"]]
     tag_block = "\n".join(tag_lines)
@@ -174,11 +184,11 @@ def publish():
         f.write(new_html)
     print(f"Generated post HTML: {new_post_file}")
     
-    update_post_list(os.path.join(ROOT, "blog.html"), slug, metadata)
-    update_post_list(os.path.join(ROOT, "category", "health", "index.html"), slug, metadata)
-    update_post_list(os.path.join(ROOT, "author", "kim890417", "index.html"), slug, metadata)
+    update_post_list(os.path.join(ROOT, "blog.html"), slug, metadata, post_id)
+    update_post_list(os.path.join(ROOT, "category", "health", "index.html"), slug, metadata, post_id)
+    update_post_list(os.path.join(ROOT, "author", "kim890417", "index.html"), slug, metadata, post_id)
 
-def update_post_list(filepath, slug, metadata):
+def update_post_list(filepath, slug, metadata, post_id):
     if not os.path.exists(filepath):
         print(f"Skipping update for missing file: {filepath}")
         return
@@ -186,10 +196,6 @@ def update_post_list(filepath, slug, metadata):
     with open(filepath, "r", encoding="utf-8") as f:
         content = f.read()
         
-    # Check if already added (remove it if it exists so we can replace/update it with correct title/metadata)
-    # Actually, we can just replace if it's there, but to be safe, let's restore first or discard changes in git if re-running
-    pass
-
     # Find the first article tag to prepend before
     article_match = re.search(r'(<article[^>]*id="post-(\d+)"[^>]*>.*?/article>)', content, re.DOTALL)
     if not article_match:
@@ -199,7 +205,6 @@ def update_post_list(filepath, slug, metadata):
     first_article = article_match.group(1)
     
     # We want to use post-345 block structure as template since we know its structure
-    # Let's search specifically for the post-345 article block to use as template
     template_match = re.search(r'(<article[^>]*id="post-345"[^>]*>.*?/article>)', content, re.DOTALL)
     if template_match:
         template_article = template_match.group(1)
@@ -207,8 +212,8 @@ def update_post_list(filepath, slug, metadata):
         template_article = first_article
         
     new_article = template_article
-    new_article = new_article.replace('id="post-345"', 'id="post-350"')
-    new_article = new_article.replace('id="post-343"', 'id="post-350"')
+    new_article = new_article.replace('id="post-345"', f'id="post-{post_id}"')
+    new_article = new_article.replace('id="post-343"', f'id="post-{post_id}"')
     new_article = re.sub(r'health/[^/"]+', f'health/{slug}', new_article)
     new_article = re.sub(r'(<a href="https://healthfit100\.com/health/[^"]+" rel="bookmark">).*?(</a>)', f'\\1{metadata["title"]}\\2', new_article)
     new_article = re.sub(r'\d+월 \d+, \d{4}', metadata["display_date"], new_article)
@@ -217,11 +222,9 @@ def update_post_list(filepath, slug, metadata):
     new_excerpt = metadata["desc"][:100] + "..."
     new_article = re.sub(excerpt_pattern, f'\\1{new_excerpt}\\2', new_article, flags=re.DOTALL)
     
-    # If the post is already in the list (e.g. from previous run), let's remove it first
-    # So we don't duplicate it.
-    if f'id="post-350"' in content:
-        # remove old post-350 article block
-        content = re.sub(r'<article[^>]*id="post-350"[^>]*>.*?/article>\s*', '', content, flags=re.DOTALL)
+    # If this specific post is already in the list, remove it first
+    if f'id="post-{post_id}"' in content:
+        content = re.sub(rf'<article[^>]*id="post-{post_id}"[^>]*>.*?/article>\s*', '', content, flags=re.DOTALL)
         # re-evaluate first article match
         article_match = re.search(r'(<article[^>]*id="post-(\d+)"[^>]*>.*?/article>)', content, re.DOTALL)
         first_article = article_match.group(1)
@@ -233,4 +236,7 @@ def update_post_list(filepath, slug, metadata):
     print(f"Updated article list in: {filepath}")
 
 if __name__ == "__main__":
-    publish()
+    if len(sys.argv) < 3:
+        print("Usage: python publish_post.py <draft_filename> <post_id>")
+        sys.exit(1)
+    publish(sys.argv[1], sys.argv[2])
