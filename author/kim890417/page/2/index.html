@@ -148,6 +148,111 @@ gtag("config", "GT-P8VJJSFD");
 
 <!-- Site Kit에 의해 추가된 Google AdSense 스니펫 종료 -->
   <link href="/style.css" rel="stylesheet">
+<style id="custom-left-thumb-list-css">
+/* 블로그 목록: 왼쪽에 썸네일, 오른쪽에 제목/글 정보 배치 */
+.ast-blog-layout-4-grid .ast-row {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 20px !important;
+}
+
+.ast-blog-layout-4-grid .ast-article-post {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-bottom: 0 !important;
+  padding: 0 !important;
+}
+
+.ast-blog-layout-4-grid .ast-article-inner {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  padding: 20px !important;
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.ast-blog-layout-4-grid .ast-article-inner:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+.ast-blog-layout-4-grid .post-content {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  width: 100% !important;
+  gap: 24px !important;
+}
+
+.ast-blog-layout-4-grid .ast-blog-featured-section.post-thumb {
+  width: 220px !important;
+  min-width: 220px !important;
+  height: 140px !important;
+  flex-shrink: 0 !important;
+  margin: 0 !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  background: #f1f5f9 !important;
+}
+
+.ast-blog-layout-4-grid .ast-blog-featured-section.post-thumb img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+  transition: transform 0.3s ease !important;
+}
+
+.ast-blog-layout-4-grid .ast-article-inner:hover .ast-blog-featured-section.post-thumb img {
+  transform: scale(1.05) !important;
+}
+
+.ast-blog-layout-4-grid .entry-title {
+  font-size: 1.25rem !important;
+  font-weight: 700 !important;
+  margin-top: 6px !important;
+  margin-bottom: 8px !important;
+  line-height: 1.4 !important;
+}
+
+.ast-blog-layout-4-grid .entry-title a {
+  color: #0f172a !important;
+  text-decoration: none !important;
+}
+
+.ast-blog-layout-4-grid .entry-title a:hover {
+  color: #046bd2 !important;
+}
+
+.ast-blog-layout-4-grid .ast-excerpt-container p {
+  margin: 0 !important;
+  color: #475569 !important;
+  font-size: 0.95rem !important;
+  line-height: 1.6 !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+}
+
+@media (max-width: 640px) {
+  .ast-blog-layout-4-grid .ast-article-inner,
+  .ast-blog-layout-4-grid .post-content {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  .ast-blog-layout-4-grid .ast-blog-featured-section.post-thumb {
+    width: 100% !important;
+    min-width: 100% !important;
+    height: 180px !important;
+  }
+}
+</style>
+
 </head>
 
 <body itemtype="https://schema.org/Blog" itemscope="itemscope" class="archive paged author author-kim890417 author-1 wp-embed-responsive paged-2 author-paged-2 wp-theme-astra ast-desktop ast-separate-container ast-right-sidebar astra-4.13.4 ast-inherit-site-logo-transparent ast-hfb-header">
@@ -211,7 +316,7 @@ gtag("config", "GT-P8VJJSFD");
 				<div class="ast-row"><article class="post-273 post type-post status-publish format-standard hentry category-health tag-b9 tag-160 tag-155 tag-159 tag-158 tag-156 tag-161 ast-grid-common-col ast-full-width ast-article-post remove-featured-img-padding" id="post-273" itemtype="https://schema.org/CreativeWork" itemscope="itemscope">
 		<div class="ast-post-format- ast-no-thumb blog-layout-4 ast-article-inner">
 	<div class="post-content ast-grid-common-col">
-		<div class="ast-blog-featured-section post-thumb ast-blog-single-element"></div><span class="ast-blog-single-element ast-taxonomy-container cat-links default"><a href="https://healthfit100.com/category/health" rel="category tag">건강,영양</a></span><h2 class="entry-title ast-blog-single-element" itemprop="headline"><a href="https://healthfit100.com/health/%EC%9E%84%EC%82%B0%EB%B6%80-%EC%97%BD%EC%82%B0-%EA%B6%8C%EC%9E%A5%EB%9F%89" rel="bookmark">임산부 엽산 권장량 및 시기별 부작용, 천연 합성 차이</a></h2>		<header class="entry-header ast-blog-single-element ast-blog-meta-container">
+		<div class="ast-blog-featured-section post-thumb ast-blog-single-element"><a href="https://healthfit100.com/health/%EC%9E%84%EC%82%B0%EB%B6%80-%EC%97%BD%EC%82%B0-%EA%B6%8C%EC%9E%A5%EB%9F%89"><img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=500&h=300&fit=crop&q=80" alt="건강노트 블로그" loading="lazy"></a></div><span class="ast-blog-single-element ast-taxonomy-container cat-links default"><a href="https://healthfit100.com/category/health" rel="category tag">건강,영양</a></span><h2 class="entry-title ast-blog-single-element" itemprop="headline"><a href="https://healthfit100.com/health/%EC%9E%84%EC%82%B0%EB%B6%80-%EC%97%BD%EC%82%B0-%EA%B6%8C%EC%9E%A5%EB%9F%89" rel="bookmark">임산부 엽산 권장량 및 시기별 부작용, 천연 합성 차이</a></h2>		<header class="entry-header ast-blog-single-element ast-blog-meta-container">
 			<div class="entry-meta"><span class="posted-by vcard author" itemtype="https://schema.org/Person" itemscope="itemscope" itemprop="author">			<a title="건강노트의 모든 글 보기" href="https://healthfit100.com/author/kim890417" rel="author" class="url fn n" itemprop="url">
 				<span class="author-name" itemprop="name">
 				건강노트			</span>
@@ -230,7 +335,7 @@ gtag("config", "GT-P8VJJSFD");
 <article class="post-272 post type-post status-publish format-standard hentry category-health tag-162 tag-166 tag-165 tag-167 ast-grid-common-col ast-full-width ast-article-post remove-featured-img-padding" id="post-272" itemtype="https://schema.org/CreativeWork" itemscope="itemscope">
 		<div class="ast-post-format- ast-no-thumb blog-layout-4 ast-article-inner">
 	<div class="post-content ast-grid-common-col">
-		<div class="ast-blog-featured-section post-thumb ast-blog-single-element"></div><span class="ast-blog-single-element ast-taxonomy-container cat-links default"><a href="https://healthfit100.com/category/health" rel="category tag">건강,영양</a></span><h2 class="entry-title ast-blog-single-element" itemprop="headline"><a href="https://healthfit100.com/health/%EC%84%9C%EB%B8%8C%EC%9B%A8%EC%9D%B4-%EC%B9%BC%EB%A1%9C%EB%A6%AC" rel="bookmark">서브웨이 칼로리 표 및 다이어트 조합, 빵 소스 칼로리~</a></h2>		<header class="entry-header ast-blog-single-element ast-blog-meta-container">
+		<div class="ast-blog-featured-section post-thumb ast-blog-single-element"><a href="https://healthfit100.com/health/%EC%84%9C%EB%B8%8C%EC%9B%A8%EC%9D%B4-%EC%B9%BC%EB%A1%9C%EB%A6%AC"><img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=500&h=300&fit=crop&q=80" alt="건강노트 블로그" loading="lazy"></a></div><span class="ast-blog-single-element ast-taxonomy-container cat-links default"><a href="https://healthfit100.com/category/health" rel="category tag">건강,영양</a></span><h2 class="entry-title ast-blog-single-element" itemprop="headline"><a href="https://healthfit100.com/health/%EC%84%9C%EB%B8%8C%EC%9B%A8%EC%9D%B4-%EC%B9%BC%EB%A1%9C%EB%A6%AC" rel="bookmark">서브웨이 칼로리 표 및 다이어트 조합, 빵 소스 칼로리~</a></h2>		<header class="entry-header ast-blog-single-element ast-blog-meta-container">
 			<div class="entry-meta"><span class="posted-by vcard author" itemtype="https://schema.org/Person" itemscope="itemscope" itemprop="author">			<a title="건강노트의 모든 글 보기" href="https://healthfit100.com/author/kim890417" rel="author" class="url fn n" itemprop="url">
 				<span class="author-name" itemprop="name">
 				건강노트			</span>
@@ -249,7 +354,7 @@ gtag("config", "GT-P8VJJSFD");
 <article class="post-271 post type-post status-publish format-standard hentry category-health tag-171 tag-169 tag-168 tag-173 tag-170 tag-172 ast-grid-common-col ast-full-width ast-article-post remove-featured-img-padding" id="post-271" itemtype="https://schema.org/CreativeWork" itemscope="itemscope">
 		<div class="ast-post-format- ast-no-thumb blog-layout-4 ast-article-inner">
 	<div class="post-content ast-grid-common-col">
-		<div class="ast-blog-featured-section post-thumb ast-blog-single-element"></div><span class="ast-blog-single-element ast-taxonomy-container cat-links default"><a href="https://healthfit100.com/category/health" rel="category tag">건강,영양</a></span><h2 class="entry-title ast-blog-single-element" itemprop="headline"><a href="https://healthfit100.com/health/%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4-%EC%B9%BC%EB%A1%9C%EB%A6%AC" rel="bookmark">스타벅스 칼로리 메뉴판 당류 비교, 다이어트 음료등등</a></h2>		<header class="entry-header ast-blog-single-element ast-blog-meta-container">
+		<div class="ast-blog-featured-section post-thumb ast-blog-single-element"><a href="https://healthfit100.com/health/%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4-%EC%B9%BC%EB%A1%9C%EB%A6%AC"><img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=500&h=300&fit=crop&q=80" alt="건강노트 블로그" loading="lazy"></a></div><span class="ast-blog-single-element ast-taxonomy-container cat-links default"><a href="https://healthfit100.com/category/health" rel="category tag">건강,영양</a></span><h2 class="entry-title ast-blog-single-element" itemprop="headline"><a href="https://healthfit100.com/health/%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4-%EC%B9%BC%EB%A1%9C%EB%A6%AC" rel="bookmark">스타벅스 칼로리 메뉴판 당류 비교, 다이어트 음료등등</a></h2>		<header class="entry-header ast-blog-single-element ast-blog-meta-container">
 			<div class="entry-meta"><span class="posted-by vcard author" itemtype="https://schema.org/Person" itemscope="itemscope" itemprop="author">			<a title="건강노트의 모든 글 보기" href="https://healthfit100.com/author/kim890417" rel="author" class="url fn n" itemprop="url">
 				<span class="author-name" itemprop="name">
 				건강노트			</span>
@@ -268,7 +373,7 @@ gtag("config", "GT-P8VJJSFD");
 <article class="post-270 post type-post status-publish format-standard hentry category-health tag-179 tag-176 tag-178 tag-180 tag-174 tag-177 ast-grid-common-col ast-full-width ast-article-post remove-featured-img-padding" id="post-270" itemtype="https://schema.org/CreativeWork" itemscope="itemscope">
 		<div class="ast-post-format- ast-no-thumb blog-layout-4 ast-article-inner">
 	<div class="post-content ast-grid-common-col">
-		<div class="ast-blog-featured-section post-thumb ast-blog-single-element"></div><span class="ast-blog-single-element ast-taxonomy-container cat-links default"><a href="https://healthfit100.com/category/health" rel="category tag">건강,영양</a></span><h2 class="entry-title ast-blog-single-element" itemprop="headline"><a href="https://healthfit100.com/health/%EC%99%80%EC%9D%B8%EC%B9%BC%EB%A1%9C%EB%A6%AC" rel="bookmark">와인칼로리 및 레드와인 종류별 당도, 다이어트 와인</a></h2>		<header class="entry-header ast-blog-single-element ast-blog-meta-container">
+		<div class="ast-blog-featured-section post-thumb ast-blog-single-element"><a href="https://healthfit100.com/health/%EC%99%80%EC%9D%B8%EC%B9%BC%EB%A1%9C%EB%A6%AC"><img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=500&h=300&fit=crop&q=80" alt="건강노트 블로그" loading="lazy"></a></div><span class="ast-blog-single-element ast-taxonomy-container cat-links default"><a href="https://healthfit100.com/category/health" rel="category tag">건강,영양</a></span><h2 class="entry-title ast-blog-single-element" itemprop="headline"><a href="https://healthfit100.com/health/%EC%99%80%EC%9D%B8%EC%B9%BC%EB%A1%9C%EB%A6%AC" rel="bookmark">와인칼로리 및 레드와인 종류별 당도, 다이어트 와인</a></h2>		<header class="entry-header ast-blog-single-element ast-blog-meta-container">
 			<div class="entry-meta"><span class="posted-by vcard author" itemtype="https://schema.org/Person" itemscope="itemscope" itemprop="author">			<a title="건강노트의 모든 글 보기" href="https://healthfit100.com/author/kim890417" rel="author" class="url fn n" itemprop="url">
 				<span class="author-name" itemprop="name">
 				건강노트			</span>
@@ -287,7 +392,7 @@ gtag("config", "GT-P8VJJSFD");
 <article class="post-269 post type-post status-publish format-standard hentry category-health tag-bmi tag-183 tag-184 tag-182 tag-181 tag-186 ast-grid-common-col ast-full-width ast-article-post remove-featured-img-padding" id="post-269" itemtype="https://schema.org/CreativeWork" itemscope="itemscope">
 		<div class="ast-post-format- ast-no-thumb blog-layout-4 ast-article-inner">
 	<div class="post-content ast-grid-common-col">
-		<div class="ast-blog-featured-section post-thumb ast-blog-single-element"></div><span class="ast-blog-single-element ast-taxonomy-container cat-links default"><a href="https://healthfit100.com/category/health" rel="category tag">건강,영양</a></span><h2 class="entry-title ast-blog-single-element" itemprop="headline"><a href="https://healthfit100.com/health/%EC%9E%84%EC%82%B0%EB%B6%80-%EC%B2%B4%EC%A4%91%EC%A6%9D%EA%B0%80" rel="bookmark">임산부 체중증가 가이드, 임신 주차별 몸무게 및 BMI</a></h2>		<header class="entry-header ast-blog-single-element ast-blog-meta-container">
+		<div class="ast-blog-featured-section post-thumb ast-blog-single-element"><a href="https://healthfit100.com/health/%EC%9E%84%EC%82%B0%EB%B6%80-%EC%B2%B4%EC%A4%91%EC%A6%9D%EA%B0%80"><img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=500&h=300&fit=crop&q=80" alt="건강노트 블로그" loading="lazy"></a></div><span class="ast-blog-single-element ast-taxonomy-container cat-links default"><a href="https://healthfit100.com/category/health" rel="category tag">건강,영양</a></span><h2 class="entry-title ast-blog-single-element" itemprop="headline"><a href="https://healthfit100.com/health/%EC%9E%84%EC%82%B0%EB%B6%80-%EC%B2%B4%EC%A4%91%EC%A6%9D%EA%B0%80" rel="bookmark">임산부 체중증가 가이드, 임신 주차별 몸무게 및 BMI</a></h2>		<header class="entry-header ast-blog-single-element ast-blog-meta-container">
 			<div class="entry-meta"><span class="posted-by vcard author" itemtype="https://schema.org/Person" itemscope="itemscope" itemprop="author">			<a title="건강노트의 모든 글 보기" href="https://healthfit100.com/author/kim890417" rel="author" class="url fn n" itemprop="url">
 				<span class="author-name" itemprop="name">
 				건강노트			</span>
@@ -306,7 +411,7 @@ gtag("config", "GT-P8VJJSFD");
 <article class="post-268 post type-post status-publish format-standard hentry category-health tag-188 tag-191 tag-192 tag-190 tag-189 ast-grid-common-col ast-full-width ast-article-post remove-featured-img-padding" id="post-268" itemtype="https://schema.org/CreativeWork" itemscope="itemscope">
 		<div class="ast-post-format- ast-no-thumb blog-layout-4 ast-article-inner">
 	<div class="post-content ast-grid-common-col">
-		<div class="ast-blog-featured-section post-thumb ast-blog-single-element"></div><span class="ast-blog-single-element ast-taxonomy-container cat-links default"><a href="https://healthfit100.com/category/health" rel="category tag">건강,영양</a></span><h2 class="entry-title ast-blog-single-element" itemprop="headline"><a href="https://healthfit100.com/health/%EC%83%9D%EB%A6%AC%EC%A3%BC%EA%B8%B0-%EA%B3%84%EC%82%B0%EB%B2%95" rel="bookmark">생리주기 계산법 및 배란일 가임기 계산 불규칙 주기 정리</a></h2>		<header class="entry-header ast-blog-single-element ast-blog-meta-container">
+		<div class="ast-blog-featured-section post-thumb ast-blog-single-element"><a href="https://healthfit100.com/health/%EC%83%9D%EB%A6%AC%EC%A3%BC%EA%B8%B0-%EA%B3%84%EC%82%B0%EB%B2%95"><img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=500&h=300&fit=crop&q=80" alt="건강노트 블로그" loading="lazy"></a></div><span class="ast-blog-single-element ast-taxonomy-container cat-links default"><a href="https://healthfit100.com/category/health" rel="category tag">건강,영양</a></span><h2 class="entry-title ast-blog-single-element" itemprop="headline"><a href="https://healthfit100.com/health/%EC%83%9D%EB%A6%AC%EC%A3%BC%EA%B8%B0-%EA%B3%84%EC%82%B0%EB%B2%95" rel="bookmark">생리주기 계산법 및 배란일 가임기 계산 불규칙 주기 정리</a></h2>		<header class="entry-header ast-blog-single-element ast-blog-meta-container">
 			<div class="entry-meta"><span class="posted-by vcard author" itemtype="https://schema.org/Person" itemscope="itemscope" itemprop="author">			<a title="건강노트의 모든 글 보기" href="https://healthfit100.com/author/kim890417" rel="author" class="url fn n" itemprop="url">
 				<span class="author-name" itemprop="name">
 				건강노트			</span>
@@ -325,7 +430,7 @@ gtag("config", "GT-P8VJJSFD");
 <article class="post-267 post type-post status-publish format-standard hentry category-health tag-met tag-199 tag-197 tag-195 tag-194 ast-grid-common-col ast-full-width ast-article-post remove-featured-img-padding" id="post-267" itemtype="https://schema.org/CreativeWork" itemscope="itemscope">
 		<div class="ast-post-format- ast-no-thumb blog-layout-4 ast-article-inner">
 	<div class="post-content ast-grid-common-col">
-		<div class="ast-blog-featured-section post-thumb ast-blog-single-element"></div><span class="ast-blog-single-element ast-taxonomy-container cat-links default"><a href="https://healthfit100.com/category/health" rel="category tag">건강,영양</a></span><h2 class="entry-title ast-blog-single-element" itemprop="headline"><a href="https://healthfit100.com/health/%EC%9A%B4%EB%8F%99-%EC%86%8C%EB%AA%A8-%EC%B9%BC%EB%A1%9C%EB%A6%AC-%EA%B3%84%EC%82%B0" rel="bookmark">운동 소모 칼로리 계산 및 스마트워치 런닝머신 오차 (MET 기준)</a></h2>		<header class="entry-header ast-blog-single-element ast-blog-meta-container">
+		<div class="ast-blog-featured-section post-thumb ast-blog-single-element"><a href="https://healthfit100.com/health/%EC%9A%B4%EB%8F%99-%EC%86%8C%EB%AA%A8-%EC%B9%BC%EB%A1%9C%EB%A6%AC-%EA%B3%84%EC%82%B0"><img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=500&h=300&fit=crop&q=80" alt="건강노트 블로그" loading="lazy"></a></div><span class="ast-blog-single-element ast-taxonomy-container cat-links default"><a href="https://healthfit100.com/category/health" rel="category tag">건강,영양</a></span><h2 class="entry-title ast-blog-single-element" itemprop="headline"><a href="https://healthfit100.com/health/%EC%9A%B4%EB%8F%99-%EC%86%8C%EB%AA%A8-%EC%B9%BC%EB%A1%9C%EB%A6%AC-%EA%B3%84%EC%82%B0" rel="bookmark">운동 소모 칼로리 계산 및 스마트워치 런닝머신 오차 (MET 기준)</a></h2>		<header class="entry-header ast-blog-single-element ast-blog-meta-container">
 			<div class="entry-meta"><span class="posted-by vcard author" itemtype="https://schema.org/Person" itemscope="itemscope" itemprop="author">			<a title="건강노트의 모든 글 보기" href="https://healthfit100.com/author/kim890417" rel="author" class="url fn n" itemprop="url">
 				<span class="author-name" itemprop="name">
 				건강노트			</span>
@@ -344,7 +449,7 @@ gtag("config", "GT-P8VJJSFD");
 <article class="post-266 post type-post status-publish format-standard hentry category-health tag-200 tag-202 tag-206 tag-203 tag-205 tag-201 ast-grid-common-col ast-full-width ast-article-post remove-featured-img-padding" id="post-266" itemtype="https://schema.org/CreativeWork" itemscope="itemscope">
 		<div class="ast-post-format- ast-no-thumb blog-layout-4 ast-article-inner">
 	<div class="post-content ast-grid-common-col">
-		<div class="ast-blog-featured-section post-thumb ast-blog-single-element"></div><span class="ast-blog-single-element ast-taxonomy-container cat-links default"><a href="https://healthfit100.com/category/health" rel="category tag">건강,영양</a></span><h2 class="entry-title ast-blog-single-element" itemprop="headline"><a href="https://healthfit100.com/health/%ED%97%AC%EC%8A%A4%EC%9E%A5-%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%84%88%EB%82%98" rel="bookmark">탄단지 비율 계산법 및 목적별 다이어트 식단 비율</a></h2>		<header class="entry-header ast-blog-single-element ast-blog-meta-container">
+		<div class="ast-blog-featured-section post-thumb ast-blog-single-element"><a href="https://healthfit100.com/health/%ED%97%AC%EC%8A%A4%EC%9E%A5-%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%84%88%EB%82%98"><img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=500&h=300&fit=crop&q=80" alt="건강노트 블로그" loading="lazy"></a></div><span class="ast-blog-single-element ast-taxonomy-container cat-links default"><a href="https://healthfit100.com/category/health" rel="category tag">건강,영양</a></span><h2 class="entry-title ast-blog-single-element" itemprop="headline"><a href="https://healthfit100.com/health/%ED%97%AC%EC%8A%A4%EC%9E%A5-%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%84%88%EB%82%98" rel="bookmark">탄단지 비율 계산법 및 목적별 다이어트 식단 비율</a></h2>		<header class="entry-header ast-blog-single-element ast-blog-meta-container">
 			<div class="entry-meta"><span class="posted-by vcard author" itemtype="https://schema.org/Person" itemscope="itemscope" itemprop="author">			<a title="건강노트의 모든 글 보기" href="https://healthfit100.com/author/kim890417" rel="author" class="url fn n" itemprop="url">
 				<span class="author-name" itemprop="name">
 				건강노트			</span>
@@ -363,7 +468,7 @@ gtag("config", "GT-P8VJJSFD");
 <article class="post-265 post type-post status-publish format-standard hentry category-health tag-bmi tag-234 tag-228 ast-grid-common-col ast-full-width ast-article-post remove-featured-img-padding" id="post-265" itemtype="https://schema.org/CreativeWork" itemscope="itemscope">
 		<div class="ast-post-format- ast-no-thumb blog-layout-4 ast-article-inner">
 	<div class="post-content ast-grid-common-col">
-		<div class="ast-blog-featured-section post-thumb ast-blog-single-element"></div><span class="ast-blog-single-element ast-taxonomy-container cat-links default"><a href="https://healthfit100.com/category/health" rel="category tag">건강,영양</a></span><h2 class="entry-title ast-blog-single-element" itemprop="headline"><a href="https://healthfit100.com/health/%EC%97%AC%EC%9E%90-%EC%A0%81%EC%A0%95-%EC%B2%B4%EC%A4%91" rel="bookmark">여자 적정 체중 계산법 및 표준 몸무게 인바디 체지방률</a></h2>		<header class="entry-header ast-blog-single-element ast-blog-meta-container">
+		<div class="ast-blog-featured-section post-thumb ast-blog-single-element"><a href="https://healthfit100.com/health/%EC%97%AC%EC%9E%90-%EC%A0%81%EC%A0%95-%EC%B2%B4%EC%A4%91"><img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=500&h=300&fit=crop&q=80" alt="건강노트 블로그" loading="lazy"></a></div><span class="ast-blog-single-element ast-taxonomy-container cat-links default"><a href="https://healthfit100.com/category/health" rel="category tag">건강,영양</a></span><h2 class="entry-title ast-blog-single-element" itemprop="headline"><a href="https://healthfit100.com/health/%EC%97%AC%EC%9E%90-%EC%A0%81%EC%A0%95-%EC%B2%B4%EC%A4%91" rel="bookmark">여자 적정 체중 계산법 및 표준 몸무게 인바디 체지방률</a></h2>		<header class="entry-header ast-blog-single-element ast-blog-meta-container">
 			<div class="entry-meta"><span class="posted-by vcard author" itemtype="https://schema.org/Person" itemscope="itemscope" itemprop="author">			<a title="건강노트의 모든 글 보기" href="https://healthfit100.com/author/kim890417" rel="author" class="url fn n" itemprop="url">
 				<span class="author-name" itemprop="name">
 				건강노트			</span>
@@ -382,7 +487,7 @@ gtag("config", "GT-P8VJJSFD");
 <article class="post-264 post type-post status-publish format-standard hentry category-health tag-bmr tag-111 tag-237 ast-grid-common-col ast-full-width ast-article-post remove-featured-img-padding" id="post-264" itemtype="https://schema.org/CreativeWork" itemscope="itemscope">
 		<div class="ast-post-format- ast-no-thumb blog-layout-4 ast-article-inner">
 	<div class="post-content ast-grid-common-col">
-		<div class="ast-blog-featured-section post-thumb ast-blog-single-element"></div><span class="ast-blog-single-element ast-taxonomy-container cat-links default"><a href="https://healthfit100.com/category/health" rel="category tag">건강,영양</a></span><h2 class="entry-title ast-blog-single-element" itemprop="headline"><a href="https://healthfit100.com/health/%EA%B8%B0%EC%B4%88%EB%8C%80%EC%82%AC%EB%9F%89-%EA%B3%84%EC%82%B0%EB%B2%95" rel="bookmark">기초대사량 계산법 및 여자 평균 BMR, 기초대사량 높이는법</a></h2>		<header class="entry-header ast-blog-single-element ast-blog-meta-container">
+		<div class="ast-blog-featured-section post-thumb ast-blog-single-element"><a href="https://healthfit100.com/health/%EA%B8%B0%EC%B4%88%EB%8C%80%EC%82%AC%EB%9F%89-%EA%B3%84%EC%82%B0%EB%B2%95"><img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=500&h=300&fit=crop&q=80" alt="건강노트 블로그" loading="lazy"></a></div><span class="ast-blog-single-element ast-taxonomy-container cat-links default"><a href="https://healthfit100.com/category/health" rel="category tag">건강,영양</a></span><h2 class="entry-title ast-blog-single-element" itemprop="headline"><a href="https://healthfit100.com/health/%EA%B8%B0%EC%B4%88%EB%8C%80%EC%82%AC%EB%9F%89-%EA%B3%84%EC%82%B0%EB%B2%95" rel="bookmark">기초대사량 계산법 및 여자 평균 BMR, 기초대사량 높이는법</a></h2>		<header class="entry-header ast-blog-single-element ast-blog-meta-container">
 			<div class="entry-meta"><span class="posted-by vcard author" itemtype="https://schema.org/Person" itemscope="itemscope" itemprop="author">			<a title="건강노트의 모든 글 보기" href="https://healthfit100.com/author/kim890417" rel="author" class="url fn n" itemprop="url">
 				<span class="author-name" itemprop="name">
 				건강노트			</span>
