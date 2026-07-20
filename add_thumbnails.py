@@ -1,10 +1,7 @@
 import os
-import re
 
 repo_path = r'C:\Users\User\Desktop\키워드 글쓰기\healthfit_repo'
 
-# 각 포스팅 폴더명 → Unsplash 이미지 URL + alt 텍스트 매핑
-# 모두 무료 CC0 라이선스 Unsplash 이미지
 IMAGE_MAP = {
     '아연-효능과-하루-권장량-총정리-남성-건강에-꼭-필요한-이유': (
         'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&h=450&fit=crop&q=80',
@@ -120,45 +117,37 @@ IMAGE_MAP = {
     ),
 }
 
-# 삽입할 이미지 HTML 템플릿
-def make_img_html(img_url, alt_text):
-    return f'''<div class="post-thumb-img-content" style="margin-bottom:1.5em;border-radius:8px;overflow:hidden;">
+def make_figure_html(img_url, alt_text):
+    return f'''<figure class="post-thumb-img-content" style="margin:0 0 1.5em 0;border-radius:8px;overflow:hidden;text-align:center;">
 <img src="{img_url}" alt="{alt_text}" width="800" height="450" loading="lazy" style="width:100%;height:auto;display:block;object-fit:cover;">
-</div>
+<figcaption style="font-size:12px;color:#888888;margin-top:6px;text-align:center;">사진 출처: Unsplash</figcaption>
+</figure>
 '''
 
-# 삽입 위치: <header class="entry-header"> 바로 앞
-TARGET = '<header class="entry-header "'
-TARGET2 = '<header class="entry-header">'
-
-fixed_count = 0
+updated_count = 0
 for dirname, (img_url, alt_text) in IMAGE_MAP.items():
     filepath = os.path.join(repo_path, 'health', dirname, 'index.html')
     if not os.path.exists(filepath):
-        print(f'[SKIP - not found] {dirname}')
         continue
 
     with open(filepath, 'r', encoding='utf-8') as f:
         content = f.read()
 
-    # 이미 이미지가 있으면 건너뜀
-    if 'post-thumb-img-content' in content and 'unsplash' in content:
-        print(f'[ALREADY DONE] {dirname}')
-        continue
-
-    img_html = make_img_html(img_url, alt_text)
-
-    if TARGET in content:
-        new_content = content.replace(TARGET, img_html + TARGET, 1)
-    elif TARGET2 in content:
-        new_content = content.replace(TARGET2, img_html + TARGET2, 1)
-    else:
-        print(f'[SKIP - no target] {dirname}')
-        continue
+    # 기존 div 기반 썸네일 제거 후 figure 형태로 대체
+    fig_html = make_figure_html(img_url, alt_text)
+    
+    if '<div class="post-thumb-img-content"' in content:
+        # Replace existing div block up to </div>
+        start = content.find('<div class="post-thumb-img-content"')
+        end = content.find('</div>\n', start) + len('</div>\n')
+        content = content[:start] + fig_html + content[end:]
+    elif '<figure class="post-thumb-img-content"' not in content:
+        target = '<header class="entry-header "'
+        if target in content:
+            content = content.replace(target, fig_html + target, 1)
 
     with open(filepath, 'w', encoding='utf-8') as f:
-        f.write(new_content)
-    print(f'[DONE] {dirname}')
-    fixed_count += 1
+        f.write(content)
+    updated_count += 1
 
-print(f'\n총 {fixed_count}개 파일에 썸네일 추가 완료!')
+print(f'{updated_count}개 파일 이미지 출처(사진 출처: Unsplash) 표시 완료!')
