@@ -138,58 +138,56 @@ gtag("config", "GT-P8VJJSFD");
 <script async crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3406696816625207&host=ca-host-pub-2644536267352236"></script>
 
 <!-- Site Kit에 의해 추가된 Google AdSense 스니펫 종료 -->
-<style id="custom-left-thumb-list-css">
-/* 블로그 목록: 왼쪽에 썸네일, 오른쪽에 제목/글 정보 배치 */
+
+
+<style id="clean-left-thumb-list-css">
+/* 그리드 무효화 및 1열 리스트 레이아웃 강제 */
 .ast-blog-layout-4-grid .ast-row {
   display: flex !important;
   flex-direction: column !important;
-  gap: 20px !important;
+  gap: 16px !important;
+  margin: 0 !important;
 }
 
 .ast-blog-layout-4-grid .ast-article-post {
   width: 100% !important;
   max-width: 100% !important;
-  margin-bottom: 0 !important;
+  margin: 0 0 16px 0 !important;
   padding: 0 !important;
+  float: none !important;
 }
 
-.ast-blog-layout-4-grid .ast-article-inner {
+.custom-card-list-item {
   display: flex !important;
   flex-direction: row !important;
   align-items: center !important;
-  padding: 20px !important;
+  gap: 20px !important;
+  padding: 16px 20px !important;
   background: #ffffff !important;
   border: 1px solid #e2e8f0 !important;
   border-radius: 12px !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
   transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+  box-sizing: border-box !important;
 }
 
-.ast-blog-layout-4-grid .ast-article-inner:hover {
+.custom-card-list-item:hover {
   transform: translateY(-2px) !important;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08) !important;
+  border-color: #cbd5e1 !important;
 }
 
-.ast-blog-layout-4-grid .post-content {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  width: 100% !important;
-  gap: 24px !important;
-}
-
-.ast-blog-layout-4-grid .ast-blog-featured-section.post-thumb {
-  width: 220px !important;
-  min-width: 220px !important;
-  height: 140px !important;
+.custom-card-thumb-link {
   flex-shrink: 0 !important;
-  margin: 0 !important;
+  width: 200px !important;
+  height: 130px !important;
   border-radius: 8px !important;
   overflow: hidden !important;
+  display: block !important;
   background: #f1f5f9 !important;
 }
 
-.ast-blog-layout-4-grid .ast-blog-featured-section.post-thumb img {
+.custom-card-thumb-link img {
   width: 100% !important;
   height: 100% !important;
   object-fit: cover !important;
@@ -197,32 +195,58 @@ gtag("config", "GT-P8VJJSFD");
   transition: transform 0.3s ease !important;
 }
 
-.ast-blog-layout-4-grid .ast-article-inner:hover .ast-blog-featured-section.post-thumb img {
+.custom-card-list-item:hover .custom-card-thumb-link img {
   transform: scale(1.05) !important;
 }
 
-.ast-blog-layout-4-grid .entry-title {
-  font-size: 1.25rem !important;
+.custom-card-body {
+  flex: 1 !important;
+  min-width: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+}
+
+.custom-card-meta {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-size: 13px !important;
+  color: #64748b !important;
+}
+
+.custom-card-category {
+  background: #eff6ff !important;
+  color: #1d4ed8 !important;
+  padding: 2px 8px !important;
+  border-radius: 4px !important;
+  font-weight: 600 !important;
+  font-size: 12px !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+}
+
+.custom-card-title {
+  margin: 0 !important;
+  font-size: 1.15rem !important;
   font-weight: 700 !important;
-  margin-top: 6px !important;
-  margin-bottom: 8px !important;
   line-height: 1.4 !important;
 }
 
-.ast-blog-layout-4-grid .entry-title a {
+.custom-card-title a {
   color: #0f172a !important;
   text-decoration: none !important;
 }
 
-.ast-blog-layout-4-grid .entry-title a:hover {
+.custom-card-title a:hover {
   color: #046bd2 !important;
 }
 
-.ast-blog-layout-4-grid .ast-excerpt-container p {
+.custom-card-excerpt {
   margin: 0 !important;
+  font-size: 0.92rem !important;
   color: #475569 !important;
-  font-size: 0.95rem !important;
-  line-height: 1.6 !important;
+  line-height: 1.5 !important;
   display: -webkit-box !important;
   -webkit-line-clamp: 2 !important;
   -webkit-box-orient: vertical !important;
@@ -230,15 +254,13 @@ gtag("config", "GT-P8VJJSFD");
 }
 
 @media (max-width: 640px) {
-  .ast-blog-layout-4-grid .ast-article-inner,
-  .ast-blog-layout-4-grid .post-content {
+  .custom-card-list-item {
     flex-direction: column !important;
     align-items: flex-start !important;
   }
-  .ast-blog-layout-4-grid .ast-blog-featured-section.post-thumb {
+  .custom-card-thumb-link {
     width: 100% !important;
-    min-width: 100% !important;
-    height: 180px !important;
+    height: 170px !important;
   }
 }
 </style>

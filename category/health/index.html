@@ -155,58 +155,56 @@ gtag("config", "GT-P8VJJSFD");
 
 <!-- Site Kit에 의해 추가된 Google AdSense 스니펫 종료 -->
   <link href="/style.css" rel="stylesheet">
-<style id="custom-left-thumb-list-css">
-/* 블로그 목록: 왼쪽에 썸네일, 오른쪽에 제목/글 정보 배치 */
+
+
+<style id="clean-left-thumb-list-css">
+/* 그리드 무효화 및 1열 리스트 레이아웃 강제 */
 .ast-blog-layout-4-grid .ast-row {
   display: flex !important;
   flex-direction: column !important;
-  gap: 20px !important;
+  gap: 16px !important;
+  margin: 0 !important;
 }
 
 .ast-blog-layout-4-grid .ast-article-post {
   width: 100% !important;
   max-width: 100% !important;
-  margin-bottom: 0 !important;
+  margin: 0 0 16px 0 !important;
   padding: 0 !important;
+  float: none !important;
 }
 
-.ast-blog-layout-4-grid .ast-article-inner {
+.custom-card-list-item {
   display: flex !important;
   flex-direction: row !important;
   align-items: center !important;
-  padding: 20px !important;
+  gap: 20px !important;
+  padding: 16px 20px !important;
   background: #ffffff !important;
   border: 1px solid #e2e8f0 !important;
   border-radius: 12px !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
   transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+  box-sizing: border-box !important;
 }
 
-.ast-blog-layout-4-grid .ast-article-inner:hover {
+.custom-card-list-item:hover {
   transform: translateY(-2px) !important;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08) !important;
+  border-color: #cbd5e1 !important;
 }
 
-.ast-blog-layout-4-grid .post-content {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  width: 100% !important;
-  gap: 24px !important;
-}
-
-.ast-blog-layout-4-grid .ast-blog-featured-section.post-thumb {
-  width: 220px !important;
-  min-width: 220px !important;
-  height: 140px !important;
+.custom-card-thumb-link {
   flex-shrink: 0 !important;
-  margin: 0 !important;
+  width: 200px !important;
+  height: 130px !important;
   border-radius: 8px !important;
   overflow: hidden !important;
+  display: block !important;
   background: #f1f5f9 !important;
 }
 
-.ast-blog-layout-4-grid .ast-blog-featured-section.post-thumb img {
+.custom-card-thumb-link img {
   width: 100% !important;
   height: 100% !important;
   object-fit: cover !important;
@@ -214,32 +212,58 @@ gtag("config", "GT-P8VJJSFD");
   transition: transform 0.3s ease !important;
 }
 
-.ast-blog-layout-4-grid .ast-article-inner:hover .ast-blog-featured-section.post-thumb img {
+.custom-card-list-item:hover .custom-card-thumb-link img {
   transform: scale(1.05) !important;
 }
 
-.ast-blog-layout-4-grid .entry-title {
-  font-size: 1.25rem !important;
+.custom-card-body {
+  flex: 1 !important;
+  min-width: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+}
+
+.custom-card-meta {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-size: 13px !important;
+  color: #64748b !important;
+}
+
+.custom-card-category {
+  background: #eff6ff !important;
+  color: #1d4ed8 !important;
+  padding: 2px 8px !important;
+  border-radius: 4px !important;
+  font-weight: 600 !important;
+  font-size: 12px !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+}
+
+.custom-card-title {
+  margin: 0 !important;
+  font-size: 1.15rem !important;
   font-weight: 700 !important;
-  margin-top: 6px !important;
-  margin-bottom: 8px !important;
   line-height: 1.4 !important;
 }
 
-.ast-blog-layout-4-grid .entry-title a {
+.custom-card-title a {
   color: #0f172a !important;
   text-decoration: none !important;
 }
 
-.ast-blog-layout-4-grid .entry-title a:hover {
+.custom-card-title a:hover {
   color: #046bd2 !important;
 }
 
-.ast-blog-layout-4-grid .ast-excerpt-container p {
+.custom-card-excerpt {
   margin: 0 !important;
+  font-size: 0.92rem !important;
   color: #475569 !important;
-  font-size: 0.95rem !important;
-  line-height: 1.6 !important;
+  line-height: 1.5 !important;
   display: -webkit-box !important;
   -webkit-line-clamp: 2 !important;
   -webkit-box-orient: vertical !important;
@@ -247,15 +271,13 @@ gtag("config", "GT-P8VJJSFD");
 }
 
 @media (max-width: 640px) {
-  .ast-blog-layout-4-grid .ast-article-inner,
-  .ast-blog-layout-4-grid .post-content {
+  .custom-card-list-item {
     flex-direction: column !important;
     align-items: flex-start !important;
   }
-  .ast-blog-layout-4-grid .ast-blog-featured-section.post-thumb {
+  .custom-card-thumb-link {
     width: 100% !important;
-    min-width: 100% !important;
-    height: 180px !important;
+    height: 170px !important;
   }
 }
 </style>
@@ -303,272 +325,286 @@ gtag("config", "GT-P8VJJSFD");
 		</section>
 	
 					<main id="main" class="site-main">
-				<div class="ast-row"><article class="post-345 post type-post status-publish format-standard hentry category-health tag-246 tag-248 tag-249 tag-79 tag-247 ast-grid-common-col ast-full-width ast-article-post remove-featured-img-padding" id="post-365" itemtype="https://schema.org/CreativeWork" itemscope="itemscope">
-		<div class="ast-post-format- ast-no-thumb blog-layout-4 ast-article-inner">
-	<div class="post-content ast-grid-common-col">
-		<div class="ast-blog-featured-section post-thumb ast-blog-single-element"><a href="https://healthfit100.com/health/잠-잘-오는-음식-5가지와-멜라토닌-영양제-복용-솔직-후기"><img src="https://images.unsplash.com/photo-1541480601022-2308c0f02487?w=500&h=300&fit=crop&q=80" alt="잠 잘 오는 음식과 멜라토닌" loading="lazy"></a></div><span class="ast-blog-single-element ast-taxonomy-container cat-links default"><a href="https://healthfit100.com/category/health" rel="category tag">건강,영양</a></span><h2 class="entry-title ast-blog-single-element" itemprop="headline"><a href="https://healthfit100.com/health/잠-잘-오는-음식-5가지와-멜라토닌-영양제-복용-솔직-후기" rel="bookmark">잠 잘 오는 음식 5가지와 멜라토닌 영양제 복용 솔직 후기</a></h2>		<header class="entry-header ast-blog-single-element ast-blog-meta-container">
-			<div class="entry-meta"><span class="posted-by vcard author" itemtype="https://schema.org/Person" itemscope="itemscope" itemprop="author">			<a title="건강노트의 모든 글 보기" href="https://healthfit100.com/author/kim890417" rel="author" class="url fn n" itemprop="url">
-				<span class="author-name" itemprop="name">
-				건강노트			</span>
-			</a>
-		</span>
-
-		 / <span class="posted-on"><span class="published" itemprop="datePublished"> 7월 20, 2026 </span></span></div>		</header><!-- .entry-header -->
-					<div class="ast-excerpt-container ast-blog-single-element">
-				<p>밤마다 잠 못 들어 고생하시나요? 천연 수면 유도 물질이 풍부한 잠 잘 오는 음식 5가지와 멜라토닌 영양제를 직접 복용해 본 솔직한 후기 및 주의사항을 전해드립니다....</p>
-			</div>
-				<div class="entry-content clear" itemprop="text">
-					</div><!-- .entry-content .clear -->
-	</div><!-- .post-content -->
-</div> <!-- .blog-layout-4 -->
-	</article>
-<article class="post-345 post type-post status-publish format-standard hentry category-health tag-246 tag-248 tag-249 tag-79 tag-247 ast-grid-common-col ast-full-width ast-article-post remove-featured-img-padding" id="post-360" itemtype="https://schema.org/CreativeWork" itemscope="itemscope">
-		<div class="ast-post-format- ast-no-thumb blog-layout-4 ast-article-inner">
-	<div class="post-content ast-grid-common-col">
-		<div class="ast-blog-featured-section post-thumb ast-blog-single-element"><a href="https://healthfit100.com/health/아연-효능과-하루-권장량-총정리-남성-건강에-꼭-필요한-이유"><img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=500&h=300&fit=crop&q=80" alt="아연 효능과 하루 권장량" loading="lazy"></a></div><span class="ast-blog-single-element ast-taxonomy-container cat-links default"><a href="https://healthfit100.com/category/health" rel="category tag">건강,영양</a></span><h2 class="entry-title ast-blog-single-element" itemprop="headline"><a href="https://healthfit100.com/health/아연-효능과-하루-권장량-총정리-남성-건강에-꼭-필요한-이유" rel="bookmark">아연 효능과 하루 권장량 총정리: 남성 건강에 꼭 필요한 이유</a></h2>		<header class="entry-header ast-blog-single-element ast-blog-meta-container">
-			<div class="entry-meta"><span class="posted-by vcard author" itemtype="https://schema.org/Person" itemscope="itemscope" itemprop="author">			<a title="건강노트의 모든 글 보기" href="https://healthfit100.com/author/kim890417" rel="author" class="url fn n" itemprop="url">
-				<span class="author-name" itemprop="name">
-				건강노트			</span>
-			</a>
-		</span>
-
-		 / <span class="posted-on"><span class="published" itemprop="datePublished"> 7월 19, 2026 </span></span></div>		</header><!-- .entry-header -->
-					<div class="ast-excerpt-container ast-blog-single-element">
-				<p>탈모 예방과 면역력 강화에 필수적인 아연 효능 5가지와 성별 아연 하루 권장량, 결핍 신호 및 올바른 영양제 복용법을 정리해 드립니다....</p>
-			</div>
-				<div class="entry-content clear" itemprop="text">
-					</div><!-- .entry-content .clear -->
-	</div><!-- .post-content -->
-</div> <!-- .blog-layout-4 -->
-	</article>
-<article class="post-345 post type-post status-publish format-standard hentry category-health tag-246 tag-248 tag-249 tag-79 tag-247 ast-grid-common-col ast-full-width ast-article-post remove-featured-img-padding" id="post-355" itemtype="https://schema.org/CreativeWork" itemscope="itemscope">
-		<div class="ast-post-format- ast-no-thumb blog-layout-4 ast-article-inner">
-	<div class="post-content ast-grid-common-col">
-		<div class="ast-blog-featured-section post-thumb ast-blog-single-element"><a href="https://healthfit100.com/health/단백질-하루-섭취량-계산법과-필수-아미노산-식품"><img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=500&h=300&fit=crop&q=80" alt="단백질 하루 섭취량 계산법" loading="lazy"></a></div><span class="ast-blog-single-element ast-taxonomy-container cat-links default"><a href="https://healthfit100.com/category/health" rel="category tag">건강,영양</a></span><h2 class="entry-title ast-blog-single-element" itemprop="headline"><a href="https://healthfit100.com/health/단백질-하루-섭취량-계산법과-필수-아미노산-식품" rel="bookmark">단백질 하루 섭취량 계산법과 필수 아미노산 식품</a></h2>		<header class="entry-header ast-blog-single-element ast-blog-meta-container">
-			<div class="entry-meta"><span class="posted-by vcard author" itemtype="https://schema.org/Person" itemscope="itemscope" itemprop="author">			<a title="건강노트의 모든 글 보기" href="https://healthfit100.com/author/kim890417" rel="author" class="url fn n" itemprop="url">
-				<span class="author-name" itemprop="name">
-				건강노트			</span>
-			</a>
-		</span>
-
-		 / <span class="posted-on"><span class="published" itemprop="datePublished"> 7월 17, 2026 </span></span></div>		</header><!-- .entry-header -->
-					<div class="ast-excerpt-container ast-blog-single-element">
-				<p>나의 체중과 운동 목적에 맞는 정확한 단백질 하루 섭취량 계산법을 알아보고, 달걀, 두부, 생선 등 필수 아미노산이 풍부한 식품 추천 및 올바른 섭취 타이밍까지 상세히 가이드해 드...</p>
-			</div>
-				<div class="entry-content clear" itemprop="text">
-					</div><!-- .entry-content .clear -->
-	</div><!-- .post-content -->
-</div> <!-- .blog-layout-4 -->
-	</article>
-<article class="post-345 post type-post status-publish format-standard hentry category-health tag-246 tag-248 tag-249 tag-79 tag-247 ast-grid-common-col ast-full-width ast-article-post remove-featured-img-padding" id="post-350" itemtype="https://schema.org/CreativeWork" itemscope="itemscope">
-		<div class="ast-post-format- ast-no-thumb blog-layout-4 ast-article-inner">
-	<div class="post-content ast-grid-common-col">
-		<div class="ast-blog-featured-section post-thumb ast-blog-single-element"><a href="https://healthfit100.com/health/철분제-효능과-빈혈-증상-예방-가이드-복용-시-주의할-음식-및-부작용"><img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=500&h=300&fit=crop&q=80" alt="철분제 효능과 빈혈 예방" loading="lazy"></a></div><span class="ast-blog-single-element ast-taxonomy-container cat-links default"><a href="https://healthfit100.com/category/health" rel="category tag">건강,영양</a></span><h2 class="entry-title ast-blog-single-element" itemprop="headline"><a href="https://healthfit100.com/health/철분제-효능과-빈혈-증상-예방-가이드-복용-시-주의할-음식-및-부작용" rel="bookmark">철분제 효능과 빈혈 증상 예방 가이드: 복용 시 주의할 음식 및 부작용 총정리</a></h2>		<header class="entry-header ast-blog-single-element ast-blog-meta-container">
-			<div class="entry-meta"><span class="posted-by vcard author" itemtype="https://schema.org/Person" itemscope="itemscope" itemprop="author">			<a title="건강노트의 모든 글 보기" href="https://healthfit100.com/author/kim890417" rel="author" class="url fn n" itemprop="url">
-				<span class="author-name" itemprop="name">
-				건강노트			</span>
-			</a>
-		</span>
-
-		 / <span class="posted-on"><span class="published" itemprop="datePublished"> 7월 15, 2026 </span></span></div>		</header><!-- .entry-header -->
-					<div class="ast-excerpt-container ast-blog-single-element">
-				<p>빈혈의 주요 증상과 원인을 알아보고, 나에게 맞는 철분제 종류 선택법부터 흡수율을 극대화하는 올바른 복용법 및 피해야 할 음식까지 상세하게 정리해 드립니다....</p>
-			</div>
-				<div class="entry-content clear" itemprop="text">
-					</div><!-- .entry-content .clear -->
-	</div><!-- .post-content -->
-</div> <!-- .blog-layout-4 -->
-	</article>
-<article class="post-345 post type-post status-publish format-standard hentry category-health tag-246 tag-248 tag-249 tag-79 tag-247 ast-grid-common-col ast-full-width ast-article-post remove-featured-img-padding" id="post-345" itemtype="https://schema.org/CreativeWork" itemscope="itemscope">
-		<div class="ast-post-format- ast-no-thumb blog-layout-4 ast-article-inner">
-	<div class="post-content ast-grid-common-col">
-		<div class="ast-blog-featured-section post-thumb ast-blog-single-element"><a href="https://healthfit100.com/health/%EB%88%88-%EB%BB%91%EB%BB%91%ED%95%A8%EA%B3%BC-%EA%B3%84%EB%8B%A8-%EC%96%B4%EC%A7%80%EB%9F%AC%EC%9B%80-%EB%A3%A8%ED%85%8C%EC%9D%B8%EA%B3%BC-%EC%B2%A0%EB%B6%84%EC%A0%9C-%EB%82%AD%EB%B9%84-%EC%97%86"><img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=500&h=300&fit=crop&q=80" alt="건강노트 블로그" loading="lazy"></a></div><span class="ast-blog-single-element ast-taxonomy-container cat-links default"><a href="https://healthfit100.com/category/health" rel="category tag">건강,영양</a></span><h2 class="entry-title ast-blog-single-element" itemprop="headline"><a href="https://healthfit100.com/health/%EB%88%88-%EB%BB%91%EB%BB%91%ED%95%A8%EA%B3%BC-%EA%B3%84%EB%8B%A8-%EC%96%B4%EC%A7%80%EB%9F%AC%EC%9B%80-%EB%A3%A8%ED%85%8C%EC%9D%B8%EA%B3%BC-%EC%B2%A0%EB%B6%84%EC%A0%9C-%EB%82%AD%EB%B9%84-%EC%97%86" rel="bookmark">눈 뻑뻑함과 계단 어지러움: 루테인과 철분제 낭비 없는 식후 복용 법칙</a></h2>		<header class="entry-header ast-blog-single-element ast-blog-meta-container">
-			<div class="entry-meta"><span class="posted-by vcard author" itemtype="https://schema.org/Person" itemscope="itemscope" itemprop="author">			<a title="건강노트의 모든 글 보기" href="https://healthfit100.com/author/kim890417" rel="author" class="url fn n" itemprop="url">
-				<span class="author-name" itemprop="name">
-				건강노트			</span>
-			</a>
-		</span>
-
-		 / <span class="posted-on"><span class="published" itemprop="datePublished"> 7월 13, 2026 </span></span></div>		</header><!-- .entry-header -->
-					<div class="ast-excerpt-container ast-blog-single-element">
-				<p>모니터 앞에 하루 8시간에서 10시간씩 앉아 일하다 보면 퇴근할 때쯤 눈이 뻑뻑하고 앞이 흐릿해지는 게 일상입니다. 그냥 피곤해서 그런가 보다 […]</p>
-			</div>
-				<div class="entry-content clear" itemprop="text">
-					</div><!-- .entry-content .clear -->
-	</div><!-- .post-content -->
-</div> <!-- .blog-layout-4 -->
-	</article><!-- #post-## -->
-<article class="post-343 post type-post status-publish format-standard hentry category-health tag-244 tag-b- tag-242 tag-245 ast-grid-common-col ast-full-width ast-article-post remove-featured-img-padding" id="post-343" itemtype="https://schema.org/CreativeWork" itemscope="itemscope">
-		<div class="ast-post-format- ast-no-thumb blog-layout-4 ast-article-inner">
-	<div class="post-content ast-grid-common-col">
-		<div class="ast-blog-featured-section post-thumb ast-blog-single-element"><a href="https://healthfit100.com/health/%EB%A9%80%ED%8B%B0%EB%B9%84%ED%83%80%EB%AF%BC-%EC%96%B8%EC%A0%9C-%EB%A8%B9%EC%96%B4%EC%95%BC-%ED%9A%A8%EA%B3%BC-%EC%A2%8B%EC%9D%84%EA%B9%8C"><img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=500&h=300&fit=crop&q=80" alt="건강노트 블로그" loading="lazy"></a></div><span class="ast-blog-single-element ast-taxonomy-container cat-links default"><a href="https://healthfit100.com/category/health" rel="category tag">건강,영양</a></span><h2 class="entry-title ast-blog-single-element" itemprop="headline"><a href="https://healthfit100.com/health/%EB%A9%80%ED%8B%B0%EB%B9%84%ED%83%80%EB%AF%BC-%EC%96%B8%EC%A0%9C-%EB%A8%B9%EC%96%B4%EC%95%BC-%ED%9A%A8%EA%B3%BC-%EC%A2%8B%EC%9D%84%EA%B9%8C" rel="bookmark">멀티비타민 언제 먹어야 효과 좋을까? 복용 시간 총정리</a></h2>		<header class="entry-header ast-blog-single-element ast-blog-meta-container">
-			<div class="entry-meta"><span class="posted-by vcard author" itemtype="https://schema.org/Person" itemscope="itemscope" itemprop="author">			<a title="건강노트의 모든 글 보기" href="https://healthfit100.com/author/kim890417" rel="author" class="url fn n" itemprop="url">
-				<span class="author-name" itemprop="name">
-				건강노트			</span>
-			</a>
-		</span>
-
-		 / <span class="posted-on"><span class="published" itemprop="datePublished"> 7월 9, 2026 </span></span></div>		</header><!-- .entry-header -->
-					<div class="ast-excerpt-container ast-blog-single-element">
-				<p>주변에서 몸 좀 챙기라는 잔소리를 듣기 시작하면 가장 먼저 장바구니에 담는 게 바로 멀티비타민입니다. 그런데 비싼 돈 주고 산 비타민을</p>
-			</div>
-				<div class="entry-content clear" itemprop="text">
-					</div><!-- .entry-content .clear -->
-	</div><!-- .post-content -->
-</div> <!-- .blog-layout-4 -->
-	</article><!-- #post-## -->
-<article class="post-324 post type-post status-publish format-standard hentry category-health tag-241 ast-grid-common-col ast-full-width ast-article-post remove-featured-img-padding" id="post-324" itemtype="https://schema.org/CreativeWork" itemscope="itemscope">
-		<div class="ast-post-format- ast-no-thumb blog-layout-4 ast-article-inner">
-	<div class="post-content ast-grid-common-col">
-		<div class="ast-blog-featured-section post-thumb ast-blog-single-element"><a href="https://healthfit100.com/health/%EC%B9%BC%EC%8A%98-%ED%95%98%EB%A3%A8-%EA%B6%8C%EC%9E%A5-%EC%84%AD%EC%B7%A8%EB%9F%89"><img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=500&h=300&fit=crop&q=80" alt="건강노트 블로그" loading="lazy"></a></div><span class="ast-blog-single-element ast-taxonomy-container cat-links default"><a href="https://healthfit100.com/category/health" rel="category tag">건강,영양</a></span><h2 class="entry-title ast-blog-single-element" itemprop="headline"><a href="https://healthfit100.com/health/%EC%B9%BC%EC%8A%98-%ED%95%98%EB%A3%A8-%EA%B6%8C%EC%9E%A5-%EC%84%AD%EC%B7%A8%EB%9F%89" rel="bookmark">칼슘 하루 권장 섭취량과 흡수율 높이는 올바른 영양제 조합 가이드</a></h2>		<header class="entry-header ast-blog-single-element ast-blog-meta-container">
-			<div class="entry-meta"><span class="posted-by vcard author" itemtype="https://schema.org/Person" itemscope="itemscope" itemprop="author">			<a title="건강노트의 모든 글 보기" href="https://healthfit100.com/author/kim890417" rel="author" class="url fn n" itemprop="url">
-				<span class="author-name" itemprop="name">
-				건강노트			</span>
-			</a>
-		</span>
-
-		 / <span class="posted-on"><span class="published" itemprop="datePublished"> 7월 5, 2026 </span></span></div>		</header><!-- .entry-header -->
-					<div class="ast-excerpt-container ast-blog-single-element">
-				<p>대한민국 성인 남녀의 신체 건강 지표를 통계적으로 살펴보면, 한국인 10명 중 7명은 만성적인 칼슘 부족 상태에 직면해 있는 것이 냉정한</p>
-			</div>
-				<div class="entry-content clear" itemprop="text">
-					</div><!-- .entry-content .clear -->
-	</div><!-- .post-content -->
-</div> <!-- .blog-layout-4 -->
-	</article><!-- #post-## -->
-<article class="post-323 post type-post status-publish format-standard hentry category-health tag-240 ast-grid-common-col ast-full-width ast-article-post remove-featured-img-padding" id="post-323" itemtype="https://schema.org/CreativeWork" itemscope="itemscope">
-		<div class="ast-post-format- ast-no-thumb blog-layout-4 ast-article-inner">
-	<div class="post-content ast-grid-common-col">
-		<div class="ast-blog-featured-section post-thumb ast-blog-single-element"><a href="https://healthfit100.com/health/%EB%A7%88%EA%B7%B8%EB%84%A4%EC%8A%98-%ED%95%98%EB%A3%A8-%EA%B6%8C%EC%9E%A5%EB%9F%89"><img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=500&h=300&fit=crop&q=80" alt="건강노트 블로그" loading="lazy"></a></div><span class="ast-blog-single-element ast-taxonomy-container cat-links default"><a href="https://healthfit100.com/category/health" rel="category tag">건강,영양</a></span><h2 class="entry-title ast-blog-single-element" itemprop="headline"><a href="https://healthfit100.com/health/%EB%A7%88%EA%B7%B8%EB%84%A4%EC%8A%98-%ED%95%98%EB%A3%A8-%EA%B6%8C%EC%9E%A5%EB%9F%89" rel="bookmark">마그네슘 하루 권장량 계산법과 부작용 없는 올바른 영양제 섭취 시간</a></h2>		<header class="entry-header ast-blog-single-element ast-blog-meta-container">
-			<div class="entry-meta"><span class="posted-by vcard author" itemtype="https://schema.org/Person" itemscope="itemscope" itemprop="author">			<a title="건강노트의 모든 글 보기" href="https://healthfit100.com/author/kim890417" rel="author" class="url fn n" itemprop="url">
-				<span class="author-name" itemprop="name">
-				건강노트			</span>
-			</a>
-		</span>
-
-		 / <span class="posted-on"><span class="published" itemprop="datePublished"> 7월 3, 2026 </span></span></div>		</header><!-- .entry-header -->
-					<div class="ast-excerpt-container ast-blog-single-element">
-				<p>수많은 사람이 피로 해소와 눈 밑 떨림을 해결하려 마그네슘을 찾지만, 본인의 적정 섭취량을 제대로 알고 먹는 경우는 드뭅니다. 대개 영양제</p>
-			</div>
-				<div class="entry-content clear" itemprop="text">
-					</div><!-- .entry-content .clear -->
-	</div><!-- .post-content -->
-</div> <!-- .blog-layout-4 -->
-	</article><!-- #post-## -->
-<article class="post-278 post type-post status-publish format-standard hentry category-health tag-122 tag-120 tag-124 tag-125 tag-126 tag-123 tag-121 ast-grid-common-col ast-full-width ast-article-post remove-featured-img-padding" id="post-278" itemtype="https://schema.org/CreativeWork" itemscope="itemscope">
-		<div class="ast-post-format- ast-no-thumb blog-layout-4 ast-article-inner">
-	<div class="post-content ast-grid-common-col">
-		<div class="ast-blog-featured-section post-thumb ast-blog-single-element"><a href="https://healthfit100.com/health/%EA%B7%BC%EC%9C%A1-%EC%9C%A0%EC%A7%80%EC%99%80-%EB%8B%A4%EC%9D%B4%EC%96%B4%ED%8A%B8%EB%A5%BC-%EC%9C%84%ED%95%B4-%EB%8B%A8%EB%B0%B1%EC%A7%88-%EC%84%AD%EC%B7%A8%EC%9D%98-%EC%A4%91%EC%9A%94%EC%84%B1"><img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=500&h=300&fit=crop&q=80" alt="건강노트 블로그" loading="lazy"></a></div><span class="ast-blog-single-element ast-taxonomy-container cat-links default"><a href="https://healthfit100.com/category/health" rel="category tag">건강,영양</a></span><h2 class="entry-title ast-blog-single-element" itemprop="headline"><a href="https://healthfit100.com/health/%EA%B7%BC%EC%9C%A1-%EC%9C%A0%EC%A7%80%EC%99%80-%EB%8B%A4%EC%9D%B4%EC%96%B4%ED%8A%B8%EB%A5%BC-%EC%9C%84%ED%95%B4-%EB%8B%A8%EB%B0%B1%EC%A7%88-%EC%84%AD%EC%B7%A8%EC%9D%98-%EC%A4%91%EC%9A%94%EC%84%B1" rel="bookmark">단백질 많은 음식 및 하루 섭취량 계산법</a></h2>		<header class="entry-header ast-blog-single-element ast-blog-meta-container">
-			<div class="entry-meta"><span class="posted-by vcard author" itemtype="https://schema.org/Person" itemscope="itemscope" itemprop="author">			<a title="건강노트의 모든 글 보기" href="https://healthfit100.com/author/kim890417" rel="author" class="url fn n" itemprop="url">
-				<span class="author-name" itemprop="name">
-				건강노트			</span>
-			</a>
-		</span>
-
-		 / <span class="posted-on"><span class="published" itemprop="datePublished"> 7월 2, 2026 </span></span></div>		</header><!-- .entry-header -->
-					<div class="ast-excerpt-container ast-blog-single-element">
-				<p>근육 유지와 다이어트를 위해 단백질 섭취의 중요성이 나날이 강조되고 있습니다. 요즘은 마트나 편의점만 가도 단백질 음료나 프로틴 바 같은 제품들이</p>
-			</div>
-				<div class="entry-content clear" itemprop="text">
-					</div><!-- .entry-content .clear -->
-	</div><!-- .post-content -->
-</div> <!-- .blog-layout-4 -->
-	</article><!-- #post-## -->
-<article class="post-255 post type-post status-publish format-standard hentry category-health tag-bmr tag-tdee tag-111 tag-113 tag-108 tag-112 tag-110 ast-grid-common-col ast-full-width ast-article-post remove-featured-img-padding" id="post-255" itemtype="https://schema.org/CreativeWork" itemscope="itemscope">
-		<div class="ast-post-format- ast-no-thumb blog-layout-4 ast-article-inner">
-	<div class="post-content ast-grid-common-col">
-		<div class="ast-blog-featured-section post-thumb ast-blog-single-element"><a href="https://healthfit100.com/health/tdee%EA%B3%84%EC%82%B0%ED%95%98%EB%8A%94%EB%B2%95"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=500&h=300&fit=crop&q=80" alt="TDEE 계산하는 법" loading="lazy"></a></div><span class="ast-blog-single-element ast-taxonomy-container cat-links default"><a href="https://healthfit100.com/category/health" rel="category tag">건강,영양</a></span><h2 class="entry-title ast-blog-single-element" itemprop="headline"><a href="https://healthfit100.com/health/tdee%EA%B3%84%EC%82%B0%ED%95%98%EB%8A%94%EB%B2%95" rel="bookmark">TDEE 계산하는 법: 무작정 1200kcal 다이어트가 실패하는 이유</a></h2>		<header class="entry-header ast-blog-single-element ast-blog-meta-container">
-			<div class="entry-meta"><span class="posted-by vcard author" itemtype="https://schema.org/Person" itemscope="itemscope" itemprop="author">			<a title="건강노트의 모든 글 보기" href="https://healthfit100.com/author/kim890417" rel="author" class="url fn n" itemprop="url">
-				<span class="author-name" itemprop="name">
-				건강노트			</span>
-			</a>
-		</span>
-
-		 / <span class="posted-on"><span class="published" itemprop="datePublished"> 7월 2, 2026 </span></span></div>		</header><!-- .entry-header -->
-					<div class="ast-excerpt-container ast-blog-single-element">
-				<p>인터넷 보면 누구는 하루에 1,200칼로리만 먹으라 그러고, 또 헬스장 트레이너들은 그렇게 먹으면 근육 다 빠지고 몸 망가진다고 난리를 칩니다. 이</p>
-			</div>
-				<div class="entry-content clear" itemprop="text">
-					</div><!-- .entry-content .clear -->
-	</div><!-- .post-content -->
-</div> <!-- .blog-layout-4 -->
-	</article><!-- #post-## -->
-<article class="post-277 post type-post status-publish format-standard hentry category-health tag-rtg3 tag-127 tag-129 tag-128 tag-131 tag-130 ast-grid-common-col ast-full-width ast-article-post remove-featured-img-padding" id="post-277" itemtype="https://schema.org/CreativeWork" itemscope="itemscope">
-		<div class="ast-post-format- ast-no-thumb blog-layout-4 ast-article-inner">
-	<div class="post-content ast-grid-common-col">
-		<div class="ast-blog-featured-section post-thumb ast-blog-single-element"><a href="https://healthfit100.com/health/%EC%98%A4%EB%A9%94%EA%B0%803"><img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=500&h=300&fit=crop&q=80" alt="건강노트 블로그" loading="lazy"></a></div><span class="ast-blog-single-element ast-taxonomy-container cat-links default"><a href="https://healthfit100.com/category/health" rel="category tag">건강,영양</a></span><h2 class="entry-title ast-blog-single-element" itemprop="headline"><a href="https://healthfit100.com/health/%EC%98%A4%EB%A9%94%EA%B0%803" rel="bookmark">오메가3 복용시간 및 하루 권장량 고르는법 (알티지 rTG)</a></h2>		<header class="entry-header ast-blog-single-element ast-blog-meta-container">
-			<div class="entry-meta"><span class="posted-by vcard author" itemtype="https://schema.org/Person" itemscope="itemscope" itemprop="author">			<a title="건강노트의 모든 글 보기" href="https://healthfit100.com/author/kim890417" rel="author" class="url fn n" itemprop="url">
-				<span class="author-name" itemprop="name">
-				건강노트			</span>
-			</a>
-		</span>
-
-		 / <span class="posted-on"><span class="published" itemprop="datePublished"> 7월 1, 2026 </span></span></div>		</header><!-- .entry-header -->
-					<div class="ast-excerpt-container ast-blog-single-element">
-				<p>종합비타민이나 유산균과 더불어 필수 건강기능식품으로 자리 잡은 것이 오메가3(EPA 및 DHA 함유 유지)입니다. 혈관 기름때를 청소해 주고 눈 건조감 개선에</p>
-			</div>
-				<div class="entry-content clear" itemprop="text">
-					</div><!-- .entry-content .clear -->
-	</div><!-- .post-content -->
-</div> <!-- .blog-layout-4 -->
-	</article><!-- #post-## -->
-<article class="post-276 post type-post status-publish format-standard hentry category-health tag-140 tag-134 tag-135 tag-136 tag-139 ast-grid-common-col ast-full-width ast-article-post remove-featured-img-padding" id="post-276" itemtype="https://schema.org/CreativeWork" itemscope="itemscope">
-		<div class="ast-post-format- ast-no-thumb blog-layout-4 ast-article-inner">
-	<div class="post-content ast-grid-common-col">
-		<div class="ast-blog-featured-section post-thumb ast-blog-single-element"><a href="https://healthfit100.com/health/%ED%95%98%EB%A3%A8-%EC%B9%B4%ED%8E%98%EC%9D%B8-%EA%B6%8C%EC%9E%A5%EB%9F%89"><img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=500&h=300&fit=crop&q=80" alt="건강노트 블로그" loading="lazy"></a></div><span class="ast-blog-single-element ast-taxonomy-container cat-links default"><a href="https://healthfit100.com/category/health" rel="category tag">건강,영양</a></span><h2 class="entry-title ast-blog-single-element" itemprop="headline"><a href="https://healthfit100.com/health/%ED%95%98%EB%A3%A8-%EC%B9%B4%ED%8E%98%EC%9D%B8-%EA%B6%8C%EC%9E%A5%EB%9F%89" rel="bookmark">하루 카페인 권장량 및 커피 음료별 카페인 함량 부작용 정리</a></h2>		<header class="entry-header ast-blog-single-element ast-blog-meta-container">
-			<div class="entry-meta"><span class="posted-by vcard author" itemtype="https://schema.org/Person" itemscope="itemscope" itemprop="author">			<a title="건강노트의 모든 글 보기" href="https://healthfit100.com/author/kim890417" rel="author" class="url fn n" itemprop="url">
-				<span class="author-name" itemprop="name">
-				건강노트			</span>
-			</a>
-		</span>
-
-		 / <span class="posted-on"><span class="published" itemprop="datePublished"> 6월 30, 2026 </span></span></div>		</header><!-- .entry-header -->
-					<div class="ast-excerpt-container ast-blog-single-element">
-				<p>아침에 눈을 뜨자마자 아메리카노 한 잔을 들이켜고, 점심 식사 후 나른함을 쫓으려 믹스커피를 타고, 오후 3시쯤 졸음이 몰려와 에너지 음료를</p>
-			</div>
-				<div class="entry-content clear" itemprop="text">
-					</div><!-- .entry-content .clear -->
-	</div><!-- .post-content -->
-</div> <!-- .blog-layout-4 -->
-	</article><!-- #post-## -->
-<article class="post-275 post type-post status-publish format-standard hentry category-health tag-141 tag-142 tag-143 tag-144 tag-147 tag-145 ast-grid-common-col ast-full-width ast-article-post remove-featured-img-padding" id="post-275" itemtype="https://schema.org/CreativeWork" itemscope="itemscope">
-		<div class="ast-post-format- ast-no-thumb blog-layout-4 ast-article-inner">
-	<div class="post-content ast-grid-common-col">
-		<div class="ast-blog-featured-section post-thumb ast-blog-single-element"><a href="https://healthfit100.com/health/%EB%8B%A4%EC%9D%B4%EC%96%B4%ED%8A%B8%EB%A5%BC-%ED%95%98%EB%8A%94-%EB%B6%84%EB%93%A4%EC%9D%B4-%EB%A7%A4%EC%9D%BC-%EC%95%84%EC%B9%A8-%EC%98%A4%EB%A5%B4%EB%8A%94-%EC%B2%B4%EC%A4%91%EA%B3%84%EC%9D%98"><img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=500&h=300&fit=crop&q=80" alt="건강노트 블로그" loading="lazy"></a></div><span class="ast-blog-single-element ast-taxonomy-container cat-links default"><a href="https://healthfit100.com/category/health" rel="category tag">건강,영양</a></span><h2 class="entry-title ast-blog-single-element" itemprop="headline"><a href="https://healthfit100.com/health/%EB%8B%A4%EC%9D%B4%EC%96%B4%ED%8A%B8%EB%A5%BC-%ED%95%98%EB%8A%94-%EB%B6%84%EB%93%A4%EC%9D%B4-%EB%A7%A4%EC%9D%BC-%EC%95%84%EC%B9%A8-%EC%98%A4%EB%A5%B4%EB%8A%94-%EC%B2%B4%EC%A4%91%EA%B3%84%EC%9D%98" rel="bookmark">허리둘레 측정법 및 복부비만 기준 센치 인</a></h2>		<header class="entry-header ast-blog-single-element ast-blog-meta-container">
-			<div class="entry-meta"><span class="posted-by vcard author" itemtype="https://schema.org/Person" itemscope="itemscope" itemprop="author">			<a title="건강노트의 모든 글 보기" href="https://healthfit100.com/author/kim890417" rel="author" class="url fn n" itemprop="url">
-				<span class="author-name" itemprop="name">
-				건강노트			</span>
-			</a>
-		</span>
-
-		 / <span class="posted-on"><span class="published" itemprop="datePublished"> 6월 29, 2026 </span></span></div>		</header><!-- .entry-header -->
-					<div class="ast-excerpt-container ast-blog-single-element">
-				<p>다이어트를 하는 분들이 매일 아침 오르는 체중계의 숫자는 사실 생각보다 많은 것을 속입니다. 허리둘레 측정법과 복부미만 기준 센치 인치 정리로</p>
-			</div>
-				<div class="entry-content clear" itemprop="text">
-					</div><!-- .entry-content .clear -->
-	</div><!-- .post-content -->
-</div> <!-- .blog-layout-4 -->
-	</article><!-- #post-## -->
-<article class="post-274 post type-post status-publish format-standard hentry category-health tag-149 tag-153 tag-151 tag-148 tag-154 ast-grid-common-col ast-full-width ast-article-post remove-featured-img-padding" id="post-274" itemtype="https://schema.org/CreativeWork" itemscope="itemscope">
-		<div class="ast-post-format- ast-no-thumb blog-layout-4 ast-article-inner">
-	<div class="post-content ast-grid-common-col">
-		<div class="ast-blog-featured-section post-thumb ast-blog-single-element"><a href="https://healthfit100.com/health/%EC%86%8C%EC%A3%BC-%EC%A3%BC%EB%9F%89-%EA%B3%84%EC%82%B0"><img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=500&h=300&fit=crop&q=80" alt="건강노트 블로그" loading="lazy"></a></div><span class="ast-blog-single-element ast-taxonomy-container cat-links default"><a href="https://healthfit100.com/category/health" rel="category tag">건강,영양</a></span><h2 class="entry-title ast-blog-single-element" itemprop="headline"><a href="https://healthfit100.com/health/%EC%86%8C%EC%A3%BC-%EC%A3%BC%EB%9F%89-%EA%B3%84%EC%82%B0" rel="bookmark">소주 주량 계산 및 알코올 분해시간, 술 깨는 시간과 숙취해소법</a></h2>		<header class="entry-header ast-blog-single-element ast-blog-meta-container">
-			<div class="entry-meta"><span class="posted-by vcard author" itemtype="https://schema.org/Person" itemscope="itemscope" itemprop="author">			<a title="건강노트의 모든 글 보기" href="https://healthfit100.com/author/kim890417" rel="author" class="url fn n" itemprop="url">
-				<span class="author-name" itemprop="name">
-				건강노트			</span>
-			</a>
-		</span>
-
-		 / <span class="posted-on"><span class="published" itemprop="datePublished"> 6월 28, 2026 </span></span></div>		</header><!-- .entry-header -->
-					<div class="ast-excerpt-container ast-blog-single-element">
-				<p>“나 소주 한 병 반이 주량이야” 라는 말을 흔히 듣습니다. 소주 주량 계산 및 알코올 분해시간 이런것들 알아봅시다. 그런 이야기들어도</p>
-			</div>
-				<div class="entry-content clear" itemprop="text">
-					</div><!-- .entry-content .clear -->
-	</div><!-- .post-content -->
-</div> <!-- .blog-layout-4 -->
-	</article><!-- #post-## -->
+				<div class="ast-row"><article class="post-345 post type-post status-publish format-standard hentry category-health ast-grid-common-col ast-full-width ast-article-post" style="width:100%;margin-bottom:16px;">
+  <div class="custom-card-list-item">
+    <a href="https://healthfit100.com/health/잠-잘-오는-음식-5가지와-멜라토닌-영양제-복용-솔직-후기" class="custom-card-thumb-link">
+      <img src="https://images.unsplash.com/photo-1541480601022-2308c0f02487?w=500&h=300&fit=crop&q=80" alt="잠 잘 오는 음식과 멜라토닌" loading="lazy">
+    </a>
+    <div class="custom-card-body">
+      <div class="custom-card-meta">
+        <span class="custom-card-category">건강,영양</span>
+        <span>•</span>
+        <span>건강노트</span>
+        <span>•</span>
+        <span>7월 20, 2026</span>
+      </div>
+      <h2 class="custom-card-title">
+        <a href="https://healthfit100.com/health/잠-잘-오는-음식-5가지와-멜라토닌-영양제-복용-솔직-후기">잠 잘 오는 음식 5가지와 멜라토닌 영양제 복용 솔직 후기</a>
+      </h2>
+      <p class="custom-card-excerpt">밤마다 잠 못 들어 고생하시나요? 천연 수면 유도 물질이 풍부한 잠 잘 오는 음식 5가지와 멜라토닌 영양제를 직접 복용해 본 솔직한 후기 및 주의사항을 전해드립니다....</p>
+    </div>
+  </div>
+</article>
+<article class="post-345 post type-post status-publish format-standard hentry category-health ast-grid-common-col ast-full-width ast-article-post" style="width:100%;margin-bottom:16px;">
+  <div class="custom-card-list-item">
+    <a href="https://healthfit100.com/health/아연-효능과-하루-권장량-총정리-남성-건강에-꼭-필요한-이유" class="custom-card-thumb-link">
+      <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=500&h=300&fit=crop&q=80" alt="아연 효능과 하루 권장량" loading="lazy">
+    </a>
+    <div class="custom-card-body">
+      <div class="custom-card-meta">
+        <span class="custom-card-category">건강,영양</span>
+        <span>•</span>
+        <span>건강노트</span>
+        <span>•</span>
+        <span>7월 19, 2026</span>
+      </div>
+      <h2 class="custom-card-title">
+        <a href="https://healthfit100.com/health/아연-효능과-하루-권장량-총정리-남성-건강에-꼭-필요한-이유">아연 효능과 하루 권장량 총정리: 남성 건강에 꼭 필요한 이유</a>
+      </h2>
+      <p class="custom-card-excerpt">탈모 예방과 면역력 강화에 필수적인 아연 효능 5가지와 성별 아연 하루 권장량, 결핍 신호 및 올바른 영양제 복용법을 정리해 드립니다....</p>
+    </div>
+  </div>
+</article>
+<article class="post-345 post type-post status-publish format-standard hentry category-health ast-grid-common-col ast-full-width ast-article-post" style="width:100%;margin-bottom:16px;">
+  <div class="custom-card-list-item">
+    <a href="https://healthfit100.com/health/단백질-하루-섭취량-계산법과-필수-아미노산-식품" class="custom-card-thumb-link">
+      <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=500&h=300&fit=crop&q=80" alt="단백질 하루 섭취량 계산법" loading="lazy">
+    </a>
+    <div class="custom-card-body">
+      <div class="custom-card-meta">
+        <span class="custom-card-category">건강,영양</span>
+        <span>•</span>
+        <span>건강노트</span>
+        <span>•</span>
+        <span>7월 17, 2026</span>
+      </div>
+      <h2 class="custom-card-title">
+        <a href="https://healthfit100.com/health/단백질-하루-섭취량-계산법과-필수-아미노산-식품">단백질 하루 섭취량 계산법과 필수 아미노산 식품</a>
+      </h2>
+      <p class="custom-card-excerpt">나의 체중과 운동 목적에 맞는 정확한 단백질 하루 섭취량 계산법을 알아보고, 달걀, 두부, 생선 등 필수 아미노산이 풍부한 식품 추천 및 올바른 섭취 타이밍까지 상세히 가이드해 드...</p>
+    </div>
+  </div>
+</article>
+<article class="post-345 post type-post status-publish format-standard hentry category-health ast-grid-common-col ast-full-width ast-article-post" style="width:100%;margin-bottom:16px;">
+  <div class="custom-card-list-item">
+    <a href="https://healthfit100.com/health/철분제-효능과-빈혈-증상-예방-가이드-복용-시-주의할-음식-및-부작용" class="custom-card-thumb-link">
+      <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=500&h=300&fit=crop&q=80" alt="철분제 효능과 빈혈 예방" loading="lazy">
+    </a>
+    <div class="custom-card-body">
+      <div class="custom-card-meta">
+        <span class="custom-card-category">건강,영양</span>
+        <span>•</span>
+        <span>건강노트</span>
+        <span>•</span>
+        <span>7월 15, 2026</span>
+      </div>
+      <h2 class="custom-card-title">
+        <a href="https://healthfit100.com/health/철분제-효능과-빈혈-증상-예방-가이드-복용-시-주의할-음식-및-부작용">철분제 효능과 빈혈 증상 예방 가이드: 복용 시 주의할 음식 및 부작용 총정리</a>
+      </h2>
+      <p class="custom-card-excerpt">빈혈의 주요 증상과 원인을 알아보고, 나에게 맞는 철분제 종류 선택법부터 흡수율을 극대화하는 올바른 복용법 및 피해야 할 음식까지 상세하게 정리해 드립니다....</p>
+    </div>
+  </div>
+</article>
+<article class="post-345 post type-post status-publish format-standard hentry category-health ast-grid-common-col ast-full-width ast-article-post" style="width:100%;margin-bottom:16px;">
+  <div class="custom-card-list-item">
+    <a href="https://healthfit100.com/health/%EB%88%88-%EB%BB%91%EB%BB%91%ED%95%A8%EA%B3%BC-%EA%B3%84%EB%8B%A8-%EC%96%B4%EC%A7%80%EB%9F%AC%EC%9B%80-%EB%A3%A8%ED%85%8C%EC%9D%B8%EA%B3%BC-%EC%B2%A0%EB%B6%84%EC%A0%9C-%EB%82%AD%EB%B9%84-%EC%97%86" class="custom-card-thumb-link">
+      <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=500&h=300&fit=crop&q=80" alt="건강노트 블로그" loading="lazy">
+    </a>
+    <div class="custom-card-body">
+      <div class="custom-card-meta">
+        <span class="custom-card-category">건강,영양</span>
+        <span>•</span>
+        <span>건강노트</span>
+        <span>•</span>
+        <span>7월 13, 2026</span>
+      </div>
+      <h2 class="custom-card-title">
+        <a href="https://healthfit100.com/health/%EB%88%88-%EB%BB%91%EB%BB%91%ED%95%A8%EA%B3%BC-%EA%B3%84%EB%8B%A8-%EC%96%B4%EC%A7%80%EB%9F%AC%EC%9B%80-%EB%A3%A8%ED%85%8C%EC%9D%B8%EA%B3%BC-%EC%B2%A0%EB%B6%84%EC%A0%9C-%EB%82%AD%EB%B9%84-%EC%97%86">눈 뻑뻑함과 계단 어지러움: 루테인과 철분제 낭비 없는 식후 복용 법칙</a>
+      </h2>
+      <p class="custom-card-excerpt">모니터 앞에 하루 8시간에서 10시간씩 앉아 일하다 보면 퇴근할 때쯤 눈이 뻑뻑하고 앞이 흐릿해지는 게 일상입니다. 그냥 피곤해서 그런가 보다 […]</p>
+    </div>
+  </div>
+</article><!-- #post-## -->
+<article class="post-345 post type-post status-publish format-standard hentry category-health ast-grid-common-col ast-full-width ast-article-post" style="width:100%;margin-bottom:16px;">
+  <div class="custom-card-list-item">
+    <a href="https://healthfit100.com/health/%EB%A9%80%ED%8B%B0%EB%B9%84%ED%83%80%EB%AF%BC-%EC%96%B8%EC%A0%9C-%EB%A8%B9%EC%96%B4%EC%95%BC-%ED%9A%A8%EA%B3%BC-%EC%A2%8B%EC%9D%84%EA%B9%8C" class="custom-card-thumb-link">
+      <img src="https://images.unsplash.com/photo-1516997121675-4c2d1684aa3e?w=500&h=300&fit=crop&q=80" alt="멀티비타민 복용 시간" loading="lazy">
+    </a>
+    <div class="custom-card-body">
+      <div class="custom-card-meta">
+        <span class="custom-card-category">건강,영양</span>
+        <span>•</span>
+        <span>건강노트</span>
+        <span>•</span>
+        <span>7월 9, 2026</span>
+      </div>
+      <h2 class="custom-card-title">
+        <a href="https://healthfit100.com/health/%EB%A9%80%ED%8B%B0%EB%B9%84%ED%83%80%EB%AF%BC-%EC%96%B8%EC%A0%9C-%EB%A8%B9%EC%96%B4%EC%95%BC-%ED%9A%A8%EA%B3%BC-%EC%A2%8B%EC%9D%84%EA%B9%8C">멀티비타민 언제 먹어야 효과 좋을까? 복용 시간 총정리</a>
+      </h2>
+      <p class="custom-card-excerpt">주변에서 몸 좀 챙기라는 잔소리를 듣기 시작하면 가장 먼저 장바구니에 담는 게 바로 멀티비타민입니다. 그런데 비싼 돈 주고 산 비타민을</p>
+    </div>
+  </div>
+</article><!-- #post-## -->
+<article class="post-345 post type-post status-publish format-standard hentry category-health ast-grid-common-col ast-full-width ast-article-post" style="width:100%;margin-bottom:16px;">
+  <div class="custom-card-list-item">
+    <a href="https://healthfit100.com/health/%EC%B9%BC%EC%8A%98-%ED%95%98%EB%A3%A8-%EA%B6%8C%EC%9E%A5-%EC%84%AD%EC%B7%A8%EB%9F%89" class="custom-card-thumb-link">
+      <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=500&h=300&fit=crop&q=80" alt="건강노트 블로그" loading="lazy">
+    </a>
+    <div class="custom-card-body">
+      <div class="custom-card-meta">
+        <span class="custom-card-category">건강,영양</span>
+        <span>•</span>
+        <span>건강노트</span>
+        <span>•</span>
+        <span>7월 5, 2026</span>
+      </div>
+      <h2 class="custom-card-title">
+        <a href="https://healthfit100.com/health/%EC%B9%BC%EC%8A%98-%ED%95%98%EB%A3%A8-%EA%B6%8C%EC%9E%A5-%EC%84%AD%EC%B7%A8%EB%9F%89">칼슘 하루 권장 섭취량과 흡수율 높이는 올바른 영양제 조합 가이드</a>
+      </h2>
+      <p class="custom-card-excerpt">대한민국 성인 남녀의 신체 건강 지표를 통계적으로 살펴보면, 한국인 10명 중 7명은 만성적인 칼슘 부족 상태에 직면해 있는 것이 냉정한</p>
+    </div>
+  </div>
+</article><!-- #post-## -->
+<article class="post-345 post type-post status-publish format-standard hentry category-health ast-grid-common-col ast-full-width ast-article-post" style="width:100%;margin-bottom:16px;">
+  <div class="custom-card-list-item">
+    <a href="https://healthfit100.com/health/%EB%A7%88%EA%B7%B8%EB%84%A4%EC%8A%98-%ED%95%98%EB%A3%A8-%EA%B6%8C%EC%9E%A5%EB%9F%89" class="custom-card-thumb-link">
+      <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=500&h=300&fit=crop&q=80" alt="건강노트 블로그" loading="lazy">
+    </a>
+    <div class="custom-card-body">
+      <div class="custom-card-meta">
+        <span class="custom-card-category">건강,영양</span>
+        <span>•</span>
+        <span>건강노트</span>
+        <span>•</span>
+        <span>7월 3, 2026</span>
+      </div>
+      <h2 class="custom-card-title">
+        <a href="https://healthfit100.com/health/%EB%A7%88%EA%B7%B8%EB%84%A4%EC%8A%98-%ED%95%98%EB%A3%A8-%EA%B6%8C%EC%9E%A5%EB%9F%89">마그네슘 하루 권장량 계산법과 부작용 없는 올바른 영양제 섭취 시간</a>
+      </h2>
+      <p class="custom-card-excerpt">수많은 사람이 피로 해소와 눈 밑 떨림을 해결하려 마그네슘을 찾지만, 본인의 적정 섭취량을 제대로 알고 먹는 경우는 드뭅니다. 대개 영양제</p>
+    </div>
+  </div>
+</article><!-- #post-## -->
+<article class="post-345 post type-post status-publish format-standard hentry category-health ast-grid-common-col ast-full-width ast-article-post" style="width:100%;margin-bottom:16px;">
+  <div class="custom-card-list-item">
+    <a href="https://healthfit100.com/health/%EA%B7%BC%EC%9C%A1-%EC%9C%A0%EC%A7%80%EC%99%80-%EB%8B%A4%EC%9D%B4%EC%96%B4%ED%8A%B8%EB%A5%BC-%EC%9C%84%ED%95%B4-%EB%8B%A8%EB%B0%B1%EC%A7%88-%EC%84%AD%EC%B7%A8%EC%9D%98-%EC%A4%91%EC%9A%94%EC%84%B1" class="custom-card-thumb-link">
+      <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=500&h=300&fit=crop&q=80" alt="건강노트 블로그" loading="lazy">
+    </a>
+    <div class="custom-card-body">
+      <div class="custom-card-meta">
+        <span class="custom-card-category">건강,영양</span>
+        <span>•</span>
+        <span>건강노트</span>
+        <span>•</span>
+        <span>7월 2, 2026</span>
+      </div>
+      <h2 class="custom-card-title">
+        <a href="https://healthfit100.com/health/%EA%B7%BC%EC%9C%A1-%EC%9C%A0%EC%A7%80%EC%99%80-%EB%8B%A4%EC%9D%B4%EC%96%B4%ED%8A%B8%EB%A5%BC-%EC%9C%84%ED%95%B4-%EB%8B%A8%EB%B0%B1%EC%A7%88-%EC%84%AD%EC%B7%A8%EC%9D%98-%EC%A4%91%EC%9A%94%EC%84%B1">단백질 많은 음식 및 하루 섭취량 계산법</a>
+      </h2>
+      <p class="custom-card-excerpt">근육 유지와 다이어트를 위해 단백질 섭취의 중요성이 나날이 강조되고 있습니다. 요즘은 마트나 편의점만 가도 단백질 음료나 프로틴 바 같은 제품들이</p>
+    </div>
+  </div>
+</article><!-- #post-## -->
+<article class="post-345 post type-post status-publish format-standard hentry category-health ast-grid-common-col ast-full-width ast-article-post" style="width:100%;margin-bottom:16px;">
+  <div class="custom-card-list-item">
+    <a href="https://healthfit100.com/health/tdee%EA%B3%84%EC%82%B0%ED%95%98%EB%8A%94%EB%B2%95" class="custom-card-thumb-link">
+      <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=500&h=300&fit=crop&q=80" alt="TDEE 계산하는 법" loading="lazy">
+    </a>
+    <div class="custom-card-body">
+      <div class="custom-card-meta">
+        <span class="custom-card-category">건강,영양</span>
+        <span>•</span>
+        <span>건강노트</span>
+        <span>•</span>
+        <span>7월 2, 2026</span>
+      </div>
+      <h2 class="custom-card-title">
+        <a href="https://healthfit100.com/health/tdee%EA%B3%84%EC%82%B0%ED%95%98%EB%8A%94%EB%B2%95">TDEE 계산하는 법: 무작정 1200kcal 다이어트가 실패하는 이유</a>
+      </h2>
+      <p class="custom-card-excerpt">인터넷 보면 누구는 하루에 1,200칼로리만 먹으라 그러고, 또 헬스장 트레이너들은 그렇게 먹으면 근육 다 빠지고 몸 망가진다고 난리를 칩니다. 이</p>
+    </div>
+  </div>
+</article><!-- #post-## -->
+<article class="post-345 post type-post status-publish format-standard hentry category-health ast-grid-common-col ast-full-width ast-article-post" style="width:100%;margin-bottom:16px;">
+  <div class="custom-card-list-item">
+    <a href="https://healthfit100.com/health/%EC%98%A4%EB%A9%94%EA%B0%803" class="custom-card-thumb-link">
+      <img src="https://images.unsplash.com/photo-1519682577862-22b62b24e493?w=500&h=300&fit=crop&q=80" alt="오메가3 복용시간" loading="lazy">
+    </a>
+    <div class="custom-card-body">
+      <div class="custom-card-meta">
+        <span class="custom-card-category">건강,영양</span>
+        <span>•</span>
+        <span>건강노트</span>
+        <span>•</span>
+        <span>7월 1, 2026</span>
+      </div>
+      <h2 class="custom-card-title">
+        <a href="https://healthfit100.com/health/%EC%98%A4%EB%A9%94%EA%B0%803">오메가3 복용시간 및 하루 권장량 고르는법 (알티지 rTG)</a>
+      </h2>
+      <p class="custom-card-excerpt">종합비타민이나 유산균과 더불어 필수 건강기능식품으로 자리 잡은 것이 오메가3(EPA 및 DHA 함유 유지)입니다. 혈관 기름때를 청소해 주고 눈 건조감 개선에</p>
+    </div>
+  </div>
+</article><!-- #post-## -->
+<article class="post-345 post type-post status-publish format-standard hentry category-health ast-grid-common-col ast-full-width ast-article-post" style="width:100%;margin-bottom:16px;">
+  <div class="custom-card-list-item">
+    <a href="https://healthfit100.com/health/%ED%95%98%EB%A3%A8-%EC%B9%B4%ED%8E%98%EC%9D%B8-%EA%B6%8C%EC%9E%A5%EB%9F%89" class="custom-card-thumb-link">
+      <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=500&h=300&fit=crop&q=80" alt="건강노트 블로그" loading="lazy">
+    </a>
+    <div class="custom-card-body">
+      <div class="custom-card-meta">
+        <span class="custom-card-category">건강,영양</span>
+        <span>•</span>
+        <span>건강노트</span>
+        <span>•</span>
+        <span>6월 30, 2026</span>
+      </div>
+      <h2 class="custom-card-title">
+        <a href="https://healthfit100.com/health/%ED%95%98%EB%A3%A8-%EC%B9%B4%ED%8E%98%EC%9D%B8-%EA%B6%8C%EC%9E%A5%EB%9F%89">하루 카페인 권장량 및 커피 음료별 카페인 함량 부작용 정리</a>
+      </h2>
+      <p class="custom-card-excerpt">아침에 눈을 뜨자마자 아메리카노 한 잔을 들이켜고, 점심 식사 후 나른함을 쫓으려 믹스커피를 타고, 오후 3시쯤 졸음이 몰려와 에너지 음료를</p>
+    </div>
+  </div>
+</article><!-- #post-## -->
+<article class="post-345 post type-post status-publish format-standard hentry category-health ast-grid-common-col ast-full-width ast-article-post" style="width:100%;margin-bottom:16px;">
+  <div class="custom-card-list-item">
+    <a href="https://healthfit100.com/health/%EB%8B%A4%EC%9D%B4%EC%96%B4%ED%8A%B8%EB%A5%BC-%ED%95%98%EB%8A%94-%EB%B6%84%EB%93%A4%EC%9D%B4-%EB%A7%A4%EC%9D%BC-%EC%95%84%EC%B9%A8-%EC%98%A4%EB%A5%B4%EB%8A%94-%EC%B2%B4%EC%A4%91%EA%B3%84%EC%9D%98" class="custom-card-thumb-link">
+      <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=500&h=300&fit=crop&q=80" alt="건강노트 블로그" loading="lazy">
+    </a>
+    <div class="custom-card-body">
+      <div class="custom-card-meta">
+        <span class="custom-card-category">건강,영양</span>
+        <span>•</span>
+        <span>건강노트</span>
+        <span>•</span>
+        <span>6월 29, 2026</span>
+      </div>
+      <h2 class="custom-card-title">
+        <a href="https://healthfit100.com/health/%EB%8B%A4%EC%9D%B4%EC%96%B4%ED%8A%B8%EB%A5%BC-%ED%95%98%EB%8A%94-%EB%B6%84%EB%93%A4%EC%9D%B4-%EB%A7%A4%EC%9D%BC-%EC%95%84%EC%B9%A8-%EC%98%A4%EB%A5%B4%EB%8A%94-%EC%B2%B4%EC%A4%91%EA%B3%84%EC%9D%98">허리둘레 측정법 및 복부비만 기준 센치 인</a>
+      </h2>
+      <p class="custom-card-excerpt">다이어트를 하는 분들이 매일 아침 오르는 체중계의 숫자는 사실 생각보다 많은 것을 속입니다. 허리둘레 측정법과 복부미만 기준 센치 인치 정리로</p>
+    </div>
+  </div>
+</article><!-- #post-## -->
+<article class="post-345 post type-post status-publish format-standard hentry category-health ast-grid-common-col ast-full-width ast-article-post" style="width:100%;margin-bottom:16px;">
+  <div class="custom-card-list-item">
+    <a href="https://healthfit100.com/health/%EC%86%8C%EC%A3%BC-%EC%A3%BC%EB%9F%89-%EA%B3%84%EC%82%B0" class="custom-card-thumb-link">
+      <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=500&h=300&fit=crop&q=80" alt="건강노트 블로그" loading="lazy">
+    </a>
+    <div class="custom-card-body">
+      <div class="custom-card-meta">
+        <span class="custom-card-category">건강,영양</span>
+        <span>•</span>
+        <span>건강노트</span>
+        <span>•</span>
+        <span>6월 28, 2026</span>
+      </div>
+      <h2 class="custom-card-title">
+        <a href="https://healthfit100.com/health/%EC%86%8C%EC%A3%BC-%EC%A3%BC%EB%9F%89-%EA%B3%84%EC%82%B0">소주 주량 계산 및 알코올 분해시간, 술 깨는 시간과 숙취해소법</a>
+      </h2>
+      <p class="custom-card-excerpt">“나 소주 한 병 반이 주량이야” 라는 말을 흔히 듣습니다. 소주 주량 계산 및 알코올 분해시간 이런것들 알아봅시다. 그런 이야기들어도</p>
+    </div>
+  </div>
+</article><!-- #post-## -->
 </div>			</main><!-- #main -->
 			
 		<div class="ast-pagination"><nav class="navigation pagination" aria-label="포스트 페이지 매김">
