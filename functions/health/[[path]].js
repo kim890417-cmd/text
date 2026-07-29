@@ -6,10 +6,14 @@ export async function onRequest(context) {
 
   let html = await response.text();
 
+  html = html
+    .replace(/<link\s+rel=["'](?:icon|apple-touch-icon)["'][^>]*>\s*/gi, '')
+    .replace(/<meta\s+name=["']msapplication-TileImage["'][^>]*>\s*/gi, '');
+
   const cssBlock = `
   <link rel="stylesheet" href="/style.css">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <style>
+  <style id="healthfit-common-shell">
     #masthead, .ast-above-header-bar, .ast-below-header-bar,
     .main-header-bar, .main-header-bar-wrap { display: none !important; }
   </style>`;
@@ -33,18 +37,9 @@ export async function onRequest(context) {
         <li><a href="/about">소개</a></li>
         <li><a href="/contact">문의하기</a></li>
       </ul>
-      <button id="theme-toggle">테마 변경</button>
     </div>
   </nav>
   <script>
-    // Theme toggle
-    const t = document.getElementById('theme-toggle');
-    if (t) t.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-      localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
-    });
-    if (localStorage.getItem('theme') === 'dark') document.body.classList.add('dark-mode');
-
     // Mobile dropdown toggle script (same as static pages)
     const dropbtn = document.querySelector('.dropbtn');
     const dropdownContent = document.querySelector('.dropdown-content');
@@ -99,7 +94,7 @@ export async function onRequest(context) {
     }
   </script>`;
 
-  if (!html.includes('#masthead') && !html.includes('.main-header-bar')) {
+  if (!html.includes('id="healthfit-common-shell"')) {
     html = html.replace('</head>', cssBlock + '\n</head>');
   }
   if (!html.includes('class="navbar"') && !html.includes('class=\'navbar\'')) {
