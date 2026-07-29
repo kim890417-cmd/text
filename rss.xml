@@ -1,66 +1,199 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
 <channel>
   <title>건강노트</title>
-  <link>https://healthfit100.com</link>
-  <description>영양제·식단·생활습관 등 일상 건강 정보와 무료 건강 계산기를 제공하는 블로그</description>
-  <language>ko</language>
-  <lastBuildDate>Wed, 29 Jul 2026 23:28:04 +0900</lastBuildDate>
-
+  <link>https://healthfit100.com/blog</link>
+  <description>영양제·식단·생활습관을 공신력 있는 자료와 실제 경험으로 정리합니다.</description>
+  <language>ko-KR</language>
+  <lastBuildDate>Thu, 30 Jul 2026 01:17:42 +0900</lastBuildDate>
   <item>
     <title>지방간에 좋은 음식·피해야 할 음식｜식단 관리 기준</title>
     <link>https://healthfit100.com/health/fatty-liver-foods-diet/</link>
+    <guid isPermaLink="true">https://healthfit100.com/health/fatty-liver-foods-diet/</guid>
     <description>지방간 식단에서 줄여야 할 가당 음료와 정제 탄수화물, 챙길 음식과 체중·운동 관리 기준을 공신력 있는 자료로 정리합니다.</description>
     <pubDate>Wed, 29 Jul 2026 12:58:21 +0900</pubDate>
   </item>
   <item>
     <title>잠 잘 오는 음식과 멜라토닌｜효과·부작용·국내 기준</title>
     <link>https://healthfit100.com/health/sleep-foods-melatonin/</link>
+    <guid isPermaLink="true">https://healthfit100.com/health/sleep-foods-melatonin/</guid>
     <description>잠 잘 오는 음식의 연구 근거와 멜라토닌의 용도·부작용·약물 상호작용, 국내 처방·해외직구 기준과 불면 진료 신호를 정리했습니다.</description>
     <pubDate>Mon, 20 Jul 2026 12:29:37 +0900</pubDate>
   </item>
   <item>
     <title>아연 효능과 하루 권장량 | 탈모·남성 건강 근거와 부작용</title>
     <link>https://healthfit100.com/health/zinc-benefits-daily-intake/</link>
+    <guid isPermaLink="true">https://healthfit100.com/health/zinc-benefits-daily-intake/</guid>
     <description>아연 하루 권장량과 상한량, 결핍 신호·음식, 공복 복용 부작용과 약물 상호작용, 탈모와의 근거를 정리했습니다.</description>
     <pubDate>Sun, 19 Jul 2026 12:25:53 +0900</pubDate>
   </item>
   <item>
     <title>철분제 효능과 빈혈 증상｜검사·복용법·부작용 총정리</title>
     <link>https://healthfit100.com/health/iron-anemia-side-effects/</link>
+    <guid isPermaLink="true">https://healthfit100.com/health/iron-anemia-side-effects/</guid>
     <description>철분제 효능과 빈혈 증상, CBC·페리틴 검사, 복용법과 음식·약 상호작용, 흑변·타르변 등 주의할 부작용을 정리했습니다.</description>
     <pubDate>Wed, 15 Jul 2026 12:32:02 +0900</pubDate>
   </item>
   <item>
     <title>눈 뻑뻑함 원인과 완화법｜루테인·인공눈물 사용 기준</title>
     <link>https://healthfit100.com/health/%EB%88%88-%EB%BB%91%EB%BB%91%ED%95%A8%EA%B3%BC-%EA%B3%84%EB%8B%A8-%EC%96%B4%EC%A7%80%EB%9F%AC%EC%9B%80-%EB%A3%A8%ED%85%8C%EC%9D%B8%EA%B3%BC-%EC%B2%A0%EB%B6%84%EC%A0%9C-%EB%82%AD%EB%B9%84-%EC%97%86/</link>
-    <description>눈 뻑뻑함이 생기는 원인과 생활 속 완화법, 인공눈물 사용 기준을 정리하고 루테인이 안구건조에 직접 도움되는지도 근거로 확인합니다.</description>
+    <guid isPermaLink="true">https://healthfit100.com/health/%EB%88%88-%EB%BB%91%EB%BB%91%ED%95%A8%EA%B3%BC-%EA%B3%84%EB%8B%A8-%EC%96%B4%EC%A7%80%EB%9F%AC%EC%9B%80-%EB%A3%A8%ED%85%8C%EC%9D%B8%EA%B3%BC-%EC%B2%A0%EB%B6%84%EC%A0%9C-%EB%82%AD%EB%B9%84-%EC%97%86/</guid>
+    <description>눈 뻑뻑함이 생기는 원인과 생활 속 완화법, 인공눈물 사용 기준을 정리하고 루테인이 안구건조에 직접 도움되는지도 근거로 확인합니다. 추천 슬러그: 기존 주소 유지(이미 발행된 글이므로 변경하지 않음)</description>
     <pubDate>Mon, 13 Jul 2026 14:10:28 +0900</pubDate>
   </item>
   <item>
-    <title>BMI 계산기</title>
-    <link>https://healthfit100.com/bmi</link>
-    <description>키와 몸무게로 체질량지수(BMI)와 비만도, 표준체중을 계산하는 무료 도구입니다.</description>
+    <title>멀티비타민 복용시간, 아침·저녁 언제 먹는 게 좋을까</title>
+    <link>https://healthfit100.com/health/%EB%A9%80%ED%8B%B0%EB%B9%84%ED%83%80%EB%AF%BC-%EC%96%B8%EC%A0%9C-%EB%A8%B9%EC%96%B4%EC%95%BC-%ED%9A%A8%EA%B3%BC-%EC%A2%8B%EC%9D%84%EA%B9%8C/</link>
+    <guid isPermaLink="true">https://healthfit100.com/health/%EB%A9%80%ED%8B%B0%EB%B9%84%ED%83%80%EB%AF%BC-%EC%96%B8%EC%A0%9C-%EB%A8%B9%EC%96%B4%EC%95%BC-%ED%9A%A8%EA%B3%BC-%EC%A2%8B%EC%9D%84%EA%B9%8C/</guid>
+    <description>멀티비타민을 아침에 먹어야 할지, 저녁에 먹어야 할지 묻는 분이 많습니다. 결론부터 말하면 모든 제품에 통하는 ‘골든타임’은 없습니다. 성분 구성이 제품마다 다르고, 복용 중인 약과 식사 습관도 다르기 때문입니다.</description>
+    <pubDate>Thu, 09 Jul 2026 13:53:24 +0900</pubDate>
   </item>
   <item>
-    <title>하루 칼로리 계산기</title>
-    <link>https://healthfit100.com/calorie</link>
-    <description>기초대사량(BMR)과 하루 필요 칼로리(TDEE), 목표별 권장 칼로리를 계산합니다.</description>
+    <title>칼슘 하루 권장량과 복용법, 500mg 분할·약물 간격</title>
+    <link>https://healthfit100.com/health/%EC%B9%BC%EC%8A%98-%ED%95%98%EB%A3%A8-%EA%B6%8C%EC%9E%A5-%EC%84%AD%EC%B7%A8%EB%9F%89/</link>
+    <guid isPermaLink="true">https://healthfit100.com/health/%EC%B9%BC%EC%8A%98-%ED%95%98%EB%A3%A8-%EA%B6%8C%EC%9E%A5-%EC%84%AD%EC%B7%A8%EB%9F%89/</guid>
+    <description>칼슘 영양제는 ‘뼈에 좋다’는 말만 믿고 고르기 쉽습니다. 막상 라벨을 보면 탄산칼슘, 구연산칼슘, 비타민 D가 한꺼번에 적혀 있고 복용 시간도 제각각이죠.</description>
+    <pubDate>Sun, 05 Jul 2026 01:04:00 +0900</pubDate>
   </item>
   <item>
-    <title>단백질 섭취량 계산기</title>
-    <link>https://healthfit100.com/protein</link>
-    <description>체중과 활동 수준에 맞는 하루 단백질 권장량(g)을 계산합니다.</description>
+    <title>마그네슘 하루 권장량과 복용시간, 보충제 상한·부작용</title>
+    <link>https://healthfit100.com/health/%EB%A7%88%EA%B7%B8%EB%84%A4%EC%8A%98-%ED%95%98%EB%A3%A8-%EA%B6%8C%EC%9E%A5%EB%9F%89/</link>
+    <guid isPermaLink="true">https://healthfit100.com/health/%EB%A7%88%EA%B7%B8%EB%84%A4%EC%8A%98-%ED%95%98%EB%A3%A8-%EA%B6%8C%EC%9E%A5%EB%9F%89/</guid>
+    <description>마그네슘은 저녁에 먹어야 잠이 잘 온다는 말부터 공복에 먹어야 흡수가 좋다는 말까지, 복용 시간에 관한 이야기가 유난히 많습니다. 정답은 조금 싱겁습니다. 모든 사람에게 통하는 한 시각은 없습니다.</description>
+    <pubDate>Fri, 03 Jul 2026 09:00:00 +0900</pubDate>
   </item>
   <item>
-    <title>물 섭취량 계산기</title>
-    <link>https://healthfit100.com/water</link>
-    <description>체중과 운동량으로 하루 권장 수분량을 계산하는 무료 도구입니다.</description>
+    <title>단백질 하루 섭취량 계산, 체중 1kg당 몇 g이 맞을까</title>
+    <link>https://healthfit100.com/health/%EA%B7%BC%EC%9C%A1-%EC%9C%A0%EC%A7%80%EC%99%80-%EB%8B%A4%EC%9D%B4%EC%96%B4%ED%8A%B8%EB%A5%BC-%EC%9C%84%ED%95%B4-%EB%8B%A8%EB%B0%B1%EC%A7%88-%EC%84%AD%EC%B7%A8%EC%9D%98-%EC%A4%91%EC%9A%94%EC%84%B1/</link>
+    <guid isPermaLink="true">https://healthfit100.com/health/%EA%B7%BC%EC%9C%A1-%EC%9C%A0%EC%A7%80%EC%99%80-%EB%8B%A4%EC%9D%B4%EC%96%B4%ED%8A%B8%EB%A5%BC-%EC%9C%84%ED%95%B4-%EB%8B%A8%EB%B0%B1%EC%A7%88-%EC%84%AD%EC%B7%A8%EC%9D%98-%EC%A4%91%EC%9A%94%EC%84%B1/</guid>
+    <description>단백질 계산을 검색하면 체중 1kg당 0.8g부터 2g이 넘는 숫자까지 한꺼번에 나옵니다. 어느 쪽이 틀렸다기보다 대상이 다릅니다. 운동을 거의 하지 않는 일반 성인과 근력운동을 하는 사람, 체중 감량 중인 사람의 목표를 같은 숫자로 잡을 수는 없습니다.</description>
+    <pubDate>Thu, 02 Jul 2026 12:13:00 +0900</pubDate>
   </item>
   <item>
-    <title>영양제 권장량 조회</title>
-    <link>https://healthfit100.com/supplement</link>
-    <description>비타민·미네랄별 하루 권장 섭취량과 상한 섭취량을 조회합니다.</description>
+    <title>TDEE 계산법과 활동계수, 다이어트 칼로리를 기록으로 보정하는 법</title>
+    <link>https://healthfit100.com/health/tdee%EA%B3%84%EC%82%B0%ED%95%98%EB%8A%94%EB%B2%95/</link>
+    <guid isPermaLink="true">https://healthfit100.com/health/tdee%EA%B3%84%EC%82%B0%ED%95%98%EB%8A%94%EB%B2%95/</guid>
+    <description>TDEE 계산기에 ‘가벼운 활동’을 넣을지 ‘보통 활동’을 넣을지에서 막힙니다. 주 3회 운동하더라도 하루 종일 앉아서 일하는 사람과 현장에서 계속 걷는 사람의 소비량은 다르니까요.</description>
+    <pubDate>Thu, 02 Jul 2026 10:05:49 +0900</pubDate>
+  </item>
+  <item>
+    <title>오메가3 복용시간과 EPA·DHA 하루 섭취량, rTG 고르는 법</title>
+    <link>https://healthfit100.com/health/%EC%98%A4%EB%A9%94%EA%B0%803/</link>
+    <guid isPermaLink="true">https://healthfit100.com/health/%EC%98%A4%EB%A9%94%EA%B0%803/</guid>
+    <description>오메가3 제품 앞면에는 1,000mg이 크게 적혀 있는데, 뒷면의 EPA와 DHA 합은 그보다 훨씬 작은 경우가 있습니다. 제품을 비교할 때 가장 먼저 볼 숫자는 캡슐 전체 무게가 아니라 하루 섭취량당 EPA+DHA 합계입니다.</description>
+    <pubDate>Wed, 01 Jul 2026 09:48:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>하루 카페인 권장량 400mg, 임산부·청소년 기준과 부작용</title>
+    <link>https://healthfit100.com/health/%ED%95%98%EB%A3%A8-%EC%B9%B4%ED%8E%98%EC%9D%B8-%EA%B6%8C%EC%9E%A5%EB%9F%89/</link>
+    <guid isPermaLink="true">https://healthfit100.com/health/%ED%95%98%EB%A3%A8-%EC%B9%B4%ED%8E%98%EC%9D%B8-%EA%B6%8C%EC%9E%A5%EB%9F%89/</guid>
+    <description>아침 커피 한 잔은 기억하면서도 오후 캔커피와 운동 전 에너지음료는 계산에서 빠지는 경우가 많습니다. 카페인 하루 섭취량은 커피 잔 수가 아니라 모든 음식과 음료에 든 mg의 합으로 봐야 합니다.</description>
+    <pubDate>Tue, 30 Jun 2026 18:32:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>허리둘레 재는 법, 남자 90cm·여자 85cm 기준을 정확히 보는 방법</title>
+    <link>https://healthfit100.com/health/%EB%8B%A4%EC%9D%B4%EC%96%B4%ED%8A%B8%EB%A5%BC-%ED%95%98%EB%8A%94-%EB%B6%84%EB%93%A4%EC%9D%B4-%EB%A7%A4%EC%9D%BC-%EC%95%84%EC%B9%A8-%EC%98%A4%EB%A5%B4%EB%8A%94-%EC%B2%B4%EC%A4%91%EA%B3%84%EC%9D%98/</link>
+    <guid isPermaLink="true">https://healthfit100.com/health/%EB%8B%A4%EC%9D%B4%EC%96%B4%ED%8A%B8%EB%A5%BC-%ED%95%98%EB%8A%94-%EB%B6%84%EB%93%A4%EC%9D%B4-%EB%A7%A4%EC%9D%BC-%EC%95%84%EC%B9%A8-%EC%98%A4%EB%A5%B4%EB%8A%94-%EC%B2%B4%EC%A4%91%EA%B3%84%EC%9D%98/</guid>
+    <description>바지 사이즈가 32인치라고 허리둘레도 정확히 32인치는 아닙니다. 옷은 브랜드와 디자인에 따라 치수가 다르고, 측정 위치도 제각각이거든요. 복부비만을 확인하려면 줄자로 몸을 직접 재야 합니다.</description>
+    <pubDate>Mon, 29 Jun 2026 18:00:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>술 깨는 시간 계산, 커피·찬물 샤워로 빨라지지 않는 이유</title>
+    <link>https://healthfit100.com/health/%EC%86%8C%EC%A3%BC-%EC%A3%BC%EB%9F%89-%EA%B3%84%EC%82%B0/</link>
+    <guid isPermaLink="true">https://healthfit100.com/health/%EC%86%8C%EC%A3%BC-%EC%A3%BC%EB%9F%89-%EA%B3%84%EC%82%B0/</guid>
+    <description>술자리 다음 날 ‘몇 시간이 지났으니 이제 괜찮겠지’ 하고 계산해 본 적이 있을 겁니다. 문제는 온라인 계산기가 혈중알코올농도나 운전 가능 여부를 정확히 판정해 주지 못한다는 점입니다.</description>
+    <pubDate>Sun, 28 Jun 2026 00:04:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>임신 준비 엽산 권장량과 복용 시기, 400μg·620μg DFE 차이</title>
+    <link>https://healthfit100.com/health/%EC%9E%84%EC%82%B0%EB%B6%80-%EC%97%BD%EC%82%B0-%EA%B6%8C%EC%9E%A5%EB%9F%89/</link>
+    <guid isPermaLink="true">https://healthfit100.com/health/%EC%9E%84%EC%82%B0%EB%B6%80-%EC%97%BD%EC%82%B0-%EA%B6%8C%EC%9E%A5%EB%9F%89/</guid>
+    <description>엽산 제품을 고르다 보면 숫자부터 헷갈립니다. 한쪽에는 400μg, 다른 쪽에는 600μg DFE 또는 620μg DFE라고 적혀 있거든요. 어느 것이 맞는 걸까요?</description>
+    <pubDate>Sat, 27 Jun 2026 21:00:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>서브웨이 칼로리 계산, 빵·치즈·소스에서 달라지는 순서</title>
+    <link>https://healthfit100.com/health/%EC%84%9C%EB%B8%8C%EC%9B%A8%EC%9D%B4-%EC%B9%BC%EB%A1%9C%EB%A6%AC/</link>
+    <guid isPermaLink="true">https://healthfit100.com/health/%EC%84%9C%EB%B8%8C%EC%9B%A8%EC%9D%B4-%EC%B9%BC%EB%A1%9C%EB%A6%AC/</guid>
+    <description>서브웨이에서 닭고기 샌드위치를 골랐는데 소스와 치즈를 더하다 보면 예상보다 열량이 높아집니다. 메뉴 이름 하나의 숫자보다 빵, 메인 재료, 치즈, 추가 토핑과 소스를 합친 최종 조합을 봐야 합니다.</description>
+    <pubDate>Thu, 25 Jun 2026 18:31:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>스타벅스 칼로리·당류 확인법, 다이어트 음료 고르는 순서</title>
+    <link>https://healthfit100.com/health/%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4-%EC%B9%BC%EB%A1%9C%EB%A6%AC/</link>
+    <guid isPermaLink="true">https://healthfit100.com/health/%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4-%EC%B9%BC%EB%A1%9C%EB%A6%AC/</guid>
+    <description>스타벅스 메뉴판에서 ‘라이트’해 보이는 음료를 골랐는데 당류가 예상보다 높은 경우가 있습니다. 커피 색이 진한지보다 우유, 시럽, 소스, 휘핑크림과 사이즈가 열량을 더 크게 바꿉니다.</description>
+    <pubDate>Thu, 25 Jun 2026 15:13:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>와인 칼로리 계산, 150mL 한 잔과 당도보다 도수가 중요한 이유</title>
+    <link>https://healthfit100.com/health/%EC%99%80%EC%9D%B8%EC%B9%BC%EB%A1%9C%EB%A6%AC/</link>
+    <guid isPermaLink="true">https://healthfit100.com/health/%EC%99%80%EC%9D%B8%EC%B9%BC%EB%A1%9C%EB%A6%AC/</guid>
+    <description>레드와인은 드라이하니 살이 덜 찌고, 스위트 와인만 피하면 된다고 생각하기 쉽습니다. 와인 열량의 큰 부분은 당이 아니라 알코올에서 나옵니다. 달지 않아도 도수가 높으면 칼로리는 낮지 않습니다.</description>
+    <pubDate>Wed, 24 Jun 2026 08:11:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>임신 체중 증가 권장 범위, 임신 전 BMI별 기준과 주의점</title>
+    <link>https://healthfit100.com/health/%EC%9E%84%EC%82%B0%EB%B6%80-%EC%B2%B4%EC%A4%91%EC%A6%9D%EA%B0%80/</link>
+    <guid isPermaLink="true">https://healthfit100.com/health/%EC%9E%84%EC%82%B0%EB%B6%80-%EC%B2%B4%EC%A4%91%EC%A6%9D%EA%B0%80/</guid>
+    <description>임신 중 몸무게가 늘면 ‘너무 많이 찐 건가’부터 걱정하게 됩니다. 반대로 입덧 때문에 체중이 잘 늘지 않아 불안한 경우도 있고요. 이때 기준은 현재 몸무게가 아니라 임신 전 체질량지수(BMI)입니다.</description>
+    <pubDate>Tue, 23 Jun 2026 09:37:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>배란일 계산법과 가임기, 생리주기만 믿으면 틀릴 수 있는 이유</title>
+    <link>https://healthfit100.com/health/%EC%83%9D%EB%A6%AC%EC%A3%BC%EA%B8%B0-%EA%B3%84%EC%82%B0%EB%B2%95/</link>
+    <guid isPermaLink="true">https://healthfit100.com/health/%EC%83%9D%EB%A6%AC%EC%A3%BC%EA%B8%B0-%EA%B3%84%EC%82%B0%EB%B2%95/</guid>
+    <description>배란일 계산기에 생리 시작일을 넣으면 날짜 하나가 딱 나옵니다. 깔끔하죠. 문제는 몸이 달력처럼 매달 같은 날에 움직이지 않는다는 겁니다.</description>
+    <pubDate>Mon, 22 Jun 2026 18:37:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>운동 소모 칼로리 계산, MET 공식과 스마트워치 오차 보는 법</title>
+    <link>https://healthfit100.com/health/%EC%9A%B4%EB%8F%99-%EC%86%8C%EB%AA%A8-%EC%B9%BC%EB%A1%9C%EB%A6%AC-%EA%B3%84%EC%82%B0/</link>
+    <guid isPermaLink="true">https://healthfit100.com/health/%EC%9A%B4%EB%8F%99-%EC%86%8C%EB%AA%A8-%EC%B9%BC%EB%A1%9C%EB%A6%AC-%EA%B3%84%EC%82%B0/</guid>
+    <description>러닝머신에는 420kcal, 스마트워치에는 330kcal가 찍히면 어느 쪽이 맞는지 궁금해집니다. 둘 다 몸에서 직접 측정한 값이 아니라 속도, 심박수, 체중 등을 넣어 계산한 추정치입니다.</description>
+    <pubDate>Sun, 21 Jun 2026 19:05:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>탄단지 비율 계산법, 2025 한국인 기준과 다이어트 조절 순서</title>
+    <link>https://healthfit100.com/health/%ED%97%AC%EC%8A%A4%EC%9E%A5-%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%84%88%EB%82%98/</link>
+    <guid isPermaLink="true">https://healthfit100.com/health/%ED%97%AC%EC%8A%A4%EC%9E%A5-%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%84%88%EB%82%98/</guid>
+    <description>탄수화물 40%, 단백질 30%, 지방 30%를 ‘다이어트 정답’처럼 쓰는 경우가 많습니다. 운동량과 식습관이 다른 사람에게 같은 비율을 붙이면 오래 유지하기 어렵습니다.</description>
+    <pubDate>Sat, 20 Jun 2026 19:00:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>여자 적정 체중 계산, 표준 몸무게 한 숫자보다 범위로 봐야 하는 이유</title>
+    <link>https://healthfit100.com/health/%EC%97%AC%EC%9E%90-%EC%A0%81%EC%A0%95-%EC%B2%B4%EC%A4%91/</link>
+    <guid isPermaLink="true">https://healthfit100.com/health/%EC%97%AC%EC%9E%90-%EC%A0%81%EC%A0%95-%EC%B2%B4%EC%A4%91/</guid>
+    <description>키 160cm 여성의 ‘미용 체중’이 45kg이라는 표를 보면 그 숫자에 맞춰야 할 것처럼 느껴집니다. 의학적으로 모든 여성에게 하나의 이상적인 몸무게를 정해 놓지는 않습니다. 건강 위험, 근육량, 허리둘레와 생활 상태를 함께 봅니다.</description>
+    <pubDate>Fri, 19 Jun 2026 21:00:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>기초대사량 계산법, 여자·남자 평균보다 내 추정값이 중요한 이유</title>
+    <link>https://healthfit100.com/health/%EA%B8%B0%EC%B4%88%EB%8C%80%EC%82%AC%EB%9F%89-%EA%B3%84%EC%82%B0%EB%B2%95/</link>
+    <guid isPermaLink="true">https://healthfit100.com/health/%EA%B8%B0%EC%B4%88%EB%8C%80%EC%82%AC%EB%9F%89-%EA%B3%84%EC%82%B0%EB%B2%95/</guid>
+    <description>인바디에서 기초대사량 1,450kcal가 나오면 하루에 그만큼만 먹어야 살이 빠진다고 생각하기 쉽습니다. 기초대사량은 다이어트 섭취 목표가 아닙니다. 누워서 아무 활동을 하지 않아도 생명 유지에 필요한 에너지의 추정값입니다.</description>
+    <pubDate>Thu, 18 Jun 2026 18:00:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>하루 물 섭취량, 2리터가 모두에게 정답은 아닌 이유</title>
+    <link>https://healthfit100.com/health/%ED%95%98%EB%A3%A8-%EB%AC%BC-%EC%84%AD%EC%B7%A8%EB%9F%89/</link>
+    <guid isPermaLink="true">https://healthfit100.com/health/%ED%95%98%EB%A3%A8-%EB%AC%BC-%EC%84%AD%EC%B7%A8%EB%9F%89/</guid>
+    <description>하루 물 2리터를 채우려고 큰 물병을 들고 다니는 사람이 많습니다. 저도 숫자가 보이면 괜히 끝까지 비워야 할 것 같은 기분이 들더라고요. 그런데 2리터는 모든 성인에게 똑같이 적용하는 처방이 아닙니다.</description>
+    <pubDate>Wed, 17 Jun 2026 12:08:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>BMI 계산법과 한국 성인 비만 기준, 허리둘레도 같이 봐야 하는 이유</title>
+    <link>https://healthfit100.com/health/bmi-%EA%B3%84%EC%82%B0%EB%B2%95/</link>
+    <guid isPermaLink="true">https://healthfit100.com/health/bmi-%EA%B3%84%EC%82%B0%EB%B2%95/</guid>
+    <description>키와 몸무게를 넣었더니 BMI 24.8이 나왔다면 ‘정상인가, 비만인가’부터 헷갈립니다. 해외 사이트는 25 미만을 정상으로 표시하는데 국내 기준은 23부터 비만전단계로 보기 때문입니다.</description>
+    <pubDate>Tue, 16 Jun 2026 19:12:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>영양제 상한섭취량, 종합비타민 중복 복용 전 확인할 숫자</title>
+    <link>https://healthfit100.com/health/%EC%98%81%EC%96%91%EC%A0%9C-%EC%83%81%ED%95%9C%EC%84%AD%EC%B7%A8%EB%9F%89/</link>
+    <guid isPermaLink="true">https://healthfit100.com/health/%EC%98%81%EC%96%91%EC%A0%9C-%EC%83%81%ED%95%9C%EC%84%AD%EC%B7%A8%EB%9F%89/</guid>
+    <description>영양제를 여러 통 꺼내 놓으면 각 제품은 권장량 안쪽인데도 합계가 커질 수 있습니다. 종합비타민에 아연이 있고, 면역 제품에도 아연이 들어 있고, 단일 아연제까지 더하는 식입니다. 제품 하나씩만 보면 놓치기 쉽습니다.</description>
+    <pubDate>Mon, 01 Jun 2026 15:00:00 +0900</pubDate>
   </item>
 </channel>
 </rss>

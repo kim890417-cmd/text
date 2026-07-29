@@ -14,8 +14,10 @@ export async function onRequest(context) {
   <link rel="stylesheet" href="/style.css">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <style id="healthfit-common-shell">
-    #masthead, .ast-above-header-bar, .ast-below-header-bar,
-    .main-header-bar, .main-header-bar-wrap { display: none !important; }
+    #masthead, #colophon, .ast-above-header-bar, .ast-below-header-bar,
+    .main-header-bar, .main-header-bar-wrap, .site-footer {
+      display: none !important;
+    }
   </style>`;
 
   const navBlock = `
@@ -94,11 +96,47 @@ export async function onRequest(context) {
     }
   </script>`;
 
+  const footerBlock = `
+  <footer class="healthfit-footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>건강노트</h4>
+        <p style="font-size:0.9rem;color:#bdc3c7;">영양제·식단·생활습관 등 일상 건강 정보를 직접 공부하고 정리해 전하는 블로그입니다.</p>
+      </div>
+      <div class="footer-section">
+        <h4>건강 계산기</h4>
+        <ul>
+          <li><a href="/bmi">BMI 계산기</a></li>
+          <li><a href="/calorie">칼로리 계산기</a></li>
+          <li><a href="/protein">단백질 계산기</a></li>
+          <li><a href="/water">물 섭취량 계산기</a></li>
+          <li><a href="/supplement">영양제 권장량</a></li>
+          <li><a href="/blog">건강 블로그</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>고객 지원</h4>
+        <ul>
+          <li><a href="/about">사이트 소개</a></li>
+          <li><a href="/contact">문의하기</a></li>
+          <li><a href="/privacy">개인정보처리방침</a></li>
+          <li><a href="/terms">이용약관</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 건강노트. 신뢰할 수 있는 건강 정보를 쉽게 전하기 위해 노력합니다.</p>
+    </div>
+  </footer>`;
+
   if (!html.includes('id="healthfit-common-shell"')) {
     html = html.replace('</head>', cssBlock + '\n</head>');
   }
   if (!html.includes('class="navbar"') && !html.includes('class=\'navbar\'')) {
     html = html.replace(/(<body[^>]*>)/, '$1\n' + navBlock);
+  }
+  if (!html.includes('class="healthfit-footer"') && !html.includes("class='healthfit-footer'")) {
+    html = html.replace('</body>', footerBlock + '\n</body>');
   }
 
   const headers = new Headers(response.headers);
