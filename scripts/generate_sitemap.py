@@ -103,6 +103,9 @@ for cat_dir in sorted(os.listdir('.')):
         index_path = os.path.join(cat_dir, slug, 'index.html')
         if os.path.isfile(index_path):
             content = _read(index_path)
+            # noindex 글은 검색용 사이트맵과 RSS에서 제외
+            if re.search(r'<meta\s+name=["\']robots["\'][^>]+content=["\'][^"\']*noindex', content, re.IGNORECASE):
+                continue
             posts.append({
                 "cat": cat_dir,
                 "slug": slug,
