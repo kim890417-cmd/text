@@ -2,6 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://healthfit100.com/</loc>
+<<<<<<< HEAD
     <lastmod>2026-10-05</lastmod>
   </url>
   <url>
@@ -43,6 +44,73 @@
   <url>
     <loc>https://healthfit100.com/terms</loc>
     <lastmod>2026-09-30</lastmod>
+=======
+    <lastmod>2026-08-09</lastmod>
+  </url>
+  <url>
+    <loc>https://healthfit100.com/blog</loc>
+    <lastmod>2026-08-09</lastmod>
+  </url>
+  <url>
+    <loc>https://healthfit100.com/bmi</loc>
+    <lastmod>2026-08-09</lastmod>
+  </url>
+  <url>
+    <loc>https://healthfit100.com/calorie</loc>
+    <lastmod>2026-08-09</lastmod>
+  </url>
+  <url>
+    <loc>https://healthfit100.com/protein</loc>
+    <lastmod>2026-08-09</lastmod>
+  </url>
+  <url>
+    <loc>https://healthfit100.com/water</loc>
+    <lastmod>2026-08-09</lastmod>
+  </url>
+  <url>
+    <loc>https://healthfit100.com/supplement</loc>
+    <lastmod>2026-08-09</lastmod>
+  </url>
+  <url>
+    <loc>https://healthfit100.com/about</loc>
+    <lastmod>2026-08-09</lastmod>
+  </url>
+  <url>
+    <loc>https://healthfit100.com/contact</loc>
+    <lastmod>2026-08-09</lastmod>
+  </url>
+  <url>
+    <loc>https://healthfit100.com/privacy</loc>
+    <lastmod>2026-08-09</lastmod>
+  </url>
+  <url>
+    <loc>https://healthfit100.com/terms</loc>
+    <lastmod>2026-08-09</lastmod>
+  </url>
+  <url>
+    <loc>https://healthfit100.com/health/ldl-cholesterol-diet-saturated-fat/</loc>
+    <lastmod>2026-08-08</lastmod>
+  </url>
+  <url>
+    <loc>https://healthfit100.com/health/cholesterol-test-results-guide/</loc>
+    <lastmod>2026-08-08</lastmod>
+  </url>
+  <url>
+    <loc>https://healthfit100.com/health/melatonin-overseas-purchase-korea/</loc>
+    <lastmod>2026-08-04</lastmod>
+  </url>
+  <url>
+    <loc>https://healthfit100.com/health/melatonin-timing-sleep-rhythm/</loc>
+    <lastmod>2026-08-04</lastmod>
+  </url>
+  <url>
+    <loc>https://healthfit100.com/health/lutein-timing-with-meals/</loc>
+    <lastmod>2026-08-01</lastmod>
+  </url>
+  <url>
+    <loc>https://healthfit100.com/health/lutein-benefits-evidence/</loc>
+    <lastmod>2026-08-01</lastmod>
+>>>>>>> a40746de67b012fccbad994a1a094e926e78ae1e
   </url>
   <url>
     <loc>https://healthfit100.com/health/fatty-liver-foods-diet/</loc>

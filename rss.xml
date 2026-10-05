@@ -5,7 +5,53 @@
   <link>https://healthfit100.com/blog</link>
   <description>영양제·식단·생활습관을 공신력 있는 자료와 실제 경험으로 정리합니다.</description>
   <language>ko-KR</language>
+<<<<<<< HEAD
   <lastBuildDate>Mon, 05 Oct 2026 09:25:14 +0900</lastBuildDate>
+=======
+  <lastBuildDate>Sun, 09 Aug 2026 13:35:24 +0900</lastBuildDate>
+  <item>
+    <title>LDL 콜레스테롤 식단｜달걀보다 포화지방 먼저 줄이기</title>
+    <link>https://healthfit100.com/health/ldl-cholesterol-diet-saturated-fat/</link>
+    <guid isPermaLink="true">https://healthfit100.com/health/ldl-cholesterol-diet-saturated-fat/</guid>
+    <description>LDL 콜레스테롤 식단에서 달걀만 끊기보다 포화지방·트랜스지방을 먼저 줄이고 실제 식사를 바꾸는 방법을 정리했습니다.</description>
+    <pubDate>Sat, 08 Aug 2026 09:10:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>콜레스테롤 검사표 읽는 법｜LDL·HDL·중성지방 해석</title>
+    <link>https://healthfit100.com/health/cholesterol-test-results-guide/</link>
+    <guid isPermaLink="true">https://healthfit100.com/health/cholesterol-test-results-guide/</guid>
+    <description>콜레스테롤 검사표의 LDL·HDL·중성지방 기준과 공복 여부, 비HDL 계산법을 실제 검진표 순서대로 정리했습니다.</description>
+    <pubDate>Fri, 07 Aug 2026 09:00:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>멜라토닌 해외직구｜국내 분류와 통관 전 확인사항</title>
+    <link>https://healthfit100.com/health/melatonin-overseas-purchase-korea/</link>
+    <guid isPermaLink="true">https://healthfit100.com/health/melatonin-overseas-purchase-korea/</guid>
+    <description>멜라토닌 해외직구 제품이 국내에서 영양제로 통하지 않는 이유와 반입차단 목록, 표시 함량·부작용 확인 방법을 정리했습니다.</description>
+    <pubDate>Tue, 04 Aug 2026 00:10:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>멜라토닌 복용시간｜생체시계와 불면 유형부터 확인</title>
+    <link>https://healthfit100.com/health/melatonin-timing-sleep-rhythm/</link>
+    <guid isPermaLink="true">https://healthfit100.com/health/melatonin-timing-sleep-rhythm/</guid>
+    <description>멜라토닌 복용시간이 사람마다 다른 이유를 생체시계 관점에서 설명합니다. 수면일지 작성법과 처방 전 확인할 점도 정리했습니다.</description>
+    <pubDate>Mon, 03 Aug 2026 09:00:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>루테인 복용시간과 식후 섭취법 | 공복·제품표 주의점</title>
+    <link>https://healthfit100.com/health/lutein-timing-with-meals/</link>
+    <guid isPermaLink="true">https://healthfit100.com/health/lutein-timing-with-meals/</guid>
+    <description>루테인 복용시간은 아침·저녁보다 식사 여부가 더 중요합니다. 지방이 있는 식사와 함께 먹는 근거, 공복 복용과 성분 중복 주의점을 정리했습니다.</description>
+    <pubDate>Sat, 01 Aug 2026 09:10:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>루테인 효능과 섭취량 10~20mg, 눈 피로 근거 확인</title>
+    <link>https://healthfit100.com/health/lutein-benefits-evidence/</link>
+    <guid isPermaLink="true">https://healthfit100.com/health/lutein-benefits-evidence/</guid>
+    <description>루테인 효능의 식약처 인정 범위와 10~20mg 기준, AREDS2 적용 대상을 구분해 눈 피로와 안구건조에 어디까지 기대할 수 있는지 정리했습니다.</description>
+    <pubDate>Fri, 31 Jul 2026 09:00:00 +0900</pubDate>
+  </item>
+>>>>>>> a40746de67b012fccbad994a1a094e926e78ae1e
   <item>
     <title>지방간에 좋은 음식·피해야 할 음식｜식단 관리 기준</title>
     <link>https://healthfit100.com/health/fatty-liver-foods-diet/</link>
