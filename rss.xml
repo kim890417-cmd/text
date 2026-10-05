@@ -5,10 +5,28 @@
   <link>https://healthfit100.com/blog</link>
   <description>영양제·식단·생활습관을 공신력 있는 자료와 실제 경험으로 정리합니다.</description>
   <language>ko-KR</language>
-<<<<<<< HEAD
-  <lastBuildDate>Mon, 05 Oct 2026 09:25:14 +0900</lastBuildDate>
-=======
-  <lastBuildDate>Sun, 09 Aug 2026 13:35:24 +0900</lastBuildDate>
+  <lastBuildDate>Mon, 05 Oct 2026 20:50:30 +0900</lastBuildDate>
+  <item>
+    <title>고혈압 전단계 수치 기준과 낮추는 법, DASH 식단과 칼륨으로 나트륨 배출하기</title>
+    <link>https://healthfit100.com/health/blood-pressure-stages-hypertension-diet/</link>
+    <guid isPermaLink="true">https://healthfit100.com/health/blood-pressure-stages-hypertension-diet/</guid>
+    <description>수축기 120~139 mmHg 고혈압 전단계 수치 기준과 약 복용 전 3개월 혈압 낮추는 생활요법, DASH 식단 및 칼륨이 풍부한 나트륨 배출 음식을 체계적으로 안내합니다.</description>
+    <pubDate>Mon, 05 Oct 2026 09:00:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>식후 혈당 스파이크 증상과 낮추는 법, 거꾸로 식사법과 15분 걷기 효과</title>
+    <link>https://healthfit100.com/health/blood-sugar-spike-prevention-diet/</link>
+    <guid isPermaLink="true">https://healthfit100.com/health/blood-sugar-spike-prevention-diet/</guid>
+    <description>밥 먹고 쏟아지는 극심한 졸음의 원인 혈당 스파이크 기준(140 mg/dL), 식이섬유부터 먹는 거꾸로 식사법과 식후 15분 걷기가 인슐린에 미치는 과학적 효과를 정리했습니다.</description>
+    <pubDate>Sun, 04 Oct 2026 09:00:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>비타민D 복용시간과 하루 권장량, 마그네슘과 함께 먹어야 하는 이유</title>
+    <link>https://healthfit100.com/health/vitamin-d-benefits-daily-intake-timing/</link>
+    <guid isPermaLink="true">https://healthfit100.com/health/vitamin-d-benefits-daily-intake-timing/</guid>
+    <description>한국인 80%가 겪는 비타민D 결핍 기준(30 ng/mL), 지용성 흡수율을 높이는 점심 식후 복용법, 성인 1000~2000 IU 하루 권장량과 마그네슘 결합 이유를 정리했습니다.</description>
+    <pubDate>Sat, 03 Oct 2026 09:00:00 +0900</pubDate>
+  </item>
   <item>
     <title>LDL 콜레스테롤 식단｜달걀보다 포화지방 먼저 줄이기</title>
     <link>https://healthfit100.com/health/ldl-cholesterol-diet-saturated-fat/</link>
@@ -51,7 +69,6 @@
     <description>루테인 효능의 식약처 인정 범위와 10~20mg 기준, AREDS2 적용 대상을 구분해 눈 피로와 안구건조에 어디까지 기대할 수 있는지 정리했습니다.</description>
     <pubDate>Fri, 31 Jul 2026 09:00:00 +0900</pubDate>
   </item>
->>>>>>> a40746de67b012fccbad994a1a094e926e78ae1e
   <item>
     <title>지방간에 좋은 음식·피해야 할 음식｜식단 관리 기준</title>
     <link>https://healthfit100.com/health/fatty-liver-foods-diet/</link>
