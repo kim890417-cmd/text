@@ -15,6 +15,9 @@ ROOT = Path.cwd()
 STATIC_PAGES = [
     "/",
     "/blog",
+    "/routine",
+    "/checkup",
+    "/quiz",
     "/bmi",
     "/calorie",
     "/protein",

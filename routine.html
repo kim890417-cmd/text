@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow">
+  <title>내 영양제 복용 시간표 & 상극 궁합 플래너 | 건강노트</title>
+  <meta name="description" content="내가 먹는 영양제를 선택하면 아침 공복, 점심 식후, 취침 전 최적의 복용 시간표와 흡수를 방해하는 상극 조합을 자동으로 분석해 드립니다.">
+  <meta property="og:title" content="내 영양제 복용 시간표 & 상극 궁합 플래너 | 건강노트">
+  <meta property="og:description" content="유산균, 비타민D, 오메가3, 마그네슘 등 복용 골든타임과 상극 궁합을 1초 만에 자동 맞춤 설계해 드립니다.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://healthfit100.com/routine">
+  <meta property="og:url" content="https://healthfit100.com/routine">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link href="/style.css" rel="stylesheet">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3406696816625207" crossorigin="anonymous"></script>
+  <style>
+    .planner-card {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 20px;
+      padding: 32px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+      margin-bottom: 40px;
+    }
+    .chip-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      gap: 12px;
+      margin: 20px 0 28px;
+    }
+    .chip-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #f8fafc;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 12px;
+      padding: 12px 14px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #334155;
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.2s ease;
+    }
+    .chip-item:hover {
+      border-color: #0284c7;
+      background: #f0f9ff;
+    }
+    .chip-item.active {
+      background: #e0f2fe;
+      border-color: #0284c7;
+      color: #0369a1;
+      box-shadow: 0 2px 8px rgba(2,132,199,0.15);
+    }
+    .chip-item input {
+      display: none;
+    }
+    .timeline-block {
+      background: #f8fafc;
+      border-left: 4px solid #0284c7;
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin-bottom: 16px;
+    }
+    .timeline-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    .timeline-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .timeline-badge {
+      background: #e2e8f0;
+      color: #475569;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 999px;
+    }
+    .pill-tag {
+      display: inline-block;
+      background: #fff;
+      border: 1px solid #cbd5e1;
+      border-radius: 20px;
+      padding: 4px 12px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #1e293b;
+      margin: 4px 6px 4px 0;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+    }
+    .warning-box {
+      background: #fff1f2;
+      border: 1.5px solid #fecdd3;
+      border-radius: 14px;
+      padding: 18px 22px;
+      margin-top: 24px;
+    }
+    .synergy-box {
+      background: #f0fdf4;
+      border: 1.5px solid #bbf7d0;
+      border-radius: 14px;
+      padding: 18px 22px;
+      margin-top: 16px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">건강노트</a>
+      <ul class="nav-menu">
+        <li class="dropdown">
+          <a href="#" class="dropbtn">건강 계산기 & 도구</a>
+          <div class="dropdown-content">
+            <a href="/routine">영양제 시간표 플래너</a>
+            <a href="/checkup">건강검진 신호등 리포트</a>
+            <a href="/quiz">건강 자가진단 퀴즈</a>
+            <a href="/bmi">BMI 계산기</a>
+            <a href="/calorie">칼로리 계산기</a>
+            <a href="/protein">단백질 계산기</a>
+            <a href="/water">물 섭취량 계산기</a>
+            <a href="/supplement">영양제 권장량 조회</a>
+          </div>
+        </li>
+        <li><a href="/blog">건강 블로그</a></li>
+        <li><a href="/about">소개</a></li>
+        <li><a href="/contact">문의하기</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      <section class="tool-section">
+        <span style="background:#e0f2fe; color:#0369a1; padding:4px 12px; border-radius:999px; font-size:0.85rem; font-weight:700; display:inline-block; margin-bottom:10px;">✨ 건강노트 시그니처 플래너</span>
+        <h1>내 영양제 복용 시간표 & 궁합 플래너</h1>
+        <p class="subtitle">현재 드시고 계시거나 섭취 예정인 영양제를 모두 선택해 보세요. 흡수율을 극대화하는 하루 4단계 복용 골든타임과 상극 충돌을 즉시 분석합니다.</p>
+
+        <div class="planner-card">
+          <h3 style="margin:0; font-size:1.15rem; color:#1e293b;">1단계: 복용 중인 영양제를 모두 클릭하세요</h3>
+          <p style="margin:6px 0 0; font-size:0.9rem; color:#64748b;">(중복 선택 가능)</p>
+
+          <div class="chip-grid" id="chip-container">
+            <!-- Chips rendered by JS -->
+          </div>
+
+          <div id="planner-result" style="display:none; margin-top:30px; border-top:1.5px dashed #cbd5e1; padding-top:28px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+              <h3 style="margin:0; font-size:1.25rem; font-weight:800; color:#0f172a;">📋 나만의 하루 영양제 최적 복용 시간표</h3>
+              <span id="selected-count" style="font-size:0.9rem; color:#0284c7; font-weight:700;"></span>
+            </div>
+
+            <div id="schedule-display"></div>
+            <div id="synergy-display"></div>
+            <div id="warning-display"></div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider">
+
+      <article class="content-rich">
+        <h2>영양제 복용 시간, 왜 반드시 나누어 먹어야 할까요?</h2>
+        <p>많은 분들이 영양제를 챙겨 먹기 귀찮다는 이유로 아침에 모든 알약을 한꺼번에 물과 함께 삼키곤 합니다. 하지만 이는 영양제의 유효 성분을 상당수 소변으로 낭비하거나, 장내에서 서로의 흡수를 가로막는 치명적인 실수입니다.</p>
+        <ul>
+          <li><strong>지용성 vs 수용성의 차이:</strong> 비타민C나 비타민B군은 물에 녹는 수용성이므로 식전 공복에 흡수가 빠릅니다. 반면 비타민D, 오메가3, 루테인 같은 지용성 성분은 식사 중 분비되는 담즙산과 지방 성분이 있어야 흡수율이 최대 50%까지 증가합니다.</li>
+          <li><strong>미네랄 간의 흡수 경쟁:</strong> 철분, 칼슘, 아연, 마그네슘은 소장 벽에서 흡수될 때 동일한 수송 통로(DMT1)를 공유합니다. 이들을 한꺼번에 먹으면 통로가 꽉 막혀 서로의 흡수를 방해합니다.</li>
+        </ul>
+
+        <h2>대표적인 영양제 시너지 & 상극 궁합 가이드</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>구분</th>
+              <th>조합</th>
+              <th>의학적 상호작용 및 복용 팁</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="color:#0284c7; font-weight:700;">최고의 시너지</td>
+              <td><strong>비타민 D + 마그네슘</strong></td>
+              <td>마그네슘은 비타민D를 체내 활성형으로 전환시키는 효소의 필수 보조인자입니다. 결핍 시 비타민D 효과가 떨어집니다.</td>
+            </tr>
+            <tr>
+              <td style="color:#0284c7; font-weight:700;">최고의 시너지</td>
+              <td><strong>철분 + 비타민 C</strong></td>
+              <td>비타민C의 산성 환경이 철분의 체내 흡수율을 최대 3~4배 증가시킵니다. 오렌지주스와 함께 복용 권장.</td>
+            </tr>
+            <tr>
+              <td style="color:#e11d48; font-weight:700;">피해야 할 상극</td>
+              <td><strong>칼슘 vs 철분</strong></td>
+              <td>소장 내 흡수 경쟁이 가장 치열한 조합입니다. 철분은 아침 공복, 칼슘은 저녁 식후로 최소 2시간 이상 분리 복용하세요.</td>
+            </tr>
+            <tr>
+              <td style="color:#e11d48; font-weight:700;">주의 조합</td>
+              <td><strong>종합비타민 + 아연 단일제</strong></td>
+              <td>이미 종합비타민에 일일 권장 아연(8~10mg)이 들어있으므로 단일 고용량을 추가하면 상한량(35mg)을 초과할 수 있습니다.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>자주 묻는 질문 (FAQ)</h2>
+        <div style="display:flex; flex-direction:column; gap:14px; margin-top:16px;">
+          <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:16px 20px;">
+            <h4 style="margin:0 0 6px; color:#1e293b;">Q. 유산균은 정말 아침 공복에 먹는 게 가장 좋은가요?</h4>
+            <p style="margin:0; font-size:0.92rem; color:#475569; line-height:1.6;">A. 네. 위산의 농도가 가장 낮고 묽어진 기상 직후 미온수 1~2잔을 먼저 마신 뒤 유산균을 섭취하면, 유익균이 강한 위산에 파괴되지 않고 장까지 살아서 도달할 확률이 가장 높습니다.</p>
+          </div>
+          <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:16px 20px;">
+            <h4 style="margin:0 0 6px; color:#1e293b;">Q. 마그네슘은 왜 취침 전에 먹으라고 하나요?</h4>
+            <p style="margin:0; font-size:0.92rem; color:#475569; line-height:1.6;">A. 마그네슘은 뇌 신경계를 안정시키는 GABA 수용체를 활성화하고 근육을 이완시키는 '천연 진정제' 역할을 합니다. 잠들기 1시간 전에 복용하면 불면증 완화와 수면 질 개선에 큰 도움이 됩니다.</p>
+          </div>
+        </div>
+
+        <h3 style="margin-top:35px;">함께 읽으면 좋은 건강노트 심층 가이드</h3>
+        <ul>
+          <li><a href="/health/vitamin-d-benefits-daily-intake-timing/">비타민D 복용시간과 하루 권장량, 마그네슘 시너지 가이드</a></li>
+          <li><a href="/health/오메가3/">오메가3 복용시간과 EPA·DHA 순도 고르는 법</a></li>
+          <li><a href="/health/iron-anemia-side-effects/">철분제 복용법과 부작용, 변비 줄이는 식사법</a></li>
+          <li><a href="/supplement">성인 비타민·미네랄 하루 권장량 및 상한선 조회기</a></li>
+        </ul>
+
+        <p style="background:#f8f9fa; border-radius:14px; padding:18px 22px; font-size:0.85rem; color:#777; line-height:1.6; margin-top:30px;">
+          ⚠️ 본 플래너는 공신력 있는 약학·영양학 지침에 기초한 일반적 권장 시간표입니다. 만성 질환 치료제(혈압약, 당뇨약, 갑상선호르몬제, 항응고제 등)를 복용 중인 경우 약물 흡수에 영향을 줄 수 있으므로 주치의 또는 전담 약사와 복용 간격을 상의하시기 바랍니다.
+        </p>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>건강노트</h4>
+        <p style="font-size: 0.9rem; color: #bdc3c7;">공신력 있는 의학 및 보건 자료를 바탕으로 정직한 건강 상식을 기록하는 건강 정보 포털입니다.</p>
+      </div>
+      <div class="footer-section">
+        <h4>건강 계산기 & 도구</h4>
+        <ul>
+          <li><a href="/routine">영양제 시간표 플래너</a></li>
+          <li><a href="/checkup">건강검진 신호등 리포트</a></li>
+          <li><a href="/quiz">건강 자가진단 퀴즈</a></li>
+          <li><a href="/bmi">BMI 계산기</a></li>
+          <li><a href="/calorie">칼로리 계산기</a></li>
+          <li><a href="/protein">단백질 계산기</a></li>
+          <li><a href="/water">물 섭취량 계산기</a></li>
+          <li><a href="/supplement">영양제 권장량 조회</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>고객 지원</h4>
+        <ul>
+          <li><a href="/about">사이트 소개</a></li>
+          <li><a href="/contact">문의하기</a></li>
+          <li><a href="/privacy">개인정보처리방침</a></li>
+          <li><a href="/terms">이용약관</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 건강노트. 독자에게 신뢰할 수 있는 가치를 전하기 위해 노력합니다.</p>
+    </div>
+  </footer>
+
+  <script>
+    const supplements = [
+      { id: "probiotics", name: "유산균 (프로바이오틱스)", icon: "🥛", time: "morning", desc: "위산이 묽은 기상 직후 미온수 1잔과 함께 복용" },
+      { id: "iron", name: "철분제", icon: "🩸", time: "morning", desc: "공복에 오렌지주스나 비타민C와 함께 흡수율 극대화" },
+      { id: "multivitamin", name: "종합비타민", icon: "💊", time: "lunch", desc: "에너지 대사 활성화 및 위장 장애 예방을 위해 점심 식후 복용" },
+      { id: "vitaminc", name: "비타민 C", icon: "🍋", time: "lunch", desc: "위산 자극 방지를 위해 식사 도중이나 식후 복용" },
+      { id: "vitamind", name: "비타민 D", icon: "☀️", time: "lunch", desc: "지용성 비타민으로 기름진 점심 식사 직후 흡수율 50% 증가" },
+      { id: "omega3", name: "오메가 3", icon: "🐟", time: "lunch", desc: "식사 중 분비되는 담즙산과 함께 흡수 극대화 및 비린내 역류 방지" },
+      { id: "lutein", name: "루테인", icon: "👁️", time: "lunch", desc: "지용성 색소 영양소로 식사 직후 복용 필수" },
+      { id: "coq10", name: "코엔자임 Q10", icon: "❤️", time: "lunch", desc: "지용성 항산화제로 낮 시간 식사 직후 복용" },
+      { id: "zinc", name: "아연", icon: "🛡️", time: "lunch", desc: "빈속에 먹으면 구역감을 유발하므로 든든한 식후 복용" },
+      { id: "milkthistle", name: "밀크씨슬", icon: "🌿", time: "dinner", desc: "하루 일과 후 피로한 간 해독 대사를 위해 저녁 식후 복용" },
+      { id: "calcium", name: "칼슘", icon: "🦴", time: "dinner", desc: "위산이 충분한 저녁 식후 복용 및 신경 안정 유도" },
+      { id: "magnesium", name: "마그네슘", icon: "🌙", time: "bedtime", desc: "근육 이완과 신경 진정, 숙면 유도를 위해 취침 1시간 전 복용" },
+      { id: "collagen", name: "콜라겐", icon: "✨", time: "bedtime", desc: "피부 재생 호르몬이 분비되는 밤 시간대 취침 전 복용" },
+      { id: "arginine", name: "아르기닌", icon: "⚡", time: "morning", desc: "아미노산 흡수 경쟁을 피해 기상 직후 공복 복용" }
+    ];
+
+    const chipContainer = document.getElementById('chip-container');
+    const selectedSet = new Set();
+
+    supplements.forEach(s => {
+      const label = document.createElement('label');
+      label.className = 'chip-item';
+      label.innerHTML = `<span>${s.icon}</span> <span>${s.name}</span><input type="checkbox" value="${s.id}">`;
+      label.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (selectedSet.has(s.id)) {
+          selectedSet.delete(s.id);
+          label.classList.remove('active');
+        } else {
+          selectedSet.add(s.id);
+          label.classList.add('active');
+        }
+        updatePlanner();
+      });
+      chipContainer.appendChild(label);
+    });
+
+    function updatePlanner() {
+      const resultArea = document.getElementById('planner-result');
+      const countEl = document.getElementById('selected-count');
+      const scheduleEl = document.getElementById('schedule-display');
+      const warningEl = document.getElementById('warning-display');
+      const synergyEl = document.getElementById('synergy-display');
+
+      if (selectedSet.size === 0) {
+        resultArea.style.display = 'none';
+        return;
+      }
+
+      resultArea.style.display = 'block';
+      countEl.textContent = `선택한 영양제: ${selectedSet.size}개`;
+
+      const groups = {
+        morning: { title: "🌅 기상 직후 (아침 공복)", badge: "물 1~2잔과 함께", items: [] },
+        lunch: { title: "☀️ 점심 식사 직후", badge: "기름진 식사와 함께 흡수", items: [] },
+        dinner: { title: "🌆 저녁 식사 직후", badge: "간 해독 및 뼈 건강", items: [] },
+        bedtime: { title: "🌙 취침 1시간 전", badge: "근육 이완 & 편안한 수면", items: [] }
+      };
+
+      selectedSet.forEach(id => {
+        const item = supplements.find(x => x.id === id);
+        if (item) groups[item.time].items.push(item);
+      });
+
+      let scheduleHtml = '';
+      for (const [key, g] of Object.entries(groups)) {
+        if (g.items.length > 0) {
+          scheduleHtml += `
+            <div class="timeline-block">
+              <div class="timeline-header">
+                <div class="timeline-title">${g.title}</div>
+                <span class="timeline-badge">${g.badge}</span>
+              </div>
+              <div style="margin-bottom:8px;">
+                ${g.items.map(it => `<span class="pill-tag">${it.icon} ${it.name}</span>`).join('')}
+              </div>
+              <ul style="margin:6px 0 0; padding-left:18px; font-size:0.86rem; color:#475569;">
+                ${g.items.map(it => `<li><strong>${it.name}:</strong> ${it.desc}</li>`).join('')}
+              </ul>
+            </div>
+          `;
+        }
+      }
+      scheduleEl.innerHTML = scheduleHtml;
+
+      // Synergy checks
+      let synergies = [];
+      if (selectedSet.has('vitamind') && selectedSet.has('magnesium')) {
+        synergies.push("<strong>비타민 D + 마그네슘</strong>: 마그네슘이 비타민D를 체내 활성형으로 변환시키는 필수 효소를 활성화합니다! 환상의 시너지 조합입니다.");
+      }
+      if (selectedSet.has('iron') && selectedSet.has('vitaminc')) {
+        synergies.push("<strong>철분 + 비타민 C</strong>: 비타민C가 철분의 산화를 방지하고 장내 흡수율을 3배 이상 끌어올립니다. 함께 드시면 매우 좋습니다.");
+      }
+      if (selectedSet.has('calcium') && selectedSet.has('vitamind')) {
+        synergies.push("<strong>칼슘 + 비타민 D</strong>: 비타민D가 칼슘의 장내 흡수를 촉진하여 뼈로 안전하게 전달합니다.");
+      }
+
+      if (synergies.length > 0) {
+        synergyEl.innerHTML = `
+          <div class="synergy-box">
+            <h4 style="margin:0 0 8px; color:#15803d; font-size:1.05rem;">✨ 발견된 찰떡 시너지 조합</h4>
+            <ul style="margin:0; padding-left:18px; font-size:0.9rem; color:#166534; line-height:1.6;">
+              ${synergies.map(s => `<li>${s}</li>`).join('')}
+            </ul>
+          </div>
+        `;
+      } else {
+        synergyEl.innerHTML = '';
+      }
+
+      // Conflict / Warning checks
+      let warnings = [];
+      if (selectedSet.has('iron') && selectedSet.has('calcium')) {
+        warnings.push("⚠️ <strong>철분 vs 칼슘 흡수 충돌</strong>: 철분과 칼슘은 장내 흡수 통로가 같아 서로의 흡수를 강력히 방해합니다. 철분은 아침 공복, 칼슘은 저녁 식후로 최소 2시간 이상 분리해서 복용하세요.");
+      }
+      if (selectedSet.has('multivitamin') && selectedSet.has('zinc')) {
+        warnings.push("⚠️ <strong>아연 중복 섭취 주의</strong>: 종합비타민에 이미 아연이 함유되어 있을 확률이 높습니다. 단일제와 합산하여 하루 상한 섭취량(35mg)을 넘지 않도록 성분표를 확인하세요.");
+      }
+      if (selectedSet.has('multivitamin') && selectedSet.has('vitamind')) {
+        warnings.push("ℹ️ <strong>비타민 D 용량 확인</strong>: 종합비타민 속 비타민D와 단일 비타민D의 합계가 하루 4,000 IU 상한선을 넘지 않는지 라벨을 체크해 보세요.");
+      }
+
+      if (warnings.length > 0) {
+        warningEl.innerHTML = `
+          <div class="warning-box">
+            <h4 style="margin:0 0 8px; color:#be123c; font-size:1.05rem;">🚨 복용 주의 및 상극 조합 경고</h4>
+            <ul style="margin:0; padding-left:18px; font-size:0.9rem; color:#9f1239; line-height:1.6;">
+              ${warnings.map(w => `<li>${w}</li>`).join('')}
+            </ul>
+          </div>
+        `;
+      } else {
+        warningEl.innerHTML = '';
+      }
+    }
+  </script>
+</body>
+</html>
