@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow">
+  <title>하루 카페인 섭취량 계산기 | 커피·에너지음료 안전 기준 조회 | 건강노트</title>
+  <meta name="description" content="아메리카노, 믹스커피, 에너지음료, 콜라 등 오늘 마신 음료를 입력하면 총 카페인 함량(mg)과 성인 하루 최대 안전 섭취 권장량(400mg) 대비 섭취율을 즉시 계산합니다.">
+  <meta property="og:title" content="하루 카페인 섭취량 계산기 | 건강노트">
+  <meta property="og:description" content="커피와 음료 속 카페인 총량을 계산하고 수면과 심장에 안전한 섭취 한도를 확인하세요.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://healthfit100.com/caffeine">
+  <meta property="og:url" content="https://healthfit100.com/caffeine">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link href="/style.css" rel="stylesheet">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3406696816625207" crossorigin="anonymous"></script>
+  <style>
+    .beverage-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin: 20px 0 24px;
+    }
+    .bev-item {
+      background: #f8fafc;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .bev-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #1e293b;
+      margin-bottom: 4px;
+    }
+    .bev-mg {
+      font-size: 0.82rem;
+      color: #64748b;
+      margin-bottom: 12px;
+    }
+    .counter-control {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .counter-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      border: 1px solid #cbd5e1;
+      background: #fff;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.15s;
+    }
+    .counter-btn:hover { background: #e2e8f0; }
+    .counter-num {
+      font-weight: 800;
+      font-size: 1.05rem;
+      min-width: 24px;
+      text-align: center;
+    }
+    .caffeine-meter-bg {
+      background: #e2e8f0;
+      height: 12px;
+      border-radius: 999px;
+      overflow: hidden;
+      margin: 16px 0 10px;
+    }
+    .caffeine-meter-fill {
+      height: 100%;
+      background: #10b981;
+      width: 0%;
+      transition: width 0.3s ease, background-color 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+    <nav class="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">건강노트</a>
+      <ul class="nav-menu">
+        <li class="dropdown">
+          <a href="#" class="dropbtn">🌟 시그니처 진단</a>
+          <div class="dropdown-content">
+            <a href="/routine">📋 영양제 시간표 플래너</a>
+            <a href="/checkup">🩺 건강검진 신호등 리포트</a>
+            <a href="/quiz">⚡ 건강 자가진단 퀴즈</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn">🧮 건강 계산기 (8종)</a>
+          <div class="dropdown-content">
+            <a href="/bmi">⚖️ BMI·표준체중</a>
+            <a href="/calorie">🔥 하루 칼로리·BMR</a>
+            <a href="/protein">🍗 단백질 권장량</a>
+            <a href="/exercise">🏃 운동 소모 칼로리</a>
+            <a href="/water">💧 하루 물 섭취량</a>
+            <a href="/caffeine">☕ 카페인 안전량</a>
+            <a href="/alcohol">🍺 알코올 분해시간</a>
+            <a href="/supplement">💊 영양제 권장·상한량</a>
+          </div>
+        </li>
+        <li><a href="/blog">건강 블로그</a></li>
+        <li><a href="/about">소개</a></li>
+        <li><a href="/contact">문의하기</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      <section class="tool-section">
+        <span style="background:#fef3c7; color:#b45309; padding:4px 12px; border-radius:999px; font-size:0.85rem; font-weight:700; display:inline-block; margin-bottom:10px;">☕ 일상 생활습관 도구</span>
+        <h1>하루 카페인 안전 섭취량 계산기</h1>
+        <p class="subtitle">오늘 마신 커피와 음료 잔 수를 선택해 보세요. 총 섭취 카페인(mg)과 식약처 기준 하루 최대 안전 한도(성인 400mg)를 실시간으로 비교합니다.</p>
+
+        <div class="tool-box" style="padding:28px; max-width:640px; margin:0 auto;">
+          <h3 style="margin:0 0 14px; font-size:1.1rem; color:#1e293b;">오늘 마신 음료 잔 수 선택</h3>
+          <div class="beverage-grid">
+            <div class="bev-item">
+              <div>
+                <div class="bev-title">☕ 아메리카노 (기본 1잔)</div>
+                <div class="bev-mg">평균 150mg 카페인</div>
+              </div>
+              <div class="counter-control">
+                <button class="counter-btn" onclick="adjustCount('ame', -1)">-</button>
+                <span class="counter-num" id="cnt-ame">0</span>
+                <button class="counter-btn" onclick="adjustCount('ame', 1)">+</button>
+              </div>
+            </div>
+            <div class="bev-item">
+              <div>
+                <div class="bev-title">🥤 믹스커피 / 캔커피</div>
+                <div class="bev-mg">평균 70mg 카페인</div>
+              </div>
+              <div class="counter-control">
+                <button class="counter-btn" onclick="adjustCount('mix', -1)">-</button>
+                <span class="counter-num" id="cnt-mix">0</span>
+                <button class="counter-btn" onclick="adjustCount('mix', 1)">+</button>
+              </div>
+            </div>
+            <div class="bev-item">
+              <div>
+                <div class="bev-title">⚡ 에너지 음료 (1캔)</div>
+                <div class="bev-mg">평균 100mg 카페인</div>
+              </div>
+              <div class="counter-control">
+                <button class="counter-btn" onclick="adjustCount('ene', -1)">-</button>
+                <span class="counter-num" id="cnt-ene">0</span>
+                <button class="counter-btn" onclick="adjustCount('ene', 1)">+</button>
+              </div>
+            </div>
+            <div class="bev-item">
+              <div>
+                <div class="bev-title">🍵 녹차 / 홍차 / 콜라</div>
+                <div class="bev-mg">평균 35mg 카페인</div>
+              </div>
+              <div class="counter-control">
+                <button class="counter-btn" onclick="adjustCount('tea', -1)">-</button>
+                <span class="counter-num" id="cnt-tea">0</span>
+                <button class="counter-btn" onclick="adjustCount('tea', 1)">+</button>
+              </div>
+            </div>
+          </div>
+
+          <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:16px; padding:20px; text-align:center;">
+            <p style="margin:0 0 4px; font-size:0.85rem; color:#64748b;">오늘 총 카페인 섭취량</p>
+            <h2 id="total-caffeine" style="margin:0; font-size:2.2rem; font-weight:800; color:#0f172a;">0 mg</h2>
+            
+            <div class="caffeine-meter-bg">
+              <div class="caffeine-meter-fill" id="meter-fill"></div>
+            </div>
+            <div style="display:flex; justify-content:space-between; font-size:0.8rem; color:#64748b;">
+              <span>0 mg</span>
+              <span>성인 일일 최대 한도 (400 mg)</span>
+            </div>
+
+            <p id="caffeine-status-msg" style="margin:14px 0 0; font-weight:700; font-size:0.95rem; color:#10b981;">
+              현재 안전 범위입니다.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider">
+
+      <article class="content-rich">
+        <h2>카페인 일일 권장 섭취 기준 (식품의약품안전처)</h2>
+        <ul>
+          <li><strong>성인 남녀:</strong> 하루 최대 <strong>400mg 이하</strong> (아메리카노 약 2~2.5잔 수준)</li>
+          <li><strong>임산부 및 수유부:</strong> 하루 최대 <strong>300mg 이하</strong> (가급적 200mg 미만 권장)</li>
+          <li><strong>어린이·청소년:</strong> 체중 1kg당 <strong>2.5mg 이하</strong> (체중 50kg 기준 125mg 이하)</li>
+        </ul>
+
+        <h2>카페인 반감기와 수면의 골든타임</h2>
+        <p>카페인은 체내에 들어온 뒤 절반으로 줄어드는 <strong>‘반감기’가 약 5~7시간</strong>에 달합니다. 즉, 오후 3시에 마신 아메리카노 1잔의 카페인(약 75mg)은 밤 10시가 되어도 여전히 뇌의 아데노신 수용체를 차단하고 있습니다. 따라서 깊은 렘(REM) 수면을 원한다면 <strong>취침 최소 8시간 전(오후 2시 이전)</strong>까지만 커피를 마시는 것이 좋습니다.</p>
+
+        <h2>자주 묻는 질문 (FAQ)</h2>
+        <div style="display:flex; flex-direction:column; gap:14px; margin-top:16px;">
+          <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:16px 20px;">
+            <h4 style="margin:0 0 6px; color:#1e293b;">Q. 커피를 마시면 왜 화장실을 자주 가나요?</h4>
+            <p style="margin:0; font-size:0.92rem; color:#475569; line-height:1.6;">A. 카페인은 신장에서 수분을 재흡수하는 항이뇨 호르몬(ADH)의 분비를 억제하여 이뇨 작용을 촉진합니다. 커피 1잔을 마셨다면 그만큼 맹물 1잔을 추가로 보충해야 탈수를 예방할 수 있습니다.</p>
+          </div>
+        </div>
+
+        <h3 style="margin-top:35px;">함께 읽으면 좋은 추천 건강 가이드</h3>
+        <ul>
+          <li><a href="/health/하루-카페인-권장량/">하루 카페인 권장량과 커피가 수분 대사에 미치는 영향</a></li>
+          <li><a href="/health/sleep-foods-melatonin/">잠 잘 오는 음식과 멜라토닌 영양제 복용 가이드</a></li>
+          <li><a href="/water">체중과 운동량에 맞는 하루 물 섭취량 계산기</a></li>
+        </ul>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>건강노트</h4>
+        <p style="font-size: 0.9rem; color: #bdc3c7;">공신력 있는 의학 및 보건 자료를 바탕으로 정직한 건강 상식을 기록하는 건강 정보 포털입니다.</p>
+      </div>
+      <div class="footer-section">
+                <h4>건강 계산기 & 도구 (11종)</h4>
+        <ul>
+          <li><a href="/routine">영양제 시간표 플래너</a></li>
+          <li><a href="/checkup">건강검진 신호등 리포트</a></li>
+          <li><a href="/quiz">건강 자가진단 퀴즈</a></li>
+          <li><a href="/bmi">BMI·표준체중 계산기</a></li>
+          <li><a href="/calorie">하루 칼로리·BMR 계산기</a></li>
+          <li><a href="/protein">단백질 섭취량 계산기</a></li>
+          <li><a href="/exercise">운동 소모 칼로리 계산기</a></li>
+          <li><a href="/water">물 섭취량 계산기</a></li>
+          <li><a href="/caffeine">카페인 안전량 계산기</a></li>
+          <li><a href="/alcohol">알코올 분해시간 계산기</a></li>
+          <li><a href="/supplement">영양제 권장량 조회</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>고객 지원</h4>
+        <ul>
+          <li><a href="/about">사이트 소개</a></li>
+          <li><a href="/contact">문의하기</a></li>
+          <li><a href="/privacy">개인정보처리방침</a></li>
+          <li><a href="/terms">이용약관</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 건강노트. 독자에게 신뢰할 수 있는 가치를 전하기 위해 노력합니다.</p>
+    </div>
+  </footer>
+
+  <script>
+    const counts = { ame: 0, mix: 0, ene: 0, tea: 0 };
+    const values = { ame: 150, mix: 70, ene: 100, tea: 35 };
+
+    function adjustCount(type, delta) {
+      counts[type] = Math.max(0, counts[type] + delta);
+      document.getElementById('cnt-' + type).textContent = counts[type];
+      calcCaffeine();
+    }
+
+    function calcCaffeine() {
+      let total = (counts.ame * values.ame) + (counts.mix * values.mix) + (counts.ene * values.ene) + (counts.tea * values.tea);
+      document.getElementById('total-caffeine').textContent = total + " mg";
+
+      let percent = Math.min(100, (total / 400) * 100);
+      const meter = document.getElementById('meter-fill');
+      const msg = document.getElementById('caffeine-status-msg');
+      meter.style.width = percent + "%";
+
+      if (total === 0) {
+        meter.style.backgroundColor = '#10b981';
+        msg.textContent = "음료를 추가해 카페인 총량을 계산해 보세요.";
+        msg.style.color = "#64748b";
+      } else if (total <= 200) {
+        meter.style.backgroundColor = '#10b981';
+        msg.textContent = "🟢 적정하고 안전한 수준입니다. 피로 회복과 집중에 도움이 됩니다.";
+        msg.style.color = "#10b981";
+      } else if (total <= 400) {
+        meter.style.backgroundColor = '#f59e0b';
+        msg.textContent = "🟡 성인 하루 상한선에 근접했습니다. 오후 늦은 시간에는 디카페인을 권장합니다.";
+        msg.style.color = "#d97706";
+      } else {
+        meter.style.backgroundColor = '#ef4444';
+        msg.textContent = "🔴 성인 최대 권장 한도(400mg)를 초과했습니다! 가슴 두근거림이나 불면증에 유의하세요.";
+        msg.style.color = "#ef4444";
+      }
+    }
+  </script>
+</body>
+</html>

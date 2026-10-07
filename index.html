@@ -352,18 +352,29 @@
 <meta property="og:url" content="https://healthfit100.com/">
 </head>
 <body>
-  <nav class="navbar">
+    <nav class="navbar">
     <div class="nav-container">
       <a href="/" class="nav-logo">건강노트</a>
       <ul class="nav-menu">
         <li class="dropdown">
-          <a href="#" class="dropbtn">건강 계산기 & 도구</a>
+          <a href="#" class="dropbtn">🌟 시그니처 진단</a>
           <div class="dropdown-content">
-            <a href="/bmi">BMI 계산기</a>
-            <a href="/calorie">칼로리 계산기</a>
-            <a href="/protein">단백질 계산기</a>
-            <a href="/water">물 섭취량 계산기</a>
-            <a href="/supplement">영양제 권장량</a>
+            <a href="/routine">📋 영양제 시간표 플래너</a>
+            <a href="/checkup">🩺 건강검진 신호등 리포트</a>
+            <a href="/quiz">⚡ 건강 자가진단 퀴즈</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn">🧮 건강 계산기 (8종)</a>
+          <div class="dropdown-content">
+            <a href="/bmi">⚖️ BMI·표준체중</a>
+            <a href="/calorie">🔥 하루 칼로리·BMR</a>
+            <a href="/protein">🍗 단백질 권장량</a>
+            <a href="/exercise">🏃 운동 소모 칼로리</a>
+            <a href="/water">💧 하루 물 섭취량</a>
+            <a href="/caffeine">☕ 카페인 안전량</a>
+            <a href="/alcohol">🍺 알코올 분해시간</a>
+            <a href="/supplement">💊 영양제 권장·상한량</a>
           </div>
         </li>
         <li><a href="/blog">건강 블로그</a></li>
@@ -381,73 +392,135 @@
         <p>비타민·영양제 효능부터 식단, 콜레스테롤·혈압 관리까지.<br>믿을 수 있는 건강 정보와 무료 건강 계산기를 한 곳에서 만나보세요.</p>
       </section>
 
-      
-      <h2 class="section-title">✨ 건강노트 시그니처 맞춤 도구</h2>
-      <p class="section-sub">나만을 위한 영양제 복용 시간표, 건강검진 종합 신호등 리포트, 30초 건강 자가진단을 무료로 이용하세요.</p>
-      <div class="tool-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-bottom: 45px;">
-        <!-- Signature Tool 1: Routine Planner -->
-        <a href="/routine" class="tool-card" style="border: 2px solid #bae6fd; background: #f0f9ff;">
-          <div class="tool-icon">📋</div>
-          <h3 style="color:#0369a1;">내 영양제 복용 시간표 & 궁합 플래너</h3>
-          <p>복용 중인 영양제를 체크하면 아침 공복, 점심 식후, 취침 전 최적의 복용 시간표와 흡수를 방해하는 상극 충돌을 즉시 분석합니다.</p>
-          <span class="tool-tag" style="background:#0284c7; color:#fff;">강력 추천 · 시그니처</span>
-        </a>
 
-        <!-- Signature Tool 2: Checkup Lab Analyzer -->
-        <a href="/checkup" class="tool-card" style="border: 2px solid #fde68a; background: #fefce8;">
-          <div class="tool-icon">🩺</div>
-          <h3 style="color:#854d0e;">건강검진 수치 신호등 리포트</h3>
-          <p>혈압, 공복혈당, LDL 콜레스테롤, 간수치(ALT)를 입력하면 정상·주의·위험 신호등 등급과 질환별 맞춤 실천 가이드를 진단합니다.</p>
-          <span class="tool-tag" style="background:#ca8a04; color:#fff;">초록·노랑·빨강 판정</span>
-        </a>
-
-        <!-- Signature Tool 3: Diagnostic Quiz -->
-        <a href="/quiz" class="tool-card" style="border: 2px solid #e9d5ff; background: #faf5ff;">
-          <div class="tool-icon">⚡</div>
-          <h3 style="color:#6b21a8;">30초 맞춤 건강 자가진단 퀴즈</h3>
-          <p>피로 시간대, 식사 습관, 운동 패턴 등 4가지 간단한 질문으로 지금 내 몸에 가장 시급한 1순위 건강 관리법과 영양소를 찾아드립니다.</p>
-          <span class="tool-tag" style="background:#9333ea; color:#fff;">30초 간편 테스트</span>
-        </a>
+      <!-- 1. 시그니처 분석 도구 -->
+      <div style="margin-bottom: 35px;">
+        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom: 14px;">
+          <div>
+            <h2 style="font-size: 1.25rem; font-weight: 800; margin: 0; color: #0f172a;">✨ 시그니처 맞춤 분석 도구</h2>
+            <p style="font-size: 0.88rem; color: #64748b; margin: 3px 0 0;">건강노트에서만 제공하는 1:1 맞춤형 진단 & 분석 서비스입니다.</p>
+          </div>
+          <span style="font-size: 0.8rem; font-weight: 700; color: #0284c7; background: #e0f2fe; padding: 3px 10px; border-radius: 999px;">3종 추천</span>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px;">
+          <a href="/routine" style="display:flex; align-items:flex-start; gap:14px; background:#f0f9ff; border:1.5px solid #bae6fd; border-radius:14px; padding:16px 18px; text-decoration:none; color:inherit; transition:transform 0.2s, box-shadow 0.2s;">
+            <div style="font-size:1.8rem; line-height:1;">📋</div>
+            <div style="flex:1;">
+              <strong style="font-size:0.98rem; color:#0369a1; display:block; margin-bottom:3px;">영양제 시간표 & 상극 궁합 플래너</strong>
+              <p style="font-size:0.84rem; color:#475569; margin:0 0 6px; line-height:1.4;">먹는 영양제 체크 시 4단계 시간표와 상극 충돌 자동 분석</p>
+              <span style="font-size:0.75rem; font-weight:700; color:#0284c7; background:#e0f2fe; padding:2px 8px; border-radius:999px;">골든타임 추천</span>
+            </div>
+          </a>
+          <a href="/checkup" style="display:flex; align-items:flex-start; gap:14px; background:#fefce8; border:1.5px solid #fde68a; border-radius:14px; padding:16px 18px; text-decoration:none; color:inherit; transition:transform 0.2s, box-shadow 0.2s;">
+            <div style="font-size:1.8rem; line-height:1;">🩺</div>
+            <div style="flex:1;">
+              <strong style="font-size:0.98rem; color:#854d0e; display:block; margin-bottom:3px;">건강검진 수치 신호등 리포트</strong>
+              <p style="font-size:0.84rem; color:#475569; margin:0 0 6px; line-height:1.4;">혈압, 혈당, 콜레스테롤, 간수치 정상·주의·위험 신호등 판정</p>
+              <span style="font-size:0.75rem; font-weight:700; color:#a16207; background:#fef3c7; padding:2px 8px; border-radius:999px;">종합 해석</span>
+            </div>
+          </a>
+          <a href="/quiz" style="display:flex; align-items:flex-start; gap:14px; background:#faf5ff; border:1.5px solid #e9d5ff; border-radius:14px; padding:16px 18px; text-decoration:none; color:inherit; transition:transform 0.2s, box-shadow 0.2s;">
+            <div style="font-size:1.8rem; line-height:1;">⚡</div>
+            <div style="flex:1;">
+              <strong style="font-size:0.98rem; color:#6b21a8; display:block; margin-bottom:3px;">30초 맞춤 건강 자가진단 퀴즈</strong>
+              <p style="font-size:0.84rem; color:#475569; margin:0 0 6px; line-height:1.4;">4가지 질문으로 내 몸에 가장 시급한 1순위 케어 솔루션 처방</p>
+              <span style="font-size:0.75rem; font-weight:700; color:#7e22ce; background:#f3e8ff; padding:2px 8px; border-radius:999px;">30초 간편 테스트</span>
+            </div>
+          </a>
+        </div>
       </div>
 
-<h2 class="section-title">🧮 건강 계산기</h2>
-      <p class="section-sub">모든 계산은 브라우저 안에서만 이루어집니다. 입력값은 서버로 전송되지 않아 안전합니다.</p>
-      <div class="tool-grid">
-        <a href="/bmi" class="tool-card">
-          <div class="tool-icon">⚖️</div>
-          <h3>BMI·표준체중 계산기</h3>
-          <p>키와 몸무게로 체질량지수(BMI)와 비만도, 표준체중을 한 번에 계산합니다. 내 체중이 적정 범위인지 확인하세요.</p>
-          <span class="tool-tag">무료 · 즉시 계산</span>
-        </a>
-        <a href="/calorie" class="tool-card">
-          <div class="tool-icon">🔥</div>
-          <h3>하루 칼로리 계산기</h3>
-          <p>기초대사량(BMR)과 활동량을 바탕으로 하루 필요 칼로리(TDEE)와 감량·유지·증량 목표 칼로리를 알려줍니다.</p>
-          <span class="tool-tag">BMR · TDEE</span>
-        </a>
-        <a href="/protein" class="tool-card">
-          <div class="tool-icon">🍗</div>
-          <h3>단백질 섭취량 계산기</h3>
-          <p>체중과 활동 수준에 맞는 하루 단백질 권장량(g)을 계산하고, 어떤 음식으로 채우면 좋은지 안내합니다.</p>
-          <span class="tool-tag">하루 권장량</span>
-        </a>
-        <a href="/water" class="tool-card">
-          <div class="tool-icon">💧</div>
-          <h3>물 섭취량 계산기</h3>
-          <p>체중과 운동량을 바탕으로 하루에 필요한 수분량(L)과 컵 수를 계산합니다. 충분히 마시고 있는지 확인하세요.</p>
-          <span class="tool-tag">하루 수분량</span>
-        </a>
-        <a href="/supplement" class="tool-card">
-          <div class="tool-icon">💊</div>
-          <h3>영양제 권장량 조회</h3>
-          <p>비타민·미네랄별 성인 하루 권장 섭취량과 상한 섭취량을 한국인 영양소 섭취기준으로 조회합니다.</p>
-          <span class="tool-tag">권장·상한량</span>
-        </a>
+      <!-- 2. 체중 & 다이어트 계산기 -->
+      <div style="margin-bottom: 35px;">
+        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom: 14px;">
+          <div>
+            <h2 style="font-size: 1.25rem; font-weight: 800; margin: 0; color: #0f172a;">⚖️ 체중 & 다이어트 계산기</h2>
+            <p style="font-size: 0.88rem; color: #64748b; margin: 3px 0 0;">체성분 분석과 과학적 다이어트 감량 플랜을 위한 정밀 계산기입니다.</p>
+          </div>
+          <span style="font-size: 0.8rem; font-weight: 700; color:#2563eb; background:#eff6ff; padding:3px 10px; border-radius:999px;">4종 계산</span>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px;">
+          <a href="/bmi" style="background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:14px 16px; text-decoration:none; color:inherit; display:flex; flex-direction:column; justify-content:space-between;">
+            <div>
+              <div style="font-size:1.4rem; margin-bottom:6px;">⚖️</div>
+              <strong style="font-size:0.95rem; color:#1e293b; display:block; margin-bottom:3px;">BMI·표준체중 계산기</strong>
+              <p style="font-size:0.82rem; color:#64748b; margin:0 0 8px; line-height:1.4;">키·몸무게 기반 아시아 기준 비만도 및 표준체중</p>
+            </div>
+            <span style="font-size:0.75rem; font-weight:700; color:#0284c7; background:#f0f9ff; padding:2px 8px; border-radius:999px; align-self:flex-start;">비만도·체지방</span>
+          </a>
+          <a href="/calorie" style="background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:14px 16px; text-decoration:none; color:inherit; display:flex; flex-direction:column; justify-content:space-between;">
+            <div>
+              <div style="font-size:1.4rem; margin-bottom:6px;">🔥</div>
+              <strong style="font-size:0.95rem; color:#1e293b; display:block; margin-bottom:3px;">하루 칼로리·BMR 계산기</strong>
+              <p style="font-size:0.82rem; color:#64748b; margin:0 0 8px; line-height:1.4;">기초대사량 및 감량·유지·증량 목표 TDEE 산출</p>
+            </div>
+            <span style="font-size:0.75rem; font-weight:700; color:#0284c7; background:#f0f9ff; padding:2px 8px; border-radius:999px; align-self:flex-start;">BMR · TDEE</span>
+          </a>
+          <a href="/protein" style="background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:14px 16px; text-decoration:none; color:inherit; display:flex; flex-direction:column; justify-content:space-between;">
+            <div>
+              <div style="font-size:1.4rem; margin-bottom:6px;">🍗</div>
+              <strong style="font-size:0.95rem; color:#1e293b; display:block; margin-bottom:3px;">단백질 권장 섭취량 계산기</strong>
+              <p style="font-size:0.82rem; color:#64748b; margin:0 0 8px; line-height:1.4;">활동량과 체중에 따른 근육 유지 일일 단백질량(g)</p>
+            </div>
+            <span style="font-size:0.75rem; font-weight:700; color:#0284c7; background:#f0f9ff; padding:2px 8px; border-radius:999px; align-self:flex-start;">근육 유지·감량</span>
+          </a>
+          <a href="/exercise" style="background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:14px 16px; text-decoration:none; color:inherit; display:flex; flex-direction:column; justify-content:space-between;">
+            <div>
+              <div style="font-size:1.4rem; margin-bottom:6px;">🏃</div>
+              <strong style="font-size:0.95rem; color:#1e293b; display:block; margin-bottom:3px;">운동 소모 칼로리 계산기</strong>
+              <p style="font-size:0.82rem; color:#64748b; margin:0 0 8px; line-height:1.4;">걷기·러닝·수영·웨이트 등 METs 소비 칼로리 정밀 계산</p>
+            </div>
+            <span style="font-size:0.75rem; font-weight:700; color:#0284c7; background:#f0f9ff; padding:2px 8px; border-radius:999px; align-self:flex-start;">체지방 연소</span>
+          </a>
+        </div>
       </div>
 
-      
-      
-      <!-- 10월 특별 기획 큐레이션 -->
+      <!-- 3. 일상 생활습관 & 영양 계산기 -->
+      <div style="margin-bottom: 45px;">
+        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom: 14px;">
+          <div>
+            <h2 style="font-size: 1.25rem; font-weight: 800; margin: 0; color: #0f172a;">☕ 일상 생활습관 & 영양 계산기</h2>
+            <p style="font-size: 0.88rem; color: #64748b; margin: 3px 0 0;">물, 커피, 알코올, 영양제 등 매일 실천하는 건강 기준치를 확인하세요.</p>
+          </div>
+          <span style="font-size: 0.8rem; font-weight: 700; color:#0d9488; background:#f0fdfa; padding:3px 10px; border-radius:999px;">4종 계산</span>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px;">
+          <a href="/water" style="background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:14px 16px; text-decoration:none; color:inherit; display:flex; flex-direction:column; justify-content:space-between;">
+            <div>
+              <div style="font-size:1.4rem; margin-bottom:6px;">💧</div>
+              <strong style="font-size:0.95rem; color:#1e293b; display:block; margin-bottom:3px;">하루 물 섭취량 계산기</strong>
+              <p style="font-size:0.82rem; color:#64748b; margin:0 0 8px; line-height:1.4;">체중과 운동량에 따른 하루 수분량(L) 및 잔 수</p>
+            </div>
+            <span style="font-size:0.75rem; font-weight:700; color:#0284c7; background:#f0f9ff; padding:2px 8px; border-radius:999px; align-self:flex-start;">수분 균형</span>
+          </a>
+          <a href="/caffeine" style="background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:14px 16px; text-decoration:none; color:inherit; display:flex; flex-direction:column; justify-content:space-between;">
+            <div>
+              <div style="font-size:1.4rem; margin-bottom:6px;">☕</div>
+              <strong style="font-size:0.95rem; color:#1e293b; display:block; margin-bottom:3px;">카페인 안전량 계산기</strong>
+              <p style="font-size:0.82rem; color:#64748b; margin:0 0 8px; line-height:1.4;">커피·음료 속 카페인 총량 및 성인 400mg 대비 섭취율</p>
+            </div>
+            <span style="font-size:0.75rem; font-weight:700; color:#0284c7; background:#f0f9ff; padding:2px 8px; border-radius:999px; align-self:flex-start;">안전 한도</span>
+          </a>
+          <a href="/alcohol" style="background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:14px 16px; text-decoration:none; color:inherit; display:flex; flex-direction:column; justify-content:space-between;">
+            <div>
+              <div style="font-size:1.4rem; margin-bottom:6px;">🍺</div>
+              <strong style="font-size:0.95rem; color:#1e293b; display:block; margin-bottom:3px;">알코올 분해시간 계산기</strong>
+              <p style="font-size:0.82rem; color:#64748b; margin:0 0 8px; line-height:1.4;">소주·맥주 잔 수와 체중 기준 위드마크 완전 해독 시간</p>
+            </div>
+            <span style="font-size:0.75rem; font-weight:700; color:#0284c7; background:#f0f9ff; padding:2px 8px; border-radius:999px; align-self:flex-start;">간 해독 시간</span>
+          </a>
+          <a href="/supplement" style="background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:14px 16px; text-decoration:none; color:inherit; display:flex; flex-direction:column; justify-content:space-between;">
+            <div>
+              <div style="font-size:1.4rem; margin-bottom:6px;">💊</div>
+              <strong style="font-size:0.95rem; color:#1e293b; display:block; margin-bottom:3px;">영양제 권장·상한량 조회</strong>
+              <p style="font-size:0.82rem; color:#64748b; margin:0 0 8px; line-height:1.4;">비타민·미네랄별 하루 권장 섭취량 및 과다 부작용 상한선</p>
+            </div>
+            <span style="font-size:0.75rem; font-weight:700; color:#0284c7; background:#f0f9ff; padding:2px 8px; border-radius:999px; align-self:flex-start;">권장·상한 기준</span>
+          </a>
+        </div>
+      </div>
+
+<!-- 10월 특별 기획 큐레이션 -->
       <div style="background: linear-gradient(135deg, #1e3a8a, #0284c7); border-radius: 18px; padding: 28px 32px; color: #fff; margin-bottom: 40px; box-shadow: 0 10px 25px rgba(2,132,199,0.18);">
         <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
           <span style="background:rgba(255,255,255,0.2); padding:4px 12px; border-radius:999px; font-size:0.8rem; font-weight:700; letter-spacing:0.5px;">🍂 10월 테마 큐레이션</span>
@@ -822,15 +895,18 @@
         <p style="font-size: 0.9rem; color: #bdc3c7;">영양제·식단·생활습관 등 일상 건강 정보를 직접 공부하고 정리해 전하는 블로그입니다.</p>
       </div>
       <div class="footer-section">
-        <h4>건강 계산기 & 도구</h4>
+                <h4>건강 계산기 & 도구 (11종)</h4>
         <ul>
           <li><a href="/routine">영양제 시간표 플래너</a></li>
           <li><a href="/checkup">건강검진 신호등 리포트</a></li>
           <li><a href="/quiz">건강 자가진단 퀴즈</a></li>
-          <li><a href="/bmi">BMI 계산기</a></li>
-          <li><a href="/calorie">칼로리 계산기</a></li>
-          <li><a href="/protein">단백질 계산기</a></li>
+          <li><a href="/bmi">BMI·표준체중 계산기</a></li>
+          <li><a href="/calorie">하루 칼로리·BMR 계산기</a></li>
+          <li><a href="/protein">단백질 섭취량 계산기</a></li>
+          <li><a href="/exercise">운동 소모 칼로리 계산기</a></li>
           <li><a href="/water">물 섭취량 계산기</a></li>
+          <li><a href="/caffeine">카페인 안전량 계산기</a></li>
+          <li><a href="/alcohol">알코올 분해시간 계산기</a></li>
           <li><a href="/supplement">영양제 권장량 조회</a></li>
         </ul>
       </div>
