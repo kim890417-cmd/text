@@ -54,11 +54,19 @@
   </url>
   <url>
     <loc>https://healthfit100.com/about</loc>
+<<<<<<< HEAD
     <lastmod>2026-10-07</lastmod>
   </url>
   <url>
     <loc>https://healthfit100.com/contact</loc>
     <lastmod>2026-10-07</lastmod>
+=======
+    <lastmod>2026-10-05</lastmod>
+  </url>
+  <url>
+    <loc>https://healthfit100.com/contact</loc>
+    <lastmod>2026-10-05</lastmod>
+>>>>>>> 5a638d68284c780d5e45e0c1770899180db150ac
   </url>
   <url>
     <loc>https://healthfit100.com/privacy</loc>
@@ -66,7 +74,11 @@
   </url>
   <url>
     <loc>https://healthfit100.com/terms</loc>
+<<<<<<< HEAD
     <lastmod>2026-10-07</lastmod>
+=======
+    <lastmod>2026-10-05</lastmod>
+>>>>>>> 5a638d68284c780d5e45e0c1770899180db150ac
   </url>
   <url>
     <loc>https://healthfit100.com/health/fasting-cardio-fat-loss-timing/</loc>
