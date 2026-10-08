@@ -136,15 +136,12 @@ gtag("config", "GT-P8VJJSFD");
  window._googlesitekit = window._googlesitekit || {}; window._googlesitekit.throttledEvents = []; window._googlesitekit.gtagEvent = (name, data) => { var key = JSON.stringify( { name, data } ); if ( !! window._googlesitekit.throttledEvents[ key ] ) { return; } window._googlesitekit.throttledEvents[ key ] = true; setTimeout( () => { delete window._googlesitekit.throttledEvents[ key ]; }, 5 ); gtag( "event", name, { ...data, event_source: "site-kit" } ); };
 //# sourceURL=google_gtagjs-js-after
 </script>
-<!-- Site Kit에서 추가한 Google AdSense 메타 태그 -->
-<meta name="google-adsense-platform-account" content="ca-host-pub-2644536267352236">
-<meta name="google-adsense-platform-domain" content="sitekit.withgoogle.com">
-<!-- Site Kit에서 추가한 Google AdSense 메타 태그 종료 -->
 
-<!-- Site Kit에 의해 추가된 Google AdSense 스니펫 -->
-<script async crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3406696816625207&host=ca-host-pub-2644536267352236"></script>
 
-<!-- Site Kit에 의해 추가된 Google AdSense 스니펫 종료 -->
+
+<script async crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3406696816625207"></script>
+
+
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="stylesheet" href="/style.css">
 
