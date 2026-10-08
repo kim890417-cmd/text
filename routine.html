@@ -115,32 +115,32 @@
   </style>
 </head>
 <body>
-    <nav class="navbar">
+      <nav class="navbar">
     <div class="nav-container">
       <a href="/" class="nav-logo">건강노트</a>
       <ul class="nav-menu">
         <li class="dropdown">
-          <a href="#" class="dropbtn">🌟 시그니처 진단</a>
+          <a href="#" class="dropbtn">건강 진단·분석</a>
           <div class="dropdown-content">
-            <a href="/routine">📋 영양제 시간표 플래너</a>
-            <a href="/checkup">🩺 건강검진 신호등 리포트</a>
-            <a href="/quiz">⚡ 건강 자가진단 퀴즈</a>
+            <a href="/routine">영양제 복용 플래너</a>
+            <a href="/checkup">건강검진 수치 해석기</a>
+            <a href="/quiz">맞춤 건강 자가진단</a>
           </div>
         </li>
         <li class="dropdown">
-          <a href="#" class="dropbtn">🧮 건강 계산기 (8종)</a>
+          <a href="#" class="dropbtn">건강 계산기</a>
           <div class="dropdown-content">
-            <a href="/bmi">⚖️ BMI·표준체중</a>
-            <a href="/calorie">🔥 하루 칼로리·BMR</a>
-            <a href="/protein">🍗 단백질 권장량</a>
-            <a href="/exercise">🏃 운동 소모 칼로리</a>
-            <a href="/water">💧 하루 물 섭취량</a>
-            <a href="/caffeine">☕ 카페인 안전량</a>
-            <a href="/alcohol">🍺 알코올 분해시간</a>
-            <a href="/supplement">💊 영양제 권장·상한량</a>
+            <a href="/bmi">BMI·표준체중</a>
+            <a href="/calorie">하루 칼로리·기초대사량</a>
+            <a href="/protein">단백질 섭취량</a>
+            <a href="/exercise">운동 소모 칼로리</a>
+            <a href="/water">물 섭취량 계산</a>
+            <a href="/caffeine">카페인 안전 섭취량</a>
+            <a href="/alcohol">알코올 분해 시간</a>
+            <a href="/supplement">영양제 권장·상한량</a>
           </div>
         </li>
-        <li><a href="/blog">건강 블로그</a></li>
+        <li><a href="/blog">건강 칼럼</a></li>
         <li><a href="/about">소개</a></li>
         <li><a href="/contact">문의하기</a></li>
       </ul>
@@ -150,7 +150,7 @@
   <main>
     <div class="container">
       <section class="tool-section">
-        <span style="background:#e0f2fe; color:#0369a1; padding:4px 12px; border-radius:999px; font-size:0.85rem; font-weight:700; display:inline-block; margin-bottom:10px;">✨ 건강노트 시그니처 플래너</span>
+        <span style="background:#e0f2fe; color:#0369a1; padding:4px 12px; border-radius:999px; font-size:0.85rem; font-weight:700; display:inline-block; margin-bottom:10px;"> 건강노트 시그니처 플래너</span>
         <h1>내 영양제 복용 시간표 & 궁합 플래너</h1>
         <p class="subtitle">현재 드시고 계시거나 섭취 예정인 영양제를 모두 선택해 보세요. 흡수율을 극대화하는 하루 4단계 복용 골든타임과 상극 충돌을 즉시 분석합니다.</p>
 
@@ -164,7 +164,7 @@
 
           <div id="planner-result" style="display:none; margin-top:30px; border-top:1.5px dashed #cbd5e1; padding-top:28px;">
             <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
-              <h3 style="margin:0; font-size:1.25rem; font-weight:800; color:#0f172a;">📋 나만의 하루 영양제 최적 복용 시간표</h3>
+              <h3 style="margin:0; font-size:1.25rem; font-weight:800; color:#0f172a;">나만의 하루 영양제 최적 복용 시간표</h3>
               <span id="selected-count" style="font-size:0.9rem; color:#0284c7; font-weight:700;"></span>
             </div>
 
@@ -239,7 +239,7 @@
         </ul>
 
         <p style="background:#f8f9fa; border-radius:14px; padding:18px 22px; font-size:0.85rem; color:#777; line-height:1.6; margin-top:30px;">
-          ⚠️ 본 플래너는 공신력 있는 약학·영양학 지침에 기초한 일반적 권장 시간표입니다. 만성 질환 치료제(혈압약, 당뇨약, 갑상선호르몬제, 항응고제 등)를 복용 중인 경우 약물 흡수에 영향을 줄 수 있으므로 주치의 또는 전담 약사와 복용 간격을 상의하시기 바랍니다.
+          [주의] 본 플래너는 공신력 있는 약학·영양학 지침에 기초한 일반적 권장 시간표입니다. 만성 질환 치료제(혈압약, 당뇨약, 갑상선호르몬제, 항응고제 등)를 복용 중인 경우 약물 흡수에 영향을 줄 수 있으므로 주치의 또는 전담 약사와 복용 간격을 상의하시기 바랍니다.
         </p>
       </article>
     </div>
@@ -252,19 +252,19 @@
         <p style="font-size: 0.9rem; color: #bdc3c7;">공신력 있는 의학 및 보건 자료를 바탕으로 정직한 건강 상식을 기록하는 건강 정보 포털입니다.</p>
       </div>
       <div class="footer-section">
-                <h4>건강 계산기 & 도구 (11종)</h4>
+                        <h4>건강 도구 및 계산기</h4>
         <ul>
-          <li><a href="/routine">영양제 시간표 플래너</a></li>
-          <li><a href="/checkup">건강검진 신호등 리포트</a></li>
-          <li><a href="/quiz">건강 자가진단 퀴즈</a></li>
+          <li><a href="/routine">영양제 복용 플래너</a></li>
+          <li><a href="/checkup">건강검진 수치 해석기</a></li>
+          <li><a href="/quiz">맞춤 건강 자가진단</a></li>
           <li><a href="/bmi">BMI·표준체중 계산기</a></li>
-          <li><a href="/calorie">하루 칼로리·BMR 계산기</a></li>
+          <li><a href="/calorie">하루 칼로리·기초대사량</a></li>
           <li><a href="/protein">단백질 섭취량 계산기</a></li>
           <li><a href="/exercise">운동 소모 칼로리 계산기</a></li>
           <li><a href="/water">물 섭취량 계산기</a></li>
-          <li><a href="/caffeine">카페인 안전량 계산기</a></li>
-          <li><a href="/alcohol">알코올 분해시간 계산기</a></li>
-          <li><a href="/supplement">영양제 권장량 조회</a></li>
+          <li><a href="/caffeine">카페인 안전 섭취량 계산기</a></li>
+          <li><a href="/alcohol">알코올 분해 시간 계산기</a></li>
+          <li><a href="/supplement">영양제 권장·상한량 조회</a></li>
         </ul>
       </div>
       <div class="footer-section">
@@ -284,20 +284,20 @@
 
   <script>
     const supplements = [
-      { id: "probiotics", name: "유산균 (프로바이오틱스)", icon: "🥛", time: "morning", desc: "위산이 묽은 기상 직후 미온수 1잔과 함께 복용" },
-      { id: "iron", name: "철분제", icon: "🩸", time: "morning", desc: "공복에 오렌지주스나 비타민C와 함께 흡수율 극대화" },
-      { id: "multivitamin", name: "종합비타민", icon: "💊", time: "lunch", desc: "에너지 대사 활성화 및 위장 장애 예방을 위해 점심 식후 복용" },
-      { id: "vitaminc", name: "비타민 C", icon: "🍋", time: "lunch", desc: "위산 자극 방지를 위해 식사 도중이나 식후 복용" },
-      { id: "vitamind", name: "비타민 D", icon: "☀️", time: "lunch", desc: "지용성 비타민으로 기름진 점심 식사 직후 흡수율 50% 증가" },
-      { id: "omega3", name: "오메가 3", icon: "🐟", time: "lunch", desc: "식사 중 분비되는 담즙산과 함께 흡수 극대화 및 비린내 역류 방지" },
-      { id: "lutein", name: "루테인", icon: "👁️", time: "lunch", desc: "지용성 색소 영양소로 식사 직후 복용 필수" },
-      { id: "coq10", name: "코엔자임 Q10", icon: "❤️", time: "lunch", desc: "지용성 항산화제로 낮 시간 식사 직후 복용" },
-      { id: "zinc", name: "아연", icon: "🛡️", time: "lunch", desc: "빈속에 먹으면 구역감을 유발하므로 든든한 식후 복용" },
-      { id: "milkthistle", name: "밀크씨슬", icon: "🌿", time: "dinner", desc: "하루 일과 후 피로한 간 해독 대사를 위해 저녁 식후 복용" },
-      { id: "calcium", name: "칼슘", icon: "🦴", time: "dinner", desc: "위산이 충분한 저녁 식후 복용 및 신경 안정 유도" },
-      { id: "magnesium", name: "마그네슘", icon: "🌙", time: "bedtime", desc: "근육 이완과 신경 진정, 숙면 유도를 위해 취침 1시간 전 복용" },
-      { id: "collagen", name: "콜라겐", icon: "✨", time: "bedtime", desc: "피부 재생 호르몬이 분비되는 밤 시간대 취침 전 복용" },
-      { id: "arginine", name: "아르기닌", icon: "⚡", time: "morning", desc: "아미노산 흡수 경쟁을 피해 기상 직후 공복 복용" }
+      { id: "probiotics", name: "유산균 (프로바이오틱스)", icon: "", time: "morning", desc: "위산이 묽은 기상 직후 미온수 1잔과 함께 복용" },
+      { id: "iron", name: "철분제", icon: "", time: "morning", desc: "공복에 오렌지주스나 비타민C와 함께 흡수율 극대화" },
+      { id: "multivitamin", name: "종합비타민", icon: "", time: "lunch", desc: "에너지 대사 활성화 및 위장 장애 예방을 위해 점심 식후 복용" },
+      { id: "vitaminc", name: "비타민 C", icon: "", time: "lunch", desc: "위산 자극 방지를 위해 식사 도중이나 식후 복용" },
+      { id: "vitamind", name: "비타민 D", icon: "", time: "lunch", desc: "지용성 비타민으로 기름진 점심 식사 직후 흡수율 50% 증가" },
+      { id: "omega3", name: "오메가 3", icon: "", time: "lunch", desc: "식사 중 분비되는 담즙산과 함께 흡수 극대화 및 비린내 역류 방지" },
+      { id: "lutein", name: "루테인", icon: "", time: "lunch", desc: "지용성 색소 영양소로 식사 직후 복용 필수" },
+      { id: "coq10", name: "코엔자임 Q10", icon: "", time: "lunch", desc: "지용성 항산화제로 낮 시간 식사 직후 복용" },
+      { id: "zinc", name: "아연", icon: "", time: "lunch", desc: "빈속에 먹으면 구역감을 유발하므로 든든한 식후 복용" },
+      { id: "milkthistle", name: "밀크씨슬", icon: "", time: "dinner", desc: "하루 일과 후 피로한 간 해독 대사를 위해 저녁 식후 복용" },
+      { id: "calcium", name: "칼슘", icon: "", time: "dinner", desc: "위산이 충분한 저녁 식후 복용 및 신경 안정 유도" },
+      { id: "magnesium", name: "마그네슘", icon: "", time: "bedtime", desc: "근육 이완과 신경 진정, 숙면 유도를 위해 취침 1시간 전 복용" },
+      { id: "collagen", name: "콜라겐", icon: "", time: "bedtime", desc: "피부 재생 호르몬이 분비되는 밤 시간대 취침 전 복용" },
+      { id: "arginine", name: "아르기닌", icon: "", time: "morning", desc: "아미노산 흡수 경쟁을 피해 기상 직후 공복 복용" }
     ];
 
     const chipContainer = document.getElementById('chip-container');
@@ -306,7 +306,7 @@
     supplements.forEach(s => {
       const label = document.createElement('label');
       label.className = 'chip-item';
-      label.innerHTML = `<span>${s.icon}</span> <span>${s.name}</span><input type="checkbox" value="${s.id}">`;
+      label.innerHTML = `<span>${s.name}</span><input type="checkbox" value="${s.id}">`;
       label.addEventListener('click', (e) => {
         e.preventDefault();
         if (selectedSet.has(s.id)) {
@@ -337,10 +337,10 @@
       countEl.textContent = `선택한 영양제: ${selectedSet.size}개`;
 
       const groups = {
-        morning: { title: "🌅 기상 직후 (아침 공복)", badge: "물 1~2잔과 함께", items: [] },
-        lunch: { title: "☀️ 점심 식사 직후", badge: "기름진 식사와 함께 흡수", items: [] },
-        dinner: { title: "🌆 저녁 식사 직후", badge: "간 해독 및 뼈 건강", items: [] },
-        bedtime: { title: "🌙 취침 1시간 전", badge: "근육 이완 & 편안한 수면", items: [] }
+        morning: { title: "기상 직후 (아침 공복)", badge: "물 1~2잔과 함께", items: [] },
+        lunch: { title: "점심 식사 직후", badge: "기름진 식사와 함께 흡수", items: [] },
+        dinner: { title: "저녁 식사 직후", badge: "간 해독 및 뼈 건강", items: [] },
+        bedtime: { title: "취침 1시간 전", badge: "근육 이완 & 편안한 수면", items: [] }
       };
 
       selectedSet.forEach(id => {
@@ -384,7 +384,7 @@
       if (synergies.length > 0) {
         synergyEl.innerHTML = `
           <div class="synergy-box">
-            <h4 style="margin:0 0 8px; color:#15803d; font-size:1.05rem;">✨ 발견된 찰떡 시너지 조합</h4>
+            <h4 style="margin:0 0 8px; color:#15803d; font-size:1.05rem;"> 발견된 찰떡 시너지 조합</h4>
             <ul style="margin:0; padding-left:18px; font-size:0.9rem; color:#166534; line-height:1.6;">
               ${synergies.map(s => `<li>${s}</li>`).join('')}
             </ul>
@@ -397,19 +397,19 @@
       // Conflict / Warning checks
       let warnings = [];
       if (selectedSet.has('iron') && selectedSet.has('calcium')) {
-        warnings.push("⚠️ <strong>철분 vs 칼슘 흡수 충돌</strong>: 철분과 칼슘은 장내 흡수 통로가 같아 서로의 흡수를 강력히 방해합니다. 철분은 아침 공복, 칼슘은 저녁 식후로 최소 2시간 이상 분리해서 복용하세요.");
+        warnings.push("[주의] <strong>철분 vs 칼슘 흡수 충돌</strong>: 철분과 칼슘은 장내 흡수 통로가 같아 서로의 흡수를 강력히 방해합니다. 철분은 아침 공복, 칼슘은 저녁 식후로 최소 2시간 이상 분리해서 복용하세요.");
       }
       if (selectedSet.has('multivitamin') && selectedSet.has('zinc')) {
-        warnings.push("⚠️ <strong>아연 중복 섭취 주의</strong>: 종합비타민에 이미 아연이 함유되어 있을 확률이 높습니다. 단일제와 합산하여 하루 상한 섭취량(35mg)을 넘지 않도록 성분표를 확인하세요.");
+        warnings.push("[주의] <strong>아연 중복 섭취 주의</strong>: 종합비타민에 이미 아연이 함유되어 있을 확률이 높습니다. 단일제와 합산하여 하루 상한 섭취량(35mg)을 넘지 않도록 성분표를 확인하세요.");
       }
       if (selectedSet.has('multivitamin') && selectedSet.has('vitamind')) {
-        warnings.push("ℹ️ <strong>비타민 D 용량 확인</strong>: 종합비타민 속 비타민D와 단일 비타민D의 합계가 하루 4,000 IU 상한선을 넘지 않는지 라벨을 체크해 보세요.");
+        warnings.push("[참고] <strong>비타민 D 용량 확인</strong>: 종합비타민 속 비타민D와 단일 비타민D의 합계가 하루 4,000 IU 상한선을 넘지 않는지 라벨을 체크해 보세요.");
       }
 
       if (warnings.length > 0) {
         warningEl.innerHTML = `
           <div class="warning-box">
-            <h4 style="margin:0 0 8px; color:#be123c; font-size:1.05rem;">🚨 복용 주의 및 상극 조합 경고</h4>
+            <h4 style="margin:0 0 8px; color:#be123c; font-size:1.05rem;">[경고] 복용 주의 및 상극 조합 경고</h4>
             <ul style="margin:0; padding-left:18px; font-size:0.9rem; color:#9f1239; line-height:1.6;">
               ${warnings.map(w => `<li>${w}</li>`).join('')}
             </ul>

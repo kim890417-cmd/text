@@ -84,32 +84,32 @@
   </style>
 </head>
 <body>
-    <nav class="navbar">
+      <nav class="navbar">
     <div class="nav-container">
       <a href="/" class="nav-logo">건강노트</a>
       <ul class="nav-menu">
         <li class="dropdown">
-          <a href="#" class="dropbtn">🌟 시그니처 진단</a>
+          <a href="#" class="dropbtn">건강 진단·분석</a>
           <div class="dropdown-content">
-            <a href="/routine">📋 영양제 시간표 플래너</a>
-            <a href="/checkup">🩺 건강검진 신호등 리포트</a>
-            <a href="/quiz">⚡ 건강 자가진단 퀴즈</a>
+            <a href="/routine">영양제 복용 플래너</a>
+            <a href="/checkup">건강검진 수치 해석기</a>
+            <a href="/quiz">맞춤 건강 자가진단</a>
           </div>
         </li>
         <li class="dropdown">
-          <a href="#" class="dropbtn">🧮 건강 계산기 (8종)</a>
+          <a href="#" class="dropbtn">건강 계산기</a>
           <div class="dropdown-content">
-            <a href="/bmi">⚖️ BMI·표준체중</a>
-            <a href="/calorie">🔥 하루 칼로리·BMR</a>
-            <a href="/protein">🍗 단백질 권장량</a>
-            <a href="/exercise">🏃 운동 소모 칼로리</a>
-            <a href="/water">💧 하루 물 섭취량</a>
-            <a href="/caffeine">☕ 카페인 안전량</a>
-            <a href="/alcohol">🍺 알코올 분해시간</a>
-            <a href="/supplement">💊 영양제 권장·상한량</a>
+            <a href="/bmi">BMI·표준체중</a>
+            <a href="/calorie">하루 칼로리·기초대사량</a>
+            <a href="/protein">단백질 섭취량</a>
+            <a href="/exercise">운동 소모 칼로리</a>
+            <a href="/water">물 섭취량 계산</a>
+            <a href="/caffeine">카페인 안전 섭취량</a>
+            <a href="/alcohol">알코올 분해 시간</a>
+            <a href="/supplement">영양제 권장·상한량</a>
           </div>
         </li>
-        <li><a href="/blog">건강 블로그</a></li>
+        <li><a href="/blog">건강 칼럼</a></li>
         <li><a href="/about">소개</a></li>
         <li><a href="/contact">문의하기</a></li>
       </ul>
@@ -119,7 +119,7 @@
   <main>
     <div class="container">
       <section class="tool-section">
-        <span style="background:#f3e8ff; color:#7e22ce; padding:4px 12px; border-radius:999px; font-size:0.85rem; font-weight:700; display:inline-block; margin-bottom:10px;">⚡ 30초 인터랙티브 자가진단</span>
+        <span style="background:#f3e8ff; color:#7e22ce; padding:4px 12px; border-radius:999px; font-size:0.85rem; font-weight:700; display:inline-block; margin-bottom:10px;">30초 인터랙티브 자가진단</span>
         <h1>나만의 맞춤 건강 루틴 자가진단</h1>
         <p class="subtitle">체크하기 쉬운 4가지 질문을 통해 지금 내 몸이 가장 필요로 하는 1순위 집중 관리법과 맞춤 영양소를 찾아드립니다.</p>
 
@@ -137,17 +137,17 @@
           </div>
 
           <div class="result-box" id="quiz-result-area">
-            <span style="background:#dcfce7; color:#15803d; padding:4px 14px; border-radius:999px; font-size:0.85rem; font-weight:700; display:inline-block; margin-bottom:12px;">🎉 진단 완료</span>
+            <span style="background:#dcfce7; color:#15803d; padding:4px 14px; border-radius:999px; font-size:0.85rem; font-weight:700; display:inline-block; margin-bottom:12px;">[완료] 진단 완료</span>
             <h2 id="result-title" style="margin:0 0 12px; font-size:1.6rem; color:#0f172a; font-weight:800;"></h2>
             <p id="result-desc" style="margin:0 0 24px; font-size:0.95rem; color:#334155; line-height:1.7;"></p>
 
             <div style="background:#fff; border:1px solid #bbf7d0; border-radius:14px; padding:20px; text-align:left; margin-bottom:20px;">
-              <h4 style="margin:0 0 10px; font-size:1.05rem; color:#15803d;">💡 당신을 위한 3대 핵심 실천 솔루션</h4>
+              <h4 style="margin:0 0 10px; font-size:1.05rem; color:#15803d;">[추천] 당신을 위한 3대 핵심 실천 솔루션</h4>
               <ul id="result-solutions" style="margin:0; padding-left:20px; font-size:0.92rem; color:#1e293b; line-height:1.7;"></ul>
             </div>
 
             <div style="text-align:left; background:#fff; border:1px solid #e2e8f0; border-radius:14px; padding:20px;">
-              <h4 style="margin:0 0 10px; font-size:1.05rem; color:#0f172a;">📖 맞춤 추천 건강노트 심층 가이드</h4>
+              <h4 style="margin:0 0 10px; font-size:1.05rem; color:#0f172a;">맞춤 추천 건강노트 심층 가이드</h4>
               <div id="result-links" style="display:flex; flex-direction:column; gap:8px;"></div>
             </div>
 
@@ -176,7 +176,7 @@
         </div>
 
         <p style="background:#f8f9fa; border-radius:14px; padding:18px 22px; font-size:0.85rem; color:#777; line-height:1.6; margin-top:30px;">
-          ⚠️ 본 자가진단 퀴즈는 개인의 생활 습관을 스스로 점검하기 위한 참고용 설문입니다. 심한 어지러움, 흉통, 지속적인 고열 등의 이상 증상이 있을 경우 즉시 병원 진료를 받으시기 바랍니다.
+          [주의] 본 자가진단 퀴즈는 개인의 생활 습관을 스스로 점검하기 위한 참고용 설문입니다. 심한 어지러움, 흉통, 지속적인 고열 등의 이상 증상이 있을 경우 즉시 병원 진료를 받으시기 바랍니다.
         </p>
       </article>
     </div>
@@ -189,19 +189,19 @@
         <p style="font-size: 0.9rem; color: #bdc3c7;">공신력 있는 의학 및 보건 자료를 바탕으로 정직한 건강 상식을 기록하는 건강 정보 포털입니다.</p>
       </div>
       <div class="footer-section">
-                <h4>건강 계산기 & 도구 (11종)</h4>
+                        <h4>건강 도구 및 계산기</h4>
         <ul>
-          <li><a href="/routine">영양제 시간표 플래너</a></li>
-          <li><a href="/checkup">건강검진 신호등 리포트</a></li>
-          <li><a href="/quiz">건강 자가진단 퀴즈</a></li>
+          <li><a href="/routine">영양제 복용 플래너</a></li>
+          <li><a href="/checkup">건강검진 수치 해석기</a></li>
+          <li><a href="/quiz">맞춤 건강 자가진단</a></li>
           <li><a href="/bmi">BMI·표준체중 계산기</a></li>
-          <li><a href="/calorie">하루 칼로리·BMR 계산기</a></li>
+          <li><a href="/calorie">하루 칼로리·기초대사량</a></li>
           <li><a href="/protein">단백질 섭취량 계산기</a></li>
           <li><a href="/exercise">운동 소모 칼로리 계산기</a></li>
           <li><a href="/water">물 섭취량 계산기</a></li>
-          <li><a href="/caffeine">카페인 안전량 계산기</a></li>
-          <li><a href="/alcohol">알코올 분해시간 계산기</a></li>
-          <li><a href="/supplement">영양제 권장량 조회</a></li>
+          <li><a href="/caffeine">카페인 안전 섭취량 계산기</a></li>
+          <li><a href="/alcohol">알코올 분해 시간 계산기</a></li>
+          <li><a href="/supplement">영양제 권장·상한량 조회</a></li>
         </ul>
       </div>
       <div class="footer-section">
@@ -306,10 +306,10 @@
 
       const results = {
         sugar: {
-          title: "🌾 '혈당 스파이크 & 급격한 식곤증' 집중 케어반",
+          title: "'혈당 스파이크 & 급격한 식곤증' 집중 케어반",
           desc: "정제 탄수화물과 식후 혈당 급상승으로 인해 췌장이 지치고 인슐린이 요동치고 있는 상태입니다. 식후 졸음과 뱃살 축적을 막기 위한 식사 순서 개선이 가장 시급합니다.",
           solutions: [
-            "식이섬유(채소) ➜ 단백질 ➜ 탄수화물 순서로 먹는 <strong>'거꾸로 식사법'</strong>을 매 끼니 실천하세요.",
+            "식이섬유(채소) → 단백질 → 탄수화물 순서로 먹는 <strong>'거꾸로 식사법'</strong>을 매 끼니 실천하세요.",
             "식사 후 눕지 말고 15분간 가볍게 동네를 산책하거나 제자리 스쿼트를 하세요.",
             "액상과당 음료(커피믹스, 과일주스)를 물이나 무가당 탄산수로 교체하세요."
           ],
@@ -320,7 +320,7 @@
           ]
         },
         bp: {
-          title: "❤️ '혈관 탄력 & 혈압 안정' 집중 케어반",
+          title: "'혈관 탄력 & 혈압 안정' 집중 케어반",
           desc: "과도한 염분(나트륨) 섭취와 스트레스, 좌식 생활로 인해 혈관의 긴장도가 높아져 있습니다. 혈압이 더 오르기 전에 나트륨을 배출하고 혈관 벽을 이완시켜야 합니다.",
           solutions: [
             "찌개나 국물 요리의 국물을 남기고 염분 섭취를 절반으로 줄이세요.",
@@ -334,7 +334,7 @@
           ]
         },
         liver: {
-          title: "🌿 '간 피로 회복 & 독소 해독' 집중 케어반",
+          title: "'간 피로 회복 & 독소 해독' 집중 케어반",
           desc: "간에 중성지방이 끼는 비알코올성 지방간 위험 또는 무분별한 건강즙 복용 등으로 인해 해독 기관인 간이 지쳐 있는 상태입니다. 피로 회복을 위해 간세포 휴식이 필요합니다.",
           solutions: [
             "현재 먹고 있는 성분 불명 즙이나 과도한 영양제를 2주간 일시 중단해 보세요.",
@@ -348,7 +348,7 @@
           ]
         },
         vitd: {
-          title: "☀️ '햇빛 결핍 & 면역·뼈 건강' 집중 케어반",
+          title: "'햇빛 결핍 & 면역·뼈 건강' 집중 케어반",
           desc: "실내 생활 비중이 높아 한국인 80%가 겪는 전형적인 비타민D 및 미네랄 부족형입니다. 뼈 건강과 면역 체계가 약화될 수 있으므로 영양 보충이 필요합니다.",
           solutions: [
             "점심 식사 직후 흡수율을 높여 비타민D(1,000~2,000 IU)를 꾸준히 복용하세요.",
