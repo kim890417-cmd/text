@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
 <channel>
-    <item>
-      <title>공복 혈당 정상 수치 기준과 당뇨 전단계 낮추는 법, 당화혈색소(HbA1c) 관리 가이드</title>
-      <link>https://healthfit100.com/health/fasting-blood-sugar-normal-range-prediabetes/</link>
-      <guid>https://healthfit100.com/health/fasting-blood-sugar-normal-range-prediabetes/</guid>
-      <pubDate>Fri, 09 Oct 2026 09:00:00 +0900</pubDate>
-      <description><![CDATA[국가건강검진 공복 혈당 정상 수치(100 mg/dL 미만)와 당뇨 전단계(100~125 mg/dL) 기준, 당화혈색소(HbA1c 5.7~6.4%) 해석법 및 인슐린 저항성을 개선하는 생활수칙을 정리했습니다.]]></description>
-    </item>
-
   <title>건강노트</title>
   <link>https://healthfit100.com/blog</link>
   <description>영양제·식단·생활습관을 공신력 있는 자료와 실제 경험으로 정리합니다.</description>
   <language>ko-KR</language>
-  <lastBuildDate>Fri, 09 Oct 2026 22:54:05 +0900</lastBuildDate>
+  <lastBuildDate>Fri, 09 Oct 2026 23:31:15 +0900</lastBuildDate>
   <item>
     <title>체지방 1kg 빼는 칼로리와 현실적인 일일 감량 식단 계산법</title>
     <link>https://healthfit100.com/health/body-fat-loss-calorie-deficit-calculator/</link>
@@ -47,6 +39,13 @@
     <link>https://healthfit100.com/health/blood-sugar-spike-prevention-diet/</link>
     <guid isPermaLink="true">https://healthfit100.com/health/blood-sugar-spike-prevention-diet/</guid>
     <description>밥 먹고 쏟아지는 극심한 졸음의 원인 혈당 스파이크 기준(140 mg/dL), 식이섬유부터 먹는 거꾸로 식사법과 식후 15분 걷기가 인슐린에 미치는 과학적 효과를 정리했습니다.</description>
+    <pubDate>Sun, 04 Oct 2026 09:00:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>공복 혈당 정상 수치 기준과 당뇨 전단계 낮추는 법, 당화혈색소(HbA1c) 관리 가이드</title>
+    <link>https://healthfit100.com/health/fasting-blood-sugar-normal-range-prediabetes/</link>
+    <guid isPermaLink="true">https://healthfit100.com/health/fasting-blood-sugar-normal-range-prediabetes/</guid>
+    <description>국가건강검진 공복 혈당 정상 수치(100 mg/dL 미만)와 당뇨 전단계(100~125 mg/dL) 기준, 당화혈색소(HbA1c 5.7~6.4%) 해석법 및 인슐린 저항성을 개선하는 생활수칙을 정리했습니다.</description>
     <pubDate>Sun, 04 Oct 2026 09:00:00 +0900</pubDate>
   </item>
   <item>
