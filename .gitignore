@@ -1,2 +1,7 @@
 *.bak
 scan_id.py
+images/thumbnails/cache/
+images/thumbnails/sample_*.jpg
+__pycache__/
+*.pyc
+
