@@ -22,8 +22,10 @@ broken = []
 for hf in html_files:
     txt = hf.read_text(encoding="utf-8", errors="ignore")
     # find all href="/..."
+    import urllib.parse
     links = re.findall(r'href=[\'"](/[^"\'#?]+)[\'"]', txt)
-    for link in links:
+    for link_raw in links:
+        link = urllib.parse.unquote(link_raw)
         if link.startswith("//"):
             continue
         link_clean = link.rstrip("/")
