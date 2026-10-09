@@ -152,19 +152,24 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 .healthfit-blog-intro{padding:18px 4px 28px}
 .healthfit-blog-intro h1{margin:0 0 8px;font-size:2rem}
 .healthfit-blog-intro p{margin:0;color:#64748b}
-.ast-row{display:flex!important;flex-direction:column!important;gap:20px}
-.ast-article-post{width:100%!important;max-width:100%!important;padding:0!important}
-.ast-article-inner{border:1px solid #e2e8f0!important;border-radius:12px!important;padding:20px!important;box-shadow:0 4px 12px rgba(15,23,42,.04)}
-.post-content{display:grid!important;grid-template-columns:220px minmax(0,1fr)!important;column-gap:24px!important;align-items:start!important}
-.ast-blog-featured-section.post-thumb{grid-column:1;grid-row:1/6;width:220px;height:140px;margin:0!important;border-radius:9px;overflow:hidden;background:#f1f5f9}
-.ast-blog-featured-section.post-thumb a,.ast-blog-featured-section.post-thumb img{display:block;width:100%;height:100%}
-.ast-blog-featured-section.post-thumb img{object-fit:cover}
-.post-content>.ast-taxonomy-container,.post-content>.entry-title,.post-content>.entry-header,.post-content>.ast-excerpt-container,.post-content>.read-more{grid-column:2}
-.post-content>.entry-title{font-size:1.3rem!important;margin:4px 0 8px!important}
-.ast-excerpt-container p{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;color:#475569}
-@media(max-width:640px){
- .post-content{display:block!important}
- .ast-blog-featured-section.post-thumb{width:100%;height:190px;margin-bottom:16px!important}
+.ast-row{display:flex!important;flex-direction:column!important;gap:18px}
+.ast-article-post{width:100%!important;max-width:100%!important;padding:0!important;background:transparent!important;border:none!important;box-shadow:none!important}
+.ast-article-inner{border:1px solid #e2e8f0!important;border-radius:14px!important;padding:18px 22px!important;box-shadow:0 4px 12px rgba(15,23,42,.04)!important;background:#fff!important;display:grid!important;grid-template-columns:220px minmax(0,1fr)!important;column-gap:22px!important;align-items:center!important;transition:transform .2s ease,box-shadow .2s ease}
+.ast-article-inner:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(15,23,42,.08)!important}
+.post-thumb-img-content{width:220px!important;height:135px!important;border-radius:10px!important;overflow:hidden!important;margin:0!important;flex-shrink:0!important;background:#0f172a}
+.post-thumb-img-content a{display:block;width:100%;height:100%}
+.post-thumb-img-content img{width:100%!important;height:100%!important;object-fit:cover!important;display:block!important;border-radius:10px!important}
+.post-content{display:flex!important;flex-direction:column!important;justify-content:center!important;padding:0!important;margin:0!important;border:none!important}
+.entry-title{font-size:1.22rem!important;font-weight:700!important;line-height:1.4!important;margin:4px 0 8px!important}
+.entry-title a{color:#0f172a!important;text-decoration:none!important}
+.entry-title a:hover{color:#0284c7!important}
+.ast-blog-single-element.ast-taxonomy-container{margin-bottom:4px}
+.ast-taxonomy-container a{font-size:0.85rem;color:#0284c7;font-weight:600;text-decoration:none}
+.entry-meta{font-size:0.85rem!important;color:#64748b!important;margin-bottom:6px!important}
+.ast-excerpt-container p{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;color:#475569;font-size:0.92rem;line-height:1.6;margin:0}
+@media(max-width:680px){
+ .ast-article-inner{display:flex!important;flex-direction:column!important;padding:16px!important}
+ .post-thumb-img-content{width:100%!important;height:180px!important;margin-bottom:14px!important}
 }
 </style>
 </head>
@@ -319,22 +324,25 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 					<main id="main" class="site-main">
 				<header class="healthfit-blog-intro"><h1>건강 블로그</h1><p>수치와 근거는 확인하고, 개인 경험은 구분해 기록합니다.</p></header>
 <div class="ast-row">
-<article class="post-356 post type-post status-publish format-standard has-post-thumbnail hentry ast-article-post" style="border:1px solid #e2e8f0; border-radius:12px; padding:20px; box-shadow:0 4px 12px rgba(15,23,42,.04); margin-bottom:20px; background:#fff;">
-  <div class="post-content" style="display:grid; grid-template-columns:220px minmax(0,1fr); column-gap:24px; align-items:start;">
-    <div class="post-thumb-img-content" style="border-radius:8px; overflow:hidden;">
+<article class="post-356 post type-post status-publish format-standard has-post-thumbnail hentry ast-article-post" id="post-356">
+  <div class="ast-post-format- has-post-thumbnail blog-layout-4 ast-article-inner">
+    <div class="post-thumb-img-content">
       <a href="/health/body-fat-loss-calorie-deficit-calculator/">
-        <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=800&h=450&fit=crop&q=80" alt="체지방 1kg 감량에 필요한 칼로리 적자 계산과 다이어트 식단" width="220" height="140" style="width:100%; height:140px; object-fit:cover; display:block;">
+        <img src="/health/body-fat-loss-calorie-deficit-calculator/thumbnail.png" alt="체지방 1kg 빼는 칼로리와 현실적인 일일 감량 식단 계산법">
       </a>
     </div>
-    <div class="entry-header">
-      <div class="entry-meta" style="font-size:0.85rem; color:#64748b; margin-bottom:6px;">
-        <span>건강,영양</span> · <span>10월 8, 2026</span>
-      </div>
-      <h2 class="entry-title" style="font-size:1.22rem; font-weight:700; margin:0 0 8px; line-height:1.4;">
-        <a href="/health/body-fat-loss-calorie-deficit-calculator/" style="color:#0f172a; text-decoration:none;">체지방 1kg 빼는 칼로리와 현실적인 일일 감량 식단 계산법</a>
+    <div class="post-content ast-grid-common-col">
+      <span class="ast-blog-single-element ast-taxonomy-container cat-links default"><a href="/blog" rel="category tag">건강,영양</a></span>
+      <h2 class="entry-title ast-blog-single-element" itemprop="headline">
+        <a href="/health/body-fat-loss-calorie-deficit-calculator/" rel="bookmark">체지방 1kg 빼는 칼로리와 현실적인 일일 감량 식단 계산법</a>
       </h2>
-      <p style="font-size:0.9rem; color:#475569; margin:0 0 10px; line-height:1.5;">체지방 1kg을 빼려면 정확히 7,700kcal의 에너지 적자가 필요합니다. 기초대사량과 활동대사량(TDEE) 계산법, 요요 없는 하루 500kcal 적자 식단 및 운동 소모 칼로리 공식을 정리했습니다.</p>
-      <div style="font-size:0.8rem; color:#0284c7; font-weight:600;">
+      <header class="entry-header ast-blog-single-element ast-blog-meta-container">
+        <div class="entry-meta"><span class="posted-by vcard author"><a title="건강노트의 모든 글 보기" href="/about" rel="author" class="url fn n"><span class="author-name">건강노트</span></a></span> / <span class="posted-on"><span class="published"> 10월 8, 2026 </span></span></div>
+      </header>
+      <div class="ast-excerpt-container ast-blog-single-element">
+        <p>체지방 1kg을 빼려면 정확히 7,700kcal의 에너지 적자가 필요합니다. 기초대사량과 활동대사량(TDEE) 계산법, 요요 없는 하루 500kcal 적자 식단 및 운동 소모 칼로리 공식을 정리했습니다.</p>
+      </div>
+      <div style="font-size:0.82rem; color:#0284c7; font-weight:600; margin-top:4px;">
         연관 계산기: <a href="/calorie" style="color:#0284c7; text-decoration:underline;">하루 칼로리·기초대사량</a> · <a href="/exercise" style="color:#0284c7; text-decoration:underline;">운동 소모 칼로리</a>
       </div>
     </div>
