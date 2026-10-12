@@ -14,9 +14,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="index, follow">
   <title>알코올 분해 시간 & 주량 계산기 | 소주·맥주 숙취 해소 계산 | 건강노트</title>
-  <meta name="description" content="성별, 체중, 마신 술(소주·맥주 잔 수)을 입력하면 위드마크(Widmark) 공식을 기반으로 혈중알코올농도와 몸에서 알코올이 완전히 분해되는 예상 시간을 계산합니다.">
+  <meta name="description" content="성별, 체중, 마신 술(소주·맥주 잔 수)을 입력하면 위드마크(Widmark) 공식을 기반으로 혈중알코올농도와 알코올 분해 시간 추정치을 계산합니다.">
   <meta property="og:title" content="알코올 분해 시간 & 주량 계산기 | 건강노트">
-  <meta property="og:description" content="소주와 맥주 마신 후 완전 해독까지 몇 시간이 걸리는지 위드마크 공식으로 즉시 확인하세요.">
+  <meta property="og:description" content="소주와 맥주 마신 후 알코올 분해 시간을 위드마크 공식으로 즉시 확인하세요.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://healthfit100.com/images/thumbnails/tool_alcohol.png" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -56,11 +56,11 @@
       <a href="/" class="nav-logo">건강노트</a>
       <ul class="nav-menu">
         <li class="dropdown">
-          <a href="#" class="dropbtn">건강 진단·분석</a>
+          <a href="#" class="dropbtn">건강 정보·생활습관 점검</a>
           <div class="dropdown-content">
             <a href="/routine">영양제 복용 플래너</a>
             <a href="/checkup">건강검진 수치 해석기</a>
-            <a href="/quiz">맞춤 건강 자가진단</a>
+            <a href="/quiz">생활습관 점검</a>
           </div>
         </li>
         <li class="dropdown">
@@ -88,7 +88,7 @@
       <section class="tool-section">
         <span style="background:#fee2e2; color:#b91c1c; padding:4px 12px; border-radius:999px; font-size:0.85rem; font-weight:700; display:inline-block; margin-bottom:10px;">간 건강 & 음주 계산</span>
         <h1>알코올 분해 시간 & 주량 계산기</h1>
-        <p class="subtitle">체중과 성별, 마신 술의 종류와 잔 수를 입력해 보세요. 위드마크(Widmark) 공식을 기반으로 체내 알코올 완전 분해 소요 시간을 계산합니다.</p>
+        <p class="subtitle">체중과 성별, 마신 술의 종류와 잔 수를 입력해 보세요. 위드마크(Widmark) 공식을 기반으로 체내 알코올 분해 시간을 추정을 계산합니다.</p>
         <div class="tool-preview-wrap" style="max-width:760px; margin:0 auto 28px; border-radius:16px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,0.06); border:1px solid #e2e8f0;">
           <img src="/images/thumbnails/banner_alcohol.jpg" alt="위드마크(Widmark) 공식 기준 체내 알코올 분해 시간" style="width:100%; height:auto; aspect-ratio:16/9; object-fit:cover; display:block;">
         </div>
@@ -122,11 +122,11 @@
           <button id="calc-alcohol-btn" class="btn-primary" style="width:100%; font-size:1.05rem;">알코올 분해 시간 계산하기</button>
 
           <div id="alcohol-result" style="display:none; margin-top:28px; text-align:center; background:#f8fafc; border:1px solid #e2e8f0; border-radius:16px; padding:24px;">
-            <p style="margin:0 0 6px; font-size:0.85rem; color:#64748b;">체내 알코올 완전 분해 예상 소요 시간</p>
+            <p style="margin:0 0 6px; font-size:0.85rem; color:#64748b;">알코올 분해 시간 추정치</p>
             <h2 id="time-hours" style="margin:0; font-size:2.5rem; font-weight:800; color:#0284c7;">약 4시간 15분</h2>
             <p id="bac-peak" style="margin:8px 0 0; font-size:0.95rem; font-weight:700; color:#475569;"></p>
             <div style="background:#fff; border:1px solid #cbd5e1; border-radius:10px; padding:12px 16px; margin-top:16px; font-size:0.86rem; color:#be123c;">
-              [주의] 개인의 간 기능, 수면, 음식 섭취량에 따라 오차가 발생할 수 있습니다. 숙취가 남아있다면 절대로 운전대를 잡지 마세요!
+              [주의] 개인의 간 기능, 수면, 음식 섭취량에 따라 오차가 발생할 수 있습니다. 숙취 유무와 관계없이 이 결과로 운전 가능 여부를 판단하지 마세요. 실제 혈중알코올농도나 안전을 보장하지 않습니다.
             </div>
           </div>
         </div>
@@ -136,15 +136,15 @@
 
       <article class="content-rich">
         <h2>위드마크(Widmark) 공식이란?</h2>
-        <p>위드마크 공식은 경찰청의 음주운전 단속 및 법의학에서 음주 후 시간 경과에 따른 혈중알코올농도를 추정할 때 공인으로 사용하는 계산식입니다.</p>
+        <p>위드마크 공식은 음주량과 체중 등을 이용해 혈중알코올농도를 추정하는 모형입니다. 이 사이트의 계산기는 공식 측정이나 법적 판단을 대신하지 않습니다.</p>
         <div class="content-img-wrap" style="margin:26px 0 32px; border-radius:14px; overflow:hidden; border:1px solid #e2e8f0; box-shadow:0 4px 14px rgba(0,0,0,0.04);">
           <img src="/images/tools/alcohol_guide.png" alt="위드마크(Widmark) 공식 기준 체내 알코올 분해 시간" style="width:100%; height:auto; display:block;" loading="lazy">
           <div style="background:#f8fafc; padding:10px 16px; font-size:0.84rem; color:#64748b; text-align:center; border-top:1px solid #e2e8f0;">
-            ▲ 도로교통공단 및 경찰청 공인 위드마크 알코올 분해 추정치
+            ▲ 위드마크 모형을 활용한 계산 예시 — 기관의 인증·감수를 받은 도구가 아닙니다.
           </div>
         </div>
         <blockquote>알코올 소비량(g) = 마신 양(ml) × 알코올 도수(%) × 알코올 비중(0.7894)</blockquote>
-        <p>섭취한 알코올 총량을 체중과 성별에 따른 체내 수분 계수(남성 0.7, 여성 0.6)로 나누어 최고 혈중알코올농도를 산출한 뒤, 시간당 분해 속도(시간당 약 0.015% 감소)를 적용해 해독 시간을 추정합니다.</p>
+        <p>섭취한 알코올 총량을 체중과 성별에 따른 체내 수분 계수(남성 0.7, 여성 0.6)로 나누어 최고 혈중알코올농도를 산출한 뒤, 시간당 분해 속도(시간당 약 0.015% 감소)를 적용해 분해 시간을 추정합니다. 실제 흡수·분해 속도는 개인과 음주 상황에 따라 다릅니다.</p>
 
         <h2>간을 보호하는 음주 3대 원칙</h2>
         <ul>
@@ -182,7 +182,7 @@
         <ul>
           <li><a href="/routine">영양제 복용 플래너</a></li>
           <li><a href="/checkup">건강검진 수치 해석기</a></li>
-          <li><a href="/quiz">맞춤 건강 자가진단</a></li>
+          <li><a href="/quiz">생활습관 점검</a></li>
           <li><a href="/bmi">BMI·표준체중 계산기</a></li>
           <li><a href="/calorie">하루 칼로리·기초대사량</a></li>
           <li><a href="/protein">단백질 섭취량 계산기</a></li>

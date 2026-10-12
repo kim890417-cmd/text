@@ -13,10 +13,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="index, follow">
-  <title>30초 맞춤 건강 자가진단 퀴즈 | 나에게 필요한 1순위 루틴은? | 건강노트</title>
-  <meta name="description" content="간단한 4가지 질문으로 나의 현재 생활 패턴과 피로 원인을 분석하고, 지금 나에게 가장 시급한 1순위 건강 관리법과 영양소를 맞춤 처방해 드립니다.">
-  <meta property="og:title" content="30초 맞춤 건강 자가진단 퀴즈 | 건강노트">
-  <meta property="og:description" content="피로도, 식습관, 운동량을 분석해 나에게 꼭 필요한 1순위 건강 관리법을 30초 만에 찾아보세요.">
+  <title>30초 생활습관 점검 퀴즈 | 식사·활동·수면 돌아보기 | 건강노트</title>
+  <meta name="description" content="4가지 질문으로 식사·활동·수면 습관을 돌아보고 관련 건강 정보를 확인하세요. 질환이나 영양 결핍을 판정하는 검사는 아닙니다.">
+  <meta property="og:title" content="30초 생활습관 점검 퀴즈 | 건강노트">
+  <meta property="og:description" content="식사·활동·수면 습관을 돌아보고 관련 건강 정보를 확인하세요. 의료적인 진단이나 처방을 제공하지 않습니다.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://healthfit100.com/images/thumbnails/tool_quiz.png" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -101,11 +101,11 @@
       <a href="/" class="nav-logo">건강노트</a>
       <ul class="nav-menu">
         <li class="dropdown">
-          <a href="#" class="dropbtn">건강 진단·분석</a>
+          <a href="#" class="dropbtn">건강 정보·생활습관 점검</a>
           <div class="dropdown-content">
             <a href="/routine">영양제 복용 플래너</a>
             <a href="/checkup">건강검진 수치 해석기</a>
-            <a href="/quiz">맞춤 건강 자가진단</a>
+            <a href="/quiz">생활습관 점검</a>
           </div>
         </li>
         <li class="dropdown">
@@ -131,12 +131,9 @@
   <main>
     <div class="container">
       <section class="tool-section">
-        <span style="background:#f3e8ff; color:#7e22ce; padding:4px 12px; border-radius:999px; font-size:0.85rem; font-weight:700; display:inline-block; margin-bottom:10px;">30초 인터랙티브 자가진단</span>
-        <h1>나만의 맞춤 건강 루틴 자가진단</h1>
-        <p class="subtitle">체크하기 쉬운 4가지 질문을 통해 지금 내 몸이 가장 필요로 하는 1순위 집중 관리법과 맞춤 영양소를 찾아드립니다.</p>
-        <div class="tool-preview-wrap" style="max-width:760px; margin:0 auto 28px; border-radius:16px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,0.06); border:1px solid #e2e8f0;">
-          <img src="/images/thumbnails/banner_quiz.jpg" alt="건강노트 30초 라이프스타일 자가진단 & 1순위 케어 영역" style="width:100%; height:auto; aspect-ratio:16/9; object-fit:cover; display:block;">
-        </div>
+        <span style="background:#f3e8ff; color:#7e22ce; padding:4px 12px; border-radius:999px; font-size:0.85rem; font-weight:700; display:inline-block; margin-bottom:10px;">30초 생활습관 점검</span>
+        <h1>나의 생활습관 돌아보기</h1>
+        <p class="subtitle">4가지 질문으로 식사·활동·수면 습관을 돌아봅니다. 결과는 질환이나 영양 결핍의 진단이 아닌 일반적인 참고 안내입니다.</p>
 
         <div class="quiz-container">
           <div class="progress-bar-bg">
@@ -152,12 +149,12 @@
           </div>
 
           <div class="result-box" id="quiz-result-area">
-            <span style="background:#dcfce7; color:#15803d; padding:4px 14px; border-radius:999px; font-size:0.85rem; font-weight:700; display:inline-block; margin-bottom:12px;">[완료] 진단 완료</span>
+            <span style="background:#dcfce7; color:#15803d; padding:4px 14px; border-radius:999px; font-size:0.85rem; font-weight:700; display:inline-block; margin-bottom:12px;">[완료] 생활습관 점검 완료</span>
             <h2 id="result-title" style="margin:0 0 12px; font-size:1.6rem; color:#0f172a; font-weight:800;"></h2>
             <p id="result-desc" style="margin:0 0 24px; font-size:0.95rem; color:#334155; line-height:1.7;"></p>
 
             <div style="background:#fff; border:1px solid #bbf7d0; border-radius:14px; padding:20px; text-align:left; margin-bottom:20px;">
-              <h4 style="margin:0 0 10px; font-size:1.05rem; color:#15803d;">[추천] 당신을 위한 3대 핵심 실천 솔루션</h4>
+              <h4 style="margin:0 0 10px; font-size:1.05rem; color:#15803d;">돌아볼 생활습관 3가지</h4>
               <ul id="result-solutions" style="margin:0; padding-left:20px; font-size:0.92rem; color:#1e293b; line-height:1.7;"></ul>
             </div>
 
@@ -166,7 +163,7 @@
               <div id="result-links" style="display:flex; flex-direction:column; gap:8px;"></div>
             </div>
 
-            <button onclick="resetQuiz()" class="btn-primary" style="margin-top:24px; width:100%;">처음부터 다시 진단하기</button>
+            <button onclick="resetQuiz()" class="btn-primary" style="margin-top:24px; width:100%;">처음부터 다시 점검하기</button>
           </div>
         </div>
       </section>
@@ -175,9 +172,9 @@
 
       <article class="content-rich">
         <h2>스스로의 건강 이상 신호를 알아차리는 법</h2>
-        <p>우리 몸은 큰 질환이 생기기 전 항상 미세한 경고 신호를 보냅니다. 식후에 참을 수 없이 쏟아지는 졸음은 혈당 스파이크의 신호이며, 아침 기상 시 찌뿌둥한 목덜미는 혈압과 수면의 이상 신호일 수 있습니다.</p>
+        <p>피로, 졸음, 목의 불편감에는 다양한 원인이 있습니다. 증상만으로 혈당이나 혈압 이상을 판단할 수 없습니다. 증상이 반복되거나 일상에 지장을 준다면 의료진과 상담하세요.</p>
         <div class="content-img-wrap" style="margin:26px 0 32px; border-radius:14px; overflow:hidden; border:1px solid #e2e8f0; box-shadow:0 4px 14px rgba(0,0,0,0.04);">
-          <img src="/images/tools/quiz_guide.png" alt="건강노트 30초 라이프스타일 자가진단 & 1순위 케어 영역" style="width:100%; height:auto; display:block;" loading="lazy">
+          <img src="/images/tools/quiz_guide.png" alt="건강노트 생활습관 점검 안내" style="width:100%; height:auto; display:block;" loading="lazy">
           <div style="background:#f8fafc; padding:10px 16px; font-size:0.84rem; color:#64748b; text-align:center; border-top:1px solid #e2e8f0;">
             ▲ 건강노트 임상 연구 기반 1:1 라이프스타일 자가진단 리포트
           </div>
@@ -214,7 +211,7 @@
         <ul>
           <li><a href="/routine">영양제 복용 플래너</a></li>
           <li><a href="/checkup">건강검진 수치 해석기</a></li>
-          <li><a href="/quiz">맞춤 건강 자가진단</a></li>
+          <li><a href="/quiz">생활습관 점검</a></li>
           <li><a href="/bmi">BMI·표준체중 계산기</a></li>
           <li><a href="/calorie">하루 칼로리·기초대사량</a></li>
           <li><a href="/protein">단백질 섭취량 계산기</a></li>
@@ -247,7 +244,7 @@
         options: [
           { text: "점심 식사 후 1~2시간 뒤 (눈꺼풀이 무겁고 극심한 식곤증)", type: "sugar" },
           { text: "아침에 일어났을 때 (목덜미가 뻐근하고 개운하지 않음)", type: "bp" },
-          { text: "오후 내내 만성적인 멍함과 피로감 (간 피로 및 해독 저하)", type: "liver" },
+          { text: "오후에 반복되는 멍함과 피로감", type: "liver" },
           { text: "계절이 바뀌거나 실내에 오래 있을 때 (면역 저하 및 뼈마디 쑤심)", type: "vitd" }
         ]
       },
@@ -327,8 +324,8 @@
 
       const results = {
         sugar: {
-          title: "'혈당 스파이크 & 급격한 식곤증' 집중 케어반",
-          desc: "정제 탄수화물과 식후 혈당 급상승으로 인해 췌장이 지치고 인슐린이 요동치고 있는 상태입니다. 식후 졸음과 뱃살 축적을 막기 위한 식사 순서 개선이 가장 시급합니다.",
+          title: "식사 구성과 식후 활동 돌아보기",
+          desc: "응답을 바탕으로 식사 구성과 식후 활동을 돌아보도록 안내합니다. 졸음만으로 혈당 이상을 판단할 수는 없습니다. 증상이 반복되면 의료진과 상담하세요.",
           solutions: [
             "식이섬유(채소) → 단백질 → 탄수화물 순서로 먹는 <strong>'거꾸로 식사법'</strong>을 매 끼니 실천하세요.",
             "식사 후 눕지 말고 15분간 가볍게 동네를 산책하거나 제자리 스쿼트를 하세요.",
@@ -341,11 +338,11 @@
           ]
         },
         bp: {
-          title: "'혈관 탄력 & 혈압 안정' 집중 케어반",
-          desc: "과도한 염분(나트륨) 섭취와 스트레스, 좌식 생활로 인해 혈관의 긴장도가 높아져 있습니다. 혈압이 더 오르기 전에 나트륨을 배출하고 혈관 벽을 이완시켜야 합니다.",
+          title: "염분 섭취와 활동량 돌아보기",
+          desc: "응답을 바탕으로 짠 음식 섭취와 활동량을 살펴보도록 안내합니다. 혈압 상태는 실제 측정과 의료진의 평가로 확인해야 합니다.",
           solutions: [
             "찌개나 국물 요리의 국물을 남기고 염분 섭취를 절반으로 줄이세요.",
-            "칼륨이 풍부한 시금치, 바나나, 토마토를 섭취해 체내 나트륨을 소변으로 배출하세요.",
+            "채소와 과일을 포함한 균형 잡힌 식사를 고려하세요. 신장질환이 있거나 칼륨에 영향을 주는 약을 복용한다면 식단 변경 전 의료진과 상담하세요.",
             "주 4회 이상 빠르게 걷기 등 유산소 운동을 30분씩 꾸준히 실천하세요."
           ],
           links: [
@@ -355,11 +352,11 @@
           ]
         },
         liver: {
-          title: "'간 피로 회복 & 독소 해독' 집중 케어반",
-          desc: "간에 중성지방이 끼는 비알코올성 지방간 위험 또는 무분별한 건강즙 복용 등으로 인해 해독 기관인 간이 지쳐 있는 상태입니다. 피로 회복을 위해 간세포 휴식이 필요합니다.",
+          title: "음주·보충제·수면 습관 돌아보기",
+          desc: "피로에는 수면 부족 등 여러 원인이 있습니다. 이 문진으로 지방간이나 간 기능 이상을 확인할 수 없습니다. 피로가 지속되거나 검진 결과가 비정상이면 진료를 받으세요.",
           solutions: [
-            "현재 먹고 있는 성분 불명 즙이나 과도한 영양제를 2주간 일시 중단해 보세요.",
-            "체중의 5% 감량을 목표로 잡으세요 (간 내 지방과 염증이 현저히 감소합니다).",
+            "복용 중인 약·영양제·건강즙 목록을 정리해 의사 또는 약사에게 중복 성분과 필요성을 확인하세요. 처방약은 임의로 중단하지 마세요.",
+            "체중 관리가 필요한지는 체중·허리둘레와 건강 상태를 함께 살펴보고 의료진과 목표를 정하세요.",
             "알코올 섭취를 최소 한 달간 중단하고 저녁 11시 이전 취침하세요."
           ],
           links: [
@@ -369,12 +366,12 @@
           ]
         },
         vitd: {
-          title: "'햇빛 결핍 & 면역·뼈 건강' 집중 케어반",
-          desc: "실내 생활 비중이 높아 한국인 80%가 겪는 전형적인 비타민D 및 미네랄 부족형입니다. 뼈 건강과 면역 체계가 약화될 수 있으므로 영양 보충이 필요합니다.",
+          title: "실외 활동과 식사 다양성 돌아보기",
+          desc: "응답을 바탕으로 실외 활동과 식사 다양성을 돌아보도록 안내합니다. 문진으로 비타민D나 미네랄 결핍을 판정할 수 없으며 보충제가 반드시 필요한 것은 아닙니다.",
           solutions: [
-            "점심 식사 직후 흡수율을 높여 비타민D(1,000~2,000 IU)를 꾸준히 복용하세요.",
-            "비타민D 활성화를 위해 마그네슘이 풍부한 견과류나 보충제를 함께 챙기세요.",
-            "점심시간 15분 이상 팔과 다리를 노출하고 햇빛을 쬐세요."
+            "보충제를 시작하기 전 식사와 기존 제품의 비타민D 함량을 확인하고, 필요성과 용량은 의료진 또는 약사와 상의하세요.",
+            "견과류·콩류 등 다양한 식품을 식사에 포함해 보세요. 마그네슘 보충제를 일률적으로 추가할 필요는 없습니다.",
+            "피부 상태와 날씨를 고려해 무리 없는 실외 활동을 계획하세요. 햇빛 노출만으로 결핍 여부나 보충 필요성을 판단할 수는 없습니다."
           ],
           links: [
             { text: "비타민D 복용시간과 하루 권장량, 마그네슘 결합 가이드 →", url: "/health/vitamin-d-benefits-daily-intake-timing/" },
