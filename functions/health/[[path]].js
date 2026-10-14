@@ -4,7 +4,13 @@ export async function onRequest(context) {
   const contentType = response.headers.get('content-type') || '';
   if (!contentType.includes('text/html')) return response;
 
-  let html = await response.text();
+  // Magazine pages already contain their navigation, footer and responsive CSS.
+  // Keep the original response: the legacy shell's global main flex rules
+  // force article content to its table min-width and clip it on phones.
+  let html = await response.clone().text();
+  if (/<link\b[^>]*href=["'][^"']*\/magazine\.css(?:[?"'])/i.test(html)) {
+    return response;
+  }
 
   html = html
     .replace(/<link\s+rel=["'](?:icon|apple-touch-icon)["'][^>]*>\s*/gi, '')
