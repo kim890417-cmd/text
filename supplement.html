@@ -54,16 +54,10 @@
               <option value="omega3">오메가-3 (EPA+DHA)</option>
             </select>
           </div>
-          <div style="margin-bottom: 22px;">
-            <label style="font-weight:600; font-size:0.95rem;">성별</label>
-            <div style="display:flex; gap:16px; margin-top:8px;">
-              <label style="cursor:pointer;"><input type="radio" name="gender" value="male" checked> 남성</label>
-              <label style="cursor:pointer;"><input type="radio" name="gender" value="female"> 여성</label>
-            </div>
-          </div>
+
           <button id="calc-button" class="btn-primary" style="width:100%;">조회하기</button>
 
-          <div id="result-area" style="display:none; margin-top: 28px;">
+          <div id="result-area" aria-live="polite" style="display:none; margin-top: 28px;">
             <p id="nut-name" style="margin:0 0 14px; text-align:center; font-weight:800; font-size:1.3rem; color:#007bff;"></p>
             <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:16px;">
               <div style="text-align:center; background:#e8f4ff; border-radius:12px; padding:16px;">
@@ -160,9 +154,8 @@
 
     document.getElementById('calc-button').addEventListener('click', () => {
       const key = document.getElementById('nutrient').value;
-      const gender = document.querySelector('input[name="gender"]:checked').value;
       const d = DATA[key];
-      const rda = (typeof d.rda === 'object') ? d.rda[gender] : d.rda;
+      const rda = d.rda;
       document.getElementById('nut-name').textContent = d.name;
       document.getElementById('rda-value').textContent = rda;
       document.getElementById('ul-value').textContent = d.ul;

@@ -64,17 +64,17 @@
         <div class="tool-box" style="padding:30px; max-width:560px; margin:0 auto;">
           <div class="exercise-grid">
             <div class="exercise-group">
-              <label>체중 (kg)</label>
-              <input type="number" id="weight" value="65" placeholder="예: 65">
+              <label for="weight">체중 (kg)</label>
+              <input type="number" id="weight" min="1" step="any" value="65" placeholder="예: 65">
             </div>
             <div class="exercise-group">
-              <label>운동 시간 (분)</label>
-              <input type="number" id="duration" value="30" placeholder="예: 30">
+              <label for="duration">운동 시간 (분)</label>
+              <input type="number" id="duration" min="1" step="any" value="30" placeholder="예: 30">
             </div>
           </div>
 
           <div class="exercise-group" style="margin-bottom:24px;">
-            <label>운동 종목 선택</label>
+            <label for="exercise-type">운동 종목 선택</label>
             <select id="exercise-type">
               <option value="3.0">가볍게 산책·걷기 (3.0 MET)</option>
               <option value="4.5" selected>빠르게 걷기 / 파워워킹 (4.5 MET)</option>
@@ -91,7 +91,8 @@
 
           <button id="calc-exercise-btn" class="btn-primary" style="width:100%; font-size:1.05rem;">소모 칼로리 계산하기</button>
 
-          <div id="exercise-result" style="display:none; margin-top:28px; background:#f8fafc; border:1px solid #e2e8f0; border-radius:16px; padding:24px; text-align:center;">
+          <p id="exercise-error" role="alert" style="color:#a52b2b;margin-top:12px;"></p>
+          <div id="exercise-result" aria-live="polite" style="display:none; margin-top:28px; background:#f8fafc; border:1px solid #e2e8f0; border-radius:16px; padding:24px; text-align:center;">
             <p style="margin:0 0 6px; font-size:0.85rem; color:#64748b;">예상 총 소모 칼로리</p>
             <h2 id="calories-burned" style="margin:0; font-size:2.5rem; font-weight:800; color:#0284c7;">153 kcal</h2>
             <div style="display:flex; justify-content:center; gap:20px; margin-top:16px; border-top:1px solid #e2e8f0; padding-top:16px;">
@@ -120,9 +121,16 @@
     document.getElementById('calc-exercise-btn').addEventListener('click', calculateCalories);
 
     function calculateCalories() {
-      const weight = parseFloat(document.getElementById('weight').value) || 65;
-      const duration = parseFloat(document.getElementById('duration').value) || 30;
-      const met = parseFloat(document.getElementById('exercise-type').value) || 4.5;
+      const weight = Number(document.getElementById('weight').value);
+      const duration = Number(document.getElementById('duration').value);
+      const met = Number(document.getElementById('exercise-type').value);
+      const error = document.getElementById('exercise-error');
+      error.textContent = '';
+      if (![weight, duration, met].every(value => Number.isFinite(value) && value > 0)) {
+        document.getElementById('exercise-result').style.display = 'none';
+        error.textContent = '체중과 운동 시간을 0보다 큰 숫자로 입력하고 운동 종목을 선택해 주세요.';
+        return;
+      }
 
       // kcal = 0.0175 * MET * weight * minutes
       const calories = Math.round(0.0175 * met * weight * duration);
