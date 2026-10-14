@@ -13,10 +13,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="index, follow">
-  <title>운동 소모 칼로리 계산기 | 종목별·시간별 칼로리 소비량 조회 | 건강노트</title>
-  <meta name="description" content="체중과 운동 종목(걷기, 조깅, 웨이트, 자전거, 등산, 수영 등), 운동 시간을 입력하면 MET(신진대사 해당치) 공식을 바탕으로 총 소비 칼로리와 체지방 연소량을 즉시 계산합니다.">
-  <meta property="og:title" content="운동 소모 칼로리 계산기 | 건강노트">
-  <meta property="og:description" content="운동 종목과 체중에 따른 소비 칼로리와 체지방 감량 효과를 MET 공식으로 확인하세요.">
+  <title>운동 소모 칼로리 계산기 | MET와 워치 결과 비교 | 건강노트</title>
+  <meta name="description" content="MET·체중·시간으로 운동 중 총소비량을 추정합니다. 실제 체지방 연소량을 측정하지 않습니다.">
+  <meta property="og:title" content="운동 소모 칼로리 계산기 | MET와 워치 결과 비교">
+  <meta property="og:description" content="MET·체중·시간으로 운동 중 총소비량을 추정합니다. 실제 체지방 연소량을 측정하지 않습니다.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://healthfit100.com/images/thumbnails/tool_exercise.png" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -49,49 +49,17 @@
       box-sizing: border-box;
     }
   </style>
-</head>
-<body>
-      <nav class="navbar">
-    <div class="nav-container">
-      <a href="/" class="nav-logo">건강노트</a>
-      <ul class="nav-menu">
-        <li class="dropdown">
-          <a href="#" class="dropbtn">건강 정보·생활습관 점검</a>
-          <div class="dropdown-content">
-            <a href="/routine">영양제 복용 플래너</a>
-            <a href="/checkup">건강검진 수치 해석기</a>
-            <a href="/quiz">생활습관 점검</a>
-          </div>
-        </li>
-        <li class="dropdown">
-          <a href="#" class="dropbtn">건강 계산기</a>
-          <div class="dropdown-content">
-            <a href="/bmi">BMI·표준체중</a>
-            <a href="/calorie">하루 칼로리·기초대사량</a>
-            <a href="/protein">단백질 섭취량</a>
-            <a href="/exercise">운동 소모 칼로리</a>
-            <a href="/water">물 섭취량 계산</a>
-            <a href="/caffeine">카페인 안전 섭취량</a>
-            <a href="/alcohol">알코올 분해 시간</a>
-            <a href="/supplement">영양제 권장·상한량</a>
-          </div>
-        </li>
-        <li><a href="/blog">건강 칼럼</a></li>
-        <li><a href="/about">소개</a></li>
-        <li><a href="/contact">문의하기</a></li>
-      </ul>
-    </div>
-  </nav>
+<link rel="stylesheet" href="/magazine.css?v=20261014-magazine1"></head>
+<body class="legacy-page">
+      <a class="skip" href="#main">본문 바로가기</a><header class="masthead"><div class="utility"><span>건강을 집요하게 확인하는 고양이, 노트</span><div><a href="/about">운영자·노트 소개</a><a href="/contact">문의·정정</a></div></div><div class="masthead-main"><details class="all-menu"><summary aria-label="전체 메뉴 열기">☰ <span>전체 메뉴</span></summary><div class="mega"><div><h3><a href="/topics/diet/">식단·체중</a></h3><a href="/health/bmr-basal-metabolic-rate-formula/">기초대사량 계산과 인바디가 다를 때, 섭취 목표로 쓰기 전 확인</a><a href="/health/body-fat-loss-calorie-deficit-calculator/">체지방 1kg·7,700kcal 계산, 체중이 예상대로 안 줄 때 볼 것</a><a href="/health/exercise-calories-burned-met-calculator/">운동 칼로리 계산, 워치의 총칼로리와 활동칼로리 비교하기</a><a href="/health/fasting-cardio-fat-loss-timing/">공복 유산소와 식후 운동, 체지방보다 먼저 비교할 지속 조건</a></div><div><h3><a href="/topics/nutrition/">영양제·표시 읽기</a></h3><a href="/health/calcium-daily-recommended-intake-timing/">칼슘 영양제 함량 읽기, 화합물 무게와 하루 섭취량 구분하기</a><a href="/health/iron-anemia-side-effects/">철분제 먹기 전 검사표 읽기, 헤모글로빈과 페리틴을 나눠 보는 이유</a><a href="/health/lutein-benefits-evidence/">루테인 눈 피로 효과를 읽을 때, AREDS2 대상부터 확인하기</a><a href="/health/lutein-timing-with-meals/">루테인 복용시간 정하기, 식후 몇 분보다 먼저 볼 제품 표시</a></div><div><h3><a href="/topics/checkup/">검사표·수치</a></h3><a href="/health/blood-pressure-stages-hypertension-diet/">가정혈압 기록하는 법, 집과 병원 수치가 다를 때 확인할 조건</a><a href="/health/blood-sugar-spike-prevention-diet/">식후 졸음과 혈당 스파이크, 느낌과 측정값을 구분하는 기록법</a><a href="/health/bmi-calculator-korean-standard/">BMI 24는 정상일까? 한국·해외 기준이 다를 때 읽는 순서</a><a href="/health/cholesterol-test-results-guide/">콜레스테롤 검사표 읽기, 같은 총수치라도 구성이 다른 이유</a></div><div><h3><a href="/topics/life/">생활·수면</a></h3><a href="/health/acid-reflux-gerd-symptoms-diet-foods/">역류성 식도염 식후 눕는 시간, 음식 목록보다 먼저 남길 기록</a><a href="/health/caffeine-daily-intake-limit-side-effects/">카페인 하루 섭취량 계산, 커피 외에 빠뜨리기 쉬운 음료들</a><a href="/health/daily-water-intake-calculator-benefits/">하루 물 섭취량 계산, 생수와 음식 속 수분을 따로 기록하기</a><a href="/health/dry-eyes-fatigue-lutein-iron-benefits/">화면 볼 때 눈 뻑뻑함, 루테인 구매 전에 확인할 생활 조건</a></div><div><h3>기록과 도구</h3><a href="/#tools">계산기·플래너</a><a href="https://app.healthfit100.com/">건강노트 앱</a><a href="/privacy">개인정보처리방침</a><a href="/terms">이용약관</a></div></div></details><a class="wordmark" href="/">건강노트</a><a class="brand-cat" href="/about"><img src="/images/note/note-glucose.webp" alt="은색 모자를 쓴 흰 고양이 노트" width="52" height="52"><span>NOTE’S<br>HEALTH JOURNAL</span></a></div><nav class="topic-nav" aria-label="주제별 메뉴"><a href="/">홈</a><a href="/topics/diet/">식단·체중</a><a href="/topics/nutrition/">영양제·표시 읽기</a><a href="/topics/checkup/">검사표·수치</a><a href="/topics/life/">생활·수면</a><a href="/#tools">계산기·기록</a><a href="/blog">전체 글</a></nav></header>
 
-  <main>
+  <main id="main">
     <div class="container">
       <section class="tool-section">
         <span style="background:#e0f2fe; color:#0369a1; padding:4px 12px; border-radius:999px; font-size:0.85rem; font-weight:700; display:inline-block; margin-bottom:10px;">운동 & 다이어트 계산</span>
         <h1>운동 소모 칼로리 계산기</h1>
-        <p class="subtitle">체중과 운동 종목, 운동 시간을 선택해 보세요. 미국 스포츠의학회(ACSM)의 MET 공식을 기반으로 실제 소모 칼로리와 체지방 연소량을 정밀 계산합니다.</p>
-        <div class="tool-preview-wrap" style="max-width:760px; margin:0 auto 28px; border-radius:16px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,0.06); border:1px solid #e2e8f0;">
-          <img src="/images/thumbnails/banner_exercise.jpg" alt="운동 종목별 시간당 칼로리 소모량 (METs 기준 / 65kg)" style="width:100%; height:auto; aspect-ratio:16/9; object-fit:cover; display:block;">
-        </div>
+        <p class="subtitle">MET·체중·시간으로 운동 중 총소비량을 추정합니다. 실제 체지방 연소량을 측정하지 않습니다.</p>
+        <div class="tool-note-intro"><img src="/images/note/note-glucose.webp" width="80" height="80" alt="고양이 노트의 설명용 일러스트"><p>노트는 계산값만 보기보다 입력 조건과 결과의 한계를 함께 확인합니다.</p></div>
 
         <div class="tool-box" style="padding:30px; max-width:560px; margin:0 auto;">
           <div class="exercise-grid">
@@ -128,7 +96,7 @@
             <h2 id="calories-burned" style="margin:0; font-size:2.5rem; font-weight:800; color:#0284c7;">153 kcal</h2>
             <div style="display:flex; justify-content:center; gap:20px; margin-top:16px; border-top:1px solid #e2e8f0; padding-top:16px;">
               <div>
-                <p style="margin:0; font-size:0.8rem; color:#64748b;">체지방 연소 환산</p>
+                <p style="margin:0; font-size:0.8rem; color:#64748b;">7,700kcal/kg 단순 환산</p>
                 <strong id="fat-burned" style="font-size:1.1rem; color:#15803d;">약 20g</strong>
               </div>
               <div>
@@ -142,75 +110,11 @@
 
       <hr class="divider">
 
-      <article class="content-rich">
-        <h2>MET(신진대사 해당치) 공식이란?</h2>
-        <p>MET(Metabolic Equivalent of Task)는 가만히 앉아 쉬고 있을 때 소비하는 에너지(1 MET)를 기준으로, 특정 운동을 할 때 에너지를 몇 배 더 소비하는지 나타내는 표준 지표입니다.</p>
-        <div class="content-img-wrap" style="margin:26px 0 32px; border-radius:14px; overflow:hidden; border:1px solid #e2e8f0; box-shadow:0 4px 14px rgba(0,0,0,0.04);">
-          <img src="/images/tools/exercise_guide.png" alt="운동 종목별 시간당 칼로리 소모량 (METs 기준 / 65kg)" style="width:100%; height:auto; display:block;" loading="lazy">
-          <div style="background:#f8fafc; padding:10px 16px; font-size:0.84rem; color:#64748b; text-align:center; border-top:1px solid #e2e8f0;">
-            ▲ 미국 스포츠의학회(ACSM) 신체활동 METs 표준 소비 칼로리
-          </div>
-        </div>
-        <blockquote>소비 칼로리(kcal) = 0.0175 × MET × 체중(kg) × 운동 시간(분)</blockquote>
-        <p>체중이 무거울수록, 운동 강도(MET)가 높을수록 같은 시간 동안 더 많은 칼로리가 소모됩니다.</p>
-
-        <h2>유산소 vs 근력 운동 칼로리 소모의 진실</h2>
-        <p>운동 도중 소모되는 순수 칼로리는 유산소 운동(달리기, 자전거)이 근력 운동보다 높습니다. 하지만 근력 운동은 운동이 끝난 뒤 손상된 근육을 회복시키는 과정에서 24~48시간 동안 추가 에너지를 소비하는 <strong>'EPOC(운동 후 초과 산소 소비량, 애프터번 효과)'</strong>를 유발합니다. 따라서 체형 개선과 요요 방지를 위해서는 두 운동을 병행하는 것이 가장 이상적입니다.</p>
-
-        <h2>자주 묻는 질문 (FAQ)</h2>
-        <div style="display:flex; flex-direction:column; gap:14px; margin-top:16px;">
-          <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:16px 20px;">
-            <h4 style="margin:0 0 6px; color:#1e293b;">Q. 체지방 1kg을 감량하려면 운동을 얼마나 해야 하나요?</h4>
-            <p style="margin:0; font-size:0.92rem; color:#475569; line-height:1.6;">A. 순수 체지방 1kg은 약 7,700kcal에 해당합니다. 하루 500kcal씩(식단 300kcal 줄이기 + 운동 200kcal 소모) 적자를 만들면 약 2주에 1kg의 순수 체지방을 건강하게 감량할 수 있습니다.</p>
-          </div>
-        </div>
-
-        <h3 style="margin-top:35px;">함께 읽으면 좋은 건강노트 가이드</h3>
-        <ul>
-          <li><a href="/health/fasting-cardio-fat-loss-timing/">공복 유산소 운동 vs 식후 운동 효과 비교, 체지방 감량 가이드</a></li>
-          <li><a href="/health/exercise-calories-burned-met-calculator/">운동 소모 칼로리 계산과 체지방 1kg 감량 기준</a></li>
-          <li><a href="/calorie">하루 필요 칼로리(TDEE) 및 기초대사량 계산기</a></li>
-        </ul>
-      </article>
+      <article class="content-rich note-tool-editorial"><section><h2>노트가 이 도구를 쓰는 기준</h2><p>노트는 먼저 두 기기가 같은 종류의 소비량을 보여주는지 확인하겠다. 안정 시 소비량을 포함한 값과 활동으로 더 쓴 값을 비교하면 출발점부터 다르다. 숫자가 크게 나온 운동을 더 좋은 운동으로 고르지는 않겠다.</p></section><section><h2>계산·분류의 전제부터 확인</h2><p>이 도구는 0.0175 × MET × 체중(kg) × 시간(분)을 사용합니다. 65kg·4.5MET·30분이면 반올림해 약 154kcal입니다. MET는 활동의 평균 강도를 나타내며 개인별 실제 소비량과 차이가 날 수 있습니다.</p></section><section><h2>숫자를 비교할 때 놓치기 쉬운 것</h2><p>워치가 보여주는 활동 칼로리는 안정 시 소비량을 제외할 수 있습니다. 이 계산의 총소비량과 숫자가 다르다고 한쪽이 반드시 고장난 것은 아닙니다. 비교 전에 총·활동 구분과 체중 설정을 확인하세요.</p></section><section><h2>생활 기록으로 옮기는 방법</h2><p>열량을 7,700kcal/kg으로 나눈 값은 단위 비교 예시일 뿐 실제 운동에서 그만큼 지방만 사용했다는 뜻이 아닙니다. 결과가 커도 그 숫자만큼 음식을 더 먹어도 된다고 해석하지 마세요.</p><p>운동 결과를 음식으로 보상할 수 있는 금액처럼 쓰면 추정 오차가 생활에 그대로 들어온다. 노트는 칼로리보다 운동 시간과 지속 가능성을 함께 보겠다. 한 번의 큰 숫자보다 다음 주에도 반복할 수 있는 움직임이 더 궁금하다.</p></section><section><h2>결과를 그대로 적용하지 않을 상황</h2><p>운동의 강도와 지속 가능성, 통증이나 어지럼 등 몸의 반응을 함께 봅니다. 계산 결과로 감량 완료 날짜나 운동의 안전성을 보장하지 않습니다.</p></section><section><h2>함께 확인할 자료</h2><a href="https://pacompendium.com/adult-compendium/">공식 자료의 대상과 설명 확인 →</a><p>기관 자료는 적용 대상과 기준 시점을 확인해 읽으세요.</p><a href="/health/exercise-calories-burned-met-calculator/">운동 칼로리 계산, 워치의 총칼로리와 활동칼로리 비교하기</a></section></article>
     </div>
   </main>
 
-  <footer>
-    <div class="footer-container">
-      <div class="footer-section">
-        <h4>건강노트</h4>
-        <p style="font-size: 0.9rem; color: #bdc3c7;">공신력 있는 의학 및 보건 자료를 바탕으로 정직한 건강 상식을 기록하는 건강 정보 포털입니다.</p>
-      </div>
-      <div class="footer-section">
-                        <h4>건강 도구 및 계산기</h4>
-        <ul>
-          <li><a href="/routine">영양제 복용 플래너</a></li>
-          <li><a href="/checkup">건강검진 수치 해석기</a></li>
-          <li><a href="/quiz">생활습관 점검</a></li>
-          <li><a href="/bmi">BMI·표준체중 계산기</a></li>
-          <li><a href="/calorie">하루 칼로리·기초대사량</a></li>
-          <li><a href="/protein">단백질 섭취량 계산기</a></li>
-          <li><a href="/exercise">운동 소모 칼로리 계산기</a></li>
-          <li><a href="/water">물 섭취량 계산기</a></li>
-          <li><a href="/caffeine">카페인 안전 섭취량 계산기</a></li>
-          <li><a href="/alcohol">알코올 분해 시간 계산기</a></li>
-          <li><a href="/supplement">영양제 권장·상한량 조회</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h4>고객 지원</h4>
-        <ul>
-          <li><a href="/about">사이트 소개</a></li>
-          <li><a href="/contact">문의하기</a></li>
-          <li><a href="/privacy">개인정보처리방침</a></li>
-          <li><a href="/terms">이용약관</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 건강노트. 독자에게 신뢰할 수 있는 가치를 전하기 위해 노력합니다.</p>
-    </div>
-  </footer>
+  <footer class="site-footer"><div class="footer-directory"><div><h3>식단·체중</h3><a href="/health/bmr-basal-metabolic-rate-formula/">기초대사량 계산과 인바디가 다를 때, 섭취 목표로 쓰기 전 확인</a><a href="/health/body-fat-loss-calorie-deficit-calculator/">체지방 1kg·7,700kcal 계산, 체중이 예상대로 안 줄 때 볼 것</a><a href="/health/exercise-calories-burned-met-calculator/">운동 칼로리 계산, 워치의 총칼로리와 활동칼로리 비교하기</a><a href="/health/fasting-cardio-fat-loss-timing/">공복 유산소와 식후 운동, 체지방보다 먼저 비교할 지속 조건</a><a href="/topics/diet/">이 주제 전체 보기 →</a></div><div><h3>영양제·표시 읽기</h3><a href="/health/calcium-daily-recommended-intake-timing/">칼슘 영양제 함량 읽기, 화합물 무게와 하루 섭취량 구분하기</a><a href="/health/iron-anemia-side-effects/">철분제 먹기 전 검사표 읽기, 헤모글로빈과 페리틴을 나눠 보는 이유</a><a href="/health/lutein-benefits-evidence/">루테인 눈 피로 효과를 읽을 때, AREDS2 대상부터 확인하기</a><a href="/health/lutein-timing-with-meals/">루테인 복용시간 정하기, 식후 몇 분보다 먼저 볼 제품 표시</a><a href="/topics/nutrition/">이 주제 전체 보기 →</a></div><div><h3>검사표·수치</h3><a href="/health/blood-pressure-stages-hypertension-diet/">가정혈압 기록하는 법, 집과 병원 수치가 다를 때 확인할 조건</a><a href="/health/blood-sugar-spike-prevention-diet/">식후 졸음과 혈당 스파이크, 느낌과 측정값을 구분하는 기록법</a><a href="/health/bmi-calculator-korean-standard/">BMI 24는 정상일까? 한국·해외 기준이 다를 때 읽는 순서</a><a href="/health/cholesterol-test-results-guide/">콜레스테롤 검사표 읽기, 같은 총수치라도 구성이 다른 이유</a><a href="/topics/checkup/">이 주제 전체 보기 →</a></div><div><h3>생활·수면</h3><a href="/health/acid-reflux-gerd-symptoms-diet-foods/">역류성 식도염 식후 눕는 시간, 음식 목록보다 먼저 남길 기록</a><a href="/health/caffeine-daily-intake-limit-side-effects/">카페인 하루 섭취량 계산, 커피 외에 빠뜨리기 쉬운 음료들</a><a href="/health/daily-water-intake-calculator-benefits/">하루 물 섭취량 계산, 생수와 음식 속 수분을 따로 기록하기</a><a href="/health/dry-eyes-fatigue-lutein-iron-benefits/">화면 볼 때 눈 뻑뻑함, 루테인 구매 전에 확인할 생활 조건</a><a href="/topics/life/">이 주제 전체 보기 →</a></div><div><h3>건강노트 안내</h3><a href="/about">운영자·노트 소개</a><a href="/contact">문의·정정 요청</a><a href="/privacy">개인정보처리방침</a><a href="/app-privacy">앱 개인정보처리방침</a><a href="/terms">이용약관</a><a href="/sitemap.xml">사이트맵</a><a href="/rss.xml">RSS</a></div></div><div class="footer-bottom"><strong>건강노트</strong><p>운영자: 건강노트 · <a href="mailto:kim890417@naver.com">kim890417@naver.com</a></p><p>노트는 운영자의 편집 관점을 전달하는 창작 캐릭터입니다. 사람의 건강 정보이며 반려동물의 식사·복용 안내가 아닙니다. 글은 일반 정보이며 개인 진단·처방을 대신하지 않습니다.</p><small>© 2026 건강노트 · 확인하고, 비교하고, 기록합니다.</small></div></footer>
 
   <script>
     document.getElementById('calc-exercise-btn').addEventListener('click', calculateCalories);

@@ -13,10 +13,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="index, follow">
-  <title>하루 카페인 섭취량 계산기 | 커피·에너지음료 안전 기준 조회 | 건강노트</title>
-  <meta name="description" content="아메리카노, 믹스커피, 에너지음료, 콜라 등 오늘 마신 음료를 입력하면 총 카페인 함량(mg)과 성인 하루 최대 안전 섭취 권장량(400mg) 대비 섭취율을 즉시 계산합니다.">
-  <meta property="og:title" content="하루 카페인 섭취량 계산기 | 건강노트">
-  <meta property="og:description" content="커피와 음료 속 카페인 총량을 계산하고 수면과 심장에 안전한 섭취 한도를 확인하세요.">
+  <title>하루 카페인 합계 계산기 | 음료별 가정값과 수면 기록 | 건강노트</title>
+  <meta name="description" content="음료 종류별 고정 가정값을 더합니다. 실제 제품 함량과 다를 수 있으며 개인의 안전 여부를 판정하지 않습니다.">
+  <meta property="og:title" content="하루 카페인 합계 계산기 | 음료별 가정값과 수면 기록">
+  <meta property="og:description" content="음료 종류별 고정 가정값을 더합니다. 실제 제품 함량과 다를 수 있으며 개인의 안전 여부를 판정하지 않습니다.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://healthfit100.com/images/thumbnails/tool_caffeine.png" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -93,49 +93,17 @@
       transition: width 0.3s ease, background-color 0.3s ease;
     }
   </style>
-</head>
-<body>
-      <nav class="navbar">
-    <div class="nav-container">
-      <a href="/" class="nav-logo">건강노트</a>
-      <ul class="nav-menu">
-        <li class="dropdown">
-          <a href="#" class="dropbtn">건강 정보·생활습관 점검</a>
-          <div class="dropdown-content">
-            <a href="/routine">영양제 복용 플래너</a>
-            <a href="/checkup">건강검진 수치 해석기</a>
-            <a href="/quiz">생활습관 점검</a>
-          </div>
-        </li>
-        <li class="dropdown">
-          <a href="#" class="dropbtn">건강 계산기</a>
-          <div class="dropdown-content">
-            <a href="/bmi">BMI·표준체중</a>
-            <a href="/calorie">하루 칼로리·기초대사량</a>
-            <a href="/protein">단백질 섭취량</a>
-            <a href="/exercise">운동 소모 칼로리</a>
-            <a href="/water">물 섭취량 계산</a>
-            <a href="/caffeine">카페인 안전 섭취량</a>
-            <a href="/alcohol">알코올 분해 시간</a>
-            <a href="/supplement">영양제 권장·상한량</a>
-          </div>
-        </li>
-        <li><a href="/blog">건강 칼럼</a></li>
-        <li><a href="/about">소개</a></li>
-        <li><a href="/contact">문의하기</a></li>
-      </ul>
-    </div>
-  </nav>
+<link rel="stylesheet" href="/magazine.css?v=20261014-magazine1"></head>
+<body class="legacy-page">
+      <a class="skip" href="#main">본문 바로가기</a><header class="masthead"><div class="utility"><span>건강을 집요하게 확인하는 고양이, 노트</span><div><a href="/about">운영자·노트 소개</a><a href="/contact">문의·정정</a></div></div><div class="masthead-main"><details class="all-menu"><summary aria-label="전체 메뉴 열기">☰ <span>전체 메뉴</span></summary><div class="mega"><div><h3><a href="/topics/diet/">식단·체중</a></h3><a href="/health/bmr-basal-metabolic-rate-formula/">기초대사량 계산과 인바디가 다를 때, 섭취 목표로 쓰기 전 확인</a><a href="/health/body-fat-loss-calorie-deficit-calculator/">체지방 1kg·7,700kcal 계산, 체중이 예상대로 안 줄 때 볼 것</a><a href="/health/exercise-calories-burned-met-calculator/">운동 칼로리 계산, 워치의 총칼로리와 활동칼로리 비교하기</a><a href="/health/fasting-cardio-fat-loss-timing/">공복 유산소와 식후 운동, 체지방보다 먼저 비교할 지속 조건</a></div><div><h3><a href="/topics/nutrition/">영양제·표시 읽기</a></h3><a href="/health/calcium-daily-recommended-intake-timing/">칼슘 영양제 함량 읽기, 화합물 무게와 하루 섭취량 구분하기</a><a href="/health/iron-anemia-side-effects/">철분제 먹기 전 검사표 읽기, 헤모글로빈과 페리틴을 나눠 보는 이유</a><a href="/health/lutein-benefits-evidence/">루테인 눈 피로 효과를 읽을 때, AREDS2 대상부터 확인하기</a><a href="/health/lutein-timing-with-meals/">루테인 복용시간 정하기, 식후 몇 분보다 먼저 볼 제품 표시</a></div><div><h3><a href="/topics/checkup/">검사표·수치</a></h3><a href="/health/blood-pressure-stages-hypertension-diet/">가정혈압 기록하는 법, 집과 병원 수치가 다를 때 확인할 조건</a><a href="/health/blood-sugar-spike-prevention-diet/">식후 졸음과 혈당 스파이크, 느낌과 측정값을 구분하는 기록법</a><a href="/health/bmi-calculator-korean-standard/">BMI 24는 정상일까? 한국·해외 기준이 다를 때 읽는 순서</a><a href="/health/cholesterol-test-results-guide/">콜레스테롤 검사표 읽기, 같은 총수치라도 구성이 다른 이유</a></div><div><h3><a href="/topics/life/">생활·수면</a></h3><a href="/health/acid-reflux-gerd-symptoms-diet-foods/">역류성 식도염 식후 눕는 시간, 음식 목록보다 먼저 남길 기록</a><a href="/health/caffeine-daily-intake-limit-side-effects/">카페인 하루 섭취량 계산, 커피 외에 빠뜨리기 쉬운 음료들</a><a href="/health/daily-water-intake-calculator-benefits/">하루 물 섭취량 계산, 생수와 음식 속 수분을 따로 기록하기</a><a href="/health/dry-eyes-fatigue-lutein-iron-benefits/">화면 볼 때 눈 뻑뻑함, 루테인 구매 전에 확인할 생활 조건</a></div><div><h3>기록과 도구</h3><a href="/#tools">계산기·플래너</a><a href="https://app.healthfit100.com/">건강노트 앱</a><a href="/privacy">개인정보처리방침</a><a href="/terms">이용약관</a></div></div></details><a class="wordmark" href="/">건강노트</a><a class="brand-cat" href="/about"><img src="/images/note/note-glucose.webp" alt="은색 모자를 쓴 흰 고양이 노트" width="52" height="52"><span>NOTE’S<br>HEALTH JOURNAL</span></a></div><nav class="topic-nav" aria-label="주제별 메뉴"><a href="/">홈</a><a href="/topics/diet/">식단·체중</a><a href="/topics/nutrition/">영양제·표시 읽기</a><a href="/topics/checkup/">검사표·수치</a><a href="/topics/life/">생활·수면</a><a href="/#tools">계산기·기록</a><a href="/blog">전체 글</a></nav></header>
 
-  <main>
+  <main id="main">
     <div class="container">
       <section class="tool-section">
         <span style="background:#fef3c7; color:#b45309; padding:4px 12px; border-radius:999px; font-size:0.85rem; font-weight:700; display:inline-block; margin-bottom:10px;">일상 생활습관 도구</span>
-        <h1>하루 카페인 안전 섭취량 계산기</h1>
-        <p class="subtitle">오늘 마신 커피와 음료 잔 수를 선택해 보세요. 총 섭취 카페인(mg)과 식약처 기준 하루 최대 안전 한도(성인 400mg)를 실시간으로 비교합니다.</p>
-        <div class="tool-preview-wrap" style="max-width:760px; margin:0 auto 28px; border-radius:16px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,0.06); border:1px solid #e2e8f0;">
-          <img src="/images/thumbnails/banner_caffeine.jpg" alt="음료별 카페인 함량 & 일일 최대 안전 한도 가이드" style="width:100%; height:auto; aspect-ratio:16/9; object-fit:cover; display:block;">
-        </div>
+        <h1>하루 카페인 합계 계산기</h1>
+        <p class="subtitle">음료 종류별 고정 가정값을 더합니다. 실제 제품 함량과 다를 수 있으며 개인의 안전 여부를 판정하지 않습니다.</p>
+        <div class="tool-note-intro"><img src="/images/note/note-glucose.webp" width="80" height="80" alt="고양이 노트의 설명용 일러스트"><p>노트는 계산값만 보기보다 입력 조건과 결과의 한계를 함께 확인합니다.</p></div>
 
         <div class="tool-box" style="padding:28px; max-width:640px; margin:0 auto;">
           <h3 style="margin:0 0 14px; font-size:1.1rem; color:#1e293b;">오늘 마신 음료 잔 수 선택</h3>
@@ -143,7 +111,7 @@
             <div class="bev-item">
               <div>
                 <div class="bev-title">아메리카노 (기본 1잔)</div>
-                <div class="bev-mg">평균 150mg 카페인</div>
+                <div class="bev-mg">가정값 150mg 카페인</div>
               </div>
               <div class="counter-control">
                 <button class="counter-btn" onclick="adjustCount('ame', -1)">-</button>
@@ -154,7 +122,7 @@
             <div class="bev-item">
               <div>
                 <div class="bev-title">믹스커피 / 캔커피</div>
-                <div class="bev-mg">평균 70mg 카페인</div>
+                <div class="bev-mg">가정값 70mg 카페인</div>
               </div>
               <div class="counter-control">
                 <button class="counter-btn" onclick="adjustCount('mix', -1)">-</button>
@@ -165,7 +133,7 @@
             <div class="bev-item">
               <div>
                 <div class="bev-title">에너지 음료 (1캔)</div>
-                <div class="bev-mg">평균 100mg 카페인</div>
+                <div class="bev-mg">가정값 100mg 카페인</div>
               </div>
               <div class="counter-control">
                 <button class="counter-btn" onclick="adjustCount('ene', -1)">-</button>
@@ -176,7 +144,7 @@
             <div class="bev-item">
               <div>
                 <div class="bev-title">녹차 / 홍차 / 콜라</div>
-                <div class="bev-mg">평균 35mg 카페인</div>
+                <div class="bev-mg">가정값 35mg 카페인</div>
               </div>
               <div class="counter-control">
                 <button class="counter-btn" onclick="adjustCount('tea', -1)">-</button>
@@ -195,11 +163,11 @@
             </div>
             <div style="display:flex; justify-content:space-between; font-size:0.8rem; color:#64748b;">
               <span>0 mg</span>
-              <span>성인 일일 최대 한도 (400 mg)</span>
+              <span>성인 참고 비교선 (400 mg)</span>
             </div>
 
             <p id="caffeine-status-msg" style="margin:14px 0 0; font-weight:700; font-size:0.95rem; color:#10b981;">
-              현재 안전 범위입니다.
+              가정값으로 비교하는 참고 계산입니다.
             </p>
           </div>
         </div>
@@ -207,77 +175,11 @@
 
       <hr class="divider">
 
-      <article class="content-rich">
-        <h2>카페인 일일 권장 섭취 기준 (식품의약품안전처)</h2>
-        <ul>
-          <li><strong>성인 남녀:</strong> 하루 최대 <strong>400mg 이하</strong> (아메리카노 약 2~2.5잔 수준)</li>
-          <li><strong>임산부 및 수유부:</strong> 하루 최대 <strong>300mg 이하</strong> (가급적 200mg 미만 권장)</li>
-          <li><strong>어린이·청소년:</strong> 체중 1kg당 <strong>2.5mg 이하</strong> (체중 50kg 기준 125mg 이하)</li>
-        </ul>
-
-        <h2>카페인 반감기와 수면의 골든타임</h2>
-        <p>카페인은 체내에 들어온 뒤 절반으로 줄어드는 <strong>‘반감기’가 약 5~7시간</strong>에 달합니다. 즉, 오후 3시에 마신 아메리카노 1잔의 카페인(약 75mg)은 밤 10시가 되어도 여전히 뇌의 아데노신 수용체를 차단하고 있습니다. 따라서 깊은 렘(REM) 수면을 원한다면 <strong>취침 최소 8시간 전(오후 2시 이전)</strong>까지만 커피를 마시는 것이 좋습니다.</p>
-        <div class="content-img-wrap" style="margin:26px 0 32px; border-radius:14px; overflow:hidden; border:1px solid #e2e8f0; box-shadow:0 4px 14px rgba(0,0,0,0.04);">
-          <img src="/images/tools/caffeine_guide.png" alt="음료별 카페인 함량 & 일일 최대 안전 한도 가이드" style="width:100%; height:auto; display:block;" loading="lazy">
-          <div style="background:#f8fafc; padding:10px 16px; font-size:0.84rem; color:#64748b; text-align:center; border-top:1px solid #e2e8f0;">
-            ▲ 식품의약품안전처 카페인 일일 섭취 기준 및 음료별 함량 분석
-          </div>
-        </div>
-
-        <h2>자주 묻는 질문 (FAQ)</h2>
-        <div style="display:flex; flex-direction:column; gap:14px; margin-top:16px;">
-          <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:16px 20px;">
-            <h4 style="margin:0 0 6px; color:#1e293b;">Q. 커피를 마시면 왜 화장실을 자주 가나요?</h4>
-            <p style="margin:0; font-size:0.92rem; color:#475569; line-height:1.6;">A. 카페인은 신장에서 수분을 재흡수하는 항이뇨 호르몬(ADH)의 분비를 억제하여 이뇨 작용을 촉진합니다. 커피 1잔을 마셨다면 그만큼 맹물 1잔을 추가로 보충해야 탈수를 예방할 수 있습니다.</p>
-          </div>
-        </div>
-
-        <h3 style="margin-top:35px;">함께 읽으면 좋은 추천 건강 가이드</h3>
-        <ul>
-          <li><a href="/health/caffeine-daily-intake-limit-side-effects/">하루 카페인 권장량과 커피가 수분 대사에 미치는 영향</a></li>
-          <li><a href="/health/sleep-foods-melatonin/">잠 잘 오는 음식과 멜라토닌 영양제 복용 가이드</a></li>
-          <li><a href="/water">체중과 운동량에 맞는 하루 물 섭취량 계산기</a></li>
-        </ul>
-      </article>
+      <article class="content-rich note-tool-editorial"><section><h2>노트가 이 도구를 쓰는 기준</h2><p>노트는 커피 몇 잔이라는 질문보다 어떤 제품을 얼마나 마셨는지를 먼저 묻겠다. 컵 크기와 추출 방식이 다르면 잔 수만으로 비교하기 어렵다. 최대 권고량을 매일 채워도 되는 목표로 읽지 않는 것도 중요하다.</p></section><section><h2>계산·분류의 전제부터 확인</h2><p>버튼의 가정값은 아메리카노 150mg, 믹스·캔커피 70mg, 에너지 음료 100mg, 차·콜라 35mg입니다. 이 값은 모든 제품의 평균을 검증한 데이터가 아닙니다. 큰 컵, 샷 수, 추출 방식과 제품에 따라 차이가 큽니다.</p></section><section><h2>숫자를 비교할 때 놓치기 쉬운 것</h2><p>성인 400mg 비교선은 모든 사람의 목표나 안전 보장이 아닙니다. 임신·수유·성장기·복용약·개인 민감도에 따라 확인할 기준이 달라집니다. 적게 마셔도 두근거림이나 불면이 있다면 숫자가 낮다는 이유로 무시하지 마세요.</p></section><section><h2>생활 기록으로 옮기는 방법</h2><p>가정값으로 아메리카노 두 잔과 믹스 한 잔은 370mg입니다. 실제 제품 표시를 확인하면 합계가 달라질 수 있습니다. 마신 시각과 수면 기록을 같이 남겨 오후의 한 잔이 생활에 어떤 부담이 되는지 살펴보세요.</p><p>잠이 불편하다면 총량뿐 아니라 마신 시각을 봐야 한다. 허용 숫자 안에 있다는 말이 개인의 두근거림이나 수면 문제를 무효로 만들지는 않는다. 카페인이 적다는 제품도 표시와 실제 크기를 확인하고 선택하겠다.</p></section><section><h2>결과를 그대로 적용하지 않을 상황</h2><p>증상을 참고량 안쪽이라는 이유로 참지 않습니다. 순수·고농축 카페인 제품을 이 음료 계산에 대입하지 않으며, 카페인 추가로 피로를 계속 버티는 방법을 권하지 않습니다.</p></section><section><h2>함께 확인할 자료</h2><a href="https://www.fda.gov/consumers/consumer-updates/spilling-beans-how-much-caffeine-too-much">공식 자료의 대상과 설명 확인 →</a><p>기관 자료는 적용 대상과 기준 시점을 확인해 읽으세요.</p><a href="/health/caffeine-daily-intake-limit-side-effects/">카페인 하루 섭취량 계산, 커피 외에 빠뜨리기 쉬운 음료들</a></section></article>
     </div>
   </main>
 
-  <footer>
-    <div class="footer-container">
-      <div class="footer-section">
-        <h4>건강노트</h4>
-        <p style="font-size: 0.9rem; color: #bdc3c7;">공신력 있는 의학 및 보건 자료를 바탕으로 정직한 건강 상식을 기록하는 건강 정보 포털입니다.</p>
-      </div>
-      <div class="footer-section">
-                        <h4>건강 도구 및 계산기</h4>
-        <ul>
-          <li><a href="/routine">영양제 복용 플래너</a></li>
-          <li><a href="/checkup">건강검진 수치 해석기</a></li>
-          <li><a href="/quiz">생활습관 점검</a></li>
-          <li><a href="/bmi">BMI·표준체중 계산기</a></li>
-          <li><a href="/calorie">하루 칼로리·기초대사량</a></li>
-          <li><a href="/protein">단백질 섭취량 계산기</a></li>
-          <li><a href="/exercise">운동 소모 칼로리 계산기</a></li>
-          <li><a href="/water">물 섭취량 계산기</a></li>
-          <li><a href="/caffeine">카페인 안전 섭취량 계산기</a></li>
-          <li><a href="/alcohol">알코올 분해 시간 계산기</a></li>
-          <li><a href="/supplement">영양제 권장·상한량 조회</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h4>고객 지원</h4>
-        <ul>
-          <li><a href="/about">사이트 소개</a></li>
-          <li><a href="/contact">문의하기</a></li>
-          <li><a href="/privacy">개인정보처리방침</a></li>
-          <li><a href="/terms">이용약관</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 건강노트. 독자에게 신뢰할 수 있는 가치를 전하기 위해 노력합니다.</p>
-    </div>
-  </footer>
+  <footer class="site-footer"><div class="footer-directory"><div><h3>식단·체중</h3><a href="/health/bmr-basal-metabolic-rate-formula/">기초대사량 계산과 인바디가 다를 때, 섭취 목표로 쓰기 전 확인</a><a href="/health/body-fat-loss-calorie-deficit-calculator/">체지방 1kg·7,700kcal 계산, 체중이 예상대로 안 줄 때 볼 것</a><a href="/health/exercise-calories-burned-met-calculator/">운동 칼로리 계산, 워치의 총칼로리와 활동칼로리 비교하기</a><a href="/health/fasting-cardio-fat-loss-timing/">공복 유산소와 식후 운동, 체지방보다 먼저 비교할 지속 조건</a><a href="/topics/diet/">이 주제 전체 보기 →</a></div><div><h3>영양제·표시 읽기</h3><a href="/health/calcium-daily-recommended-intake-timing/">칼슘 영양제 함량 읽기, 화합물 무게와 하루 섭취량 구분하기</a><a href="/health/iron-anemia-side-effects/">철분제 먹기 전 검사표 읽기, 헤모글로빈과 페리틴을 나눠 보는 이유</a><a href="/health/lutein-benefits-evidence/">루테인 눈 피로 효과를 읽을 때, AREDS2 대상부터 확인하기</a><a href="/health/lutein-timing-with-meals/">루테인 복용시간 정하기, 식후 몇 분보다 먼저 볼 제품 표시</a><a href="/topics/nutrition/">이 주제 전체 보기 →</a></div><div><h3>검사표·수치</h3><a href="/health/blood-pressure-stages-hypertension-diet/">가정혈압 기록하는 법, 집과 병원 수치가 다를 때 확인할 조건</a><a href="/health/blood-sugar-spike-prevention-diet/">식후 졸음과 혈당 스파이크, 느낌과 측정값을 구분하는 기록법</a><a href="/health/bmi-calculator-korean-standard/">BMI 24는 정상일까? 한국·해외 기준이 다를 때 읽는 순서</a><a href="/health/cholesterol-test-results-guide/">콜레스테롤 검사표 읽기, 같은 총수치라도 구성이 다른 이유</a><a href="/topics/checkup/">이 주제 전체 보기 →</a></div><div><h3>생활·수면</h3><a href="/health/acid-reflux-gerd-symptoms-diet-foods/">역류성 식도염 식후 눕는 시간, 음식 목록보다 먼저 남길 기록</a><a href="/health/caffeine-daily-intake-limit-side-effects/">카페인 하루 섭취량 계산, 커피 외에 빠뜨리기 쉬운 음료들</a><a href="/health/daily-water-intake-calculator-benefits/">하루 물 섭취량 계산, 생수와 음식 속 수분을 따로 기록하기</a><a href="/health/dry-eyes-fatigue-lutein-iron-benefits/">화면 볼 때 눈 뻑뻑함, 루테인 구매 전에 확인할 생활 조건</a><a href="/topics/life/">이 주제 전체 보기 →</a></div><div><h3>건강노트 안내</h3><a href="/about">운영자·노트 소개</a><a href="/contact">문의·정정 요청</a><a href="/privacy">개인정보처리방침</a><a href="/app-privacy">앱 개인정보처리방침</a><a href="/terms">이용약관</a><a href="/sitemap.xml">사이트맵</a><a href="/rss.xml">RSS</a></div></div><div class="footer-bottom"><strong>건강노트</strong><p>운영자: 건강노트 · <a href="mailto:kim890417@naver.com">kim890417@naver.com</a></p><p>노트는 운영자의 편집 관점을 전달하는 창작 캐릭터입니다. 사람의 건강 정보이며 반려동물의 식사·복용 안내가 아닙니다. 글은 일반 정보이며 개인 진단·처방을 대신하지 않습니다.</p><small>© 2026 건강노트 · 확인하고, 비교하고, 기록합니다.</small></div></footer>
 
   <script>
     const counts = { ame: 0, mix: 0, ene: 0, tea: 0 };
@@ -304,15 +206,15 @@
         msg.style.color = "#64748b";
       } else if (total <= 200) {
         meter.style.backgroundColor = '#10b981';
-        msg.textContent = "[안전] 적정하고 안전한 수준입니다. 피로 회복과 집중에 도움이 됩니다.";
+        msg.textContent = "가정값 합계는 200mg 이하입니다. 개인의 안전이나 적정량을 판정하지 않습니다.";
         msg.style.color = "#10b981";
       } else if (total <= 400) {
         meter.style.backgroundColor = '#f59e0b';
-        msg.textContent = "[주의] 성인 하루 상한선에 근접했습니다. 늦은 시간에는 섭취를 제한하세요.";
+        msg.textContent = "가정값 합계는 400mg 이하입니다. 제품 함량·섭취 시각·개인 조건을 확인하세요.";
         msg.style.color = "#d97706";
       } else {
         meter.style.backgroundColor = '#ef4444';
-        msg.textContent = "[초과 경고] 성인 일일 최대 안전 한도(400mg)를 초과했습니다! 추가 섭취를 중단하세요.";
+        msg.textContent = "[초과 경고] 성인 참고 비교선(400mg)를 초과했습니다! 추가 섭취를 중단하세요.";
         msg.style.color = "#ef4444";
       }
     }

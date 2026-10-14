@@ -16,6 +16,10 @@ ROOT = Path.cwd()
 STATIC_PAGES = [
     "/",
     "/blog",
+    "/topics/diet/",
+    "/topics/nutrition/",
+    "/topics/checkup/",
+    "/topics/life/",
     "/routine",
     "/checkup",
     "/quiz",
@@ -99,6 +103,8 @@ def rfc822(value: datetime) -> str:
 
 
 def page_file(url_path: str) -> Path:
+    if url_path.endswith("/") and url_path != "/":
+        return ROOT / url_path.strip("/") / "index.html"
     return ROOT / ("index.html" if url_path == "/" else f"{url_path.strip('/')}.html")
 
 
