@@ -8,3 +8,6 @@ body:not(.legacy-page)>main.article-page{max-width:940px}.article-heading{border
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}@media print{.masthead,.site-footer,.article-toc,.button{display:none!important}.article-page{max-width:none!important}.table-scroll{overflow:visible}.article-body table{min-width:0}.editor-note img{width:80px}}
 
 .legacy-page .tool-note-intro{display:flex;align-items:center;gap:16px;max-width:600px;margin:18px auto 25px;padding:14px 18px;background:#f6f2e9;text-align:left}.legacy-page .tool-note-intro img{width:64px;height:64px;object-fit:cover;border-radius:50%;flex-shrink:0}.legacy-page .tool-note-intro p{font-size:14px;margin:0;line-height:1.7}
+
+/* Unique article thumbnails */
+.editor-note{grid-template-columns:240px 1fr}.editor-note img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}.story-image img{object-fit:cover}@media(max-width:700px){.editor-note{grid-template-columns:1fr}.editor-note img{width:100%;height:auto;max-height:260px;aspect-ratio:3/2}}
