@@ -3,6 +3,7 @@ from __future__ import annotations
 import html
 import json
 import re
+import subprocess
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from urllib.parse import quote
@@ -29,6 +30,7 @@ STATIC_PAGES = [
     "/about",
     "/contact",
     "/privacy",
+    "/app-privacy",
     "/terms",
 ]
 
@@ -60,21 +62,22 @@ def title_from_html(content: str, slug: str) -> str:
 def schema_dates(content: str) -> tuple[datetime, datetime]:
     published = None
     modified = None
-    match = re.search(
-        r'<script[^>]+class="rank-math-schema"[^>]*>([\s\S]*?)</script>',
-        content,
-        flags=re.IGNORECASE,
-    )
-    if match:
+    def nodes(value):
+        if isinstance(value, dict):
+            yield value
+            for child in value.values():
+                yield from nodes(child)
+        elif isinstance(value, list):
+            for child in value:
+                yield from nodes(child)
+
+    for block in re.findall(r'<script[^>]+type=["\']application/ld\+json["\'][^>]*>([\s\S]*?)</script>', content, re.IGNORECASE):
         try:
-            data = json.loads(match.group(1))
-            for node in data.get("@graph", []):
-                if not isinstance(node, dict):
-                    continue
+            for node in nodes(json.loads(block)):
                 published = published or node.get("datePublished")
                 modified = modified or node.get("dateModified")
         except json.JSONDecodeError:
-            pass
+            continue
 
     def parse(value: str | None) -> datetime | None:
         if not value:
@@ -103,6 +106,15 @@ def page_lastmod(url_path: str) -> str:
     path = page_file(url_path)
     if not path.is_file():
         return datetime.now(KST).strftime("%Y-%m-%d")
+    try:
+        value = subprocess.check_output(
+            ["git", "log", "-1", "--format=%aI", "--", str(path.relative_to(ROOT))],
+            cwd=ROOT, text=True, stderr=subprocess.DEVNULL,
+        ).strip()
+        if value:
+            return datetime.fromisoformat(value).astimezone(KST).strftime("%Y-%m-%d")
+    except (subprocess.SubprocessError, ValueError):
+        pass
     return datetime.fromtimestamp(path.stat().st_mtime, KST).strftime("%Y-%m-%d")
 
 
@@ -159,7 +171,7 @@ rss_lines = [
     "<channel>",
     "  <title>건강노트</title>",
     f"  <link>{BASE_URL}/blog</link>",
-    "  <description>영양제·식단·생활습관을 공신력 있는 자료와 실제 경험으로 정리합니다.</description>",
+    "  <description>영양제·식단·생활습관을 공신력 있는 자료와 비교 예시, 기록 방법으로 정리합니다.</description>",
     "  <language>ko-KR</language>",
     f"  <lastBuildDate>{rfc822(datetime.now(KST))}</lastBuildDate>",
 ]
