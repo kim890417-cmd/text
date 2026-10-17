@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://healthfit100.com/</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-18</lastmod>
   </url>
   <url>
     <loc>https://healthfit100.com/blog</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-18</lastmod>
   </url>
   <url>
     <loc>https://healthfit100.com/topics/diet/</loc>
@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://healthfit100.com/topics/nutrition/</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-18</lastmod>
   </url>
   <url>
     <loc>https://healthfit100.com/topics/checkup/</loc>
@@ -87,6 +87,10 @@
   <url>
     <loc>https://healthfit100.com/terms</loc>
     <lastmod>2026-10-15</lastmod>
+  </url>
+  <url>
+    <loc>https://healthfit100.com/health/vitamin-d-5000iu-2000iu-daily-dosage/</loc>
+    <lastmod>2026-10-18</lastmod>
   </url>
   <url>
     <loc>https://healthfit100.com/health/caffeine-daily-intake-drinks-record-method/</loc>
@@ -263,9 +267,5 @@
   <url>
     <loc>https://healthfit100.com/health/supplement-upper-intake-limit-overdose/</loc>
     <lastmod>2026-10-15</lastmod>
-  </url>
-  <url>
-    <loc>https://healthfit100.com/health/vitamin-d-5000iu-2000iu-daily-dosage/</loc>
-    <lastmod>2026-10-18</lastmod>
   </url>
 </urlset>
