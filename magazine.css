@@ -42,3 +42,6 @@ body:not(.legacy-page)>main.article-page{max-width:940px}.article-heading{border
 .vitamin-c-media-article .article-body table{display:block;max-width:100%;overflow-x:auto}
 .vitamin-c-media-article .article-body th,.vitamin-c-media-article .article-body td{min-width:120px}
 .vitamin-c-media-article .article-body table{width:100%;min-width:0;box-sizing:border-box}
+
+/* Real photographs accompany each Note article. */
+.note-real-photo>img{display:block;width:100%;height:auto;max-height:720px;object-fit:contain;background:#f8fafc}.note-photo-credit{font-size:12px;color:#64748b;line-height:1.7;margin:24px 0}
