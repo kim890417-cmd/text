@@ -45,3 +45,7 @@ body:not(.legacy-page)>main.article-page{max-width:940px}.article-heading{border
 
 /* Real photographs accompany each Note article. */
 .note-real-photo>img{display:block;width:100%;height:auto;max-height:720px;object-fit:contain;background:#f8fafc}.note-photo-credit{font-size:12px;color:#64748b;line-height:1.7;margin:24px 0}
+
+/* Clear homepage name and purpose above the navigation. */
+.home-masthead .wordmark{font-size:52px;line-height:1.2}.home-masthead .masthead-main{padding-bottom:10px}.home-brand-tagline{margin:0 auto 20px;padding:0 20px;max-width:900px;text-align:center;font-size:19px;font-weight:650;line-height:1.65;letter-spacing:-.4px;color:#304b5a}.home-brand-tagline span{display:inline-block}
+@media(max-width:700px){.home-masthead .wordmark{font-size:38px}.home-masthead .masthead-main{padding-bottom:8px}.home-brand-tagline{font-size:16px;line-height:1.6;margin-bottom:16px;padding:0 20px}.home-brand-tagline span{display:block}}
