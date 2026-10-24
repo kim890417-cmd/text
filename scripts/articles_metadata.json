@@ -2,20 +2,20 @@
   {
     "slug": "vitamin-c-1000mg-multivitamin-overlap-natural-synthetic",
     "title": "비타민C 1000mg, 종합비타민과 같이 먹어도 될까? 중복 섭취와 천연 원료 비교",
-    "desc": "비타민C 1000mg과 종합비타민을 함께 먹을 때 하루분을 합산하는 방법, 고함량의 한계, 천연·합성 원료와 하루 비용 비교를 노트의 관점으로 정리합니다.",
-    "img": "/images/note/articles/vitamin-c-1000mg-multivitamin-overlap-natural-synthetic-note.webp"
+    "desc": "비타민C 1000mg을 더할 때는 현재 종합비타민의 하루분부터 확인합니다. 수용성이라는 말이 양과 불편을 살피지 않아도 된다는 뜻은 아닙니다.",
+    "img": "/images/note/articles/vitamin-c-1000mg-multivitamin-overlap-natural-synthetic/card-01-label-check.webp"
   },
   {
     "slug": "blood-pressure-stages-hypertension-diet",
-    "title": "고혈압 전단계 수치 기준과 낮추는 법, DASH 식단과 칼륨으로 나트륨 배출하기",
-    "desc": "수축기 120~139 mmHg 고혈압 전단계 수치 기준과 약 복용 전 3개월 혈압 낮추는 생활요법, DASH 식단 및 칼륨이 풍부한 나트륨 배출 음식을 체계적으로 안내합니다.",
-    "img": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=450&fit=crop&q=80"
+    "title": "집 혈압과 병원 혈압 차이, 가정혈압 기록에서 빠뜨리기 쉬운 조건",
+    "desc": "집과 병원에서 잰 혈압은 측정 장소와 방법을 구분해 읽어야 합니다. 재측정 결과가 달랐다는 사실만으로 고혈압 여부를 혼자 결정할 수는 없습니다.",
+    "img": "/images/note/articles/blood-pressure-stages-hypertension-diet.webp"
   },
   {
     "slug": "blood-sugar-spike-prevention-diet",
-    "title": "식후 혈당 스파이크 증상과 낮추는 법, 거꾸로 식사법과 15분 걷기 효과",
-    "desc": "밥 먹고 쏟아지는 극심한 졸음의 원인 혈당 스파이크 기준(140 mg/dL), 식이섬유부터 먹는 거꾸로 식사법과 식후 15분 걷기가 인슐린에 미치는 과학적 효과를 정리했습니다.",
-    "img": "https://images.unsplash.com/photo-1505576399279-565b52d4ac71?w=800&h=450&fit=crop&q=80"
+    "title": "밥 먹고 졸림은 혈당 때문일까? 식후 졸음과 측정값 구분하기",
+    "desc": "식후 졸음은 혈당 측정값이 아닙니다. 수면·식사량 등 여러 조건을 함께 보고, 혈당 상태는 적절한 검사로 확인해야 합니다.",
+    "img": "/images/note/articles/blood-sugar-spike-prevention-diet.webp"
   },
   {
     "slug": "bmi-계산법",
@@ -25,75 +25,75 @@
   },
   {
     "slug": "body-fat-loss-calorie-deficit-calculator",
-    "title": "체지방 1kg 빼는 칼로리와 현실적인 일일 감량 식단 계산법",
-    "desc": "체지방 1kg을 빼려면 정확히 7,700kcal의 에너지 적자가 필요합니다. 기초대사량과 활동대사량(TDEE) 계산법, 요요 없는 하루 500kcal 적자 식단 및 운동 소모 칼로리 공식을 정리했습니다.",
-    "img": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=800&h=450&fit=crop&q=80"
+    "title": "여자 체지방률 평균, 나이별 수치와 인바디 정상범위가 다른 이유",
+    "desc": "여자 체지방률의 조사 평균과 기기에서 제시한 참고 범위는 같은 종류의 숫자가 아닙니다. 조사 연도·대상·측정 방법을 함께 확인해야 합니다.",
+    "img": "/images/note/articles/body-fat-loss-calorie-deficit-calculator-v2.webp"
   },
   {
     "slug": "cholesterol-test-results-guide",
-    "title": "콜레스테롤 검사표 읽는 법｜LDL·HDL·중성지방 해석",
-    "desc": "콜레스테롤 검사표의 LDL·HDL·중성지방 기준과 공복 여부, 비HDL 계산법을 실제 검진표 순서대로 정리했습니다.",
-    "img": ""
+    "title": "총콜레스테롤 같은데 LDL이 다른 이유, 검사표 항목 함께 읽기",
+    "desc": "총콜레스테롤만으로 LDL·HDL·중성지방의 구성이나 치료 필요성을 판단할 수 없습니다. 원본 항목과 단위, 개인 위험도를 함께 봅니다.",
+    "img": "/images/note/articles/cholesterol-test-results-guide.webp"
   },
   {
     "slug": "fasting-cardio-fat-loss-timing",
-    "title": "공복 유산소 운동 vs 식후 운동 효과 비교, 체지방 감량과 근손실 방지 가이드",
-    "desc": "아침 공복 유산소 운동의 체지방 연소 과학적 원리와 근손실 예방 심박수, 식후 근력 운동과의 칼로리 소모 비교, 목표별 최적의 운동 시간대를 안내합니다.",
-    "img": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=800&h=450&fit=crop&q=80"
+    "title": "공복 유산소 근손실 걱정될 때, 식후 운동과 무엇을 비교할까?",
+    "desc": "공복 운동 중 쓰는 연료와 장기 체지방 변화는 같은 지표가 아닙니다. 운동 시각을 고를 때는 연구의 대상·조건과 본인의 불편을 함께 봅니다.",
+    "img": "/images/note/articles/fasting-cardio-fat-loss-timing.webp"
   },
   {
     "slug": "fatty-liver-foods-diet",
-    "title": "지방간에 좋은 음식·피해야 할 음식｜식단 관리 기준",
-    "desc": "지방간 식단에서 줄여야 할 가당 음료와 정제 탄수화물, 챙길 음식과 체중·운동 관리 기준을 공신력 있는 자료로 정리합니다.",
-    "img": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&h=450&fit=crop&q=80"
+    "title": "지방간 식단 가당음료 비교, 건강즙을 더하기 전에 볼 것",
+    "desc": "지방간 식단에서는 건강에 좋다는 제품을 추가하는 것과 현재 음료·식사를 바꾸는 일을 구분해 봅니다. 진단과 치료 계획은 검사와 개인 상태에 따라 정합니다.",
+    "img": "/images/note/articles/fatty-liver-foods-diet.webp"
   },
   {
     "slug": "iron-anemia-side-effects",
-    "title": "철분제 효능과 빈혈 증상｜검사·복용법·부작용 총정리",
-    "desc": "철분제 효능과 빈혈 증상, CBC·페리틴 검사, 복용법과 음식·약 상호작용, 흑변·타르변 등 주의할 부작용을 정리했습니다.",
-    "img": "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=800&h=450&fit=crop&q=80"
+    "title": "철분제 먹기 전 페리틴 검사, 헤모글로빈과 다르게 읽는 이유",
+    "desc": "피로감만으로 철분 결핍이나 철분제 필요성을 정할 수 없습니다. 헤모글로빈과 페리틴은 서로 다른 정보를 제공하며 원인 평가가 필요합니다.",
+    "img": "/images/note/articles/iron-anemia-side-effects.webp"
   },
   {
     "slug": "ldl-cholesterol-diet-saturated-fat",
-    "title": "LDL 콜레스테롤 식단｜달걀보다 포화지방 먼저 줄이기",
-    "desc": "LDL 콜레스테롤 식단에서 달걀만 끊기보다 포화지방·트랜스지방을 먼저 줄이고 실제 식사를 바꾸는 방법을 정리했습니다.",
-    "img": ""
+    "title": "LDL 식단 포화지방 비교, 한 개와 100g 표시가 다를 때",
+    "desc": "포화지방을 비교할 때는 같은 섭취량을 기준으로 제품의 표시를 맞춥니다. 제로 음료를 골랐다고 버거의 포화지방이 줄어드는 것은 아닙니다.",
+    "img": "/images/note/articles/ldl-cholesterol-diet-saturated-fat.webp"
   },
   {
     "slug": "liver-enzymes-ast-alt-guide",
-    "title": "간수치 AST ALT 정상 수치와 해석, 높은 이유와 낮추는 법",
-    "desc": "건강검진 간수치 AST(GOT)·ALT(GPT) 정상 범위(40 IU/L 이하)와 수치가 높아지는 주요 원인(비알코올성 지방간, 음주, 약물·즙), 식단과 생활습관으로 낮추는 법을 정리했습니다.",
-    "img": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&h=450&fit=crop&q=80"
+    "title": "ALT 50 간수치 높을까? 검사기관 참고범위를 함께 보는 법",
+    "desc": "ALT 결과는 검사기관 참고 범위와 다른 검사, 병력·증상을 함께 봅니다. 숫자 하나만으로 간질환의 종류나 원인을 확정할 수 없습니다.",
+    "img": "/images/note/articles/liver-enzymes-ast-alt-guide.webp"
   },
   {
     "slug": "lutein-benefits-evidence",
-    "title": "루테인 효능과 섭취량 10~20mg, 눈 피로 근거 확인",
-    "desc": "루테인 효능의 식약처 인정 범위와 10~20mg 기준, AREDS2 적용 대상을 구분해 눈 피로와 안구건조에 어디까지 기대할 수 있는지 정리했습니다.",
-    "img": ""
+    "title": "루테인 눈피로 효과와 AREDS2 차이, 연구 대상부터 확인하기",
+    "desc": "루테인의 기능성과 특정 연구의 대상은 일반적인 화면 눈피로와 구분해 읽어야 합니다. AREDS2 결과를 모든 눈 불편에 적용할 수는 없습니다.",
+    "img": "/images/note/articles/lutein-benefits-evidence.webp"
   },
   {
     "slug": "lutein-timing-with-meals",
-    "title": "루테인 복용시간과 식후 섭취법",
-    "desc": "루테인 복용시간은 아침·저녁보다 식사 여부가 더 중요합니다. 지방이 있는 식사와 함께 먹는 근거, 공복 복용과 성분 중복 주의점을 정리했습니다.",
-    "img": ""
+    "title": "루테인 복용시간 식후 몇 분? 제품 표시부터 읽어야 하는 이유",
+    "desc": "루테인 복용시간은 제품 표시와 식사 조건을 함께 봅니다. 분 단위 시간표가 모든 제품과 사람에게 같은 효과를 보장하는 기준은 아닙니다.",
+    "img": "/images/note/articles/lutein-timing-with-meals.webp"
   },
   {
     "slug": "melatonin-overseas-purchase-korea",
-    "title": "멜라토닌 해외직구｜국내 분류와 통관 전 확인사항",
-    "desc": "멜라토닌 해외직구 제품이 국내에서 영양제로 통하지 않는 이유와 반입차단 목록, 표시 함량·부작용 확인 방법을 정리했습니다.",
-    "img": ""
+    "title": "멜라토닌 해외직구 국내 반입, 천연·구미 문구 전에 확인할 순서",
+    "desc": "해외 판매 페이지에서 살 수 있다는 사실과 국내 반입·사용 기준은 다릅니다. 멜라토닌 제품은 성분과 국내 규정을 확인한 뒤 판단해야 합니다.",
+    "img": "/images/note/articles/melatonin-overseas-purchase-korea.webp"
   },
   {
     "slug": "melatonin-timing-sleep-rhythm",
-    "title": "멜라토닌 복용시간｜생체시계와 불면 유형부터 확인",
-    "desc": "멜라토닌 복용시간이 사람마다 다른 이유를 생체시계 관점에서 설명합니다. 수면일지 작성법과 처방 전 확인할 점도 정리했습니다.",
-    "img": ""
+    "title": "멜라토닌 복용시간 묻기 전 수면일지에 남길 네 가지",
+    "desc": "멜라토닌 복용시간은 수면 문제의 종류와 제품·처방 목적에 따라 달라집니다. 일정 하나로 모든 불면을 해결하는 정보로 읽지 않습니다.",
+    "img": "/images/note/articles/melatonin-timing-sleep-rhythm.webp"
   },
   {
     "slug": "sleep-foods-melatonin",
-    "title": "잠 잘 오는 음식과 멜라토닌｜효과·부작용·국내 기준",
-    "desc": "잠 잘 오는 음식의 연구 근거와 멜라토닌의 용도·부작용·약물 상호작용, 국내 처방·해외직구 기준과 불면 진료 신호를 정리했습니다.",
-    "img": "https://images.unsplash.com/photo-1541480601022-2308c0f02487?w=800&h=450&fit=crop&q=80"
+    "title": "잠 잘오는 음식 키위·타트체리, 연구 결과를 내 식사에 옮기기 전",
+    "desc": "잠에 좋다는 음식의 성분과 불면 치료 효과는 같은 주장으로 읽지 않습니다. 연구의 대상·기간·측정한 결과를 확인해야 합니다.",
+    "img": "/images/note/articles/sleep-foods-melatonin.webp"
   },
   {
     "slug": "tdee계산하는법",
@@ -103,15 +103,15 @@
   },
   {
     "slug": "vitamin-d-benefits-daily-intake-timing",
-    "title": "비타민D 복용시간과 하루 권장량, 마그네슘과 함께 먹어야 하는 이유",
-    "desc": "한국인 80%가 겪는 비타민D 결핍 기준(30 ng/mL), 지용성 흡수율을 높이는 점심 식후 복용법, 성인 1000~2000 IU 하루 권장량과 마그네슘 결합 이유를 정리했습니다.",
-    "img": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&h=450&fit=crop&q=80"
+    "title": "비타민D IU µg 환산, 종합비타민과 중복될 때 하루분 계산",
+    "desc": "비타민D는 1µg가 40IU입니다. 단위를 맞춘 뒤 한 알과 하루분의 기준 개수를 확인해야 중복 합계를 계산할 수 있습니다.",
+    "img": "/images/note/articles/vitamin-d-benefits-daily-intake-timing.webp"
   },
   {
     "slug": "zinc-benefits-daily-intake",
-    "title": "아연 효능과 하루 권장량",
-    "desc": "아연 하루 권장량과 상한량, 결핍 신호·음식, 공복 복용 부작용과 약물 상호작용, 탈모와의 근거를 정리했습니다.",
-    "img": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&h=450&fit=crop&q=80"
+    "title": "아연 공복 메스꺼움과 탈모 기대, 함량을 늘리기 전 확인할 것",
+    "desc": "아연은 필요한 영양소이지만 피로나 탈모만으로 결핍과 보충제 필요성을 정할 수 없습니다. 종합비타민의 아연량과 다른 섭취원을 함께 확인합니다.",
+    "img": "/images/note/articles/zinc-benefits-daily-intake.webp"
   },
   {
     "slug": "근육-유지와-다이어트를-위해-단백질-섭취의-중요성",
