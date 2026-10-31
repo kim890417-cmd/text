@@ -1,0 +1,101 @@
+{
+  "purpose": "건강노트는 체중과 건강을 위해 식사 조절이 필요한 사람이, 식품과학 지식과 영양 계산을 바탕으로 목적에 맞는 식단을 구성하고 실천하도록 돕습니다.",
+  "categories": [
+    {
+      "slug": "weight",
+      "name": "체중 관리 식단",
+      "articles": [
+        "bmr-basal-metabolic-rate-formula",
+        "tdee-calculator-daily-energy-expenditure",
+        "standard-weight-calculator-height-male-female",
+        "female-ideal-healthy-weight-standard",
+        "body-fat-loss-calorie-deficit-calculator",
+        "bmi-calculator-korean-standard",
+        "weight-scale-fluctuation-morning-truth",
+        "pregnancy-weight-gain-guidelines-bmi"
+      ]
+    },
+    {
+      "slug": "training",
+      "name": "운동 식단",
+      "articles": [
+        "protein-intake-muscle-maintenance-diet",
+        "gym-trainer-diet-carbohydrate-truth",
+        "fasting-cardio-fat-loss-timing",
+        "exercise-calories-burned-met-calculator",
+        "skeletal-muscle-mass-average-male-female",
+        "daily-water-intake-calculator-benefits"
+      ]
+    },
+    {
+      "slug": "conditions",
+      "name": "질환별 식사 이해",
+      "articles": [
+        "fatty-liver-foods-diet",
+        "ldl-cholesterol-diet-saturated-fat",
+        "blood-sugar-spike-prevention-diet",
+        "acid-reflux-gerd-symptoms-diet-foods",
+        "fasting-blood-sugar-normal-range-prediabetes",
+        "blood-pressure-stages-hypertension-diet",
+        "cholesterol-test-results-guide",
+        "liver-enzymes-ast-alt-guide"
+      ]
+    },
+    {
+      "slug": "food-tools",
+      "name": "식품 선택·계산기",
+      "articles": [
+        "nutrition-facts-sugar-serving-size-calculation",
+        "subway-sandwich-low-calorie-diet-menu",
+        "starbucks-drink-low-calorie-diet-guide",
+        "caffeine-daily-intake-drinks-record-method",
+        "caffeine-daily-intake-limit-side-effects",
+        "wine-calories-sugar-hangover-guide"
+      ]
+    }
+  ],
+  "titles": [
+    {
+      "slug": "protein-intake-muscle-maintenance-diet",
+      "before": "몸무게 85kg 단백질 섭취량, 계산 목표를 집밥으로 바꾸려면?",
+      "after": "운동 식단 단백질 섭취량, 계산한 목표를 달걀·닭가슴살과 비교하기"
+    },
+    {
+      "slug": "gym-trainer-diet-carbohydrate-truth",
+      "before": "탄단지 식단 비율 g 계산, 퍼센트를 실제 한 끼로 바꾸는 순서",
+      "after": "운동 식단 탄단지 계산, 에너지 비율을 영양소 g으로 바꾸는 순서"
+    },
+    {
+      "slug": "nutrition-facts-sugar-serving-size-calculation",
+      "before": "영양성분표 당류 계산, 한 봉지와 표시 기준량이 다를 때",
+      "after": "식단 기록을 위한 당류 계산, 표시 기준량과 먹은 양 맞추기"
+    },
+    {
+      "slug": "bmr-basal-metabolic-rate-formula",
+      "before": "기초대사량 다이어트, 인바디 수치를 하루 섭취량으로 써도 될까?",
+      "after": "체중 관리 식사량 정하기 전, 기초대사량과 하루 소비량 구분하기"
+    },
+    {
+      "slug": "tdee-calculator-daily-energy-expenditure",
+      "before": "사무직 TDEE 활동계수 주 3회 운동, 횟수만으로 고르기 어려운 이유",
+      "after": "체중 관리 TDEE 계산, 사무직·주 3회 운동의 활동계수 확인하기"
+    },
+    {
+      "slug": "ldl-cholesterol-diet-saturated-fat",
+      "before": "LDL 식단 포화지방 비교, 한 개와 100g 표시가 다를 때",
+      "after": "LDL 관리 식품 선택, 포화지방을 같은 섭취량으로 비교하기"
+    },
+    {
+      "slug": "fatty-liver-foods-diet",
+      "before": "지방간 식단 가당음료 비교, 건강즙을 더하기 전에 볼 것",
+      "after": "지방간 식사 조절, 건강즙과 가당음료 표시를 비교하는 방법"
+    }
+  ],
+  "editorial_checks": [
+    "직접 확인한 내용이 있는가",
+    "구체적인 예시가 한 개 이상 있는가",
+    "초보자가 막힐 지점을 설명했는가",
+    "본문과 제목이 정확히 일치하는가"
+  ],
+  "scope": "카테고리 구조와 본문 범위에 맞춘 제목 조정. 48편 전체의 근거 재검증이나 본문 전면 개편 완료를 의미하지 않음."
+}
