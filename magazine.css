@@ -59,3 +59,13 @@ body:not(.legacy-page)>main.article-page{max-width:940px}.article-heading{border
 
 /* Purpose-based entry points */
 .purpose-categories{margin:28px 0 48px}.purpose-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}.purpose-card{display:block;border:1px solid #deded5;border-radius:18px;overflow:hidden;background:#f8f7f2;text-decoration:none;color:inherit;transition:transform .18s}.purpose-card:hover{transform:translateY(-4px)}.purpose-card:focus-visible{outline:3px solid #246652;outline-offset:4px}.purpose-card img{display:block;width:100%;height:180px;object-fit:cover}.purpose-card>div{padding:20px}.purpose-card h3{font-size:22px;margin:0 0 10px}.purpose-card p{font-size:15px;line-height:1.7;margin:0 0 20px}.purpose-card span{font-size:14px;font-weight:700;color:#246652}.tool-links{display:flex;gap:14px;flex-wrap:wrap}.tool-links a{padding:15px;border:1px solid #ddd;border-radius:10px}@media(max-width:1000px){.purpose-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.purpose-card img{height:210px}}@media(max-width:540px){.purpose-grid{grid-template-columns:1fr}.purpose-card img{height:220px}.purpose-card h3{font-size:23px}}
+
+/* Readability for the locally revised articles. */
+.readable-edit .article-body{max-width:760px;margin-inline:auto;line-height:2.05;word-break:keep-all;overflow-wrap:anywhere}
+.readable-edit .article-body p{margin:0 0 1.65em}
+.readable-edit .article-body h2{margin-top:56px;margin-bottom:24px;line-height:1.55}
+.readable-edit .article-body h3{margin-top:36px;margin-bottom:18px;line-height:1.6}
+.readable-edit .article-body li{margin-bottom:16px}
+.readable-edit .table-scroll{margin:32px 0}
+.readable-edit .article-body td,.readable-edit .article-body th{padding:16px;line-height:1.85}
+@media(max-width:700px){.readable-edit .article-body{line-height:2.05}.readable-edit .article-body p{margin-bottom:1.7em}.readable-edit .article-body h2{margin-top:44px;font-size:23px}}
