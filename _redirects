@@ -1,3 +1,13 @@
+/topics/conditions /topics/life/ 301
+/topics/conditions/ /topics/life/ 301
+/topics/checkup /topics/life/ 301
+/topics/checkup/ /topics/life/ 301
+/topics/food-tools /topics/diet/ 301
+/topics/food-tools/ /topics/diet/ 301
+/topics/training /topics/diet/ 301
+/topics/training/ /topics/diet/ 301
+/topics/weight /topics/diet/ 301
+/topics/weight/ /topics/diet/ 301
 /rss /rss.xml 200
 /feed /rss.xml 301
 /comments/feed /rss.xml 301

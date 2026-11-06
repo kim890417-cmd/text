@@ -19,12 +19,10 @@ STATIC_PAGES = [
     "/food-catalog",
     "/topics/diet/",
     "/topics/nutrition/",
-    "/topics/checkup/",
+
     "/topics/life/",
-    "/topics/weight/",
-    "/topics/training/",
-    "/topics/conditions/",
-    "/topics/food-tools/",
+
+
     "/routine",
     "/checkup",
     "/quiz",
