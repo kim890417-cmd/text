@@ -76,3 +76,6 @@ body:not(.legacy-page)>main.article-page{max-width:940px}.article-heading{border
 .language-chooser{position:relative;max-width:1100px;margin:0 auto;padding:6px 16px;font-size:14px;text-align:right}.language-chooser summary{cursor:pointer;color:#264b60}.language-chooser[open]{background:#f6f8fa}.language-chooser a,.language-chooser span{display:inline-block;margin:8px 6px;color:#264b60}
 
 .home-purpose p{margin:0 0 0.9em;line-height:1.9}.home-purpose p:last-child{margin-bottom:0}.home-purpose strong{color:#166354;font-weight:700}
+
+/* Compact app promotion and balanced footer navigation. */
+.note-app-bridge{display:block!important;margin:20px 0!important;padding:16px 20px!important}.note-app-bridge h2{font-size:20px!important;margin:4px 0!important}.note-app-bridge p{margin:4px 0 10px!important}.footer-directory{grid-template-columns:repeat(4,minmax(0,1fr))}.footer-directory h3{font-size:16px}.footer-directory a{font-size:14px;line-height:1.55}.footer-bottom{line-height:1.7}@media(max-width:800px){.footer-directory{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:480px){.footer-directory{grid-template-columns:1fr 1fr;gap:22px 16px}.footer-directory a{font-size:13px}}
