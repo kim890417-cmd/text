@@ -79,3 +79,12 @@ body:not(.legacy-page)>main.article-page{max-width:940px}.article-heading{border
 
 /* Compact app promotion and balanced footer navigation. */
 .note-app-bridge{display:block!important;margin:20px 0!important;padding:16px 20px!important}.note-app-bridge h2{font-size:20px!important;margin:4px 0!important}.note-app-bridge p{margin:4px 0 10px!important}.footer-directory{grid-template-columns:repeat(4,minmax(0,1fr))}.footer-directory h3{font-size:16px}.footer-directory a{font-size:14px;line-height:1.55}.footer-bottom{line-height:1.7}@media(max-width:800px){.footer-directory{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:480px){.footer-directory{grid-template-columns:1fr 1fr;gap:22px 16px}.footer-directory a{font-size:13px}}
+
+/* In-article tool recommendation box */
+.article-tool-box{margin:36px 0;padding:22px 24px;background:#f4f8fb;border:1px solid #d2e3ee;border-left:5px solid var(--note-blue,#2463eb);border-radius:12px}
+.article-tool-box h3{font-size:18px!important;margin:0 0 10px!important;color:var(--note-ink,#182a3a)!important}
+.article-tool-box p{font-size:14px!important;line-height:1.75!important;color:#4a5c6d!important;margin:0 0 14px!important}
+.article-tool-box .tool-links{display:flex;gap:12px;flex-wrap:wrap}
+.article-tool-box .tool-links a{display:inline-flex;align-items:center;padding:9px 16px;background:#ffffff;border:1px solid #b8d2e4;border-radius:8px;font-size:14px;font-weight:650;color:var(--note-ink,#182a3a);text-decoration:none;transition:all .2s}
+.article-tool-box .tool-links a:hover{background:var(--note-blue,#2463eb);color:#ffffff;border-color:var(--note-blue,#2463eb)}
+@media(max-width:600px){.article-tool-box{padding:18px 16px;margin:28px 0}.article-tool-box .tool-links a{width:100%;justify-content:center}}

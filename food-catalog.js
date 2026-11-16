@@ -37,7 +37,7 @@
     }
     element('status').textContent = '식품을 찾고 있어요. 처음 검색할 때는 자료를 준비하는 시간이 필요합니다.';
     if (!worker) {
-      worker = new Worker('/food-search-worker.js?v=20261101');
+      worker = new Worker('/food-search-worker.js?v=20261113-relevance');
       worker.onerror = () => {
         element('status').textContent = '검색 자료를 읽지 못했습니다. 다시 검색해 주세요.';
         worker.terminate();
@@ -82,10 +82,11 @@
       if (!food) throw new Error('Food not found');
       const values = Object.fromEntries(Object.entries(labels).map(([key, label]) => [key, number(food[label[2]])]));
       const basis = String(food.SERVING_SIZE || '');
-      const match = basis.match(/^\s*(\d+(?:\.\d+)?)\s*g\s*$/i);
-      const grams = match ? Number(match[1]) : null;
-      const canCalculate = grams > 0;
-      element('detailBody').innerHTML = '<small>' + escape(food.DB_GRP_NM) + ', ' + escape(food.FOOD_CD) + '</small><h2>' + escape(food.FOOD_NM_KR) + '</h2><p>' + escape(food.MAKER_NM || '') + '</p><p>표시 기준량 <strong>' + escape(basis || '미제공') + '</strong></p>' + (canCalculate ? '<label class="quantity">먹을 양 <input id="grams" type="number" value="' + grams + '" min="0.1" max="5000" step="any"> g</label><p>먹을 양을 바꾸면 아래 영양성분도 같은 비율로 계산합니다.</p>' : '<p>g 단위의 기준량이 없어 중량 환산을 제공하지 않습니다.</p>') + '<div id="nutrition">' + nutrition(values) + '</div><p class="notice">자료 출처 ' + escape(food.SUB_REF_NAME || '식품의약품안전처') + '<br>데이터 기준일 ' + escape(food.UPDATE_DATE || '미제공') + '<br>미제공 값은 빈 정보로 유지합니다. 실제 제품 표시와 조리 상태도 함께 확인해 주세요.</p>' + (embedded && canCalculate ? '<div class="actions"><button id="addFood" class="primary">내 식품에 저장</button><button id="addMeal">식사 기록에 담기</button></div>' : '');
+      const match = basis.match(/^\s*(\d+(?:\.\d+)?)\s*(g|mL)\s*$/i);
+      const basisAmount = match ? Number(match[1]) : null;
+      const unit = match && match[2].toLowerCase() === 'ml' ? 'mL' : 'g';
+      const canCalculate = basisAmount > 0;
+      element('detailBody').innerHTML = '<small>' + escape(food.DB_GRP_NM) + ', ' + escape(food.FOOD_CD) + '</small><h2>' + escape(food.FOOD_NM_KR) + '</h2><p>' + escape(food.MAKER_NM || '') + '</p><p>표시 기준량 <strong>' + escape(basis || '미제공') + '</strong></p>' + (canCalculate ? '<label class="quantity">먹을 양 <input id="grams" type="number" value="' + basisAmount + '" min="0.1" max="5000" step="any"> ' + unit + '</label><p>먹을 양을 바꾸면 아래 영양성분도 같은 비율로 계산합니다.</p>' : '<p>g 또는 mL 단위의 기준량을 확인할 수 없어 섭취량 환산을 제공하지 않습니다.</p>') + '<div id="nutrition">' + nutrition(values) + '</div><p class="notice">자료 출처 ' + escape(food.SUB_REF_NAME || '식품의약품안전처') + '<br>데이터 기준일 ' + escape(food.UPDATE_DATE || '미제공') + '<br>미제공 값은 빈 정보로 유지합니다. 실제 제품 표시와 조리 상태도 함께 확인해 주세요.</p>' + (embedded && canCalculate && unit === 'g' ? '<div class="actions"><button id="addFood" class="primary">내 식품에 저장</button><button id="addMeal">식사 기록에 담기</button></div>' : '');
       if (canCalculate) {
         const amount = () => {
           const value = Number(element('grams').value);
@@ -93,13 +94,13 @@
         };
         element('grams').oninput = () => {
           const value = amount();
-          element('nutrition').innerHTML = value ? nutrition(values, value / grams) : '<p>0보다 크고 5,000g 이하로 입력해 주세요.</p>';
+          element('nutrition').innerHTML = value ? nutrition(values, value / basisAmount) : '<p>0보다 크고 5,000 이하의 양을 표시 단위에 맞춰 입력해 주세요.</p>';
         };
-        if (embedded) {
+        if (embedded && unit === 'g') {
           const send = type => {
             const value = amount();
             if (!value) return;
-            const payload = {name: food.FOOD_NM_KR, code: food.FOOD_CD, source: '식품의약품안전처 ' + food.FOOD_CD + ', 원본 ' + basis + ', ' + (food.UPDATE_DATE || ''), nutrients: Object.fromEntries(Object.entries(values).map(([key, nutrient]) => [key, nutrient == null ? null : nutrient * 100 / grams])), grams: value};
+            const payload = {name: food.FOOD_NM_KR, code: food.FOOD_CD, source: '식품의약품안전처 ' + food.FOOD_CD + ', 원본 ' + basis + ', ' + (food.UPDATE_DATE || ''), nutrients: Object.fromEntries(Object.entries(values).map(([key, nutrient]) => [key, nutrient == null ? null : nutrient * 100 / basisAmount])), grams: value};
             parent.document.dispatchEvent(new CustomEvent('health-food-import', {detail: {type, payload}}));
             element('detail').close();
           };
