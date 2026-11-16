@@ -88,3 +88,152 @@ body:not(.legacy-page)>main.article-page{max-width:940px}.article-heading{border
 .article-tool-box .tool-links a{display:inline-flex;align-items:center;padding:9px 16px;background:#ffffff;border:1px solid #b8d2e4;border-radius:8px;font-size:14px;font-weight:650;color:var(--note-ink,#182a3a);text-decoration:none;transition:all .2s}
 .article-tool-box .tool-links a:hover{background:var(--note-blue,#2463eb);color:#ffffff;border-color:var(--note-blue,#2463eb)}
 @media(max-width:600px){.article-tool-box{padding:18px 16px;margin:28px 0}.article-tool-box .tool-links a{width:100%;justify-content:center}}
+
+
+/* ==========================================================================
+   한국인 맞춤 SNS 공유 바 (Lightweight Korean SNS Share Bar)
+   ========================================================================== */
+.sns-share-bar {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 20px 22px;
+  margin: 32px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  clear: both;
+}
+.sns-share-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.sns-share-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+.sns-share-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+.sns-share-subtitle {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-left: 4px;
+}
+.sns-share-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.sns-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #334155;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  text-decoration: none;
+  line-height: 1;
+  user-select: none;
+  font-family: inherit;
+}
+.sns-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+.sns-btn svg {
+  flex-shrink: 0;
+}
+.sns-btn-share {
+  background: #059669;
+  color: #ffffff;
+  border-color: #059669;
+}
+.sns-btn-share:hover {
+  background: #047857;
+  border-color: #047857;
+  color: #ffffff;
+}
+.sns-btn-copy:hover {
+  background: #f1f5f9;
+  border-color: #94a3b8;
+  color: #0f172a;
+}
+.sns-btn-kakao {
+  background: #fee500;
+  color: #191919;
+  border-color: #fada0a;
+}
+.sns-btn-kakao:hover {
+  background: #f5dc00;
+  border-color: #edd400;
+  color: #191919;
+}
+.sns-btn-naver:hover {
+  background: #03c75a;
+  color: #ffffff;
+  border-color: #03c75a;
+}
+.sns-btn-band:hover {
+  background: #06c755;
+  color: #ffffff;
+  border-color: #06c755;
+}
+.sns-btn-twitter:hover {
+  background: #000000;
+  color: #ffffff;
+  border-color: #000000;
+}
+.sns-btn-facebook:hover {
+  background: #1877f2;
+  color: #ffffff;
+  border-color: #1877f2;
+}
+
+/* SNS 복사 토스트 메시지 */
+.sns-toast {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translate(-50%, 20px);
+  background: rgba(15, 23, 42, 0.92);
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 9999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 999999;
+}
+.sns-toast.show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+@media (max-width: 640px) {
+  .sns-share-bar {
+    padding: 16px 14px;
+    margin: 24px 0;
+  }
+  .sns-share-subtitle {
+    display: block;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 2px;
+  }
+  .sns-btn {
+    padding: 7px 11px;
+    font-size: 0.82rem;
+  }
+}

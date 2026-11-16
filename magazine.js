@@ -23,3 +23,144 @@
   });
   filterArticles();
 })();
+
+
+// ==========================================================================
+// 한국인 맞춤 SNS 공유 유틸리티 (Web Share API, 링크 복사, 카카오톡, 네이버, 밴드, X, 페이스북)
+// ==========================================================================
+(function() {
+  function showToast(message) {
+    let toast = document.getElementById('sns-toast');
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.id = 'sns-toast';
+      toast.className = 'sns-toast';
+      document.body.appendChild(toast);
+    }
+    toast.textContent = message;
+    toast.classList.add('show');
+    clearTimeout(toast._timeout);
+    toast._timeout = setTimeout(() => {
+      toast.classList.remove('show');
+    }, 2000);
+  }
+
+  function getPageMeta(btn) {
+    const bar = btn ? btn.closest('.sns-share-bar') : null;
+    const canonical = document.querySelector('link[rel="canonical"]');
+    const url = (bar && bar.dataset.url) || (canonical && canonical.href) || window.location.href;
+    let title = (bar && bar.dataset.title) || document.title;
+    if (title.includes('|')) {
+      title = title.split('|')[0].trim();
+    }
+    return { url, title, domain: window.location.hostname };
+  }
+
+  window.snsShare = function(platform, btn) {
+    const { url, title, domain } = getPageMeta(btn);
+    const encUrl = encodeURIComponent(url);
+    const encTitle = encodeURIComponent(title);
+
+    switch (platform) {
+      case 'share':
+        if (navigator.share) {
+          navigator.share({ title: title, url: url }).catch(() => {});
+        } else {
+          window.snsShare('copy', btn);
+        }
+        break;
+
+      case 'copy':
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(url).then(() => {
+            showToast('링크가 복사되었습니다');
+          }).catch(() => {
+            legacyCopy(url, '링크가 복사되었습니다');
+          });
+        } else {
+          legacyCopy(url, '링크가 복사되었습니다');
+        }
+        break;
+
+      case 'kakao':
+        if (window.Kakao && window.Kakao.isInitialized && window.Kakao.isInitialized()) {
+          try {
+            window.Kakao.Share.sendDefault({
+              objectType: 'feed',
+              content: {
+                title: title,
+                description: document.querySelector('meta[name="description"]')?.content || title,
+                imageUrl: document.querySelector('meta[property="og:image"]')?.content || '',
+                link: { mobileWebUrl: url, webUrl: url }
+              }
+            });
+          } catch (e) {
+            fallbackKakao(url);
+          }
+        } else {
+          fallbackKakao(url);
+        }
+        break;
+
+      case 'naver':
+        window.open(
+          'https://share.naver.com/web/shareView?url=' + encUrl + '&title=' + encTitle,
+          '_blank',
+          'width=600,height=500,noopener,noreferrer'
+        );
+        break;
+
+      case 'band':
+        window.open(
+          'https://band.us/plugin/share?body=' + encodeURIComponent(title + '\n' + url) + '&route=' + encodeURIComponent(domain),
+          '_blank',
+          'width=600,height=650,noopener,noreferrer'
+        );
+        break;
+
+      case 'twitter':
+        window.open(
+          'https://twitter.com/intent/tweet?text=' + encTitle + '&url=' + encUrl,
+          '_blank',
+          'width=600,height=450,noopener,noreferrer'
+        );
+        break;
+
+      case 'facebook':
+        window.open(
+          'https://www.facebook.com/sharer/sharer.php?u=' + encUrl,
+          '_blank',
+          'width=600,height=500,noopener,noreferrer'
+        );
+        break;
+    }
+  };
+
+  function fallbackKakao(url) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(() => {
+        showToast('링크가 복사되었습니다. 카카오톡에 붙여넣으세요');
+      }).catch(() => {
+        legacyCopy(url, '링크가 복사되었습니다. 카카오톡에 붙여넣으세요');
+      });
+    } else {
+      legacyCopy(url, '링크가 복사되었습니다. 카카오톡에 붙여넣으세요');
+    }
+  }
+
+  function legacyCopy(text, msg) {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try {
+      document.execCommand('copy');
+      showToast(msg || '링크가 복사되었습니다');
+    } catch (e) {
+      alert('주소를 복사할 수 없습니다: ' + text);
+    }
+    document.body.removeChild(ta);
+  }
+})();
