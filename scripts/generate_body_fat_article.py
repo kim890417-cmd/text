@@ -28,7 +28,7 @@ body_html = """
 <hr style="margin: 30px 0; border: 0; border-top: 1px solid #e2e8f0;">
 
 <h2>체지방 1kg이 정확히 7,700kcal인 과학적 이유</h2>
-<p><strong>순수 지방 1g의 열량은 9kcal이지만, 인체 체지방 조직은 순수 지방 약 87%와 수분·단백질 세포 기질 약 13%로 이루어져 있어 체지방 1kg을 완전히 연소하려면 약 7,700kcal의 에너지 적자가 필요합니다.</strong></p>
+<p><strong>순수 지방 1g의 열량은 9kcal이지만, 인체 체지방 조직은 순수 지방 약 87%와 수분, 단백질 세포 기질 약 13%로 이루어져 있어 체지방 1kg을 완전히 연소하려면 약 7,700kcal의 에너지 적자가 필요합니다.</strong></p>
 
 <p>많은 분들이 "지방 1g이 9kcal니까 1kg(1,000g)이면 9,000kcal를 태워야 하는 것 아닌가?"라고 오해하십니다. 하지만 우리 몸의 지방세포(Adipocyte)는 순수한 기름 덩어리가 아닙니다. 세포벽과 결합조직 단백질, 그리고 약간의 세포 내 수분이 13%가량 포함되어 있습니다.</p>
 
@@ -82,7 +82,7 @@ body_html = """
 <div style="background:#f0f9ff; border:1.5px solid #bae6fd; border-radius:12px; padding:20px; margin:28px 0;">
   <strong style="color:#0369a1; font-size:1.05rem; display:block; margin-bottom:6px;">[실시간 계산] 나의 기초대사량(BMR) &amp; 유지 칼로리(TDEE) 확인하기</strong>
   <p style="font-size:0.92rem; color:#475569; margin:0 0 14px; line-height:1.5;">복잡한 공식으로 직접 계산할 필요 없습니다. 성별, 나이, 키, 체중, 평소 활동량을 입력하시면 나의 TDEE와 감량 목표별 섭취 칼로리를 즉시 산출해 드립니다.</p>
-  <a href="/calorie" style="display:inline-block; background:#0284c7; color:#fff; padding:10px 20px; border-radius:8px; font-weight:700; text-decoration:none; font-size:0.9rem;">하루 칼로리·기초대사량 계산기 바로가기 →</a>
+  <a href="/calorie" style="display:inline-block; background:#0284c7; color:#fff; padding:10px 20px; border-radius:8px; font-weight:700; text-decoration:none; font-size:0.9rem;">하루 칼로리, 기초대사량 계산기 바로가기 →</a>
 </div>
 
 <hr style="margin: 30px 0; border: 0; border-top: 1px solid #e2e8f0;">
@@ -96,7 +96,7 @@ body_html = """
 <ul>
   <li>매 끼니 밥공기의 1/4을 덜어내기 (하루 3끼 합산 약 200~250kcal 절감)</li>
   <li>설탕 든 믹스커피나 달콤한 음료를 블랙커피나 물로 전환 (하루 150~200kcal 절감)</li>
-  <li>튀김류 반찬을 찜·구이류로 변경 (드레싱은 부먹 대신 찍먹)</li>
+  <li>튀김류 반찬을 찜, 구이류로 변경 (드레싱은 부먹 대신 찍먹)</li>
 </ul>
 
 <h3>2. 운동으로 200kcal 태우기 (METs 활동 계수 기준)</h3>
@@ -170,7 +170,7 @@ body_html = """
   <div style="display:flex; gap:10px; flex-wrap:wrap;">
     <a href="/protein" style="display:inline-block; background:#16a34a; color:#fff; padding:8px 16px; border-radius:8px; font-weight:700; text-decoration:none; font-size:0.88rem;">단백질 계산기 →</a>
     <a href="/water" style="display:inline-block; background:#0891b2; color:#fff; padding:8px 16px; border-radius:8px; font-weight:700; text-decoration:none; font-size:0.88rem;">물 섭취량 계산기 →</a>
-    <a href="/bmi" style="display:inline-block; background:#475569; color:#fff; padding:8px 16px; border-radius:8px; font-weight:700; text-decoration:none; font-size:0.88rem;">BMI·표준체중 계산기 →</a>
+    <a href="/bmi" style="display:inline-block; background:#475569; color:#fff; padding:8px 16px; border-radius:8px; font-weight:700; text-decoration:none; font-size:0.88rem;">BMI, 표준체중 계산기 →</a>
   </div>
 </div>
 
@@ -198,7 +198,7 @@ body_html = """
 
 <h2>참고자료</h2>
 <ul>
-  <li>보건복지부·한국영양학회 – 2020 한국인 영양소 섭취기준 (에너지 및 다량영양소 대사 지침)</li>
+  <li>보건복지부, 한국영양학회 – 2020 한국인 영양소 섭취기준 (에너지 및 다량영양소 대사 지침)</li>
   <li>질병관리청 국가건강정보포털 – 비만 예방을 위한 신체활동 및 식사 가이드라인</li>
   <li>American College of Sports Medicine (ACSM) – Appropriate Physical Activity Intervention Strategies for Weight Loss and Prevention of Weight Regain for Adults</li>
   <li>Hall KD, et al. – Quantification of the effect of energy imbalance on bodyweight. The Lancet.</li>
@@ -277,14 +277,14 @@ new_post_card = f'''<article class="post-356 post type-post status-publish forma
     </div>
     <div class="entry-header">
       <div class="entry-meta" style="font-size:0.85rem; color:#64748b; margin-bottom:6px;">
-        <span>건강,영양</span> · <span>{display_date}</span>
+        <span>건강,영양</span> ,  <span>{display_date}</span>
       </div>
       <h2 class="entry-title" style="font-size:1.22rem; font-weight:700; margin:0 0 8px; line-height:1.4;">
         <a href="/health/{slug}/" style="color:#0f172a; text-decoration:none;">{title}</a>
       </h2>
       <p style="font-size:0.9rem; color:#475569; margin:0 0 10px; line-height:1.5;">{meta_desc}</p>
       <div style="font-size:0.8rem; color:#0284c7; font-weight:600;">
-        연관 계산기: <a href="/calorie" style="color:#0284c7; text-decoration:underline;">하루 칼로리·기초대사량</a> · <a href="/exercise" style="color:#0284c7; text-decoration:underline;">운동 소모 칼로리</a>
+        연관 계산기: <a href="/calorie" style="color:#0284c7; text-decoration:underline;">하루 칼로리, 기초대사량</a> ,  <a href="/exercise" style="color:#0284c7; text-decoration:underline;">운동 소모 칼로리</a>
       </div>
     </div>
   </div>
@@ -304,15 +304,15 @@ new_index_card = f'''        <div style="background:#fff; border:1px solid #e2e8
           <img src="{img_url}" alt="{img_alt}" style="width:160px; height:105px; border-radius:10px; object-fit:cover; flex-shrink:0;">
           <div style="flex:1;">
             <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
-              <span style="background:#eff6ff; color:#2563eb; font-size:0.75rem; font-weight:700; padding:2px 8px; border-radius:999px;">체중·칼로리 분석</span>
+              <span style="background:#eff6ff; color:#2563eb; font-size:0.75rem; font-weight:700; padding:2px 8px; border-radius:999px;">체중, 칼로리 분석</span>
               <span style="font-size:0.8rem; color:#94a3b8;">{display_date}</span>
             </div>
             <h3 style="margin:0 0 6px; font-size:1.1rem; font-weight:700;">
               <a href="/health/{slug}/" style="color:#0f172a; text-decoration:none;">{title}</a>
             </h3>
-            <p style="margin:0 0 8px; font-size:0.88rem; color:#64748b; line-height:1.4;">체지방 1kg을 빼기 위한 7,700kcal 적자 원리와 TDEE 유지 칼로리, 단백질·운동 결합 공식</p>
+            <p style="margin:0 0 8px; font-size:0.88rem; color:#64748b; line-height:1.4;">체지방 1kg을 빼기 위한 7,700kcal 적자 원리와 TDEE 유지 칼로리, 단백질, 운동 결합 공식</p>
             <div style="font-size:0.78rem; color:#0284c7; font-weight:600;">
-              연관 도구: <a href="/calorie" style="color:#0284c7; text-decoration:underline;">기초대사량·TDEE 계산기</a> · <a href="/exercise" style="color:#0284c7; text-decoration:underline;">운동 소모 칼로리</a>
+              연관 도구: <a href="/calorie" style="color:#0284c7; text-decoration:underline;">기초대사량, TDEE 계산기</a> ,  <a href="/exercise" style="color:#0284c7; text-decoration:underline;">운동 소모 칼로리</a>
             </div>
           </div>
         </div>'''

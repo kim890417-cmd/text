@@ -94,7 +94,7 @@ articles = [
 <h2>참고자료</h2>
 <ul>
 <li>질병관리청 국가건강정보포털 – 비타민D 결핍증과 골다공증 가이드</li>
-<li>보건복지부·한국영양학회 – 2020 한국인 영양소 섭취기준 (비타민D 및 미네랄)</li>
+<li>보건복지부, 한국영양학회 – 2020 한국인 영양소 섭취기준 (비타민D 및 미네랄)</li>
 <li>The Journal of Clinical Endocrinology & Metabolism – Evaluation, Treatment, and Prevention of Vitamin D Deficiency</li>
 </ul>
 <blockquote><p>본 콘텐츠는 공신력 있는 보건 당국 및 학술 연구 자료를 바탕으로 작성된 건강 정보이며, 의사의 개별 진료나 처방을 대신할 수 없습니다. 수치 이상이나 기저질환이 있는 경우 주치의와 상담하십시오.</p></blockquote>
@@ -104,7 +104,7 @@ articles = [
     {
         "slug": "blood-sugar-spike-prevention-diet",
         "title": "식후 혈당 스파이크 증상과 낮추는 법, 거꾸로 식사법과 15분 걷기 효과",
-        "short_title": "식후 혈당 스파이크 증상과 낮추는 법｜거꾸로 식사법·15분 걷기",
+        "short_title": "식후 혈당 스파이크 증상과 낮추는 법｜거꾸로 식사법, 15분 걷기",
         "meta_desc": "밥 먹고 쏟아지는 극심한 졸음의 원인 혈당 스파이크 기준(140 mg/dL), 식이섬유부터 먹는 거꾸로 식사법과 식후 15분 걷기가 인슐린에 미치는 과학적 효과를 정리했습니다.",
         "published_iso": "2026-10-04T09:00:00+09:00",
         "modified_iso": "2026-10-04T09:00:00+09:00",
@@ -155,13 +155,13 @@ articles = [
 </tr>
 </tbody>
 </table>
-<p>공복 혈당만 재는 일반 건강검진에서는 식후 혈당 스파이크를 놓치기 쉽습니다. 만약 식후 심한 졸음, 어지러움, 집중력 저하가 잦다면 연속혈당측정기(CGM)를 활용하거나 가정용 혈당계로 식후 1시간·2시간 혈당을 측정해 보는 것이 좋습니다.</p>
+<p>공복 혈당만 재는 일반 건강검진에서는 식후 혈당 스파이크를 놓치기 쉽습니다. 만약 식후 심한 졸음, 어지러움, 집중력 저하가 잦다면 연속혈당측정기(CGM)를 활용하거나 가정용 혈당계로 식후 1시간, 2시간 혈당을 측정해 보는 것이 좋습니다.</p>
 
-<h2>가장 확실한 식사 전략: ‘거꾸로 식사법 (채·단·탄)’</h2>
+<h2>가장 확실한 식사 전략: ‘거꾸로 식사법 (채, 단, 탄)’</h2>
 <p>먹는 음식의 총 칼로리가 같더라도 <strong>‘먹는 순서’</strong>만 바꾸면 식후 혈당 상승 폭을 30~40% 이상 완만하게 낮출 수 있습니다. 이를 영양학에서는 거꾸로 식사법이라고 부릅니다.</p>
 <ol>
-<li><strong>1단계: 채소·해조류 (식이섬유):</strong> 샐러드, 나물, 미역국, 양배추 등을 가장 먼저 꼭꼭 씹어 먹습니다. 수용성 식이섬유가 위벽에 그물망 같은 젤을 형성하여 이후 들어올 영양소의 소화 흡수를 물리적으로 지연시킵니다.</li>
-<li><strong>2단계: 단백질·지방 (고기, 생선, 두부, 달걀):</strong> 단백질과 지방은 위장 배출 시간을 늦추는 호르몬(GLP-1) 분비를 촉진합니다. 포만감이 일찍 찾아와 탄수화물 과식을 막아줍니다.</li>
+<li><strong>1단계: 채소, 해조류 (식이섬유):</strong> 샐러드, 나물, 미역국, 양배추 등을 가장 먼저 꼭꼭 씹어 먹습니다. 수용성 식이섬유가 위벽에 그물망 같은 젤을 형성하여 이후 들어올 영양소의 소화 흡수를 물리적으로 지연시킵니다.</li>
+<li><strong>2단계: 단백질, 지방 (고기, 생선, 두부, 달걀):</strong> 단백질과 지방은 위장 배출 시간을 늦추는 호르몬(GLP-1) 분비를 촉진합니다. 포만감이 일찍 찾아와 탄수화물 과식을 막아줍니다.</li>
 <li><strong>3단계: 탄수화물 (밥, 빵, 면):</strong> 마지막에 밥이나 빵을 먹습니다. 이미 식이섬유와 단백질이 장벽을 감싸고 있어 포도당이 혈액으로 급격히 흡수되지 않고 천천히 분해됩니다.</li>
 </ol>
 
@@ -188,7 +188,7 @@ articles = [
     {
         "slug": "blood-pressure-stages-hypertension-diet",
         "title": "고혈압 전단계 수치 기준과 낮추는 법, DASH 식단과 칼륨으로 나트륨 배출하기",
-        "short_title": "고혈압 전단계 수치 기준과 낮추는 법｜DASH 식단·칼륨 음식",
+        "short_title": "고혈압 전단계 수치 기준과 낮추는 법｜DASH 식단, 칼륨 음식",
         "meta_desc": "수축기 120~139 mmHg 고혈압 전단계 수치 기준과 약 복용 전 3개월 혈압 낮추는 생활요법, DASH 식단 및 칼륨이 풍부한 나트륨 배출 음식을 체계적으로 안내합니다.",
         "published_iso": "2026-10-05T09:00:00+09:00",
         "modified_iso": "2026-10-05T09:00:00+09:00",
@@ -232,7 +232,7 @@ articles = [
 <td><strong>130 ~ 139</strong></td>
 <td>또는</td>
 <td><strong>80 ~ 89</strong></td>
-<td><strong>적극적인 비약물 요법(식단·체중감량) 필수</strong></td>
+<td><strong>적극적인 비약물 요법(식단, 체중감량) 필수</strong></td>
 </tr>
 <tr>
 <td><strong>1기 고혈압</strong></td>
@@ -261,9 +261,9 @@ articles = [
 
 <h3>칼륨이 풍부한 대표 식재료</h3>
 <ul>
-<li><strong>시금치·근대·아욱:</strong> 짙은 녹색 잎채소는 칼륨과 마그네슘이 모두 풍부하여 혈관 확장을 돕습니다.</li>
-<li><strong>바나나·토마토·아보카도:</strong> 대표적인 고칼륨 과채류로 아침 식사나 간식으로 나트륨 배출을 돕기에 적합합니다.</li>
-<li><strong>감자·고구마:</strong> 밥 대신 섭취할 수 있는 복합 탄수화물이자 풍부한 칼륨 공급원입니다.</li>
+<li><strong>시금치, 근대, 아욱:</strong> 짙은 녹색 잎채소는 칼륨과 마그네슘이 모두 풍부하여 혈관 확장을 돕습니다.</li>
+<li><strong>바나나, 토마토, 아보카도:</strong> 대표적인 고칼륨 과채류로 아침 식사나 간식으로 나트륨 배출을 돕기에 적합합니다.</li>
+<li><strong>감자, 고구마:</strong> 밥 대신 섭취할 수 있는 복합 탄수화물이자 풍부한 칼륨 공급원입니다.</li>
 <li><em>※ 주의: 만성 콩팥병(신부전) 환자는 신장의 칼륨 배출 기능이 떨어져 고칼륨혈증(부정맥 위험)이 발생할 수 있으므로 임의로 고칼륨 식단을 하시면 안 됩니다.</em></li>
 </ul>
 
@@ -272,7 +272,7 @@ articles = [
 <ol>
 <li><strong>흰쌀밥 대신 통곡물:</strong> 현미, 귀리, 보리 등 통곡물로 밥을 지어 식이섬유 섭취를 늘립니다.</li>
 <li><strong>국물은 건더기만:</strong> 찌개나 라면 국물에 녹아 있는 나트륨이 전체의 60% 이상입니다. 국물을 남기는 것만으로도 나트륨 섭취를 절반으로 줄일 수 있습니다.</li>
-<li><strong>저지방 유제품과 견과류:</strong> 칼슘이 풍부한 저지방 우유·요거트와 마그네슘이 풍부한 아몬드·호두를 매일 한 줌씩 섭취합니다.</li>
+<li><strong>저지방 유제품과 견과류:</strong> 칼슘이 풍부한 저지방 우유, 요거트와 마그네슘이 풍부한 아몬드, 호두를 매일 한 줌씩 섭취합니다.</li>
 <li><strong>가공육과 붉은 고기 줄이기:</strong> 베이컨, 햄, 소시지 등 가공육은 나트륨과 포화지방 함량이 매우 높아 혈관 탄력을 떨어뜨립니다.</li>
 </ol>
 
@@ -290,7 +290,7 @@ articles = [
 <li>National Institutes of Health (NIH) – DASH Eating Plan and Blood Pressure Reduction</li>
 </ul>
 <blockquote><p>본 정보는 일반적인 건강 증진을 위해 공신력 있는 의학 지침을 정리한 자료입니다. 개인의 심혈관 질환 위험인자(당뇨, 흡연, 고지혈증)에 따라 치료 기준이 달라지므로 반드시 의사와 상담하시기 바랍니다.</p></blockquote>
-<div class="crp_related crp-text-only"><h3>함께 읽으면 좋은 정보</h3><ul><li><a href="/health/cholesterol-test-results-guide/" class="crp_link"><span class="crp_title">콜레스테롤 검사표 읽는 법, 총콜레스테롤보다 먼저 볼 숫자</span></a></li><li><a href="/health/ldl-cholesterol-diet-saturated-fat/" class="crp_link"><span class="crp_title">LDL 콜레스테롤 낮추는 식단, 달걀보다 먼저 바꿀 지방</span></a></li><li><a href="/health/하루-카페인-권장량/" class="crp_link"><span class="crp_title">하루 카페인 권장량과 혈압·심장에 미치는 영향</span></a></li></ul><div class="crp_clear"></div></div>
+<div class="crp_related crp-text-only"><h3>함께 읽으면 좋은 정보</h3><ul><li><a href="/health/cholesterol-test-results-guide/" class="crp_link"><span class="crp_title">콜레스테롤 검사표 읽는 법, 총콜레스테롤보다 먼저 볼 숫자</span></a></li><li><a href="/health/ldl-cholesterol-diet-saturated-fat/" class="crp_link"><span class="crp_title">LDL 콜레스테롤 낮추는 식단, 달걀보다 먼저 바꿀 지방</span></a></li><li><a href="/health/하루-카페인-권장량/" class="crp_link"><span class="crp_title">하루 카페인 권장량과 혈압, 심장에 미치는 영향</span></a></li></ul><div class="crp_clear"></div></div>
 """
     }
 ]

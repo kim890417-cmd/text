@@ -10,7 +10,7 @@ clean_navbar = """  <nav class="navbar">
       <a href="/" class="nav-logo">건강노트</a>
       <ul class="nav-menu">
         <li class="dropdown">
-          <a href="#" class="dropbtn">건강 진단·분석</a>
+          <a href="#" class="dropbtn">건강 진단, 분석</a>
           <div class="dropdown-content">
             <a href="/routine">영양제 복용 플래너</a>
             <a href="/checkup">건강검진 수치 해석기</a>
@@ -20,14 +20,14 @@ clean_navbar = """  <nav class="navbar">
         <li class="dropdown">
           <a href="#" class="dropbtn">건강 계산기</a>
           <div class="dropdown-content">
-            <a href="/bmi">BMI·표준체중</a>
-            <a href="/calorie">하루 칼로리·기초대사량</a>
+            <a href="/bmi">BMI, 표준체중</a>
+            <a href="/calorie">하루 칼로리, 기초대사량</a>
             <a href="/protein">단백질 섭취량</a>
             <a href="/exercise">운동 소모 칼로리</a>
             <a href="/water">물 섭취량 계산</a>
             <a href="/caffeine">카페인 안전 섭취량</a>
             <a href="/alcohol">알코올 분해 시간</a>
-            <a href="/supplement">영양제 권장·상한량</a>
+            <a href="/supplement">영양제 권장, 상한량</a>
           </div>
         </li>
         <li><a href="/blog">건강 칼럼</a></li>
@@ -42,14 +42,14 @@ clean_footer_tools = """        <h4>건강 도구 및 계산기</h4>
           <li><a href="/routine">영양제 복용 플래너</a></li>
           <li><a href="/checkup">건강검진 수치 해석기</a></li>
           <li><a href="/quiz">맞춤 건강 자가진단</a></li>
-          <li><a href="/bmi">BMI·표준체중 계산기</a></li>
-          <li><a href="/calorie">하루 칼로리·기초대사량</a></li>
+          <li><a href="/bmi">BMI, 표준체중 계산기</a></li>
+          <li><a href="/calorie">하루 칼로리, 기초대사량</a></li>
           <li><a href="/protein">단백질 섭취량 계산기</a></li>
           <li><a href="/exercise">운동 소모 칼로리 계산기</a></li>
           <li><a href="/water">물 섭취량 계산기</a></li>
           <li><a href="/caffeine">카페인 안전 섭취량 계산기</a></li>
           <li><a href="/alcohol">알코올 분해 시간 계산기</a></li>
-          <li><a href="/supplement">영양제 권장·상한량 조회</a></li>
+          <li><a href="/supplement">영양제 권장, 상한량 조회</a></li>
         </ul>"""
 
 for hf in REPO_DIR.glob("*.html"):

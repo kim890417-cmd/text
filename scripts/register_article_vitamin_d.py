@@ -3,14 +3,14 @@ from pathlib import Path
 
 repo_dir = Path(r"C:\Users\sadase\Desktop\키워드 글쓰기\healthfit_repo")
 
-article_home_card = """<article class="story"><a href="/health/vitamin-d-5000iu-2000iu-daily-dosage/"><div class="story-image"><img src="/images/note/articles/vitamin-d-5000iu-2000iu-daily-dosage.webp" alt="은색 모자를 쓴 흰 고양이 노트가 비타민D 5000IU와 2000IU 영양제 병의 라벨을 비교하는 일러스트" width="960" height="640" loading="lazy"><span>비타민D 5000IU 매일 복용</span></div><div class="story-copy"><small>영양제·표시 읽기 · 2026.10.18</small><h3>비타민D 5000IU 매일 먹어도 될까? 2000IU 차이와 종합비타민 중복 계산법</h3><p>해외직구로 산 5000IU 캡슐, 매일 먹으면 상한량 4000IU를 넘길까? 2000IU와의 목적별 차이와 종합비타민 속 비타민D 합산 계산식을 정리합니다.</p></div></a></article>"""
+article_home_card = """<article class="story"><a href="/health/vitamin-d-5000iu-2000iu-daily-dosage/"><div class="story-image"><img src="/images/note/articles/vitamin-d-5000iu-2000iu-daily-dosage.webp" alt="은색 모자를 쓴 흰 고양이 노트가 비타민D 5000IU와 2000IU 영양제 병의 라벨을 비교하는 일러스트" width="960" height="640" loading="lazy"><span>비타민D 5000IU 매일 복용</span></div><div class="story-copy"><small>영양제, 표시 읽기 ,  2026.10.18</small><h3>비타민D 5000IU 매일 먹어도 될까? 2000IU 차이와 종합비타민 중복 계산법</h3><p>해외직구로 산 5000IU 캡슐, 매일 먹으면 상한량 4000IU를 넘길까? 2000IU와의 목적별 차이와 종합비타민 속 비타민D 합산 계산식을 정리합니다.</p></div></a></article>"""
 
 # 1. Update index.html
 index_file = repo_dir / "index.html"
 index_html = index_file.read_text(encoding="utf-8")
 
 if "vitamin-d-5000iu-2000iu-daily-dosage" not in index_html:
-    nut_marker = '<section id="nutrition" class="category-section"><div class="section-title"><h2><a href="/topics/nutrition/">영양제·표시 읽기</a></h2><a href="/topics/nutrition/">전체 보기 →</a></div><p class="section-desc">효능 문구에서 바로 구매로 넘어가지 않습니다. 하루분, 단위, 중복 성분과 적용 대상을 먼저 확인합니다.</p><div class="stories">'
+    nut_marker = '<section id="nutrition" class="category-section"><div class="section-title"><h2><a href="/topics/nutrition/">영양제, 표시 읽기</a></h2><a href="/topics/nutrition/">전체 보기 →</a></div><p class="section-desc">효능 문구에서 바로 구매로 넘어가지 않습니다. 하루분, 단위, 중복 성분과 적용 대상을 먼저 확인합니다.</p><div class="stories">'
     index_html = index_html.replace(nut_marker, nut_marker + article_home_card)
     index_file.write_text(index_html, encoding="utf-8")
     print("Added to index.html nutrition section")
@@ -61,7 +61,7 @@ rss_item = """  <item>
     <title>비타민D 5000IU 매일 먹어도 될까? 2000IU 차이와 종합비타민 중복 계산법</title>
     <link>https://healthfit100.com/health/vitamin-d-5000iu-2000iu-daily-dosage/</link>
     <guid isPermaLink="true">https://healthfit100.com/health/vitamin-d-5000iu-2000iu-daily-dosage/</guid>
-    <description>비타민D 5000IU 매일 복용 안전성과 2000IU 차이, 상한섭취량 4000IU 및 종합비타민 중복 계산법을 정리합니다. 운영자의 실제 영양제 직구·식사 경험과 노트의 판단을 함께 읽고 내 상황에서 확인할 질문을 남겨보세요.</description>
+    <description>비타민D 5000IU 매일 복용 안전성과 2000IU 차이, 상한섭취량 4000IU 및 종합비타민 중복 계산법을 정리합니다. 운영자의 실제 영양제 직구, 식사 경험과 노트의 판단을 함께 읽고 내 상황에서 확인할 질문을 남겨보세요.</description>
     <pubDate>Sun, 18 Oct 2026 01:00:00 +0900</pubDate>
   </item>
 """

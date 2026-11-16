@@ -119,8 +119,8 @@ def render_master_cardnews(
     line_gap = int(main_size * 1.16)
     
     def render_title_line(y_pos, text, fill_col):
-        if "·" in text:
-            parts = text.split("·")
+        if ", " in text:
+            parts = text.split(", ")
             t1 = parts[0]
             t2 = parts[1]
             bb1 = draw.textbbox((0, 0), t1, font=font_main)
@@ -197,7 +197,7 @@ def generate_all():
             "badge": "검진 수치 판독",
             "badge_bg": (27, 94, 57),
             "line1": "간수치",
-            "line2": "AST·ALT",
+            "line2": "AST, ALT",
             "line2_color": (214, 245, 93), # Lime Yellow
             "subs": ["정상 수치 기준과", "원인별 간질환 관리"],
             "footer": "밀크씨슬 & 생활습관 가이드",
@@ -214,7 +214,7 @@ def generate_all():
             "line1": "고혈압 전단계",
             "line2": "DASH 식단",
             "line2_color": (245, 199, 84), # Warm Gold
-            "subs": ["수축기 130 이상 기준", "칼륨·나트륨 감량법"],
+            "subs": ["수축기 130 이상 기준", "칼륨, 나트륨 감량법"],
             "footer": "혈압 낮추는 식습관 가이드",
             "theme_top": (54, 16, 28),
             "theme_bot": (28, 7, 14),

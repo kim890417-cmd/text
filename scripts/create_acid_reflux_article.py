@@ -10,7 +10,7 @@ template = template_path.read_text(encoding="utf-8")
 
 slug = "acid-reflux-gerd-symptoms-diet-foods"
 title = "역류성 식도염 증상과 좋은 음식 피해야 할 음식, 목 이물감 없애는 식후 습관"
-meta_desc = "가슴 쓰림과 목 이물감, 신트림을 유발하는 역류성 식도염(GERD)의 원인과 하부식도괄약근 보호 원리, 양배추·바나나 등 위벽을 살리는 식단과 식후 3시간 생활수칙을 정리했습니다."
+meta_desc = "가슴 쓰림과 목 이물감, 신트림을 유발하는 역류성 식도염(GERD)의 원인과 하부식도괄약근 보호 원리, 양배추, 바나나 등 위벽을 살리는 식단과 식후 3시간 생활수칙을 정리했습니다."
 published_iso = "2026-10-11T09:00:00+09:00"
 modified_iso = "2026-10-11T09:00:00+09:00"
 display_date = "10월 11, 2026"
@@ -67,7 +67,7 @@ body_html = """
   </tbody>
 </table>
 
-<p>대한소화기기능성질환·운동학회 통계에 따르면 한국인 10명 중 1명 이상이 위식도역류질환을 앓고 있습니다. 만약 이를 방치하여 식도 점막 손상이 만성화되면 식도 점막 세포가 장 점막처럼 변하는 '바렛 식도(Barrett's Esophagus)'로 진행될 수 있으며, 이는 식도암의 전단계 위험 인자로 꼽힙니다.</p>
+<p>대한소화기기능성질환, 운동학회 통계에 따르면 한국인 10명 중 1명 이상이 위식도역류질환을 앓고 있습니다. 만약 이를 방치하여 식도 점막 손상이 만성화되면 식도 점막 세포가 장 점막처럼 변하는 '바렛 식도(Barrett's Esophagus)'로 진행될 수 있으며, 이는 식도암의 전단계 위험 인자로 꼽힙니다.</p>
 
 <hr style="margin: 30px 0; border: 0; border-top: 1px solid #e2e8f0;">
 
@@ -104,7 +104,7 @@ body_html = """
   <li><strong>1. 커피 및 고함량 카페인 (메틸크산틴):</strong> 카페인 성분은 하부식도괄약근의 평활근을 직접 이완시켜 문을 헐겁게 열어버립니다. 빈속의 모닝커피는 식도염 환자에게 독약입니다. 나의 하루 안전 카페인 한도는 <a href="/caffeine">카페인 안전 섭취량 계산기</a>에서 확인하실 수 있습니다.</li>
   <li><strong>2. 초콜릿 (테오브로민과 지방):</strong> 초콜릿 속 테오브로민은 식도 조임근을 마비시키듯 느슨하게 풀고, 고농도 지방 성분이 위장 배출 시간을 2배 이상 늦춥니다.</li>
   <li><strong>3. 기름진 튀김 및 삼겹살:</strong> 지방질이 많은 고기류는 소화하는 데 4~5시간 이상 걸리며, 위산 분비를 촉진하는 호르몬을 대량 방출시켜 위 내부 압력을 폭발적으로 끌어올립니다.</li>
-  <li><strong>4. 감귤류·토마토 등 산도가 강한 과일:</strong> 오렌지, 자몽, 레몬, 토마토소스는 자체 산도(pH 3 이하)가 높아 이미 헐어버린 식도 점막에 닿는 순간 극심한 통증과 염증을 유발합니다.</li>
+  <li><strong>4. 감귤류, 토마토 등 산도가 강한 과일:</strong> 오렌지, 자몽, 레몬, 토마토소스는 자체 산도(pH 3 이하)가 높아 이미 헐어버린 식도 점막에 닿는 순간 극심한 통증과 염증을 유발합니다.</li>
   <li><strong>5. 박하 및 페퍼민트:</strong> 상쾌한 느낌 때문에 소화에 좋을 것이라 착각하기 쉽지만, 박하의 멘톨 성분은 식도 괄약근 긴장도를 직접적으로 떨어뜨리는 대표적인 금기 성분입니다.</li>
 </ul>
 
@@ -127,7 +127,7 @@ body_html = """
 <h2>에디터의 3줄 요약과 오늘부터 실천할 1가지</h2>
 <ul>
   <li><strong>핵심 1:</strong> 목 이물감과 가슴 쓰림은 식도 괄약근(LES)이 느슨해져 위산이 역류하는 명백한 경고 신호입니다.</li>
-  <li><strong>핵심 2:</strong> 양배추, 바나나로 점막을 보호하고 커피·초콜릿·기름진 야식을 식탁에서 완전히 끊어내세요.</li>
+  <li><strong>핵심 2:</strong> 양배추, 바나나로 점막을 보호하고 커피, 초콜릿, 기름진 야식을 식탁에서 완전히 끊어내세요.</li>
   <li><strong>핵심 3:</strong> 저녁 식사 후 최소 3시간 동안 눕지 말고, 수면 시에는 반드시 왼쪽으로 누우세요.</li>
 </ul>
 
@@ -137,7 +137,7 @@ body_html = """
 
 <h2>참고자료 및 공인 출처</h2>
 <ul>
-  <li>대한소화기기능성질환·운동학회 – 2020 위식도역류질환 서울 가이드라인 (진단 및 생활요법 지침)</li>
+  <li>대한소화기기능성질환, 운동학회 – 2020 위식도역류질환 서울 가이드라인 (진단 및 생활요법 지침)</li>
   <li>질병관리청 국가건강정보포털 – 위식도역류질환의 증상, 합병증 및 예방 수칙</li>
   <li>American College of Gastroenterology (ACG) – Guidelines for the Diagnosis and Management of Gastroesophageal Reflux Disease (Am J Gastroenterol)</li>
   <li>The American Journal of Clinical Nutrition – Diet and Lifestyle Factors in Gastroesophageal Reflux Disease</li>
@@ -151,7 +151,7 @@ body_html = """
 <div class="crp_related crp-text-only">
   <h3>함께 읽으면 좋은 건강 정보</h3>
   <ul>
-    <li><a href="/health/caffeine-daily-intake-limit-side-effects/" class="crp_link"><span class="crp_title">하루 카페인 권장량 400mg, 임산부·청소년 기준과 부작용</span></a></li>
+    <li><a href="/health/caffeine-daily-intake-limit-side-effects/" class="crp_link"><span class="crp_title">하루 카페인 권장량 400mg, 임산부, 청소년 기준과 부작용</span></a></li>
     <li><a href="/health/daily-water-intake-calculator-benefits/" class="crp_link"><span class="crp_title">하루 물 섭취량, 2리터가 모두에게 정답은 아닌 이유</span></a></li>
     <li><a href="/health/blood-sugar-spike-prevention-diet/" class="crp_link"><span class="crp_title">식후 혈당 스파이크 증상과 낮추는 법, 거꾸로 식사법과 15분 걷기 효과</span></a></li>
   </ul>

@@ -77,8 +77,8 @@ body_html = """
 <p>만약 공복 혈당이 98 mg/dL로 정상 커트라인에 걸쳐 있더라도 당화혈색소가 5.9%라면, 낮 시간대나 식후에 심한 혈당 롤러코스터(혈당 스파이크)를 겪고 있다는 결정적인 증거입니다. 검진 결과표를 보실 때는 반드시 두 숫자를 교차해서 읽으셔야 합니다.</p>
 
 <div style="background:#f0f9ff; border:1.5px solid #bae6fd; border-radius:12px; padding:20px; margin:28px 0;">
-  <strong style="color:#0369a1; font-size:1.05rem; display:block; margin-bottom:6px;">[수치 판독 가이드] 건강검진 혈압·혈당·간수치 종합 판독표</strong>
-  <p style="font-size:0.92rem; color:#475569; margin:0 0 14px; line-height:1.5;">공복혈당뿐만 아니라 수축기 혈압, 간수치(AST·ALT), 총콜레스테롤 등 나의 종합 검진 결과가 정상 기준에 들어가는지 한 번에 점검해 보세요.</p>
+  <strong style="color:#0369a1; font-size:1.05rem; display:block; margin-bottom:6px;">[수치 판독 가이드] 건강검진 혈압, 혈당, 간수치 종합 판독표</strong>
+  <p style="font-size:0.92rem; color:#475569; margin:0 0 14px; line-height:1.5;">공복혈당뿐만 아니라 수축기 혈압, 간수치(AST, ALT), 총콜레스테롤 등 나의 종합 검진 결과가 정상 기준에 들어가는지 한 번에 점검해 보세요.</p>
   <a href="/checkup" style="display:inline-block; background:#0284c7; color:#fff; padding:10px 20px; border-radius:8px; font-weight:700; text-decoration:none; font-size:0.9rem;">건강검진 수치 정상 범위 &amp; 판독 가이드 바로가기 →</a>
 </div>
 
@@ -105,7 +105,7 @@ body_html = """
 <p>우리 몸에서 음식으로 흡수된 포도당을 가장 많이 저장하고 소비하는 장기는 <strong>허벅지와 엉덩이 같은 하체 골격근(전체의 70% 이상)</strong>입니다. 근육량이 부족하면 포도당이 갈 곳을 잃고 혈관에 쌓입니다. 스쿼트, 런지, 계단 오르기 등 하체 근력 운동을 주 3회 병행하면 인슐린의 도움 없이도 근육의 포도당 수송체(GLUT4)가 활성화되어 공복 혈당이 빠르게 안정됩니다.</p>
 
 <h3>3. 식사 순서 변경: 채소 먼저 먹는 거꾸로 식사법</h3>
-<p>탄수화물(밥, 빵, 면)을 먼저 입에 넣으면 혈당이 수직 상승하며 인슐린이 폭발적으로 분비됩니다. 식사할 때 <strong>식이섬유(채소·해조류) → 단백질(고기·생선·두부) → 탄수화물(밥)</strong> 순서로 먹는 것만으로도 식후 혈당 피크를 30% 이상 억제할 수 있습니다. 자세한 식사 순서와 원리는 <a href="/health/blood-sugar-spike-prevention-diet/">혈당 스파이크 예방 식단 칼럼</a>을 참고해 보세요.</p>
+<p>탄수화물(밥, 빵, 면)을 먼저 입에 넣으면 혈당이 수직 상승하며 인슐린이 폭발적으로 분비됩니다. 식사할 때 <strong>식이섬유(채소, 해조류) → 단백질(고기, 생선, 두부) → 탄수화물(밥)</strong> 순서로 먹는 것만으로도 식후 혈당 피크를 30% 이상 억제할 수 있습니다. 자세한 식사 순서와 원리는 <a href="/health/blood-sugar-spike-prevention-diet/">혈당 스파이크 예방 식단 칼럼</a>을 참고해 보세요.</p>
 
 <h3>4. 현재 체중의 5~7% 감량 (내장지방 제거)</h3>
 <p>미국 국립보건원(NIH)의 유명한 대규모 임상 연구인 DPP(Diabetes Prevention Program)에 따르면, <strong>당뇨 전단계 성인이 체중의 5~7%만 감량해도 당뇨병 발생 위험이 58% 감소</strong>하는 것으로 증명되었습니다. 체중이 75kg인 사람이라면 3.5~5kg만 줄여도 복부 내장지방이 걷히며 인슐린 저항성이 획기적으로 개선됩니다. 나의 감량 칼로리 설계는 <a href="/calorie">하루 칼로리(TDEE) 계산기</a>를 활용해 보세요.</p>
@@ -141,7 +141,7 @@ body_html = """
   <ul>
     <li><a href="/health/blood-sugar-spike-prevention-diet/" class="crp_link"><span class="crp_title">식후 혈당 스파이크 증상과 낮추는 법, 거꾸로 식사법과 15분 걷기 효과</span></a></li>
     <li><a href="/health/liver-enzymes-ast-alt-guide/" class="crp_link"><span class="crp_title">간수치 AST ALT 정상 수치와 해석, 높은 이유와 낮추는 법</span></a></li>
-    <li><a href="/health/blood-pressure-stages-hypertension-diet/" class="crp_link"><span class="crp_title">고혈압 전단계 수치 기준과 낮추는 법, DASH 식단과 칼륨·나트륨 관리 가이드</span></a></li>
+    <li><a href="/health/blood-pressure-stages-hypertension-diet/" class="crp_link"><span class="crp_title">고혈압 전단계 수치 기준과 낮추는 법, DASH 식단과 칼륨, 나트륨 관리 가이드</span></a></li>
   </ul>
   <div class="crp_clear"></div>
 </div>

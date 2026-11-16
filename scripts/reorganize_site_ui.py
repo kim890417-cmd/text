@@ -27,7 +27,7 @@ compact_tools_html = """
             <div style="font-size:1.8rem; line-height:1;">🩺</div>
             <div style="flex:1;">
               <strong style="font-size:0.98rem; color:#854d0e; display:block; margin-bottom:3px;">건강검진 수치 신호등 리포트</strong>
-              <p style="font-size:0.84rem; color:#475569; margin:0 0 6px; line-height:1.4;">혈압, 혈당, 콜레스테롤, 간수치 정상·주의·위험 신호등 판정</p>
+              <p style="font-size:0.84rem; color:#475569; margin:0 0 6px; line-height:1.4;">혈압, 혈당, 콜레스테롤, 간수치 정상, 주의, 위험 신호등 판정</p>
               <span style="font-size:0.75rem; font-weight:700; color:#a16207; background:#fef3c7; padding:2px 8px; border-radius:999px;">종합 해석</span>
             </div>
           </a>
@@ -55,18 +55,18 @@ compact_tools_html = """
           <a href="/bmi" style="background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:14px 16px; text-decoration:none; color:inherit; display:flex; flex-direction:column; justify-content:space-between;">
             <div>
               <div style="font-size:1.4rem; margin-bottom:6px;">⚖️</div>
-              <strong style="font-size:0.95rem; color:#1e293b; display:block; margin-bottom:3px;">BMI·표준체중 계산기</strong>
-              <p style="font-size:0.82rem; color:#64748b; margin:0 0 8px; line-height:1.4;">키·몸무게 기반 아시아 기준 비만도 및 표준체중</p>
+              <strong style="font-size:0.95rem; color:#1e293b; display:block; margin-bottom:3px;">BMI, 표준체중 계산기</strong>
+              <p style="font-size:0.82rem; color:#64748b; margin:0 0 8px; line-height:1.4;">키, 몸무게 기반 아시아 기준 비만도 및 표준체중</p>
             </div>
-            <span style="font-size:0.75rem; font-weight:700; color:#0284c7; background:#f0f9ff; padding:2px 8px; border-radius:999px; align-self:flex-start;">비만도·체지방</span>
+            <span style="font-size:0.75rem; font-weight:700; color:#0284c7; background:#f0f9ff; padding:2px 8px; border-radius:999px; align-self:flex-start;">비만도, 체지방</span>
           </a>
           <a href="/calorie" style="background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:14px 16px; text-decoration:none; color:inherit; display:flex; flex-direction:column; justify-content:space-between;">
             <div>
               <div style="font-size:1.4rem; margin-bottom:6px;">🔥</div>
-              <strong style="font-size:0.95rem; color:#1e293b; display:block; margin-bottom:3px;">하루 칼로리·BMR 계산기</strong>
-              <p style="font-size:0.82rem; color:#64748b; margin:0 0 8px; line-height:1.4;">기초대사량 및 감량·유지·증량 목표 TDEE 산출</p>
+              <strong style="font-size:0.95rem; color:#1e293b; display:block; margin-bottom:3px;">하루 칼로리, BMR 계산기</strong>
+              <p style="font-size:0.82rem; color:#64748b; margin:0 0 8px; line-height:1.4;">기초대사량 및 감량, 유지, 증량 목표 TDEE 산출</p>
             </div>
-            <span style="font-size:0.75rem; font-weight:700; color:#0284c7; background:#f0f9ff; padding:2px 8px; border-radius:999px; align-self:flex-start;">BMR · TDEE</span>
+            <span style="font-size:0.75rem; font-weight:700; color:#0284c7; background:#f0f9ff; padding:2px 8px; border-radius:999px; align-self:flex-start;">BMR ,  TDEE</span>
           </a>
           <a href="/protein" style="background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:14px 16px; text-decoration:none; color:inherit; display:flex; flex-direction:column; justify-content:space-between;">
             <div>
@@ -74,13 +74,13 @@ compact_tools_html = """
               <strong style="font-size:0.95rem; color:#1e293b; display:block; margin-bottom:3px;">단백질 권장 섭취량 계산기</strong>
               <p style="font-size:0.82rem; color:#64748b; margin:0 0 8px; line-height:1.4;">활동량과 체중에 따른 근육 유지 일일 단백질량(g)</p>
             </div>
-            <span style="font-size:0.75rem; font-weight:700; color:#0284c7; background:#f0f9ff; padding:2px 8px; border-radius:999px; align-self:flex-start;">근육 유지·감량</span>
+            <span style="font-size:0.75rem; font-weight:700; color:#0284c7; background:#f0f9ff; padding:2px 8px; border-radius:999px; align-self:flex-start;">근육 유지, 감량</span>
           </a>
           <a href="/exercise" style="background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:14px 16px; text-decoration:none; color:inherit; display:flex; flex-direction:column; justify-content:space-between;">
             <div>
               <div style="font-size:1.4rem; margin-bottom:6px;">🏃</div>
               <strong style="font-size:0.95rem; color:#1e293b; display:block; margin-bottom:3px;">운동 소모 칼로리 계산기</strong>
-              <p style="font-size:0.82rem; color:#64748b; margin:0 0 8px; line-height:1.4;">걷기·러닝·수영·웨이트 등 METs 소비 칼로리 정밀 계산</p>
+              <p style="font-size:0.82rem; color:#64748b; margin:0 0 8px; line-height:1.4;">걷기, 러닝, 수영, 웨이트 등 METs 소비 칼로리 정밀 계산</p>
             </div>
             <span style="font-size:0.75rem; font-weight:700; color:#0284c7; background:#f0f9ff; padding:2px 8px; border-radius:999px; align-self:flex-start;">체지방 연소</span>
           </a>
@@ -109,7 +109,7 @@ compact_tools_html = """
             <div>
               <div style="font-size:1.4rem; margin-bottom:6px;">☕</div>
               <strong style="font-size:0.95rem; color:#1e293b; display:block; margin-bottom:3px;">카페인 안전량 계산기</strong>
-              <p style="font-size:0.82rem; color:#64748b; margin:0 0 8px; line-height:1.4;">커피·음료 속 카페인 총량 및 성인 400mg 대비 섭취율</p>
+              <p style="font-size:0.82rem; color:#64748b; margin:0 0 8px; line-height:1.4;">커피, 음료 속 카페인 총량 및 성인 400mg 대비 섭취율</p>
             </div>
             <span style="font-size:0.75rem; font-weight:700; color:#0284c7; background:#f0f9ff; padding:2px 8px; border-radius:999px; align-self:flex-start;">안전 한도</span>
           </a>
@@ -117,17 +117,17 @@ compact_tools_html = """
             <div>
               <div style="font-size:1.4rem; margin-bottom:6px;">🍺</div>
               <strong style="font-size:0.95rem; color:#1e293b; display:block; margin-bottom:3px;">알코올 분해시간 계산기</strong>
-              <p style="font-size:0.82rem; color:#64748b; margin:0 0 8px; line-height:1.4;">소주·맥주 잔 수와 체중 기준 위드마크 완전 해독 시간</p>
+              <p style="font-size:0.82rem; color:#64748b; margin:0 0 8px; line-height:1.4;">소주, 맥주 잔 수와 체중 기준 위드마크 완전 해독 시간</p>
             </div>
             <span style="font-size:0.75rem; font-weight:700; color:#0284c7; background:#f0f9ff; padding:2px 8px; border-radius:999px; align-self:flex-start;">간 해독 시간</span>
           </a>
           <a href="/supplement" style="background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:14px 16px; text-decoration:none; color:inherit; display:flex; flex-direction:column; justify-content:space-between;">
             <div>
               <div style="font-size:1.4rem; margin-bottom:6px;">💊</div>
-              <strong style="font-size:0.95rem; color:#1e293b; display:block; margin-bottom:3px;">영양제 권장·상한량 조회</strong>
-              <p style="font-size:0.82rem; color:#64748b; margin:0 0 8px; line-height:1.4;">비타민·미네랄별 하루 권장 섭취량 및 과다 부작용 상한선</p>
+              <strong style="font-size:0.95rem; color:#1e293b; display:block; margin-bottom:3px;">영양제 권장, 상한량 조회</strong>
+              <p style="font-size:0.82rem; color:#64748b; margin:0 0 8px; line-height:1.4;">비타민, 미네랄별 하루 권장 섭취량 및 과다 부작용 상한선</p>
             </div>
-            <span style="font-size:0.75rem; font-weight:700; color:#0284c7; background:#f0f9ff; padding:2px 8px; border-radius:999px; align-self:flex-start;">권장·상한 기준</span>
+            <span style="font-size:0.75rem; font-weight:700; color:#0284c7; background:#f0f9ff; padding:2px 8px; border-radius:999px; align-self:flex-start;">권장, 상한 기준</span>
           </a>
         </div>
       </div>
@@ -164,14 +164,14 @@ unified_navbar = """  <nav class="navbar">
         <li class="dropdown">
           <a href="#" class="dropbtn">🧮 건강 계산기 (8종)</a>
           <div class="dropdown-content">
-            <a href="/bmi">⚖️ BMI·표준체중</a>
-            <a href="/calorie">🔥 하루 칼로리·BMR</a>
+            <a href="/bmi">⚖️ BMI, 표준체중</a>
+            <a href="/calorie">🔥 하루 칼로리, BMR</a>
             <a href="/protein">🍗 단백질 권장량</a>
             <a href="/exercise">🏃 운동 소모 칼로리</a>
             <a href="/water">💧 하루 물 섭취량</a>
             <a href="/caffeine">☕ 카페인 안전량</a>
             <a href="/alcohol">🍺 알코올 분해시간</a>
-            <a href="/supplement">💊 영양제 권장·상한량</a>
+            <a href="/supplement">💊 영양제 권장, 상한량</a>
           </div>
         </li>
         <li><a href="/blog">건강 블로그</a></li>
@@ -186,8 +186,8 @@ unified_footer_tools = """        <h4>건강 계산기 & 도구 (11종)</h4>
           <li><a href="/routine">영양제 시간표 플래너</a></li>
           <li><a href="/checkup">건강검진 신호등 리포트</a></li>
           <li><a href="/quiz">건강 자가진단 퀴즈</a></li>
-          <li><a href="/bmi">BMI·표준체중 계산기</a></li>
-          <li><a href="/calorie">하루 칼로리·BMR 계산기</a></li>
+          <li><a href="/bmi">BMI, 표준체중 계산기</a></li>
+          <li><a href="/calorie">하루 칼로리, BMR 계산기</a></li>
           <li><a href="/protein">단백질 섭취량 계산기</a></li>
           <li><a href="/exercise">운동 소모 칼로리 계산기</a></li>
           <li><a href="/water">물 섭취량 계산기</a></li>

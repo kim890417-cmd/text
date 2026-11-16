@@ -234,8 +234,8 @@ supp_extra = """
         <h3 style="margin-top:35px;">함께 읽으면 좋은 추천 건강 가이드</h3>
         <ul>
           <li><a href="/health/vitamin-d-benefits-daily-intake-timing/">비타민D 복용시간과 하루 권장량, 마그네슘 시너지</a></li>
-          <li><a href="/health/iron-anemia-side-effects/">철분제 복용법과 부작용, 변비·위장장애 줄이는 법</a></li>
-          <li><a href="/health/오메가3/">오메가3 복용시간과 EPA·DHA 하루 섭취량, rTG 고르는 법</a></li>
+          <li><a href="/health/iron-anemia-side-effects/">철분제 복용법과 부작용, 변비, 위장장애 줄이는 법</a></li>
+          <li><a href="/health/오메가3/">오메가3 복용시간과 EPA, DHA 하루 섭취량, rTG 고르는 법</a></li>
         </ul>
 """
 

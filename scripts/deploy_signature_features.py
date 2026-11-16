@@ -17,15 +17,15 @@ sig_section = """
           <div class="tool-icon">📋</div>
           <h3 style="color:#0369a1;">내 영양제 복용 시간표 & 궁합 플래너</h3>
           <p>복용 중인 영양제를 체크하면 아침 공복, 점심 식후, 취침 전 최적의 복용 시간표와 흡수를 방해하는 상극 충돌을 즉시 분석합니다.</p>
-          <span class="tool-tag" style="background:#0284c7; color:#fff;">강력 추천 · 시그니처</span>
+          <span class="tool-tag" style="background:#0284c7; color:#fff;">강력 추천 ,  시그니처</span>
         </a>
 
         <!-- Signature Tool 2: Checkup Lab Analyzer -->
         <a href="/checkup" class="tool-card" style="border: 2px solid #fde68a; background: #fefce8;">
           <div class="tool-icon">🩺</div>
           <h3 style="color:#854d0e;">건강검진 수치 신호등 리포트</h3>
-          <p>혈압, 공복혈당, LDL 콜레스테롤, 간수치(ALT)를 입력하면 정상·주의·위험 신호등 등급과 질환별 맞춤 실천 가이드를 진단합니다.</p>
-          <span class="tool-tag" style="background:#ca8a04; color:#fff;">초록·노랑·빨강 판정</span>
+          <p>혈압, 공복혈당, LDL 콜레스테롤, 간수치(ALT)를 입력하면 정상, 주의, 위험 신호등 등급과 질환별 맞춤 실천 가이드를 진단합니다.</p>
+          <span class="tool-tag" style="background:#ca8a04; color:#fff;">초록, 노랑, 빨강 판정</span>
         </a>
 
         <!-- Signature Tool 3: Diagnostic Quiz -->

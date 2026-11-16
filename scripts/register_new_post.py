@@ -26,7 +26,7 @@ new_post_card = """<article class="post-410 post type-post status-publish format
         <p>국가건강검진 공복 혈당 정상 수치(100 mg/dL 미만)와 당뇨 전단계(100~125 mg/dL) 기준, 당화혈색소(HbA1c 5.7~6.4%) 해석법 및 인슐린 저항성을 개선하는 생활수칙을 정리했습니다.</p>
       </div>
       <div style="font-size:0.82rem; color:#0284c7; font-weight:600; margin-top:4px;">
-        연관 계산기: <a href="/checkup" style="color:#0284c7; text-decoration:underline;">건강검진 판독 가이드</a> · <a href="/calorie" style="color:#0284c7; text-decoration:underline;">하루 칼로리·TDEE 계산기</a>
+        연관 계산기: <a href="/checkup" style="color:#0284c7; text-decoration:underline;">건강검진 판독 가이드</a> ,  <a href="/calorie" style="color:#0284c7; text-decoration:underline;">하루 칼로리, TDEE 계산기</a>
       </div>
     </div>
   </div>
@@ -51,13 +51,13 @@ new_index_item = """          <!-- Article 0: 공복 혈당 정상 수치 & 당�
             </div>
             <div class="article-feed-content">
               <div class="article-feed-meta">
-                <span class="article-feed-cat">혈당·검진</span>
-                <span>5분 읽기 · 대한당뇨병학회 기준</span>
+                <span class="article-feed-cat">혈당, 검진</span>
+                <span>5분 읽기 ,  대한당뇨병학회 기준</span>
               </div>
               <h3 class="article-feed-title">공복 혈당 정상 수치 기준과 당뇨 전단계 낮추는 법, 당화혈색소(HbA1c) 관리 가이드</h3>
               <p class="article-feed-excerpt">국가건강검진 공복 혈당 100~125 mg/dL 구간의 진짜 의미와 당화혈색소(HbA1c) 판독법, 야식 차단과 하체 근력 운동으로 인슐린 저항성을 개선하는 과학적 생활 수칙을 정리했습니다.</p>
               <div class="article-feed-related">
-                연관 도구: 건강검진 판독 가이드 · 하루 칼로리(TDEE) 계산기
+                연관 도구: 건강검진 판독 가이드 ,  하루 칼로리(TDEE) 계산기
               </div>
             </div>
           </a>

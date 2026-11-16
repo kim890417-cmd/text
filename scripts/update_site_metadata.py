@@ -63,8 +63,8 @@ home_cards = """
           </a>
           <div class="custom-card-body">
             <div class="custom-card-meta">
-              <span class="custom-card-category">혈압·혈관</span>
-              <span>5분 읽기 · 대한고혈압학회 지침 기반</span>
+              <span class="custom-card-category">혈압, 혈관</span>
+              <span>5분 읽기 ,  대한고혈압학회 지침 기반</span>
             </div>
             <h3 class="custom-card-title">
               <a href="/health/blood-pressure-stages-hypertension-diet/">고혈압 전단계 수치 기준과 낮추는 법, DASH 식단과 칼륨으로 나트륨 배출하기</a>
@@ -82,8 +82,8 @@ home_cards = """
           </a>
           <div class="custom-card-body">
             <div class="custom-card-meta">
-              <span class="custom-card-category">혈당·당뇨</span>
-              <span>5분 읽기 · 대한당뇨병학회 자료 기반</span>
+              <span class="custom-card-category">혈당, 당뇨</span>
+              <span>5분 읽기 ,  대한당뇨병학회 자료 기반</span>
             </div>
             <h3 class="custom-card-title">
               <a href="/health/blood-sugar-spike-prevention-diet/">식후 혈당 스파이크 증상과 낮추는 법, 거꾸로 식사법과 15분 걷기 효과</a>
@@ -102,13 +102,13 @@ home_cards = """
           <div class="custom-card-body">
             <div class="custom-card-meta">
               <span class="custom-card-category">영양제</span>
-              <span>5분 읽기 · 보건복지부 섭취기준 기반</span>
+              <span>5분 읽기 ,  보건복지부 섭취기준 기반</span>
             </div>
             <h3 class="custom-card-title">
               <a href="/health/vitamin-d-benefits-daily-intake-timing/">비타민D 복용시간과 하루 권장량, 마그네슘과 함께 먹어야 하는 이유</a>
             </h3>
             <p class="custom-card-excerpt">
-              한국인의 80%가 겪는 비타민D 결핍 혈중 수치 기준과 지용성 흡수율을 50% 높이는 점심 식후 복용법, 1000~2000 IU 적정 권장량 및 마그네슘·비타민K2와의 필수 시너지를 정리했습니다.
+              한국인의 80%가 겪는 비타민D 결핍 혈중 수치 기준과 지용성 흡수율을 50% 높이는 점심 식후 복용법, 1000~2000 IU 적정 권장량 및 마그네슘, 비타민K2와의 필수 시너지를 정리했습니다.
             </p>
           </div>
         </article>

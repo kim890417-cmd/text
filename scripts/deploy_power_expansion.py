@@ -13,8 +13,8 @@ new_articles = [
     {
         "slug": "liver-enzymes-ast-alt-guide",
         "title": "간수치 AST ALT 정상 수치와 해석, 높은 이유와 낮추는 법",
-        "short_title": "간수치 AST ALT 정상 수치와 해석｜높은 이유·낮추는 법",
-        "meta_desc": "건강검진 간수치 AST(GOT)·ALT(GPT) 정상 범위(40 IU/L 이하)와 수치가 높아지는 주요 원인(비알코올성 지방간, 음주, 약물·즙), 식단과 생활습관으로 낮추는 법을 정리했습니다.",
+        "short_title": "간수치 AST ALT 정상 수치와 해석｜높은 이유, 낮추는 법",
+        "meta_desc": "건강검진 간수치 AST(GOT), ALT(GPT) 정상 범위(40 IU/L 이하)와 수치가 높아지는 주요 원인(비알코올성 지방간, 음주, 약물, 즙), 식단과 생활습관으로 낮추는 법을 정리했습니다.",
         "published_iso": "2026-10-05T09:00:00+09:00",
         "modified_iso": "2026-10-05T09:00:00+09:00",
         "display_date": "10월 5, 2026",
@@ -100,7 +100,7 @@ new_articles = [
     {
         "slug": "fasting-cardio-fat-loss-timing",
         "title": "공복 유산소 운동 vs 식후 운동 효과 비교, 체지방 감량과 근손실 방지 가이드",
-        "short_title": "공복 유산소 vs 식후 운동 비교｜체지방 감량·근손실",
+        "short_title": "공복 유산소 vs 식후 운동 비교｜체지방 감량, 근손실",
         "meta_desc": "아침 공복 유산소 운동의 체지방 연소 과학적 원리와 근손실 예방 심박수, 식후 근력 운동과의 칼로리 소모 비교, 목표별 최적의 운동 시간대를 안내합니다.",
         "published_iso": "2026-10-05T14:00:00+09:00",
         "modified_iso": "2026-10-05T14:00:00+09:00",
@@ -269,7 +269,7 @@ blog_entries_2 = """
 		<header class="entry-header ast-blog-single-element ast-blog-meta-container">
 			<div class="entry-meta"><span class="posted-by vcard author" itemtype="https://schema.org/Person" itemscope="itemscope" itemprop="author"><a title="건강노트의 모든 글 보기" href="https://healthfit100.com/about" rel="author" class="url fn n" itemprop="url"><span class="author-name" itemprop="name">건강노트</span></a></span> / <span class="posted-on"><span class="published" itemprop="datePublished"> 10월 5, 2026 </span></span></div>
 		</header>
-		<div class="ast-excerpt-container ast-blog-single-element"><p>건강검진 간수치 AST(GOT)·ALT(GPT) 정상 범위(40 IU/L 이하)와 수치가 높아지는 주요 원인(비알코올성 지방간, 음주, 약물·즙), 식단과 생활습관으로 낮추는 법을 정리했습니다.</p></div>
+		<div class="ast-excerpt-container ast-blog-single-element"><p>건강검진 간수치 AST(GOT), ALT(GPT) 정상 범위(40 IU/L 이하)와 수치가 높아지는 주요 원인(비알코올성 지방간, 음주, 약물, 즙), 식단과 생활습관으로 낮추는 법을 정리했습니다.</p></div>
 		<div class="entry-content clear" itemprop="text"></div>
 	</div>
 </div>
@@ -294,7 +294,7 @@ october_banner = """
           <span style="background:rgba(255,255,255,0.2); padding:4px 12px; border-radius:999px; font-size:0.8rem; font-weight:700; letter-spacing:0.5px;">🍂 10월 테마 큐레이션</span>
           <span style="font-size:0.85rem; opacity:0.9;">환절기 건강 관리</span>
         </div>
-        <h2 style="margin:0 0 10px; font-size:1.6rem; font-weight:800; color:#fff; border:none; padding:0;">10월 환절기 혈관·혈당·간수치 집중 관리 가이드</h2>
+        <h2 style="margin:0 0 10px; font-size:1.6rem; font-weight:800; color:#fff; border:none; padding:0;">10월 환절기 혈관, 혈당, 간수치 집중 관리 가이드</h2>
         <p style="margin:0 0 20px; font-size:0.95rem; opacity:0.9; line-height:1.6; max-width:680px;">
           일교차가 10도 이상 벌어지는 가을철에는 혈관 수축으로 인한 혈압 급상승과 면역력 저하, 식욕 증가로 인한 혈당 스파이크에 각별히 유의해야 합니다. 공신력 있는 의학 학회 지침을 바탕으로 엄선한 이달의 추천 가이드입니다.
         </p>
@@ -309,7 +309,7 @@ october_banner = """
           </a>
           <a href="/health/liver-enzymes-ast-alt-guide/" style="background:rgba(255,255,255,0.15); border-radius:12px; padding:14px 16px; text-decoration:none; color:#fff; transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.25)'" onmouseout="this.style.background='rgba(255,255,255,0.15)'">
             <div style="font-size:0.8rem; opacity:0.8;">건강검진표</div>
-            <strong style="font-size:0.95rem; display:block; margin-top:2px;">간수치 AST·ALT 해석 가이드 →</strong>
+            <strong style="font-size:0.95rem; display:block; margin-top:2px;">간수치 AST, ALT 해석 가이드 →</strong>
           </a>
           <a href="/health/vitamin-d-benefits-daily-intake-timing/" style="background:rgba(255,255,255,0.15); border-radius:12px; padding:14px 16px; text-decoration:none; color:#fff; transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.25)'" onmouseout="this.style.background='rgba(255,255,255,0.15)'">
             <div style="font-size:0.8rem; opacity:0.8;">면역 영양소</div>
@@ -327,8 +327,8 @@ home_cards_2 = """
           </a>
           <div class="custom-card-body">
             <div class="custom-card-meta">
-              <span class="custom-card-category">간 건강·검진</span>
-              <span>5분 읽기 · 대한간학회 지침 기반</span>
+              <span class="custom-card-category">간 건강, 검진</span>
+              <span>5분 읽기 ,  대한간학회 지침 기반</span>
             </div>
             <h3 class="custom-card-title">
               <a href="/health/liver-enzymes-ast-alt-guide/">간수치 AST ALT 정상 수치와 해석, 높은 이유와 낮추는 법</a>
@@ -346,8 +346,8 @@ home_cards_2 = """
           </a>
           <div class="custom-card-body">
             <div class="custom-card-meta">
-              <span class="custom-card-category">운동·다이어트</span>
-              <span>5분 읽기 · 운동 생리학 연구 분석</span>
+              <span class="custom-card-category">운동, 다이어트</span>
+              <span>5분 읽기 ,  운동 생리학 연구 분석</span>
             </div>
             <h3 class="custom-card-title">
               <a href="/health/fasting-cardio-fat-loss-timing/">공복 유산소 운동 vs 식후 운동 효과 비교, 체지방 감량과 근손실 방지 가이드</a>
@@ -384,13 +384,13 @@ policy_box = """
           <div style="background:#fff; border:1px solid #edf2f7; border-radius:12px; padding:20px;">
             <div style="font-weight:700; color:#0284c7; margin-bottom:6px;">1. 공인된 1차 의학 출처 인용</div>
             <p style="margin:0; font-size:0.88rem; color:#475569; line-height:1.6;">
-              보건복지부, 질병관리청(KDCA), 대한당뇨병학회, 대한고혈압학회, 한국지질·동맥경화학회 등 국가 공공기관 및 전문 의학 학회의 최신 공식 지침과 학술 논문만을 1차 근거로 사용합니다.
+              보건복지부, 질병관리청(KDCA), 대한당뇨병학회, 대한고혈압학회, 한국지질, 동맥경화학회 등 국가 공공기관 및 전문 의학 학회의 최신 공식 지침과 학술 논문만을 1차 근거로 사용합니다.
             </p>
           </div>
           <div style="background:#fff; border:1px solid #edf2f7; border-radius:12px; padding:20px;">
             <div style="font-weight:700; color:#0284c7; margin-bottom:6px;">2. 상업적 제품 광고 배제</div>
             <p style="margin:0; font-size:0.88rem; color:#475569; line-height:1.6;">
-              특정 제약사나 영양제 브랜드의 협찬·유료 광고성 리뷰를 일절 작성하지 않으며, 특정 상품을 강요하지 않고 성분 자체의 과학적 기전과 일일 섭취 기준치에 집중합니다.
+              특정 제약사나 영양제 브랜드의 협찬, 유료 광고성 리뷰를 일절 작성하지 않으며, 특정 상품을 강요하지 않고 성분 자체의 과학적 기전과 일일 섭취 기준치에 집중합니다.
             </p>
           </div>
           <div style="background:#fff; border:1px solid #edf2f7; border-radius:12px; padding:20px;">

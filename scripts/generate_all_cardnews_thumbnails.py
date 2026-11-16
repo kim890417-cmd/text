@@ -262,7 +262,7 @@ SKY_ACCENT = (56, 189, 248)
 ARTICLES_MAP = [
     {
         'slug': 'blood-pressure-stages-hypertension-diet',
-        'badge': '혈관·혈압 관리',
+        'badge': '혈관, 혈압 관리',
         'titles': ['고혈압 전단계', '수치 기준 & 낮추는 법'],
         'point': '✓ 수축기 120~139 단계별 DASH 식단',
         'sub': ['칼륨 나트륨 배출 음식 & 3개월 관리법', '건강노트 순환기계 팩트체크'],
@@ -271,7 +271,7 @@ ARTICLES_MAP = [
     },
     {
         'slug': 'blood-sugar-spike-prevention-diet',
-        'badge': '혈당·대사 케어',
+        'badge': '혈당, 대사 케어',
         'titles': ['식후 혈당 스파이크', '증상 & 거꾸로 식사법'],
         'point': '✓ 140mg/dL 급상승 예방 15분 걷기',
         'sub': ['식이섬유 우선 식사 순서와 인슐린 안정', '건강노트 대사 건강 가이드'],
@@ -283,7 +283,7 @@ ARTICLES_MAP = [
         'badge': '체성분 정밀진단',
         'titles': ['BMI 계산법', '한국인 성인 비만 기준'],
         'point': '✓ 23부터 비만전단계 & 허리둘레 기준',
-        'sub': ['키·체중 기반 체질량지수 4단계 분석', '건강노트 체형 진단 가이드'],
+        'sub': ['키, 체중 기반 체질량지수 4단계 분석', '건강노트 체형 진단 가이드'],
         'badge_color': BLUE, 'point_color': SKY_ACCENT,
         'img': 'https://images.unsplash.com/photo-1576678927484-cc907957088c?w=1080&q=80'
     },
@@ -300,7 +300,7 @@ ARTICLES_MAP = [
         'slug': 'cholesterol-test-results-guide',
         'badge': '검진 수치 판독',
         'titles': ['콜레스테롤 검사표', '읽는 법 완벽 가이드'],
-        'point': '✓ LDL · HDL · 중성지방 정상 수치',
+        'point': '✓ LDL ,  HDL ,  중성지방 정상 수치',
         'sub': ['공복 채혈 기준과 비HDL 계산 공식', '건강노트 검진표 종합 판독'],
         'badge_color': BLUE, 'point_color': GOLD_YELLOW,
         'img': 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=1080&q=80'
@@ -325,10 +325,10 @@ ARTICLES_MAP = [
     },
     {
         'slug': 'iron-anemia-side-effects',
-        'badge': '영양·빈혈 가이드',
+        'badge': '영양, 빈혈 가이드',
         'titles': ['철분제 효능 & 복용법', '빈혈 증상과 부작용'],
         'point': '✓ 페리틴 검사 & 비타민C 병용 흡수율',
-        'sub': ['위장장애·변비 줄이는 복용 타이밍', '건강노트 영양소 연구팀'],
+        'sub': ['위장장애, 변비 줄이는 복용 타이밍', '건강노트 영양소 연구팀'],
         'badge_color': ROSE, 'point_color': GOLD_YELLOW,
         'img': 'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=1080&q=80'
     },
@@ -337,16 +337,16 @@ ARTICLES_MAP = [
         'badge': '지질 대사 관리',
         'titles': ['LDL 콜레스테롤 식단', '달걀보다 포화지방 줄이기'],
         'point': '✓ 혈중 LDL을 올리는 진짜 주범 차단',
-        'sub': ['가공육·버터 제한과 수용성 식이섬유 섭취', '건강노트 영양학 리서치'],
+        'sub': ['가공육, 버터 제한과 수용성 식이섬유 섭취', '건강노트 영양학 리서치'],
         'badge_color': ROSE, 'point_color': GOLD_YELLOW,
         'img': 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1080&q=80'
     },
     {
         'slug': 'liver-enzymes-ast-alt-guide',
         'badge': '간수치 팩트체크',
-        'titles': ['간수치 AST · ALT', '정상 범위 & 낮추는 법'],
+        'titles': ['간수치 AST ,  ALT', '정상 범위 & 낮추는 법'],
         'point': '✓ 40 IU/L 기준 위험 신호 판독법',
-        'sub': ['음주·약물·건강즙 부작용과 생활 회복법', '건강노트 검진 리포트'],
+        'sub': ['음주, 약물, 건강즙 부작용과 생활 회복법', '건강노트 검진 리포트'],
         'badge_color': AMBER, 'point_color': GOLD_YELLOW,
         'img': 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=1080&q=80'
     },
@@ -390,7 +390,7 @@ ARTICLES_MAP = [
         'slug': 'sleep-foods-melatonin',
         'badge': '숙면 식단 솔루션',
         'titles': ['잠 잘 오는 음식', '멜라토닌 & 트립토판'],
-        'point': '✓ 바나나·체리·따뜻한 우유의 과학',
+        'point': '✓ 바나나, 체리, 따뜻한 우유의 과학',
         'sub': ['야식 피하고 뇌 수면 호르몬 깨우는 식단', '건강노트 숙면 큐레이션'],
         'badge_color': PURPLE, 'point_color': GOLD_YELLOW,
         'img': 'https://images.unsplash.com/photo-1541480601022-2308c0f02487?w=1080&q=80'
@@ -415,7 +415,7 @@ ARTICLES_MAP = [
     },
     {
         'slug': 'zinc-benefits-daily-intake',
-        'badge': '면역·미네랄 케어',
+        'badge': '면역, 미네랄 케어',
         'titles': ['아연 효능 & 권장량', '공복 복용 주의사항'],
         'point': '✓ 성인 하루 8~10mg 최적 섭취선',
         'sub': ['속쓰림 없는 식후 섭취와 구리 상호작용', '건강노트 영양소 연구팀'],
@@ -443,7 +443,7 @@ ARTICLES_MAP = [
     {
         'slug': '눈-뻑뻑함과-계단-어지러움-루테인과-철분제-낭비-없',
         'badge': '피로 자가진단',
-        'titles': ['눈 뻑뻑함 & 어지러움', '루테인 · 철분 낭비 없는 법'],
+        'titles': ['눈 뻑뻑함 & 어지러움', '루테인 ,  철분 낭비 없는 법'],
         'point': '✓ 단순 피로와 결핍 증상 정확한 구분',
         'sub': ['인공눈물 바른 사용법과 페리틴 혈액 검사', '건강노트 생활 증상 케어'],
         'badge_color': EMERALD, 'point_color': GOLD_YELLOW,
@@ -452,7 +452,7 @@ ARTICLES_MAP = [
     {
         'slug': '다이어트를-하는-분들이-매일-아침-오르는-체중계의',
         'badge': '복부비만 진단',
-        'titles': ['허리둘레 재는 법', '남 90cm · 여 85cm 기준'],
+        'titles': ['허리둘레 재는 법', '남 90cm ,  여 85cm 기준'],
         'point': '✓ 갈비뼈 아래와 골반 위 정중앙 측정',
         'sub': ['바지 인치와 다른 진짜 내장지방 기준', '건강노트 체형 진단'],
         'badge_color': BLUE, 'point_color': SKY_ACCENT,
@@ -460,9 +460,9 @@ ARTICLES_MAP = [
     },
     {
         'slug': '마그네슘-하루-권장량',
-        'badge': '신경·근육 미네랄',
+        'badge': '신경, 근육 미네랄',
         'titles': ['마그네슘 권장량', '복용시간 & 상한 부작용'],
-        'point': '✓ 킬레이트·산화 마그네슘 흡수율 차이',
+        'point': '✓ 킬레이트, 산화 마그네슘 흡수율 차이',
         'sub': ['저녁 복용과 숙면, 설사 없는 상한선 350mg', '건강노트 보충제 분석'],
         'badge_color': EMERALD, 'point_color': GOLD_YELLOW,
         'img': 'https://images.unsplash.com/photo-1498557850523-fd3d118b962e?w=1080&q=80'
@@ -488,7 +488,7 @@ ARTICLES_MAP = [
     {
         'slug': '서브웨이-칼로리',
         'badge': '다이어트 외식',
-        'titles': ['서브웨이 칼로리', '빵 · 소스 다이어트 조합'],
+        'titles': ['서브웨이 칼로리', '빵 ,  소스 다이어트 조합'],
         'point': '✓ 위트 빵 + 로스트치킨 + 올리브오일',
         'sub': ['소스 하나로 200kcal 차이나는 칼로리표', '건강노트 식단 큐레이션'],
         'badge_color': BLUE, 'point_color': GOLD_YELLOW,
@@ -499,7 +499,7 @@ ARTICLES_MAP = [
         'badge': '숙취 해독 과학',
         'titles': ['술 깨는 시간 계산', '위드마크 공식과 간 해독'],
         'point': '✓ 소주 1병 완전 분해 4~6시간 소요',
-        'sub': ['커피·사우나로 빨라지지 않는 알코올 대사', '건강노트 숙취 해소 가이드'],
+        'sub': ['커피, 사우나로 빨라지지 않는 알코올 대사', '건강노트 숙취 해소 가이드'],
         'badge_color': AMBER, 'point_color': SKY_ACCENT,
         'img': 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1080&q=80'
     },
@@ -525,14 +525,14 @@ ARTICLES_MAP = [
         'slug': '영양제-상한섭취량',
         'badge': '영양제 안전성',
         'titles': ['영양제 상한섭취량', '중복 복용 전 확인할 숫자'],
-        'point': '✓ 비타민A · 아연 · 셀레늄 과다 경고',
+        'point': '✓ 비타민A ,  아연 ,  셀레늄 과다 경고',
         'sub': ['종합비타민 + 단일제 합산 계산 원칙', '건강노트 영양제 안전 체크'],
         'badge_color': ROSE, 'point_color': GOLD_YELLOW,
         'img': 'https://images.unsplash.com/photo-1587854680352-936b22b91030?w=1080&q=80'
     },
     {
         'slug': '오메가3',
-        'badge': '혈행·오메가3',
+        'badge': '혈행, 오메가3',
         'titles': ['오메가3 고르는 법', 'rTG vs 순도 팩트체크'],
         'point': '✓ EPA + DHA 순수 합 1,000mg 확인법',
         'sub': ['산패도(IFOS)와 식후 복용으로 흡수율 극대화', '건강노트 보충제 연구팀'],
@@ -552,7 +552,7 @@ ARTICLES_MAP = [
         'slug': '운동-소모-칼로리-계산',
         'badge': '소비 칼로리 MET',
         'titles': ['운동 소모 칼로리', 'MET 공식 & 스마트워치 오차'],
-        'point': '✓ 걷기 · 러닝 · 수영 종목별 정확한 계산',
+        'point': '✓ 걷기 ,  러닝 ,  수영 종목별 정확한 계산',
         'sub': ['체중과 시간 반영한 신체활동 에너지 소비량', '건강노트 운동역학 계산'],
         'badge_color': BLUE, 'point_color': GOLD_YELLOW,
         'img': 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1080&q=80'
@@ -577,10 +577,10 @@ ARTICLES_MAP = [
     },
     {
         'slug': '칼슘-하루-권장-섭취량',
-        'badge': '골밀도·칼슘 케어',
+        'badge': '골밀도, 칼슘 케어',
         'titles': ['칼슘 하루 권장량', '500mg 분할 & 복용법'],
         'point': '✓ 1회 500mg 이하 분할 흡수율 극대화',
-        'sub': ['비타민D·마그네슘 상호작용과 위장 편한 성분', '건강노트 뼈 건강 연구팀'],
+        'sub': ['비타민D, 마그네슘 상호작용과 위장 편한 성분', '건강노트 뼈 건강 연구팀'],
         'badge_color': EMERALD, 'point_color': GOLD_YELLOW,
         'img': 'https://images.unsplash.com/photo-1563636619-e9143da7973b?w=1080&q=80'
     },
@@ -597,7 +597,7 @@ ARTICLES_MAP = [
         'slug': '하루-카페인-권장량',
         'badge': '카페인 안전 가이드',
         'titles': ['하루 카페인 권장량', '성인 400mg 안전 한도'],
-        'point': '✓ 커피 3~4잔 기준 임산부·청소년 한도',
+        'point': '✓ 커피 3~4잔 기준 임산부, 청소년 한도',
         'sub': ['심장 두근거림 없는 섭취 시간과 배출 시간', '건강노트 카페인 분석'],
         'badge_color': AMBER, 'point_color': GOLD_YELLOW,
         'img': 'https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=1080&q=80'
@@ -629,8 +629,8 @@ TOOLS_MAP = [
         'file': 'checkup.html',
         'badge': '검진 종합 판독',
         'titles': ['건강검진 수치', '신호등 판독 리포트'],
-        'point': '✓ 혈압 · 혈당 · 간수치 · 콜레스테롤',
-        'sub': ['정상 · 주의 · 위험 신호등 즉시 판독', '한국인 표준 검진 해석 가이드'],
+        'point': '✓ 혈압 ,  혈당 ,  간수치 ,  콜레스테롤',
+        'sub': ['정상 ,  주의 ,  위험 신호등 즉시 판독', '한국인 표준 검진 해석 가이드'],
         'badge_color': AMBER, 'point_color': GOLD_YELLOW,
         'img': TOPIC_IMAGES['medical']
     },
@@ -640,7 +640,7 @@ TOOLS_MAP = [
         'badge': '셀프 케어 진단',
         'titles': ['30초 맞춤 건강', '생활습관 자가진단'],
         'point': '✓ 내 몸 1순위 케어 솔루션 처방',
-        'sub': ['영양 · 수면 · 활력 4문항 간편 체크', '개인 맞춤 건강 처방전'],
+        'sub': ['영양 ,  수면 ,  활력 4문항 간편 체크', '개인 맞춤 건강 처방전'],
         'badge_color': PURPLE, 'point_color': SKY_ACCENT,
         'img': TOPIC_IMAGES['default']
     },
@@ -650,7 +650,7 @@ TOOLS_MAP = [
         'badge': '체성분 정밀 진단',
         'titles': ['BMI 비만도 계산기', '& 한국인 표준체중'],
         'point': '✓ 아시아 비만학회 기준 비만 4단계',
-        'sub': ['키 · 체중 기반 최적 적정 체중 산출', '건강 체형 관리 솔루션'],
+        'sub': ['키 ,  체중 기반 최적 적정 체중 산출', '건강 체형 관리 솔루션'],
         'badge_color': BLUE, 'point_color': SKY_ACCENT,
         'img': TOPIC_IMAGES['weight']
     },
@@ -659,7 +659,7 @@ TOOLS_MAP = [
         'file': 'calorie.html',
         'badge': '다이어트 계산기',
         'titles': ['하루 칼로리 계산기', '기초대사량 & TDEE'],
-        'point': '✓ 감량 · 유지 · 증량 목표 칼로리',
+        'point': '✓ 감량 ,  유지 ,  증량 목표 칼로리',
         'sub': ['미플린-지어 공식 기반 정밀 대사량 산출', '체계적인 일일 섭취 목표 가이드'],
         'badge_color': BLUE, 'point_color': GOLD_YELLOW,
         'img': TOPIC_IMAGES['diet']
@@ -679,7 +679,7 @@ TOOLS_MAP = [
         'file': 'exercise.html',
         'badge': '운동 소모 계산',
         'titles': ['운동별 소모 칼로리', 'METs 정밀 계산기'],
-        'point': '✓ 걷기 · 러닝 · 수영 · 웨이트 소비량',
+        'point': '✓ 걷기 ,  러닝 ,  수영 ,  웨이트 소비량',
         'sub': ['체중과 운동 시간 기반 소비 칼로리', '체지방 연소 시간 가이드'],
         'badge_color': BLUE, 'point_color': GOLD_YELLOW,
         'img': TOPIC_IMAGES['workout']
@@ -700,7 +700,7 @@ TOOLS_MAP = [
         'badge': '카페인 안전 한도',
         'titles': ['하루 카페인 안전량', '& 커피 음료 계산기'],
         'point': '✓ 성인 400mg 대비 섭취율 측정',
-        'sub': ['커피 · 에너지음료 속 카페인 총량', '부작용 없는 일일 안전선'],
+        'sub': ['커피 ,  에너지음료 속 카페인 총량', '부작용 없는 일일 안전선'],
         'badge_color': AMBER, 'point_color': GOLD_YELLOW,
         'img': TOPIC_IMAGES['coffee']
     },
@@ -709,7 +709,7 @@ TOOLS_MAP = [
         'file': 'alcohol.html',
         'badge': '간 건강 계산',
         'titles': ['알코올 분해시간', '위드마크 숙취 계산기'],
-        'point': '✓ 소주 · 맥주 완전 해독 소요 시간',
+        'point': '✓ 소주 ,  맥주 완전 해독 소요 시간',
         'sub': ['체중과 음주량 기반 알코올 분해 추정', '숙취 예방 및 음주 가이드'],
         'badge_color': AMBER, 'point_color': SKY_ACCENT,
         'img': TOPIC_IMAGES['alcohol']
@@ -719,7 +719,7 @@ TOOLS_MAP = [
         'file': 'supplement.html',
         'badge': '영양제 안전 분석',
         'titles': ['영양제 상한 섭취량', '& 과다복용 체크기'],
-        'point': '✓ 비타민 · 미네랄 중복 복용 위험 차단',
+        'point': '✓ 비타민 ,  미네랄 중복 복용 위험 차단',
         'sub': ['식약처 1일 권장량 및 상한선 조회', '안전한 성분 배합 체크'],
         'badge_color': EMERALD, 'point_color': GOLD_YELLOW,
         'img': TOPIC_IMAGES['vitamins']

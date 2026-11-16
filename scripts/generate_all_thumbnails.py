@@ -143,7 +143,7 @@ def generate_thumbnail(title: str, subtitle: str, category: str, output_path: st
     # Footer
     footer_y = height - 95
     draw.line((75, footer_y - 15, width - 75, footer_y - 15), fill=(255, 255, 255, 30), width=1)
-    draw.text((75, footer_y), "✓ 의학·생리학 근거 기반 가이드", fill=t['accent'], font=font_footer)
+    draw.text((75, footer_y), "✓ 의학, 생리학 근거 기반 가이드", fill=t['accent'], font=font_footer)
     draw.text((360, footer_y), "✓ 맞춤 분석 & 무료 도구", fill=(148, 163, 184), font=font_footer)
     draw.text((width - 75 - 160, footer_y), "healthfit100.com", fill=(148, 163, 184), font=font_footer)
 
@@ -184,11 +184,11 @@ def process_tools():
         ('exercise.html', '운동별 소모 칼로리 계산기', '체중과 운동 종목, 운동 시간에 따른 정확한 에너지 소모량 계산', '운동 소모 계산기', 'violet', 'images/thumbnails/tool_exercise.png'),
         ('water.html', '하루 물 권장 섭취량 계산기', '체중과 활동량 기준 수분 부족 예방을 위한 하루 최적 섭취량', '수분 건강 계산기', 'teal', 'images/thumbnails/tool_water.png'),
         ('caffeine.html', '하루 카페인 권장량 & 안전 섭취 계산기', '커피, 에너지음료 속 카페인 함량과 부작용 없는 일일 안전 한도', '영양 섭취 가이드', 'blue', 'images/thumbnails/tool_caffeine.png'),
-        ('alcohol.html', '소주·맥주 주량 및 숙취 알코올 분해 계산기', '체중과 음주량에 따른 체내 알코올 분해 소요 시간 및 간 건강 분석', '생활 건강 계산기', 'indigo', 'images/thumbnails/tool_alcohol.png'),
+        ('alcohol.html', '소주, 맥주 주량 및 숙취 알코올 분해 계산기', '체중과 음주량에 따른 체내 알코올 분해 소요 시간 및 간 건강 분석', '생활 건강 계산기', 'indigo', 'images/thumbnails/tool_alcohol.png'),
         ('supplement.html', '영양제 상한 섭취량 및 과다복용 체크', '비타민과 미네랄 성분 중복 및 상한선 초과 위험을 예방하는 안전 체크', '영양제 안전 분석', 'emerald', 'images/thumbnails/tool_supplement.png'),
-        ('checkup.html', '건강검진 수치 정상 범위 & 판독 가이드', '혈압, 공복혈당, 간수치(AST·ALT), 콜레스테롤 정상 기준 종합 안내', '검진 수치 가이드', 'blue', 'images/thumbnails/tool_checkup.png'),
-        ('quiz.html', '건강 상식 퀴즈 & 나의 생활습관 자가진단', '잘못 알고 있던 영양·수면·운동 상식을 바로잡는 인터랙티브 퀴즈', '건강 자가 진단', 'violet', 'images/thumbnails/tool_quiz.png'),
-        ('index.html', '건강노트 | 영양제·식단·건강 정보와 무료 건강 계산기', '직접 검증한 건강 정보와 11종 무료 건강 계산기를 한곳에서', '스마트 헬스케어', 'teal', 'images/thumbnails/og_default.png'),
+        ('checkup.html', '건강검진 수치 정상 범위 & 판독 가이드', '혈압, 공복혈당, 간수치(AST, ALT), 콜레스테롤 정상 기준 종합 안내', '검진 수치 가이드', 'blue', 'images/thumbnails/tool_checkup.png'),
+        ('quiz.html', '건강 상식 퀴즈 & 나의 생활습관 자가진단', '잘못 알고 있던 영양, 수면, 운동 상식을 바로잡는 인터랙티브 퀴즈', '건강 자가 진단', 'violet', 'images/thumbnails/tool_quiz.png'),
+        ('index.html', '건강노트 | 영양제, 식단, 건강 정보와 무료 건강 계산기', '직접 검증한 건강 정보와 11종 무료 건강 계산기를 한곳에서', '스마트 헬스케어', 'teal', 'images/thumbnails/og_default.png'),
     ]
 
     for fname, title, sub, cat, theme, outpath in tools:
@@ -220,13 +220,13 @@ def process_articles():
         # pick theme & category based on title
         if any(k in title for k in ['칼로리', '체지방', '다이어트', '유산소', '운동', 'TDEE', '기초대사량', '체중']):
             theme = 'indigo'
-            category = '다이어트·운동'
+            category = '다이어트, 운동'
         elif any(k in title for k in ['비타민', '오메가', '마그네슘', '루테인', '철분', '영양제', '엽산', '칼슘', '아연']):
             theme = 'emerald'
-            category = '영양·보충제'
+            category = '영양, 보충제'
         elif any(k in title for k in ['혈압', '혈당', '간수치', '콜레스테롤', '지방간', '수면', '멜라토닌']):
             theme = 'teal'
-            category = '질환·검진'
+            category = '질환, 검진'
         else:
             theme = 'blue'
             category = '건강 매거진'

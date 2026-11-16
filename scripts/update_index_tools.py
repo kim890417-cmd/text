@@ -32,8 +32,8 @@ html = re.sub(quiz_pat, quiz_repl, html, count=1)
 # 2. Update Group 2: Diet tools (bmi, calorie, protein, exercise)
 # Replace 32x32 svg icon with full top banner
 diet_tools = [
-    ('bmi', 'BMI·표준체중 비만도 계산기'),
-    ('calorie', '하루 칼로리·기초대사량(BMR) 계산기'),
+    ('bmi', 'BMI, 표준체중 비만도 계산기'),
+    ('calorie', '하루 칼로리, 기초대사량(BMR) 계산기'),
     ('protein', '단백질 권장 섭취량 계산기'),
     ('exercise', '운동별 소모 칼로리 계산기')
 ]
@@ -51,7 +51,7 @@ life_tools = [
     ('water', '하루 물 섭취량 계산기'),
     ('caffeine', '카페인 안전량 계산기'),
     ('alcohol', '알코올 분해시간 계산기'),
-    ('supplement', '영양제 권장·상한량 조회')
+    ('supplement', '영양제 권장, 상한량 조회')
 ]
 
 for tid, ttitle in life_tools:

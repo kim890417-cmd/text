@@ -178,7 +178,7 @@ rss_lines = [
     "<channel>",
     "  <title>건강노트</title>",
     f"  <link>{BASE_URL}/blog</link>",
-    "  <description>영양제·식단·생활습관을 공신력 있는 자료와 비교 예시, 기록 방법으로 정리합니다.</description>",
+    "  <description>영양제, 식단, 생활습관을 공신력 있는 자료와 비교 예시, 기록 방법으로 정리합니다.</description>",
     "  <language>ko-KR</language>",
     f"  <lastBuildDate>{rfc822(datetime.now(KST))}</lastBuildDate>",
 ]
