@@ -4,8 +4,14 @@
   const cards = [...document.querySelectorAll('.category-section .story')];
   const groups = [...document.querySelectorAll('.category-section')];
   const status = document.querySelector('#search-status');
-  const homeTop = document.querySelector('.home-top');
-  const purposeCats = document.querySelector('.purpose-categories');
+
+  const getNonSearchElements = () => [
+    document.querySelector('.home-purpose'),
+    document.querySelector('.purpose-categories'),
+    document.querySelector('.home-top'),
+    document.querySelector('#tools'),
+    document.querySelector('.home-brand-tagline')
+  ].filter(Boolean);
 
   const filterArticles = () => {
     const terms = input.value.trim().toLocaleLowerCase('ko').split(/\s+/).filter(Boolean);
@@ -21,9 +27,11 @@
       group.hidden = ![...group.querySelectorAll('.story')].some(card => !card.hidden);
     }
 
-    // 검색 중일 때는 검색창 바로 아래에 결과가 오도록 중간 고정 배너 숨김
-    if (purposeCats) purposeCats.hidden = isSearching;
-    if (homeTop) homeTop.hidden = isSearching;
+    // 검색 중일 때는 검색창 바로 아래에 결과만 오도록 중간 고정 섹션(소개, 카테고리, 최신/추천글, 계산기도구) 강제 숨김
+    for (const el of getNonSearchElements()) {
+      el.hidden = isSearching;
+      el.style.setProperty('display', isSearching ? 'none' : '', 'important');
+    }
 
     status.textContent = isSearching 
       ? (shown ? `${shown}편의 글을 찾았습니다.` : '검색 결과가 없습니다. 다른 단어나 짧은 키워드로 검색해 보세요.') 
