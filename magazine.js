@@ -4,17 +4,32 @@
   const cards = [...document.querySelectorAll('.category-section .story')];
   const groups = [...document.querySelectorAll('.category-section')];
   const status = document.querySelector('#search-status');
+  const homeTop = document.querySelector('.home-top');
+  const purposeCats = document.querySelector('.purpose-categories');
+
   const filterArticles = () => {
     const terms = input.value.trim().toLocaleLowerCase('ko').split(/\s+/).filter(Boolean);
+    const isSearching = terms.length > 0;
     let shown = 0;
+
     for (const card of cards) {
       const text = card.textContent.toLocaleLowerCase('ko');
       card.hidden = !terms.every(term => text.includes(term));
       if (!card.hidden) shown++;
     }
-    for (const group of groups) group.hidden = ![...group.querySelectorAll('.story')].some(card => !card.hidden);
-    status.textContent = terms.length ? (shown ? `${shown}편의 글을 찾았습니다. 아래 글 목록에서 확인하세요.` : '검색 결과가 없습니다. 다른 단어나 짧은 키워드로 검색해 보세요.') : '제목과 글 소개에서 검색합니다.';
+    for (const group of groups) {
+      group.hidden = ![...group.querySelectorAll('.story')].some(card => !card.hidden);
+    }
+
+    // 검색 중일 때는 검색창 바로 아래에 결과가 오도록 중간 고정 배너 숨김
+    if (purposeCats) purposeCats.hidden = isSearching;
+    if (homeTop) homeTop.hidden = isSearching;
+
+    status.textContent = isSearching 
+      ? (shown ? `${shown}편의 글을 찾았습니다.` : '검색 결과가 없습니다. 다른 단어나 짧은 키워드로 검색해 보세요.') 
+      : '제목과 글 소개에서 검색합니다.';
   };
+
   input.addEventListener('input', filterArticles);
   document.querySelector('#article-search-clear')?.addEventListener('click', () => {
     input.value = '';
